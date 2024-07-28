@@ -24,9 +24,18 @@ def test_single_document(pdf_path):
     llm = config.create_llm_openai()
     templates.prepare_llm(llm)
 
+    test_message = [{"role": "user", "content": "Do you remember your task?"}]
+    initial_msg = llm.invoke(test_message)
+    print(initial_msg.content)
+
+    pdf_path = "../dataset/" + pdf_path
     pages = paginate_pdf(pdf_path)
+
+    print("\nPAGE 6")
+    print(pages[6])
+
     result = templates.analyze_pdf_incompleteness(llm, pages)
-    print_results(result)
+    print(result)
     return result
 
 
@@ -38,4 +47,6 @@ def print_results(results):
 
 
 if __name__ == '__main__':
-    main()
+    # main()
+    test_single_document("2001_esa.pdf")
+
