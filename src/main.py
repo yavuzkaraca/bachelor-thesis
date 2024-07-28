@@ -1,25 +1,41 @@
 import config
 import templates
-from pdf_loader import load_and_split_pdf
+from retrieve_dataset import get_pdf_file_paths
+from pdf_loader import paginate_pdf
 
 
-def basic_test(pdf_paths):
+def main():
     llm = config.create_llm_openai()
     templates.prepare_llm(llm)
 
+    pdf_paths = get_pdf_file_paths()
+
     results = {}
     for pdf_path in pdf_paths:
-        pages = load_and_split_pdf(pdf_path)
+        pages = paginate_pdf(pdf_path)
         analysis_result = templates.analyze_pdf_incompleteness(llm, pages)
         results[pdf_path] = analysis_result
+
+    print_results(results)
     return results
 
 
-if __name__ == '__main__':
-    pdf_paths = ["../dataset/2001_esa.pdf", "../dataset/2005_nenios.pdf"]
-    results = basic_test(pdf_paths)
+def test_single_document(pdf_path):
+    llm = config.create_llm_openai()
+    templates.prepare_llm(llm)
 
+    pages = paginate_pdf(pdf_path)
+    result = templates.analyze_pdf_incompleteness(llm, pages)
+    print_results(result)
+    return result
+
+
+def print_results(results):
     for pdf, result in results.items():
         print(f"Results for {pdf}:")
         print(result)
         print("\n" + "=" * 50 + "\n")
+
+
+if __name__ == '__main__':
+    main()
