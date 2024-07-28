@@ -1,6 +1,6 @@
 import config
 import templates
-from pdf_loader import load_and_split_pdf, create_faiss_index, search_documents
+from pdf_loader import load_and_split_pdf
 
 
 def basic_test(pdf_paths):
@@ -10,15 +10,13 @@ def basic_test(pdf_paths):
     results = {}
     for pdf_path in pdf_paths:
         pages = load_and_split_pdf(pdf_path)
-        faiss_index = create_faiss_index(pages)
-        docs = search_documents(faiss_index, "Identify incompleteness in this document.")
-        analysis_result = templates.analyze_pdf_incompleteness(llm, docs)
+        analysis_result = templates.analyze_pdf_incompleteness(llm, pages)
         results[pdf_path] = analysis_result
     return results
 
 
 if __name__ == '__main__':
-    pdf_paths = ["dataset/2001_esa.pdf", "dataset/2005_nenios.pdf"]
+    pdf_paths = ["../dataset/2001_esa.pdf", "../dataset/2005_nenios.pdf"]
     results = basic_test(pdf_paths)
 
     for pdf, result in results.items():
