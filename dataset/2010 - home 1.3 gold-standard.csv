@@ -1,0 +1,6 @@
+Label / Reference,Level,Issue,Suggestion
+Section 4.4,3,does not specify integration with external security systems.,"""The security system shall be capable of integrating with existing home security systems via standard communication protocols."""
+Section 5.3,3,does not include safety measures of children or disabled individuals,"""The system shall provide child safety locks and alerts for appliances to prevent accidental activation."""
+Section 5.4,2,does not specify encryption standards for data transmission.,"""All data transmitted between the DH system and external devices shall be encrypted using AES-256 encryption."""
+Section 5.5,3,does not specify procedures for software updates and patches.,"""The system shall support automatic software updates and patches, with user notifications and options to schedule updates."""
+Section 5.6,3,does not detail  user privacy and data ownership.,"""Users shall retain ownership of their data, and the system shall provide options to export or delete their data upon request."""

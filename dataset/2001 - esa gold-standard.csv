@@ -1,0 +1,7 @@
+Label / Reference,Level,Issue,Suggestion
+N/A,3,does not specify requirements for data redundancy and backup.,"""The APAF system shall implement data redundancy and backup procedures to ensure no data loss, with backups performed daily and stored at multiple locations."""
+N/A,3,does not mention a disaster recovery plan.,"""The APAF system shall maintain a detailed disaster recovery plan that includes procedures for daily data backups, offsite storage, and step-by-step instructions for system restoration."""
+APAF-DS-II-1,2,lacks specific data format and protocol details.,"""System Parameters shall be in JSON format, communicated via HTTPS."""
+APAF-PR-01,2,lacks comprehensive security measures.,"""All data transmitted between the APAF system and external interfaces shall be encrypted using AES-256 encryption."""
+APAF-CR-01 to APAF-CR-04,2,lacks specific details on hardware specifications and software dependencies.,"""The UNIX-based system shall have at least 1 GB RAM and 256 GB storage."""
+APAF-LR-01 to APAF-LR-02,2,does not specify detailed maintenance and support procedures.,"""The SwRI software team shall perform routine maintenance tasks on the APAF system monthly, including system updates, backups, and performance checks."""
