@@ -28,7 +28,7 @@ def test_single_document(pdf_path):
     initial_msg = llm.invoke(test_message)
     print(initial_msg.content)
 
-    pdf_path = "../dataset/" + pdf_path
+    # pdf_path = "../dataset/PURE/" + pdf_path
     pages = paginate_pdf(pdf_path)
 
     print("\nPAGE 6")
@@ -48,5 +48,5 @@ def print_results(results):
 
 if __name__ == '__main__':
     # main()
-    test_single_document("2001_esa.pdf")
+    test_single_document("../dataset/PURE/2001_esa.pdf")
 
