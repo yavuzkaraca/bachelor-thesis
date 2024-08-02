@@ -1,5 +1,5 @@
 Label / Reference,Level,Issue,Suggestion
-Glossary,1,lacks definition of FPGA.,"Expand the glossary to include ""FPGA."""
-RC10 and RC30,1,reference is not defined.,Clearly define the reference.
-NR40,2,lacks specific details about conditions under which this timing is measured.,"""The program startup time shall not exceed 10 seconds on a system with minimum specifications of an Intel i5 processor and 8GB RAM."""
+Glossary,1,lacks definition of FPGA.,Expand the glossary to include "FPGA."
+RC10 and RC30,1,reference is not defined.,define the reference.
 NR60,2,does not specify how extendability is to be achieved or measured.,"""The program shall be designed with modular architecture, allowing additional neural network models and hardware components to be integrated with minimal changes to existing code."""
+FR-A-30,2,does not specify recovery or program state when selection is improper., """... Improper Selection is undone and the previous state before the selection is still valid."""
