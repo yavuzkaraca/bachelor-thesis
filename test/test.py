@@ -1,7 +1,7 @@
 import csv_writer
 import invoker
 import llm_creator
-from dataset_retriever import paginate_pdf
+from dataset_loader import paginate_pdf
 
 test_path = "../dataset/PURE/2001_esa.pdf"
 

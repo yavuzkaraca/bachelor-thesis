@@ -21,7 +21,7 @@ def instructions():
     """
 
 
-def IEEE_guidelines():
+def ieee_guidelines():
     """
     Returns a string that describes the importance of completeness and the consequences of incompleteness
     in Software Requirements Specifications (SRS), along with IEEE guidelines for a complete SRS document.

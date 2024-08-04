@@ -1,7 +1,7 @@
 import invoker
 import llm_creator
 import templates
-from dataset_retriever import get_pdf_file_paths, paginate_pdf
+from dataset_loader import get_pdf_file_paths, paginate_pdf
 
 
 def main():
