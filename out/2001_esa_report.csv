@@ -1,0 +1,21 @@
+Label, Issue, Suggestion
+N/A, glossary is missing, Include a glossary with the definitions of each term used in the document.
+Section 1.2, does not specify the data formats for telemetry data, Add a requirement specifying the data formats for telemetry data.
+Section 2.2," does not define the term ""qualification methods"""," Add a definition for ""qualification methods"" in the glossary."
+Section 3.1, does not specify error handling for failed data processing, Add a requirement specifying the error handling procedures for failed data processing.
+APAF-FR-01, does not specify the frequency of data acquisition, Add a requirement specifying the frequency of data acquisition from ESOC.
+APAF-FR-02, does not specify the format of IDFS data sets, Add a requirement specifying the format of IDFS data sets.
+APAF-FR-07, does not specify the update frequency for web-based displays, Add a requirement specifying the update frequency for web-based displays.
+APAF-PR-01, does not specify the password protection mechanism, Add a requirement specifying the password protection mechanism for the web server.
+APAF-CR-02, does not specify the archival system details, Add a requirement specifying the details of the archival system for the production computer.
+APAF-DR-01a, does not specify the error handling for transmission failures, Add a requirement specifying the error handling procedures for transmission failures.
+APAF-DR-02c, does not specify the validation process for data before submission, Add a requirement specifying the validation process for data before submission to NASA PDS.
+APAF-DS-II-3, does not specify the format for virtual instrument descriptions, Add a requirement specifying the format for virtual instrument descriptions.
+APAF-DS-OI-1, does not specify the distribution method for IDFS data sets, Add a requirement specifying the distribution method for IDFS data sets.
+APAF-DS-OI-4, does not specify the content of web-based displays, Add a requirement specifying the content and format of web-based displays.
+Section 3.3, does not provide details on internal interfaces, Add detailed information on internal interfaces in the Software Design Documents.
+Section 3.4, does not provide details on internal data requirements, Add detailed information on internal data requirements in the Software Design Documents.
+Section 3.5, does not specify the handling of sensitive information, Add a requirement specifying the handling procedures for sensitive information.
+Section 3.9.4, does not specify software quality metrics, Add requirements specifying software quality metrics such as reliability, maintainability, and usability.
+Section 3.9.6, does not specify personnel-related requirements, Add requirements related to personnel training and qualifications for using the software.
+Section 3.9.7, does not specify training-related requirements, Add requirements specifying the training procedures for developers and users of the APAF data system.
