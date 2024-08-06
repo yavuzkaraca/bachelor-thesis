@@ -2,6 +2,9 @@ import csv
 import os
 from io import StringIO
 
+OPEN_AI_IDENTIFIER = "gpt4o"
+LLAMA_IDENTIFIER = "ollama"
+
 
 def save_results_to_csv(result, filename, output_dir="../out"):
     """
@@ -12,7 +15,6 @@ def save_results_to_csv(result, filename, output_dir="../out"):
     - output_dir: Directory where the CSV file will be saved.
     - filename: Name of the PDF file.
     """
-    filename += "_report.csv"
 
     # Ensure the output directory exists
     os.makedirs(output_dir, exist_ok=True)
@@ -46,3 +48,10 @@ def save_results_to_csv(result, filename, output_dir="../out"):
             writer.writerow(row)
 
     print(f"Results have been saved to {output_file}")
+
+
+def generate_filename(pdf_path, identifier):
+    basename = os.path.basename(pdf_path)
+    name_without_extension, _ = os.path.splitext(basename)
+    filename = name_without_extension + "_report_" + identifier + ".csv"
+    return filename

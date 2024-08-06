@@ -1,0 +1,13 @@
+otectal projections are the neural pathways that connect the retina to the tectum, preserving spatial relationships. This system is often used as a model for studying neural development and axon guidance. The growth cone is a dynamic structure at the tip of a growing axon or dendrite that explores the environment to find its path. It moves on a substrate, which can be physical or chemical.
+
+"The sigmoid function is an ""S""-shaped mathematical function often used to model growth and neural response functions", while the Gaussian distribution is a probability distribution characterized by a symmetric bell-shaped curve centered around a mean value, used to model randomness. Adaptation mechanisms allow growth cones to change their behavior based on past experiences and current conditions.
+
+Fiber-fiber interactions occur between axonal fibers and influence their growth and final connectivity, while fiber-target interactions affect growth direction and connectivity based on target-derived signals. Forward signal refers to Eph receptors on axonal growth cones interacting with ephrin ligands in the environment, leading to repulsive cues that guide the axon away from areas with high ephrin concentration. Reverse signal is when ephrin ligands on growth cones receive signals from Eph receptors in the environment, also leading to repulsive cues.
+
+Continuous gradients are gradual changes in chemical concentration across the substrate that guide axon growth direction. The stripe assay and gap assay are experimental setups used to study axon guidance. Tectum is a part of the brain involved in visual processing, and projection mapping is the visualization of how neural projections map from one area, such as the retina, to another, such as the tectum.
+
+The nasal (retinal region) refers to the area of the retina closer to the nose, while the temporal (retinal region) is closer to the temples. In retinotectal mapping, nasal retinal axons typically project to the anterior part of the tectum, and temporal retinal axons generally project to the posterior part of the tectum.
+
+References:
+[1] Gebhardt C, Bastmeyer M, Weth F. Balancing of ephrin/Eph forward and reverse signaling as the driving force of adaptive topographic mapping. Development. 2012 Jan;139(2):335-45. doi: 10.1242/dev.070474. Epub 2011 Dec 7. PMID: 22159582.
+[2] Felix Fiederling, Markus Weschenfelder, Martin Fritz, Anne von Philipsborn, Martin Bastmeyer, Franco Weth (2017) Ephrin-A/EphA specific co-adaptation as a novel mechanism in topographic axon guidance eLife 6:e2553

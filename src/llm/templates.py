@@ -14,8 +14,8 @@ def instructions():
     Example Output:
     Label, Issue, Suggestion
     N/A, glossary is missing, include a glossary with the definitions of each term used in the document.
-    R19, does not specify what happens if the message is ignored., add the requirement "If the immunization reminder is ignored, the system shall send an alert to the administrator."
-    Section 2.2, the term "alphanumeric characters"" is undefined., add the glossary entry "Alphanumeric Characters: Characters that consist of letters (A-Z, a-z) and numbers (0-9)."
+    R19, does not specify what happens if the message is ignored., add the requirement "If the immunization reminder is ignored, the system shall send an alert to the administrator".
+    Section 2.2, the term "alphanumeric characters"" is undefined., add the glossary entry "Alphanumeric Characters: Characters that consist of letters (A-Z, a-z) and numbers (0-9)".
     
     \n
     """

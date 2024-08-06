@@ -1,4 +1,4 @@
-from templates import ieee_guidelines, instructions, completeness_types
+from llm.templates import ieee_guidelines, instructions, completeness_types
 
 
 def analyze_pdf_incompleteness(llm, docs):
