@@ -26,7 +26,7 @@ def test_single_document(pdf_path):
 
     result = invoker.analyze_pdf_incompleteness(llm, pages)
     print(result)
-    csv_writer.save_results_to_csv(result, "2001_esa")
+    csv_writer.save_results_to_csv(result, "2001_esa_test.cv")
     return result
 
 
