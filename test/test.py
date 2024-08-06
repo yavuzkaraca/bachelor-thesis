@@ -21,7 +21,7 @@ def test_memory_and_pagination(pdf_path):
 
 
 def test_single_document(pdf_path):
-    llm = llm_creator.create_llm_openai()
+    llm = llm_creator.create_llm_ollama()
 
     pages = paginate_pdf(pdf_path)
 
