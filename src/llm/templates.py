@@ -10,7 +10,11 @@ def instructions():
     
     Output Format:
     Produce a CSV file with the following columns: "Label", "Issue", and "Suggestion". 
-
+    
+    Example Output:
+    R19, "does not specify what happens if the message is ignored", "If the immunization reminder is ignored, the system shall send an alert to the administrator"
+    Section 5.1, "does not specify total supported number of concurrent users", "The system shall handle up to 10,000 concurrent users without performance degradation"
+    FR-A-30, "does not specify recovery or program state when selection is improper", "Improper Selection is undone and the previous state before the selection is still valid"
     \n
     """
 

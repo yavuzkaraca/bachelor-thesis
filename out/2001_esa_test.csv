@@ -1,26 +1,13 @@
 Label,Issue,Suggestion
-N/A,The document does not define all terms and units of measure as required by IEEE guidelines.,Include a glossary section that defines all terms and units of measure used in the document.
-1.5,The related documents section does not provide complete references for all figures, tables, and diagrams.,Ensure that all figures, tables, and diagrams are fully labeled and referenced in the related documents section.
-3.1,The functional requirements do not specify responses to all realizable input data in all conceivable situations.,Add detailed descriptions of system responses to all possible input data, including edge cases and invalid inputs.
-3.2.1,The input interfaces table lacks detailed descriptions of the data formats and protocols used.,Provide detailed descriptions of the data formats and protocols for each input interface.
-3.2.2,The output interfaces table lacks detailed descriptions of the data formats and protocols used.,Provide detailed descriptions of the data formats and protocols for each output interface.
-3.3,The internal interface requirements are left to the design without any initial guidelines.,Provide initial guidelines or constraints for internal interface design to ensure consistency and compatibility.
-3.4,The internal data requirements are left to the design without any initial guidelines.,Provide initial guidelines or constraints for internal data requirements to ensure data integrity and consistency.
-3.5,The document states there are no security requirements but does not address potential security risks.,Conduct a security risk assessment and include relevant security requirements to mitigate identified risks.
-3.6,The computer resource requirements do not specify performance metrics such as response time and throughput.,Include performance metrics such as response time and throughput in the computer resource requirements.
-3.7,The logistics-related requirements do not specify the frequency and scope of system maintenance and software support.,Define the frequency and scope of system maintenance and software support in the logistics-related requirements.
-3.8,The delivery requirements do not specify the format and method of delivering the software and data.,Specify the format and method of delivering the software and data in the delivery requirements.
-3.9.1,The document states that the APAF data system is not required to operate in more than one state or mode without justification.,Provide justification for why the APAF data system is not required to operate in more than one state or mode.
-3.9.2,The document states there are no installation-dependent requirements without considering potential future needs.,Consider potential future installation-dependent requirements and document them if applicable.
-3.9.3,The document states there are no safety requirements without conducting a safety assessment.,Conduct a safety assessment and include relevant safety requirements if any hazards are identified.
-3.9.4,The document states there are no software quality requirements but mentions considering software quality factors.,Define specific software quality requirements based on the mentioned software quality factors.
-3.9.5,The document states there are no design and implementation constraints without considering potential constraints.,Consider potential design and implementation constraints and document them if applicable.
-3.9.6,The document states there are no personnel-related requirements without considering user training and support needs.,Consider user training and support needs and document relevant personnel-related requirements.
-3.9.7,The document states there are no training-related requirements without considering the complexity of the system.,Consider the complexity of the system and document relevant training-related requirements for users and operators.
-3.9.8,The document states there are no precedence and criticality requirements without considering the impact of requirement prioritization.,Consider the impact of requirement prioritization and document relevant precedence and criticality requirements.
-4.1,The baseline science requirements do not specify the data formats and validation criteria for the measurements.,Specify the data formats and validation criteria for each measurement in the baseline science requirements.
-4.2,The launch requirements do not specify the timeline and dependencies for software delivery.,Include a detailed timeline and dependencies for software delivery in the launch requirements.
-4.3,The ground system requirements do not specify the data packetization and storage strategies.,Define the data packetization and storage strategies in the ground system requirements.
-4.4,The science data management requirements do not specify the validation and calibration procedures for the scientific data.,Include detailed validation and calibration procedures for the scientific data in the science data management requirements.
-4.5,The analysis software requirements do not specify the integration process with the NASA approved data repository.,Define the integration process with the NASA approved data repository in the analysis software requirements.
-4.6,The data management plan requirements do not specify the roles and responsibilities for data handling.,Include detailed roles and responsibilities for data handling in the data management plan requirements.
+N/A,The document does not specify the total number of supported concurrent users.,"The system shall handle up to 10,000 concurrent users without performance degradation."
+Section 3.1,Does not specify what happens if the telemetry data acquisition fails.,"If telemetry data acquisition fails, the system shall retry up to three times before alerting the administrator."
+APAF-FR-01,Does not specify the frequency of data acquisition from ESOC.,The APAF system shall acquire telemetry data from ESOC every 24 hours.
+APAF-FR-02,Does not specify the format of the IDFS data sets.,The IDFS data sets shall be in a format compliant with the NASA Planetary Data System (PDS) standards.
+APAF-FR-07,Does not specify the update frequency for web-based displays.,Web-based displays of the most current ASPERA-3 data shall be updated every 15 minutes.
+APAF-PR-01,Does not specify the password policy for the web server.,"The APAF system web server shall enforce a strong password policy, requiring at least 12 characters, including uppercase, lowercase, numbers, and special characters."
+APAF-CR-04,Does not specify the bandwidth requirements for the network connection between SwRI and NISN.,The network connection between SwRI and NISN shall have a minimum bandwidth of 100 Mbps.
+APAF-LR-01,Does not specify the frequency of system maintenance.,SwRI shall provide APAF system maintenance on a quarterly basis.
+APAF-DR-01a,Does not specify the actions to be taken if the transmission and processing are not error-free.,"If the transmission and processing are not error-free, the system shall log the errors and notify the administrator for manual intervention."
+APAF-DR-02c,Does not specify the format for providing data to NASA PDS.,"ASPERA-3 data shall be provided to NASA PDS in a PDS-compliant format, including metadata and documentation."
+Section 3.9.4,Does not specify any software quality metrics.,"The APAF data system shall adhere to software quality metrics including reliability (99.9% uptime), maintainability (mean time to repair of 4 hours), and usability (user satisfaction score of 85%)."
+Section 3.9.7,Does not specify any training requirements for users and operators.,The APAF Operations Procedures Document shall include detailed training materials and guidelines for users and operators.
