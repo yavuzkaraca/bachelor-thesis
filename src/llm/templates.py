@@ -9,16 +9,22 @@ def instructions():
     3. Offering a correction/suggestion.
     
     Output Format:
-    Produce a CSV file with the following columns: "Label", "Issue", and "Suggestion".
+    Produce a CSV file with the following columns: "Label", "Issue", and "Suggestion". Never place comma (,)
+    within one cell, write "&" instead to avoid adding unwanted columns to CSV.
 
-    Example Output:
-    Label, Issue, Suggestion
-    N/A, glossary is missing, include a glossary with the definitions of each term used in the document.
-    R19, does not specify what happens if the message is ignored., add the requirement "If the immunization reminder is ignored, the system shall send an alert to the administrator".
-    Section 2.2, the term "alphanumeric characters"" is undefined., add the glossary entry "Alphanumeric Characters: Characters that consist of letters (A-Z, a-z) and numbers (0-9)".
-    
     \n
     """
+
+
+"""
+    Example Output (illustrative, not exhaustive):
+    Label, Issue, Suggestion
+    RQ1, << issue specific to the document >>, << suggestion specific to the document >>.
+    Section X.Y, << undefined term or concept >> is not defined., add the glossary entry "Term: Definition".
+    FR-63, missing format specification for file, specify the file format requirement (e.g., CSV, JSON).
+    N/A, glossary is missing, include a glossary with the definitions of terms if necessary.
+    
+"""
 
 
 def ieee_guidelines():
