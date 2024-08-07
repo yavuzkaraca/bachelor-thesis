@@ -19,21 +19,6 @@ def instructions():
     """
 
 
-"""
-    Never place a comma (,) within one cell, write "&" instead to avoid adding unwanted columns to CSV.
-"""
-
-"""
-    Example Output (illustrative, not exhaustive):
-    Label, Issue, Suggestion
-    RQ1, << issue specific to the document >>, << suggestion specific to the document >>.
-    Section X.Y, << undefined term or concept >> is not defined., add the glossary entry "Term: Definition".
-    FR-63, missing format specification for file, specify the file format requirement (e.g., CSV, JSON).
-    N/A, glossary is missing, include a glossary with the definitions of terms if necessary.
-    
-"""
-
-
 def ieee_guidelines():
     """
     Returns a string that describes the importance of completeness and the consequences of incompleteness
