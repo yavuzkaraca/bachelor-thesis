@@ -9,12 +9,15 @@ def instructions():
     3. Offering a correction/suggestion.
     
     Output Format:
-    Produce a CSV file with the following columns: "Label", "Issue", and "Suggestion". Never place comma (,)
-    within one cell, write "&" instead to avoid adding unwanted columns to CSV.
+    Produce a CSV file with the following columns: "Label", "Issue", and "Suggestion". 
 
     \n
     """
 
+
+"""
+    Never place a comma (,) within one cell, write "&" instead to avoid adding unwanted columns to CSV.
+"""
 
 """
     Example Output (illustrative, not exhaustive):
