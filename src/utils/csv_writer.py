@@ -1,3 +1,15 @@
+"""
+This module provides functions for processing analysis results and saving them to CSV files. It includes functionality for extracting CSV data from text and generating appropriate filenames for output files.
+
+Constants:
+    - OPEN_AI_IDENTIFIER: Identifier for the OpenAI model used.
+    - LLAMA_IDENTIFIER: Identifier for the LLama model used.
+
+Functions:
+    - save_results_to_csv: Extracts CSV data from a result string and saves it to a CSV file in the specified output directory.
+    - generate_filename: Generates a filename for the output CSV file based on the input PDF path and the model identifier.
+"""
+
 import csv
 import os
 from io import StringIO
@@ -8,14 +20,22 @@ LLAMA_IDENTIFIER = "ollama"
 
 def save_results_to_csv(result, filename, output_dir="../out"):
     """
-    Save the analysis results to a CSV file.
+    Saves the analysis results to a CSV file.
 
     Parameters:
-    - results: List of dictionaries containing analysis results with keys "Label", "Issue", and "Suggestion".
-    - output_dir: Directory where the CSV file will be saved.
-    - filename: Name of the PDF file.
-    """
+    - result: A string containing the analysis results, which includes a CSV section.
+    - filename: The name of the file where the results will be saved.
+    - output_dir: Directory where the CSV file will be saved (default is "../out").
 
+    The function:
+    1. Ensures the output directory exists.
+    2. Extracts the CSV section from the result string.
+    3. Parses the CSV data.
+    4. Writes the CSV data to the specified file.
+
+    Outputs:
+    - A CSV file saved in the specified directory containing the analysis results.
+    """
     # Ensure the output directory exists
     os.makedirs(output_dir, exist_ok=True)
 
@@ -51,6 +71,16 @@ def save_results_to_csv(result, filename, output_dir="../out"):
 
 
 def generate_filename(pdf_path, identifier):
+    """
+    Generates a filename for the output CSV file based on the PDF path and model identifier.
+
+    Parameters:
+    - pdf_path: The path to the PDF file that was analyzed.
+    - identifier: A string representing the model identifier (e.g., "gpt4o" or "ollama").
+
+    Returns:
+    - A string representing the generated filename, which includes the base name of the PDF, an identifier, and a ".csv" extension.
+    """
     basename = os.path.basename(pdf_path)
     name_without_extension, _ = os.path.splitext(basename)
     filename = name_without_extension + "_report_" + identifier + ".csv"

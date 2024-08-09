@@ -1,16 +1,45 @@
+"""
+This module provides template functions that generate standard prompts and guidelines for validating Software
+Specification Documents.
+
+Functions:
+    - instructions: Returns a detailed prompt instructing an assistant on how to identify and report incompleteness in
+    Software Specification Documents.
+    - ieee_guidelines: Returns a description of the importance of completeness in Software Requirements Specifications
+    (SRS) and outlines IEEE guidelines for ensuring a complete SRS document.
+    - completeness_types: Returns a detailed explanation of the concept of completeness in Software Requirements
+    Specifications (SRS) and outlines three levels of completeness in SRS documents.
+
+"""
+
+
 def instructions():
+    """
+    Provides a prompt for an assistant tasked with identifying incompleteness in Software Specification Documents.
+
+    The prompt details the steps the assistant should follow:
+        1. Refer to the requirement by its unique identifier, section number, or "N/A" if it's document-wide.
+        2. State the issue found.
+        3. Offer a correction or suggestion.
+
+    Output Format:
+        The output is expected to be a CSV file with columns: "Label", "Issue", and "Suggestion".
+
+    Returns:
+        A string containing the instructions and an example output.
+    """
     return """
     You are an assistant that identifies incompleteness in Software Specification Documents.
-    
+
     You will identify all the instances of incompleteness by:
     1. Referring to the requirement by its unique identifier/label, if it's a whole section than the section number.
     If it's document wide than you can say "N/A".
     2. Stating the issue.
     3. Offering a correction/suggestion.
-    
+
     Output Format:
     Produce a CSV file with the following columns: "Label", "Issue", and "Suggestion". 
-    
+
     Example Output:
     R19, "does not specify what happens if the message is ignored", "If the immunization reminder is ignored, the system shall send an alert to the administrator"
     Section 5.1, "does not specify total supported number of concurrent users", "The system shall handle up to 10,000 concurrent users without performance degradation"
@@ -21,8 +50,18 @@ def instructions():
 
 def ieee_guidelines():
     """
-    Returns a string that describes the importance of completeness and the consequences of incompleteness
-    in Software Requirements Specifications (SRS), along with IEEE guidelines for a complete SRS document.
+    Provides a summary of the significance of completeness in Software Requirements Specifications (SRS) and the IEEE
+    standards for a complete SRS.
+
+    The guidelines specify that an SRS is complete if it:
+        1. Includes all significant requirements (e.g., functionality, performance, design constraints, attributes, or
+        external interfaces).
+        2. Defines responses to all conceivable input data in any situation.
+        3. Provides complete labels and references for all figures, tables, and diagrams, and defines all terms and
+        units of measure.
+
+    Returns:
+        A string containing the IEEE guidelines and the rationale behind the importance of a complete SRS.
     """
     return """
     Incompleteness "causes uncertainty of the project foundations", which forces
@@ -41,11 +80,10 @@ def ieee_guidelines():
 
 def completeness_types():
     """
-    Provides a detailed explanation of the concept of completeness in Software
-    Requirements Specifications (SRS) and the importance of adhering to IEEE
-    guidelines. The function outlines three levels of completeness in SRS documents,
-    emphasizing the implications of incompleteness and the necessity for comprehensive
-    requirement documentation.
+    Provides a detailed explanation of the concept of completeness in Software Requirements Specifications (SRS)
+    and the importance of adhering to IEEE guidelines. The function outlines three levels of completeness in SRS
+    documents, emphasizing the implications of incompleteness and the necessity for comprehensive requirement
+    documentation.
     """
     return """
     7 Completeness
