@@ -1,0 +1,40 @@
+Label,Issue,Suggestion
+N/A,The document does not specify the version of the software being described.,Include a version number for the software in the document header or foreword.
+N/A,The document does not define all terms and units of measure used throughout the document.,Add a glossary section or define terms and units of measure where they first appear.
+Section 2.1,The scope of application does not specify any limitations or exclusions.,Include any limitations or exclusions in the scope of application.
+FR-10,Does not specify what happens if the user-defined configurations are invalid or missing.,Define error handling procedures for invalid or missing user configurations.
+FR-11,Does not specify what happens if the initialization fails.,Include error handling and recovery procedures for initialization failures.
+FR-12,Does not specify the range or constraints for the predefined probabilities for movement in the x and y directions.,Define the valid range or constraints for the x and y step probabilities.
+FR-13,Does not specify how the potential interactions are calculated or what factors are considered.,Provide a detailed description of the potential calculation method and factors involved.
+FR-14,Does not specify what happens if adaptation is not enabled or if adaptation parameters are invalid.,Define the default behavior when adaptation is not enabled and error handling for invalid adaptation parameters.
+FR-15,Does not specify the range or constraints for the force parameter.,Define the valid range or constraints for the force parameter.
+FR-16,Does not specify how the final state of the growth cones is recorded and returned.,Provide details on the format and method of recording and returning the final state of the growth cones.
+FR-20,Does not specify the valid range or constraints for the basic simulation parameters.,Define the valid range or constraints for each basic simulation parameter.
+FR-30,Does not specify the valid range or constraints for the advanced simulation parameters.,Define the valid range or constraints for each advanced simulation parameter.
+FR-31,Does not specify the valid range or constraints for the sigmoid function parameters.,Define the valid range or constraints for each sigmoid function parameter.
+FR-32,Does not specify the valid range or constraints for the adaptation parameters.,Define the valid range or constraints for each adaptation parameter.
+FR-33,Does not specify the valid range or constraints for the interaction switches.,Define the valid range or constraints for each interaction switch.
+FR-40,Does not specify the valid range or constraints for the substrate parameters.,Define the valid range or constraints for each substrate parameter.
+FR-41,Does not specify the valid range or constraints for the supported substrate types.,Define the valid range or constraints for each supported substrate type.
+FR-42,Does not specify the valid range or constraints for the continuous gradient parameters.,Define the valid range or constraints for each continuous gradient parameter.
+FR-43,Does not specify the valid range or constraints for the wedges parameters.,Define the valid range or constraints for each wedges parameter.
+FR-44,Does not specify the valid range or constraints for the stripe assay parameters.,Define the valid range or constraints for each stripe assay parameter.
+FR-45,Does not specify the valid range or constraints for the gap assay parameters.,Define the valid range or constraints for each gap assay parameter.
+FR-50,Does not specify the format or method of visualization for each item listed.,Provide details on the format and method of visualization for each item.
+FR-51,Does not specify the method used for calculating linear regression on projection mapping.,Provide details on the method used for calculating linear regression on projection mapping.
+FR-52,Does not specify the method used for smooth interpolation.,Provide details on the method used for smooth interpolation.
+FR-60,Does not specify the format or method for saving simulation results.,Provide details on the format and method for saving simulation results.
+FR-70,Does not specify how the estimated time remaining indicator is calculated or displayed.,Provide details on the calculation and display method for the estimated time remaining indicator.
+NR-10,Does not specify the maximum field size in terms of columns and rows.,Define the maximum field size in terms of columns and rows.
+NR-20,Does not specify the early stopping mechanisms or parallel computing algorithms to be used.,Provide details on the early stopping mechanisms and parallel computing algorithms to be used.
+NR-30,Does not specify the user interface or documentation to assist bioscientists with minimal programming knowledge.,Provide details on the user interface and documentation to assist bioscientists.
+NR-40,Does not specify the entry and exit points for integration with other applications.,Provide details on the entry and exit points for integration with other applications.
+CN-10,Does not specify the version of Python to be used for development.,Specify the version of Python to be used for development.
+CN-20,Does not specify the mathematical models to be used for calculations.,Provide references or descriptions of the mathematical models to be used for calculations.
+SE-10,Does not specify the minimum or recommended versions of the operating systems.,Specify the minimum or recommended versions of the operating systems.
+SE-20,Does not specify the minimum or recommended version of Python.,Specify the minimum or recommended version of Python.
+SE-30,Does not specify the versions of the Python libraries to be used.,Specify the versions of the Python libraries to be used.
+SE-40,Does not specify the version of Git to be used for version control.,Specify the version of Git to be used for version control.
+HE-10,Does not specify the minimum or recommended processor specifications.,Specify the minimum or recommended processor specifications.
+HE-20,Does not specify the minimum or recommended memory specifications.,Specify the minimum or recommended memory specifications.
+HE-30,Does not specify the minimum or recommended storage specifications.,Specify the minimum or recommended storage specifications.

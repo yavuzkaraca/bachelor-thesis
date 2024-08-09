@@ -1,0 +1,21 @@
+Label,Issue,Suggestion
+N/A,The document does not specify the expected performance metrics for the system.,"Define performance metrics such as response time, uptime, and maximum load capacity."
+N/A,The document does not specify the backup and recovery procedures for the system.,"Include a section detailing the backup frequency, storage, and recovery procedures in case of data loss."
+N/A,The document does not specify the user training requirements.,Add a section outlining the training programs or materials that will be provided to users.
+N/A,The document does not specify the hardware and software requirements for the system.,Include a section listing the minimum hardware and software requirements for running the system.
+N/A,The document does not specify the maintenance and support plan for the system.,"Add a section detailing the maintenance schedule, support contact information, and service level agreements."
+Section 1.1,The goals and objectives section does not specify measurable success criteria.,"Define specific, measurable success criteria for the project, such as user satisfaction ratings or reduction in administrative time."
+Section 1.2,The statement of scope does not mention any limitations or exclusions of the system.,Include a subsection that clearly states any limitations or exclusions of the system's functionality.
+R7,The requirement does not specify the process for resetting a user's password.,"Define the process for resetting a user's password, including who is authorized to perform the reset."
+R12,The requirement does not specify how a new password will be communicated to the user.,Specify the method of communication for delivering a new password to the user securely.
+R13,The requirement does not specify what happens to unsaved work when a user is logged off due to inactivity.,Define the behavior of the system regarding unsaved work when a user is logged off due to inactivity.
+R19,The requirement does not specify what happens if the immunization reminder is ignored.,"If the immunization reminder is ignored, the system shall send an alert to the administrator."
+R22,The requirement does not specify the format or content of the immunization notification on the invoice.,Define the format and content of the immunization notification that will be printed on the monthly invoice.
+R26,The requirement does not specify the retention period for account history data.,Specify the retention period for account history data and any archival procedures.
+R28,The requirement does not specify how late pick-up fees are calculated and applied.,Clarify the calculation method and application process for late pick-up fees.
+R29,The requirement does not specify the format or content of the invoices.,Define the format and content of the invoices that will be available for printing.
+R39,The requirement does not specify how the description of the change will be recorded.,Detail the format and content required for the description of changes recorded in the database.
+R41,The requirement does not specify the format or constraints for storing a child's photo.,"Define the format, size, and storage constraints for a child's photo in the system."
+R43,The requirement does not specify the format or constraints for customer log notes.,"Define the format, length, and storage constraints for customer log notes."
+R47,The requirement does not specify how the waiting list will be managed when it reaches its maximum capacity.,"Define the process for managing the waiting list when it reaches its maximum capacity, including any notification or prioritization mechanisms."
+R50,The requirement does not specify the criteria for measuring the 20-second response time.,Define the criteria and conditions under which the 20-second response time will be measured and validated.
