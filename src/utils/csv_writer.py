@@ -14,9 +14,6 @@ import csv
 import os
 from io import StringIO
 
-OPEN_AI_IDENTIFIER = "gpt4o"
-LLAMA_IDENTIFIER = "ollama"
-
 
 def save_results_to_csv(result, filename, output_dir="../out"):
     """
@@ -45,9 +42,6 @@ def save_results_to_csv(result, filename, output_dir="../out"):
 
     # Extract the CSV portion
     csv_data = result[csv_start:csv_end].strip()
-
-    # Parse the CSV data
-    csv_lines = csv_data.splitlines()
 
     # Use StringIO to simulate a file object for the csv reader
     csv_reader = csv.reader(StringIO(csv_data))

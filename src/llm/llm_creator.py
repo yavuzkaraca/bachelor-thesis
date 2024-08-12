@@ -65,7 +65,7 @@ def create_llm_ollama():
         An instance of ChatOllama ready for use.
     """
     llm = ChatOllama(
-        model="mixtral",
+        model="llama3:8b",
         temperature=0,
         max_tokens=None,
         timeout=None,

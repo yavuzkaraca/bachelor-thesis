@@ -26,7 +26,7 @@ def test_single_document(pdf_path):
 
     result = invoker.validate_full_prompt(llm, pages)
     print(result)
-    csv_writer.save_results_to_csv(result, "2001_esa_test.csv")
+    csv_writer.save_results_to_csv(result, "2001_esa_test_34b.csv")
     return result
 
 
