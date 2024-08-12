@@ -39,7 +39,7 @@ def instructions():
 
     Output Format:
     Produce a CSV file with the following columns: "Label", "Issue", and "Suggestion". Please ensure that each cell 
-    value in the CSV file is enclosed within double quote marks (")
+    value in the CSV file is enclosed within quote marks ("<content>").
 
     Example Output:
     "R19", "does not specify what happens if the message is ignored", "If the immunization reminder is ignored, the system shall send an alert to the administrator"
