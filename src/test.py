@@ -1,6 +1,6 @@
-from utils import csv_writer
-from llm import llm_creator, invoker
-from utils.dataset_loader import paginate_pdf
+from src.utils import csv_writer
+from src.llm import llm_creator, invoker
+from src.utils.dataset_loader import paginate_pdf
 
 test_path = "../dataset/PURE/2001_esa.pdf"
 
@@ -20,7 +20,7 @@ def test_memory_and_pagination(pdf_path):
 
 
 def test_single_document(pdf_path):
-    llm = llm_creator.create_llm_openai()
+    llm = llm_creator.create_llm_ollama()
 
     pages = paginate_pdf(pdf_path)
 
