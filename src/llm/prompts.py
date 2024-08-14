@@ -32,19 +32,19 @@ def instructions():
     You are an assistant that identifies incompleteness in Software Specification Documents.
 
     You will identify all the instances of incompleteness by:
-    1. Referring to the requirement by its unique identifier/label, if it's a whole section than the section number.
-    If it's document wide than you can say "N/A".
+    1. Referring to the requirement by its unique identifier/label. If it's more than one requirement then you can
+     refer to the section number. If it's document wide than you can say "N/A".
     2. Stating the issue.
     3. Offering a correction/suggestion.
 
     Output Format:
-    Produce a CSV file with the following columns: "Label", "Issue", and "Suggestion". Please ensure that each cell 
-    value in the CSV file is enclosed within quote marks ("<content>").
+    Produce a CSV file with the following columns: "Label", "Issue", and "Suggestion". Ensure that each cell 
+    value in the CSV file is separated with a semicolon (;).
 
     Example Output:
-    "R19", "does not specify what happens if the message is ignored", "If the immunization reminder is ignored, the system shall send an alert to the administrator"
-    "Section 5.1", "does not specify total supported number of concurrent users", "The system shall handle up to 10,000 concurrent users without performance degradation"
-    "FR-A-30", "does not specify recovery or program state when selection is improper", "Improper Selection is undone and the previous state before the selection is still valid"
+    R19; does not specify what happens if the message is ignored; If the immunization reminder is ignored, the system shall send an alert to the administrator
+    Section 5.1; does not specify total supported number of concurrent users; The system shall handle up to 10.000 concurrent users without performance degradation
+    FR-A-30; does not specify recovery or program state when selection is improper; Improper Selection is undone and the previous state before the selection is still valid
     \n
     """
 

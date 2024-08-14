@@ -44,20 +44,16 @@ def save_results_to_csv(result, filename, output_dir="../out"):
     csv_data = result[csv_start:csv_end].strip()
 
     # Use StringIO to simulate a file object for the csv reader
-    csv_reader = csv.reader(StringIO(csv_data))
-    headers = next(csv_reader)
+    csv_reader = csv.reader(StringIO(csv_data), delimiter=';')
 
     # Define the full path to the output file
     output_file = os.path.join(output_dir, filename)
 
     # Write the extracted CSV data to the output file
     with open(output_file, mode='w', newline='', encoding='utf-8') as csvfile:
-        writer = csv.writer(csvfile)
+        writer = csv.writer(csvfile, delimiter=',')
 
-        # Write the headers
-        writer.writerow(headers)
-
-        # Write the data rows
+        # Write the CSV data directly to the file
         for row in csv_reader:
             writer.writerow(row)
 

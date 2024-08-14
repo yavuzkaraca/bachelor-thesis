@@ -42,7 +42,7 @@ def create_llm_openai():
     llm = ChatOpenAI(
         model="gpt-4o",
         temperature=0,
-        max_tokens=None,
+        max_tokens=None,  # 4096?
         timeout=None,
         max_retries=2,
         api_key=OPENAI_API_KEY
@@ -67,7 +67,7 @@ def create_llm_ollama():
     llm = ChatOllama(
         model="llama3:8b",
         temperature=0,
-        max_tokens=None,
+        max_tokens=None,  # 4096?
         timeout=None,
         max_retries=2,
         base_url="https://ollama.vdl.sdq.kastel.kit.edu",
