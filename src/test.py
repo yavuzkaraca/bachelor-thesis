@@ -13,7 +13,6 @@ def test_memory_and_pagination(pdf_path):
     initial_msg = llm.invoke(test_message)
     print(initial_msg.content)
 
-    # pdf_path = "../dataset/PURE/" + pdf_path
     pages = paginate_pdf(pdf_path)
 
     print("\nPAGE 6")

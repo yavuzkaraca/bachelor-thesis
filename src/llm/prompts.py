@@ -33,7 +33,7 @@ def instructions():
 
     You will identify all the instances of incompleteness by:
     1. Referring to the requirement by its unique identifier/label. If it's more than one requirement then you can
-     refer to the section number. If it's document wide than you can say "N/A".
+     refer to the section number. If the section is totally missing than you can say "N/A".
     2. Stating the issue.
     3. Providing an example of a requirement that addresses the identified incompleteness.
 
@@ -42,9 +42,9 @@ def instructions():
     value in the CSV file is separated with a semicolon (;).
 
     Example Output:
-    R19; does not specify what happens if the message is ignored; If the immunization reminder is ignored, the system shall send an alert to the administrator
-    Section 5.1; does not specify total supported number of concurrent users; The system shall handle up to 10.000 concurrent users without performance degradation
-    FR-A-30; does not specify recovery or program state when selection is improper; Improper Selection is undone and the previous state before the selection is still valid
+    R19;does not specify what happens if the message is ignored;If the immunization reminder is ignored, the system shall send an alert to the administrator
+    Section 5.1;does not specify total supported number of concurrent users;The system shall handle up to 10.000 concurrent users without performance degradation
+    FR-A-30;does not specify recovery or program state when selection is improper;Improper Selection is undone and the previous state before the selection is still valid
     \n
     """
 

@@ -1,23 +1,20 @@
 Label / Reference,Level,Issue,Suggestion
 Glossary,1,lacks definition of FPGA.,Expand the glossary to include "FPGA."
-FR-A-30,2,does not specify recovery or program state when selection is improper., """... Improper Selection is undone and the previous state before the selection is still valid."""
-FR-U-20,2,does not refer to behavior specifying requirement., refer to FR-A-10
-FR-U-50,2,does not refer to behavior specifying requirement., refer to FR-A-10
-FR-U-30,2,does not refer to behavior specifying requirement., refer to PD20
-PD20,2,does not specify the maximum number of neural networks that can be imported,"""The system shall allow importing up to 10 neural networks simultaneously."""
-PD40,2,does not specify the maximum size of the runtime log file.,"""The system shall limit the runtime log file size to 10MB and create new log files when the limit is reached."""
-FR-U-60,2,does not refer to behavior specifying requirement., refer to PD10
-FR-U-100,2,does not refer to behavior specifying requirement., refer to PD30
-FR-U-80,2,does not specify the behavior if the inference fails., """If inference fails the program returns to parameter selection state and the error is printed as specified in FR-A-70."""
-Section 8,2,does not specify the performance requirements for the system.,"""Inference should not take longer than 10 seconds for each image"""
-NR60,2,does not specify how extendability is to be achieved or measured.,"""The program shall be designed with modular architecture, allowing additional neural network models and hardware components to be integrated with minimal changes to existing code."""
-Section 11,2,does not specify the performance testing tool to be used.,"""Qmlbench will be used as the performance testing tool."""
-
-
-N/A,Does not specify the expected behavior if the user tries to start an inference without selecting all required parameters,The system shall disable the 'Start the inference' button until all required parameters are selected
-N/A,Does not specify the expected behavior if the user tries to export results without running an inference,The system shall disable the 'Export results' button until an inference has been run
-N/A,Does not specify the expected behavior if the user tries to view results without running an inference,The system shall disable the 'View results' button until an inference has been run
-N/A,Does not specify the expected behavior if the user tries to select a hardware component that is not available,The system shall display an error message and prevent the selection of unavailable hardware components
-N/A,Does not specify the expected behavior if the user tries to import more than the maximum number of images,The system shall display an error message and prevent the import of more than 100 images
-N/A,Does not specify the expected behavior if the user tries to import a neural network topology that is not compatible with the specified hardware,The system shall display an error message and prevent the import of incompatible neural network topologies
-N/A,Does not specify the expected behavior if the user tries to start multiple inference instances simultaneously,The system shall prevent starting multiple inference instances simultaneously and display an appropriate message
+FR-A-30,2,does not specify recovery or program state when selection is improper.,"... Improper Selection is undone and the previous state before the selection is still valid."
+FR-A-40,2,does not specify the behavior if user tries to start multiple inference instances simultaneously,"... or an inference is already started."
+FR-U-20,2,does not refer to behavior specifying requirement.,refer to FR-A-10
+FR-U-30,2,does not refer to behavior specifying requirement.,refer to PD20
+FR-U-40,2,does not specify if the listed hardware are all available and how it's updated.,"The system shall display an error message and prevent the selection of unavailable hardware components"
+FR-U-50,2,does not refer to behavior specifying requirement.,refer to FR-A-10
+FR-U-60,2,does not refer to behavior specifying requirement.,refer to PD10
+FR-U-80,2,does not refer to behavior specifying requirement.,refer to FR-A-40
+FR-U-80,2,does not specify the behavior if the inference fails.,"If inference fails the program returns to parameter selection state and the error is printed as specified in FR-A-70."
+FR-U-100,2,does not refer to behavior specifying requirement.,refer to PD30
+FR-U-100,2,does not specify the behaviour if user tries to view results without running an inference,"The system shall disable the 'View results' button until an inference has been run, analogous to FR-A-40."
+FR-U-110,2,does not specify the behaviour if user tries to export results without running an inference,"The system shall disable the 'Export results' button until an inference has been run, analogous to FR-A-40."
+PD20,2,does not specify the maximum number of neural networks that can be imported,"The system shall allow importing up to 10 neural networks simultaneously."
+PD20,3,does not specify what kind of topology is supported,"The system shall allow importing only such topologies with nodes consisting: Relu, Abs, SoftMax, MaxPool, Flatten and Convolutional"
+PD40,2,does not specify the maximum size of the runtime log file.,"The system shall limit the runtime log file size to 10MB and create new log files when the limit is reached."
+Section 8,2,does not specify the performance requirements for the system.,"Inference should not take longer than 10 seconds for each image"
+NR60,2,does not specify how extendability is to be achieved or measured.,"The program shall be designed with modular architecture, allowing additional neural network models and hardware components to be integrated with minimal changes to existing code."
+Section 11,2,does not specify the performance testing tool to be used.,"Qmlbench will be used as the performance testing tool."
