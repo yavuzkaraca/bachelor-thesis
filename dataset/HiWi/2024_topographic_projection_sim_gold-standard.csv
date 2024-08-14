@@ -1,2 +1,17 @@
-Label / Reference,Level,Issue,Suggestion
-FR-11, 2, doesn't specify how the growth cones are configured, growth cones are configured by entering a min and max value for each ligand and receptor
+Label,Level,Issue,Correction,Native
+N/A,2,does not specify the behaviour if invalid parameters are given,"The system will be extended by a GUI that ensures users to set the parameters only to valid values",yes
+FR-11,2,does not specify how the growth cones are configured,"growth cones are configured by entering a min and max value for each ligand and receptor",yes
+FR-20,2,does not specify the range or limits for the parameters,"... must be a positive integer",yes
+FR-30,2,does not specify the range or limits for the parameters,"... must be a positive double",yes
+FR-30,2,does not specify the range or limits for the parameters,"... must be a positive double",yes
+FR-31,2,does not specify the range or limits for the parameters,"... must be a double",yes
+FR-32,2,does not specify the range or limits for the parameters,"... must be a positive double",yes
+FR-33,2,does not specify the range or limits for the parameters,"... must be a boolean",yes
+FR-40,2,does not specify the range or limits for the parameters,"... must be an integer",yes
+FR-42,2,does not specify the range or limits for the parameters,"... must be a positive double",yes
+FR-43,2,does not specify the range or limits for the parameters,"... must be a positive double",yes
+FR-44,2,does not specify the range or limits for the parameters,"... must be a positive double",yes
+FR-45,2,does not specify the range or limits for the parameters,"... must be a positive double",yes
+FR-60,2,does not detail the format for saving simulation results,"Textual format will be plain text while visual results are saved as png",yes
+FR-70,2,does not specify how the estimated time remaining indicator is calculated,"Remaining time is calculated by the ratio between current step number and total step number",yes
+CN-10,2,does not specify the version of Python to be used for development,"... to Python 3.8 or higher",yes
