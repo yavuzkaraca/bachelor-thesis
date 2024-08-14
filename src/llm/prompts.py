@@ -35,10 +35,10 @@ def instructions():
     1. Referring to the requirement by its unique identifier/label. If it's more than one requirement then you can
      refer to the section number. If it's document wide than you can say "N/A".
     2. Stating the issue.
-    3. Offering a correction/suggestion.
+    3. Providing an example of a requirement that addresses the identified incompleteness.
 
     Output Format:
-    Produce a CSV file with the following columns: "Label", "Issue", and "Suggestion". Ensure that each cell 
+    Produce a CSV file with the following columns: "Label", "Issue", and "Correction". Ensure that each cell 
     value in the CSV file is separated with a semicolon (;).
 
     Example Output:

@@ -27,7 +27,7 @@ def test_single_document(pdf_path):
 
     result = invoker.validate_instructions_only(llm, pages)
     print(result)
-    csv_writer.save_results_to_csv(result, "2022_esa_test_semicolon.csv")
+    csv_writer.save_results_to_csv(result, "2022_esa_test_example_as_suggestion.csv")
     return result
 
 

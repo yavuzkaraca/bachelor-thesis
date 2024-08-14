@@ -1,0 +1,11 @@
+Label,Issue,Correction
+N/A,No mention of how to handle data corruption during transmission,The system shall implement error-checking mechanisms to detect and correct data corruption during transmission.
+Section 3.1,Does not specify the maximum allowable downtime for the system,The system shall have a maximum allowable downtime of 1 hour per month.
+APAF-FR-07,Does not specify the frequency of updates for web-based displays,The web-based displays shall be updated every 5 minutes with the most current data.
+APAF-FR-09,Does not specify the types of errors to be handled,"The system shall handle errors including but not limited to data corruption, transmission failures, and processing errors."
+APAF-PR-01,Does not specify the method of password protection,The system web server shall use two-factor authentication for password protection.
+APAF-CR-02,Does not specify the storage capacity required for the archival system,The archival system shall have a minimum storage capacity of 10 TB.
+APAF-DR-01a,Does not specify what happens if transmission and processing are not error-free,"If transmission and processing are not error-free, the data shall be reprocessed and retransmitted within the next 24 hours."
+APAF-DR-02c,Does not specify the format for data submission to NASA PDS,The data shall be submitted to NASA PDS in a PDS4-compliant format.
+APAF-DS-II-4,Does not specify the type of operator input required,"The operator input shall include commands for data processing, error handling, and system maintenance."
+APAF-DS-OI-2,Does not specify the retention period for system logs,System logs shall be retained for a minimum of 5 years.
