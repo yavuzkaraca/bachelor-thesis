@@ -1,0 +1,14 @@
+Label,Issue,Correction
+3.2.1.4,does not specify the process for designating a Master user,The system shall provide an interface for the initial setup where the first user can designate a Master user.
+3.3.4,does not specify the specific hardware and software standards to be used,The system shall use IEEE 802.11 for wireless communication and TCP/IP for network communication.
+4.1.1,does not specify the types of web-ready devices supported,"The system shall support control via web-ready computers, smartphones, tablets, and PDAs."
+4.2.2,does not specify the process for adding or removing thermostats,The system shall provide an interface for adding or removing thermostats through the DH web server.
+4.3.2,does not specify the process for adding or removing humidistats,The system shall provide an interface for adding or removing humidistats through the DH web server.
+4.4.1,does not specify the process for adding or removing contact sensors,The system shall provide an interface for adding or removing contact sensors through the DH web server.
+4.5.2,does not specify the process for adding or removing power switches,The system shall provide an interface for adding or removing power switches through the DH web server.
+5.1,does not specify total supported number of concurrent users,"The system shall handle up to 10,000 concurrent users without performance degradation."
+5.2.2.2,does not specify the time frame for system recovery,The system shall recover and restore data within 5 minutes of a failure.
+5.4.1,does not specify the encryption standard to be used,The system shall use AES-256 encryption for securing user data.
+5.7.1,does not specify the format of the online documentation,The online documentation shall be provided in HTML and PDF formats.
+N/A,does not include a section on user interface requirements,The system shall provide a user-friendly graphical interface that is accessible via web browsers and mobile applications.
+``

@@ -4,6 +4,7 @@ from src.utils.dataset_loader import paginate_pdf
 
 test_path_esa = "../dataset/PURE/2001_esa.pdf"
 test_path_neutero = "../dataset/PSE/2022_neutero.pdf"
+test_path_home = "../dataset/PURE/2010_home_1.3.pdf"
 
 
 def test_memory_and_pagination(pdf_path):
@@ -26,9 +27,9 @@ def test_single_document(pdf_path):
 
     result = invoker.validate_instructions_only(llm, pages)
     print(result)
-    csv_writer.save_results_to_csv(result, "2001_esa_test_example_as_suggestion.csv")
+    csv_writer.save_results_to_csv(result, "2010_home_instructions.csv")
     return result
 
 
 if __name__ == '__main__':
-    test_single_document(test_path_esa)
+    test_single_document(test_path_home)

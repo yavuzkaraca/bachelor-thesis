@@ -1,6 +1,8 @@
-Label / Reference,Level,Issue,Suggestion
-Section 4.4,3,does not specify integration with external security systems.,"""The security system shall be capable of integrating with existing home security systems via standard communication protocols."""
-Section 5.3,3,does not include safety measures of children or disabled individuals,"""The system shall provide child safety locks and alerts for appliances to prevent accidental activation."""
-Section 5.4,2,does not specify encryption standards for data transmission.,"""All data transmitted between the DH system and external devices shall be encrypted using AES-256 encryption."""
-Section 5.5,3,does not specify procedures for software updates and patches.,"""The system shall support automatic software updates and patches, with user notifications and options to schedule updates."""
-Section 5.6,3,does not detail  user privacy and data ownership.,"""Users shall retain ownership of their data, and the system shall provide options to export or delete their data upon request."""
+Label,Level,Issue,Correction,Native
+N/A,does not include a section on user interface design,"The system shall provide a user-friendly interface with intuitive navigation, consistent layout, and responsive design for various devices."
+3.4.2.1,2,does not specify the type of home computer required for the DH home web server,"The DH home web server shall be hosted on a home computer running at least Windows 10, macOS 10.15, or a Linux distribution with kernel version 5.4 or higher.",yes
+4.4.1,2,does not specify the type of contact sensors and alarms,The DigitalHome security system shall use magnetic contact sensors and piezoelectric sound alarms.,yes
+5.2.2.2,3,does not specify the time required for system recovery,The system recovery mechanism shall restore system data within 5 minutes of a failure.,yes
+5.3.1,3,does not include safety measures of children or disabled individuals,"The system shall provide child safety locks and alerts for appliances to prevent accidental activation.",yes
+5.4.1,2,does not specify the encryption algorithm to be used,The DigitalHome web system shall use AES-256 encryption for securing user data.,yes
+5.6,3,does not detail  user privacy and data ownership.,"Users shall retain ownership of their data, and the system shall provide options to export or delete their data upon request.",yes

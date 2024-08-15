@@ -1,16 +1,20 @@
-Label / Reference,Level,Issue,Suggestion
-N/A,1,overview / overall description is missing,
-N/A,1,glossary is missing,
-N/A,1,design constraints are missing,"""The system shall support the latest versions of Chrome, Firefox, and Safari. It should also operate efficiently on hardware with at least 4GB RAM and a 2GHz processor."""
-N/A,1,cross-references are missing,
-N/A,1,does not include any performance requirements,"The system shall handle up to 200 concurrent users with a response time of less than 2 seconds for any operation."""
-N/A,1,user stories or use cases are missing,
-S2.2,1,"the term ""alphanumeric characters"" is undefined.","""Alphanumeric Characters: Characters that consist of letters (A-Z, a-z) and numbers (0-9)."""
-R2 & R39,2,does not specify time format,"Glossary Entry: Time (HH:MM): The time at which an action occurs, recorded in hours, minutes, and seconds. The time should be recorded in Coordinated Universal Time (UTC) to ensure consistency across different time zones."
-R1-R6,2,does not specify details on how the access privileges are managed and updated.,"""The system shall provide an interface for administrators to manage and update access privileges for each user role."""
-R7-R13,3,does not specify data encryption and audit logging.,"""All user data shall be encrypted using AES-256 encryption. The system shall log all user activities for auditing purposes."""
-R14-R17,2,does not specify how reminders are managed.,"""Users shall be able to manage their reminders, including viewing, editing, and deleting"""
-R14-R17,2,does not specify any limitations on the number of reminders.,"""Each user can set up to 10 active reminders at any given time."""
-R18,2,does not specify how this information is entered or updated.,"""The system shall allow authorized personnel to enter and update immunization dates through a secure form."""
-R19,2,does not specify what happens if the message is ignored.,"""If the immunization reminder is ignored, the system shall send an alert to the administrator."""
-R23-R29,3,does not specify details on customer disputes.,"""The system shall allow customers to dispute charges within 30 days of the invoice date."""
+Label,Level,Issue,Correction,Native
+N/A,1,overview / overall description is missing,,yes
+N/A,1,glossary is missing,,yes
+Section 1.1,2,The goals and objectives section does not specify measurable goals or success criteria.,"Include specific, measurable goals and success criteria for the project.",yes
+Section 1.2,2,"The statement of scope does not detail the boundaries of the system, such as what is out of scope.",Clearly define what functionalities and features are out of scope for the NCCM system.,yes
+R2,2,does not specify time format,"Glossary Entry: Time (HH:MM): The time at which an action occurs, recorded in hours, minutes, and seconds. The time should be recorded in Coordinated Universal Time (UTC) to ensure consistency across different time zones.",yes
+Section 2.1,2,does not specify details on how the access privileges are managed and updated.,"The system shall provide an interface for administrators to manage and update access privileges for each user role.",yes
+R10,1,"the term ""alphanumeric characters"" is undefined.","Alphanumeric Characters: Characters that consist of letters (A-Z, a-z) and numbers (0-9).",yes
+R12,2,does not specify the process for resetting a forgotten password.,"The system shall provide a 'Forgot Password' feature that allows users to reset their password via email verification.",yes
+R13,3,does not specify what happens to unsaved data when a user is logged off due to inactivity.,The system shall save the user's work automatically before logging off due to inactivity.,yes
+Section 2.2,3,does not specify data encryption and audit logging.,"All user data shall be encrypted using AES-256 encryption. The system shall log all user activities for auditing purposes.",yes
+Section 2.3,2,does not specify how reminders are managed.,"Users shall be able to manage their reminders, including viewing, editing, and deleting",yes
+Section 2.3,2,does not specify any limitations on the number of reminders.,"Each user can set up to 10 active reminders at any given time.",yes
+R18,2,does not specify how this information is entered or updated.,"The system shall allow authorized personnel to enter and update immunization dates through a secure form.",yes
+Section 2.5,3,does not specify details on customer disputes.,"The system shall allow customers to dispute charges within 30 days of the invoice date.",yes
+R29,2,does not specify the format or details included in the invoices.,"Invoices shall include a breakdown of charges, payment due date, and any applicable discounts or late fees.",yes
+R39,2,does not specify date format,"Glossary Entry: Date (DD:MM:YYYY): The date at which an action occurs.",yes
+R47,3,does not specify how the waiting list is managed and how parents are notified of openings.,"The waiting list shall be managed on a first-come, first-served basis, and parents shall be notified of openings via email or phone.",yes
+R47,2,The requirement does not specify how the waiting list will be managed when it reaches its maximum capacity.,"Define the process for managing the waiting list when it reaches its maximum capacity, including any notification or prioritization mechanisms.",yes
+Section 4,2,does not specify the hardware and software requirements for the Web server supporting ASP.NET.,"The Web server shall have at least 8GB RAM, a quad-core processor, and run Windows Server 2016 or later with IIS installed.",yes

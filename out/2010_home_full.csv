@@ -1,0 +1,15 @@
+Label,Issue,Correction
+3.2.1.4,does not specify the process for designating a Master user,The system shall provide an interface for the initial setup where the first user can be designated as the Master user.
+3.3.3,does not specify the development process to be used,The development team shall use the Agile development process specified by Digital HomeOwner Inc.
+3.4.2.1,does not specify the type of home computer required for the DH home web server,"The DH home web server shall be hosted on a home computer running at least Windows 10, macOS 10.15, or a Linux distribution with kernel version 5.4 or higher."
+4.1.1,does not specify the supported web browsers for accessing the system,"The DigitalHome System shall support the latest versions of Chrome, Firefox, Safari, and Edge browsers."
+4.2.1.2,does not specify the default temperature setting,The default temperature setting for the thermostat shall be 72°F.
+4.3.1.2,does not specify the default humidity setting,The default humidity setting for the humidistat shall be 45%.
+4.4.1,does not specify the type of contact sensors and alarms,The DigitalHome security system shall use magnetic contact sensors and piezoelectric sound alarms.
+4.5.2,does not specify the type of power switches,"The Appliance Manager shall be able to manage up to one hundred 115 volt, 10 amp smart power switches."
+5.1.1,does not specify the maximum number of devices that can be updated simultaneously,The system shall be able to update the status of up to 50 devices simultaneously every two seconds.
+5.2.2.2,does not specify the time required for system recovery,The system recovery mechanism shall restore system data within 5 minutes of a failure.
+5.4.1,does not specify the encryption algorithm to be used,The DigitalHome web system shall use AES-256 encryption for securing user data.
+5.5.1.1,does not specify the format for documentation,All documentation shall be provided in PDF format and follow the HomeOwner document format [HO2305].
+5.7.1.3,does not specify the format of the DH Planner documentation,The DH Planner documentation shall be provided in HTML format accessible through the DigitalHome web interface.
+N/A,does not include a section on user interface design,"The system shall provide a user-friendly interface with intuitive navigation, consistent layout, and responsive design for various devices."
