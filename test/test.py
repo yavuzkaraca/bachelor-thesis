@@ -49,9 +49,9 @@ def test_single_document(pdf_path):
     result = invoker.validate_instructions_only(llm, pages)
     print(result)
 
-    csv_writer.save_results_to_csv(result, "2010_home_test.csv")
+    csv_writer.save_results_to_csv(result, "neutero_gpt_instruction_only.csv")
     return result
 
 
 if __name__ == '__main__':
-    test_single_document(test_path_home)
+    test_single_document(test_path_neutero)

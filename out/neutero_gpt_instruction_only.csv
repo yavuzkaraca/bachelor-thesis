@@ -1,0 +1,46 @@
+Label,Issue,Correction
+MC10,does not specify the supported formats for neural network topology,The program shall support importing neural network topologies in ONNX format.
+MC60,does not specify the supported formats for input images,"The program shall support importing input images in JPEG, JPG, and PNG formats."
+MC90,does not specify the unit of processing time,The processing time in seconds is shown to the user after the inference is finished.
+MC100,does not specify the format of the error message,"If a missing hardware component is selected, an error message in plain text format shall be shown to the user."
+MC120,does not specify the format for exporting results and diagnostic data,The program shall export results and diagnostic data in CSV format.
+OC10,does not specify the model of FPGA supported,The program shall support FPGA model Terasic DE1-SOC.
+OC20,does not specify the state of the program after aborting the inference,"After aborting the inference, the program shall return to the initial state with all previous selections preserved."
+OC30,does not specify the format of elapsed time,The elapsed time in seconds is shown to the user while the inference is running.
+OC40,does not specify the maximum number of images that can be imported,The program shall allow importing up to 100 images at a time.
+OC50,does not specify how the results are displayed when multiple hardware components are selected,The program shall display the inference results for each hardware component in a separate section.
+OC60,does not specify the action taken if Intel Movidius is not detected,"If Intel Movidius is not detected, an error message shall be shown to the user."
+OC70,does not specify the types of comparative graphs,The program shall show comparative graphs for processing time and accuracy across different hardware components.
+OC80,does not specify the type of graph for inference results,Inference results shall be shown as a bar graph indicating confidence percentages.
+OC90,does not specify the maximum number of repeated inferences,The program shall allow running an inference up to 10 times with the same arguments.
+OC100,does not specify which languages are supported,"The program shall support English, German, and French languages."
+OC110,does not specify the maximum number of neural network topologies that can be imported,The program shall allow importing up to 10 neural network topologies.
+RC10,does not specify the operating system,The program can only be run on Ubuntu 20.04.
+RC30,does not specify the compatible neural network topologies,Only neural network topologies in ONNX format are supported.
+FR-U-10,does not specify the format of the neural network list,The list of neural networks shall be shown in a drop-down menu.
+FR-U-20,does not specify the action taken if no neural network is selected,"If no neural network is selected, an error message shall be shown to the user."
+FR-U-30,does not specify the supported formats for importing neural networks,The program shall support importing neural networks in ONNX format.
+FR-U-40,does not specify the format of the hardware component list,The list of hardware components shall be shown in a drop-down menu.
+FR-U-50,does not specify the action taken if no hardware component is selected,"If no hardware component is selected, an error message shall be shown to the user."
+FR-U-60,does not specify the supported formats for input images,"The program shall support importing input images in JPEG, JPG, and PNG formats."
+FR-U-70,does not specify the action taken if no image is selected,"If no image is selected, an error message shall be shown to the user."
+FR-U-80,does not specify the action taken if the inference fails,"If the inference fails, an error message shall be shown to the user."
+FR-U-100,does not specify the format of the results,The results shall be shown in a pop-up window in tabular format.
+FR-U-110,does not specify the format for exporting results,The results and diagnostic data shall be exported in CSV format.
+FR-U-120,does not specify the state of the program after aborting the inference,"After aborting the inference, the program shall return to the initial state with all previous selections preserved."
+FR-U-130,does not specify the maximum number of images that can be imported,The program shall allow importing up to 100 images at a time.
+FR-U-140,does not specify the action taken if the reordering fails,"If the reordering of images fails, an error message shall be shown to the user."
+FR-U-150,does not specify the action taken if multiple hardware components are selected,"If multiple hardware components are selected, the program shall run the inference on each component sequentially."
+FR-U-160,does not specify the types of graphs for benchmarking,The program shall show comparative graphs for processing time and accuracy across different hardware components.
+FR-U-170,does not specify the maximum number of repeated inferences,The program shall allow running an inference up to 10 times with the same arguments.
+FR-U-180,does not specify which languages are supported,"The program shall support English, German, and French languages."
+FR-U-190,does not specify the action taken if the removal of neural network fails,"If the removal of a neural network fails, an error message shall be shown to the user."
+FR-A-10,does not specify the format of error and warning messages,Error and warning messages shall be shown in plain text format in the run-time log.
+FR-A-20,does not specify the size of image thumbnails,Thumbnails of imported images shall be shown in a 100x100 pixel grid.
+FR-A-30,does not specify the types of argument conflicts,"Argument conflicts shall include missing selections, incompatible hardware, and unsupported image formats."
+FR-A-40,does not specify the action taken if the start button is disabled,"If the start button is disabled, an error message shall be shown to the user."
+FR-A-50,does not specify the type of loading animation,The loading animation shall be a spinning wheel.
+FR-A-60,does not specify the format of the completion message,The completion message shall be shown in a pop-up window.
+FR-A-70,does not specify the format of the run-time log file,The run-time log file shall be in plain text format.
+FR-A-80,does not specify the duration for which arguments are preserved,Arguments shall be preserved until the program is terminated.
+``

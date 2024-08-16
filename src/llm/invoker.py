@@ -22,9 +22,17 @@ def validate_full_prompt(llm, docs):
     Returns:
         The content of the LLM's response.
     """
-    messages = [
+    """messages = [
         {"role": "user", "content": instructions() + ieee_guidelines() + completeness_types() + "\n".join(
             [doc.page_content for doc in docs])}
+    ]"""
+
+    messages = [
+        (
+            "system",
+            instructions() + ieee_guidelines() + completeness_types(),
+        ),
+        ("human", "\n".join([doc.page_content for doc in docs])),
     ]
 
     response = llm.invoke(messages)
@@ -62,9 +70,18 @@ def validate_instructions_only(llm, docs):
     Returns:
         The content of the LLM's response.
     """
-    messages = [
+
+    """messages = [
         {"role": "user", "content": instructions() + "\n".join(
             [doc.page_content for doc in docs])}
+    ]"""
+
+    messages = [
+        (
+            "system",
+            instructions(),
+        ),
+        ("human", "\n".join([doc.page_content for doc in docs])),
     ]
 
     response = llm.invoke(messages)
