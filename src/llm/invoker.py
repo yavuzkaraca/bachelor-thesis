@@ -16,7 +16,7 @@ from langchain_core.chat_history import (
 from langchain_core.runnables.history import RunnableWithMessageHistory
 
 from llm.prompts import generate_ieee_guidelines, instructions_few_shot, system_default_role, \
-    instructions_zero_shot, system_engineer_role, instructions_chain_of_thought
+    instructions_zero_shot, system_engineer_role, instructions_chain_of_thought,completeness_types
 
 
 def generated_knowledge(llm, docs):
@@ -167,6 +167,29 @@ def chain_of_thought(llm, docs):
             "system", system_default_role()
         ),
         ("user", instructions_chain_of_thought() + "\n".join([doc.page_content for doc in docs])),
+    ]
+
+    response = llm.invoke(messages)
+    return response.content
+
+
+def provided_completeness_types(llm, docs):
+    """
+    Validates documents using a minimal prompt containing only instructions.
+
+    Args:
+        llm: The language model instance to invoke.
+        docs: A list of document objects to validate.
+
+    Returns:
+        The content of the LLM's response.
+    """
+
+    messages = [
+        (
+            "system", system_default_role()
+        ),
+        ("user", instructions_few_shot() + completeness_types() + "\n".join([doc.page_content for doc in docs])),
     ]
 
     response = llm.invoke(messages)
