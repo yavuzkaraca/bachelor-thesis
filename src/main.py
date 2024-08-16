@@ -1,8 +1,8 @@
-from pipeline import gpt4o_process_all, ollama_process_all
+from pipeline import openai_process_all, ollama_process_all
 
 
 def main():
-    gpt4o_process_all()
+    openai_process_all()
     # ollama_process_all()
 
 

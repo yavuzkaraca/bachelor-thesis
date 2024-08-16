@@ -62,7 +62,7 @@ def process_all_pdfs_all_prompt_variants(llm, identifier, output_base_dir):
     return results
 
 
-def gpt4o_process_all(output_base_dir="../out"):
+def openai_process_all(output_base_dir="../out"):
     """
     Processes all PDF files in the dataset using the GPT-4o model.
 
