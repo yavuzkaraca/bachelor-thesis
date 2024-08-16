@@ -44,17 +44,17 @@ def process_all_pdfs_all_prompt_variants(llm, identifier, output_base_dir):
     for pdf_path in pdf_paths:
         pages = paginate_pdf(pdf_path)
 
-        result_full_prompt = invoker.validate_full_prompt(llm, pages)
+        result_full_prompt = invoker.generated_knowledge_all(llm, pages)
         csv_writer.save_results_to_csv(result_full_prompt, generate_filename(pdf_path, identifier),
                                        os.path.join(output_base_dir, "full_prompt"))
         results[pdf_path, 0] = result_full_prompt
 
-        result_instructions_ieee = invoker.validate_instructions_ieee(llm, pages)
+        result_instructions_ieee = invoker.generated_knowledge_ieee(llm, pages)
         csv_writer.save_results_to_csv(result_instructions_ieee, generate_filename(pdf_path, identifier),
                                        os.path.join(output_base_dir, "instructions_ieee"))
         results[pdf_path, 1] = result_instructions_ieee
 
-        result_instructions_only = invoker.validate_instructions_only(llm, pages)
+        result_instructions_only = invoker.few_shot(llm, pages)
         csv_writer.save_results_to_csv(result_instructions_only, generate_filename(pdf_path, identifier),
                                        os.path.join(output_base_dir, "instructions_only"))
         results[pdf_path, 2] = result_instructions_only

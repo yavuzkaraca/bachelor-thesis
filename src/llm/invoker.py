@@ -7,11 +7,11 @@ Functions:
     - validate_with_instructions_only: Validates documents using a prompt containing only instructions.
 """
 
+from llm.prompts import ieee_guidelines, instructions_few_shot, completeness_types, system_default_role, \
+    instructions_zero_shot, system_engineer_role, instructions_chain_of_thought
 
-from llm.prompts import ieee_guidelines, instructions, completeness_types
 
-
-def validate_full_prompt(llm, docs):
+def generated_knowledge_all(llm, docs):
     """
     Validates documents using a comprehensive prompt combining instructions, IEEE guidelines, and completeness types.
 
@@ -22,24 +22,19 @@ def validate_full_prompt(llm, docs):
     Returns:
         The content of the LLM's response.
     """
-    """messages = [
-        {"role": "user", "content": instructions() + ieee_guidelines() + completeness_types() + "\n".join(
-            [doc.page_content for doc in docs])}
-    ]"""
-
     messages = [
         (
-            "system",
-            instructions() + ieee_guidelines() + completeness_types(),
+            "system", system_default_role()
         ),
-        ("human", "\n".join([doc.page_content for doc in docs])),
+        ("user", instructions_few_shot() + ieee_guidelines() + completeness_types()
+         + "\n".join([doc.page_content for doc in docs])),
     ]
 
     response = llm.invoke(messages)
     return response.content
 
 
-def validate_instructions_ieee(llm, docs):
+def generated_knowledge_ieee(llm, docs):
     """
     Validates documents using a prompt that includes instructions and IEEE guidelines, but excludes completeness types.
 
@@ -51,15 +46,17 @@ def validate_instructions_ieee(llm, docs):
         The content of the LLM's response.
     """
     messages = [
-        {"role": "user", "content": instructions() + ieee_guidelines() + "\n".join(
-            [doc.page_content for doc in docs])}
+        (
+            "system", system_default_role()
+        ),
+        ("user", instructions_few_shot() + ieee_guidelines() + "\n".join([doc.page_content for doc in docs])),
     ]
 
     response = llm.invoke(messages)
     return response.content
 
 
-def validate_instructions_only(llm, docs):
+def few_shot(llm, docs):
     """
     Validates documents using a minimal prompt containing only instructions.
 
@@ -71,17 +68,104 @@ def validate_instructions_only(llm, docs):
         The content of the LLM's response.
     """
 
-    """messages = [
-        {"role": "user", "content": instructions() + "\n".join(
-            [doc.page_content for doc in docs])}
-    ]"""
+    messages = [
+        (
+            "system", system_default_role()
+        ),
+        ("user", instructions_few_shot() + "\n".join([doc.page_content for doc in docs])),
+    ]
+
+    response = llm.invoke(messages)
+    return response.content
+
+
+def zero_shot(llm, docs):
+    """
+    Validates documents using a minimal prompt containing only instructions.
+
+    Args:
+        llm: The language model instance to invoke.
+        docs: A list of document objects to validate.
+
+    Returns:
+        The content of the LLM's response.
+    """
 
     messages = [
         (
-            "system",
-            instructions(),
+            "system", system_default_role()
         ),
-        ("human", "\n".join([doc.page_content for doc in docs])),
+        ("user", instructions_zero_shot() + "\n".join([doc.page_content for doc in docs])),
+    ]
+
+    response = llm.invoke(messages)
+    return response.content
+
+
+def engineer_persona(llm, docs):
+    """
+    Validates documents using a minimal prompt containing only instructions.
+
+    Args:
+        llm: The language model instance to invoke.
+        docs: A list of document objects to validate.
+
+    Returns:
+        The content of the LLM's response.
+    """
+
+    messages = [
+        (
+            "system", system_engineer_role()
+        ),
+        ("user", instructions_few_shot() + "\n".join([doc.page_content for doc in docs])),
+    ]
+
+    response = llm.invoke(messages)
+    return response.content
+
+
+def repeated_instructions(llm, docs):
+    """
+    Validates documents using a minimal prompt containing only instructions.
+
+    Args:
+        llm: The language model instance to invoke.
+        docs: A list of document objects to validate.
+
+    Returns:
+        The content of the LLM's response.
+    """
+
+    messages = [
+        (
+            "system", system_engineer_role()
+        ),
+        ("user", instructions_few_shot() + "\n".join([doc.page_content for doc in docs])
+         + "\n" + instructions_few_shot()),
+    ]
+
+    response = llm.invoke(messages)
+    return response.content
+
+
+def chain_of_thought(llm, docs):
+    """
+    Validates documents using a minimal prompt containing only instructions.
+
+    Args:
+        llm: The language model instance to invoke.
+        docs: A list of document objects to validate.
+
+    Returns:
+        The content of the LLM's response.
+    """
+
+    messages = [
+        (
+            "system", system_default_role()
+        ),
+        ("user", instructions_chain_of_thought() + "\n".join([doc.page_content for doc in docs])),
     ]
 
     response = llm.invoke(messages)

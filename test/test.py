@@ -46,7 +46,7 @@ def test_single_document(pdf_path):
 
     pages = paginate_pdf(pdf_path)
 
-    result = invoker.validate_instructions_only(llm, pages)
+    result = invoker.few_shot(llm, pages)
     print(result)
 
     csv_writer.save_results_to_csv(result, "neutero_gpt_instruction_only.csv")
