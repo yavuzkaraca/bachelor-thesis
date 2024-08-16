@@ -6,12 +6,20 @@ Functions:
     - validate_without_completeness_types: Validates documents using a prompt containing instructions and IEEE guidelines, excluding completeness types.
     - validate_with_instructions_only: Validates documents using a prompt containing only instructions.
 """
+from langchain_core.messages import HumanMessage
 
-from llm.prompts import ieee_guidelines, instructions_few_shot, completeness_types, system_default_role, \
+from langchain_core.chat_history import (
+    BaseChatMessageHistory,
+    InMemoryChatMessageHistory,
+)
+
+from langchain_core.runnables.history import RunnableWithMessageHistory
+
+from llm.prompts import generate_ieee_guidelines, instructions_few_shot, system_default_role, \
     instructions_zero_shot, system_engineer_role, instructions_chain_of_thought
 
 
-def generated_knowledge_all(llm, docs):
+def generated_knowledge(llm, docs):
     """
     Validates documents using a comprehensive prompt combining instructions, IEEE guidelines, and completeness types.
 
@@ -22,37 +30,30 @@ def generated_knowledge_all(llm, docs):
     Returns:
         The content of the LLM's response.
     """
+
+    store = {}
+
+    def get_session_history(session_id: str) -> BaseChatMessageHistory:
+        if session_id not in store:
+            store[session_id] = InMemoryChatMessageHistory()
+        return store[session_id]
+
+    with_message_history = RunnableWithMessageHistory(llm, get_session_history)
+
+    config = {"configurable": {"session_id": "abc"}}
+
+    first_response = with_message_history.invoke([HumanMessage(content=generate_ieee_guidelines())],
+                                                 config=config)
+    print(first_response.content)
+
     messages = [
-        (
-            "system", system_default_role()
-        ),
-        ("user", instructions_few_shot() + ieee_guidelines() + completeness_types()
-         + "\n".join([doc.page_content for doc in docs])),
+        ("system", system_default_role()),
+        ("user", instructions_few_shot() + "\n".join([doc.page_content for doc in docs])),
     ]
 
-    response = llm.invoke(messages)
-    return response.content
+    response = with_message_history.invoke(messages, config=config)
+    print(response.content)
 
-
-def generated_knowledge_ieee(llm, docs):
-    """
-    Validates documents using a prompt that includes instructions and IEEE guidelines, but excludes completeness types.
-
-    Args:
-        llm: The language model instance to invoke.
-        docs: A list of document objects to validate.
-
-    Returns:
-        The content of the LLM's response.
-    """
-    messages = [
-        (
-            "system", system_default_role()
-        ),
-        ("user", instructions_few_shot() + ieee_guidelines() + "\n".join([doc.page_content for doc in docs])),
-    ]
-
-    response = llm.invoke(messages)
     return response.content
 
 

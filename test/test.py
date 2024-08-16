@@ -53,5 +53,31 @@ def test_single_document(pdf_path):
     return result
 
 
+def generate_ieee():
+    """
+    This is just for testing a single document to not consume unnecessary API Calls
+    """
+    llm = llm_creator.create_llm_openai()
+
+    message = [{"role": "user", "content": "Provide the IEEE guidelines for Software Requirement Specification"
+                                           "documents about the Completeness aspect. According to IEEE, documents"
+                                           "should fulfill three things to be complete. What are these?"}]
+    answer = llm.invoke(message)
+
+    print(answer.content)
+
+
+def test_generated_knowledge():
+    """
+    This is just for testing a single document to not consume unnecessary API Calls
+    """
+    llm = llm_creator.create_llm_openai()
+    pages = paginate_pdf(test_path_esa)
+
+    invoker.generated_knowledge(llm,pages)
+
+
 if __name__ == '__main__':
-    test_single_document(test_path_neutero)
+    # test_single_document(test_path_neutero)
+    # generate_ieee()
+    test_generated_knowledge()
