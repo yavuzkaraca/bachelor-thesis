@@ -104,17 +104,6 @@ def zero_shot(llm, docs):
 
 
 def engineer_persona(llm, docs):
-    """
-    Validates documents using a minimal prompt containing only instructions.
-
-    Args:
-        llm: The language model instance to invoke.
-        docs: A list of document objects to validate.
-
-    Returns:
-        The content of the LLM's response.
-    """
-
     messages = [
         (
             "system", system_engineer_role()
@@ -127,20 +116,9 @@ def engineer_persona(llm, docs):
 
 
 def repeated_instructions(llm, docs):
-    """
-    Validates documents using a minimal prompt containing only instructions.
-
-    Args:
-        llm: The language model instance to invoke.
-        docs: A list of document objects to validate.
-
-    Returns:
-        The content of the LLM's response.
-    """
-
     messages = [
         (
-            "system", system_engineer_role()
+            "system", system_default_role()
         ),
         ("user", instructions_few_shot() + "\n".join([doc.page_content for doc in docs])
          + "\n" + instructions_few_shot()),

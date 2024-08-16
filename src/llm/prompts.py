@@ -22,7 +22,7 @@ def system_engineer_role():
 
 def system_default_role():
     return """
-    You are an AI assistant that identifies incompleteness in Software Requirement Specification documents.
+    You are an AI assistant that validates completeness in Software Requirement Specification documents.
     """
 
 
@@ -77,7 +77,8 @@ def instructions_chain_of_thought():
     """
     return """
     First, read the following document thoroughly and identify all the instances of incompleteness.
-    Then explain the reason of incompleteness for each instance referring to their unique identifier.
+    Then, take your time and think about these instances if they really are accurate and valid.
+    After that, explain the reason of incompleteness for each instance referring to their unique identifier.
     Finally, depending on the reason, provide an example of a requirement that addresses the identified incompleteness.
 
     Output Format:
