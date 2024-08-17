@@ -16,21 +16,31 @@ from langchain_core.chat_history import (
 from langchain_core.runnables.history import RunnableWithMessageHistory
 
 from llm.prompts import generate_ieee_guidelines, instructions_few_shot, system_default_role, \
-    instructions_zero_shot, system_engineer_role, instructions_chain_of_thought,completeness_types
+    instructions_zero_shot, system_engineer_role, instructions_chain_of_thought, completeness_types
+
+
+def combined(llm, docs):
+    """
+    Combines:
+     1. chain of though
+     2. repeated instructions
+     3. persona pattern
+     4. zero shots
+     5. provided completeness types
+
+    """
+    messages = [
+        (
+            "system", system_engineer_role()
+        ),
+        ("user", instructions_chain_of_thought() + completeness_types() + "\n".join([doc.page_content for doc in docs])
+         + "\n" + instructions_chain_of_thought()),
+    ]
+    response = llm.invoke(messages)
+    return response.content
 
 
 def generated_knowledge(llm, docs):
-    """
-    Validates documents using a comprehensive prompt combining instructions, IEEE guidelines, and completeness types.
-
-    Args:
-        llm: The language model instance to invoke.
-        docs: A list of document objects to validate.
-
-    Returns:
-        The content of the LLM's response.
-    """
-
     store = {}
 
     def get_session_history(session_id: str) -> BaseChatMessageHistory:
@@ -44,7 +54,6 @@ def generated_knowledge(llm, docs):
 
     first_response = with_message_history.invoke([HumanMessage(content=generate_ieee_guidelines())],
                                                  config=config)
-    print(first_response.content)
 
     messages = [
         ("system", system_default_role()),
@@ -52,23 +61,11 @@ def generated_knowledge(llm, docs):
     ]
 
     response = with_message_history.invoke(messages, config=config)
-    print(response.content)
 
     return response.content
 
 
 def few_shot(llm, docs):
-    """
-    Validates documents using a minimal prompt containing only instructions.
-
-    Args:
-        llm: The language model instance to invoke.
-        docs: A list of document objects to validate.
-
-    Returns:
-        The content of the LLM's response.
-    """
-
     messages = [
         (
             "system", system_default_role()
@@ -81,17 +78,6 @@ def few_shot(llm, docs):
 
 
 def zero_shot(llm, docs):
-    """
-    Validates documents using a minimal prompt containing only instructions.
-
-    Args:
-        llm: The language model instance to invoke.
-        docs: A list of document objects to validate.
-
-    Returns:
-        The content of the LLM's response.
-    """
-
     messages = [
         (
             "system", system_default_role()
@@ -129,17 +115,6 @@ def repeated_instructions(llm, docs):
 
 
 def chain_of_thought(llm, docs):
-    """
-    Validates documents using a minimal prompt containing only instructions.
-
-    Args:
-        llm: The language model instance to invoke.
-        docs: A list of document objects to validate.
-
-    Returns:
-        The content of the LLM's response.
-    """
-
     messages = [
         (
             "system", system_default_role()
@@ -152,17 +127,6 @@ def chain_of_thought(llm, docs):
 
 
 def provided_completeness_types(llm, docs):
-    """
-    Validates documents using a minimal prompt containing only instructions.
-
-    Args:
-        llm: The language model instance to invoke.
-        docs: A list of document objects to validate.
-
-    Returns:
-        The content of the LLM's response.
-    """
-
     messages = [
         (
             "system", system_default_role()

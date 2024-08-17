@@ -1,0 +1,18 @@
+dentified the instances of incompleteness in the document as follows:
+
+"1. Data with the ""View results"" or ""Export"" button:"
+"	* /TC-OPT-30/ Inference with Multiple Images: The expected result mentions a ""View results"" window, but it's unclear what data will be displayed or how it will be presented."
+"	* /TC-OPT-40/ Inference with Multiple Hardware Components Selected: Similar to the previous point, the expected result mentions a ""View results"" window, but lacks details on the data and its presentation."
+
+Other instances of incompleteness:
+
+1. Lack of specific metrics or targets:
+"	* /TC-OPT-50/ Showing Benchmark Statistics: The expected result mentions visualizing performances as graphs, but it's unclear what specific metrics will be used (e.g., inference time, accuracy, etc.) or what the target values are."
+2. Unclear or missing definitions:
+"	* Glossary: Some terms, like ""argument"" and ""diagnostic data"", lack clear definitions or examples."
+3. Incomplete or vague descriptions:
+	* /TC-OPT-20/ Automatic Detection of Intel Movidius: The expected result is unclear about what exactly will be available for selection in the hardware component list after step 2.
+4. Missing information on error handling and edge cases:
+"	* Throughout the document, there's no mention of how the program will handle errors, exceptions, or unexpected inputs."
+
+These instances of incompleteness can make it challenging to fully understand the requirements and expectations outlined in the document

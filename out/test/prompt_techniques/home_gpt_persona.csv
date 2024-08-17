@@ -1,0 +1,20 @@
+Label,Issue,Correction
+Section 3.1,does not specify the types of web-ready devices supported,"The DigitalHome system shall support web-ready devices including but not limited to computers, smartphones, and tablets."
+Section 3.2.1,does not specify the number of user accounts that can be created,The system shall support the creation of up to 10 user accounts.
+Section 3.2.2,does not specify the number of technician accounts that can be created,The system shall support the creation of up to 5 technician accounts.
+Section 3.3,does not specify the development process to be used,The development team shall use the Agile development process specified by DigitalHomeOwner Inc.
+Section 3.4,does not specify the operating system requirements for the DH Home Web Server,"The DH Home Web Server shall support operating systems including Windows, macOS, and Linux."
+Section 4.1,does not specify the types of small appliances that can be controlled,"The system shall support the control of small appliances such as coffee makers, lamps, and fans."
+Section 4.2,does not specify the communication protocol used by the thermostats,The thermostats shall use the Zigbee communication protocol to communicate with the master control unit.
+Section 4.3,does not specify the communication protocol used by the humidistats,The humidistats shall use the Zigbee communication protocol to communicate with the master control unit.
+Section 4.4,does not specify the communication protocol used by the security system,The security system shall use the Zigbee communication protocol to communicate with the master control unit.
+Section 4.5,does not specify the communication protocol used by the Appliance Manager,The Appliance Manager shall use the Zigbee communication protocol to communicate with the master control unit.
+Section 4.6,does not specify the format of the monthly planner,"The monthly planner shall be in a calendar format, allowing users to select days and time periods for setting parameters."
+Section 5.1,does not specify total supported number of concurrent users,"The system shall handle up to 10,000 concurrent users without performance degradation."
+Section 5.2,does not specify the recovery time after a system failure,The system shall recover and restore data within 5 minutes after a failure.
+Section 5.3,does not specify the safety measures for power switches,The system shall include safety measures to prevent power switches from being turned on when young children are present.
+Section 5.4,does not specify the encryption algorithm to be used,The system shall use AES-256 encryption for securing user data.
+Section 5.5,does not specify the frequency of maintenance updates,The system shall receive maintenance updates at least once every quarter.
+Section 5.6,does not specify the format for system documents,All system documents shall be in PDF format and follow the HomeOwner document format [3].
+Section 5.7,does not specify the update frequency for the FAQ section,The FAQ section shall be updated at least once every six months.
+``

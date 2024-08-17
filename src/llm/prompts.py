@@ -2,14 +2,6 @@
 This module provides template functions that generate standard prompts and guidelines for validating Software
 Specification Documents.
 
-Functions:
-    - instructions: Returns a detailed prompt instructing an assistant on how to identify and report incompleteness in
-    Software Specification Documents.
-    - ieee_guidelines: Returns a description of the importance of completeness in Software Requirements Specifications
-    (SRS) and outlines IEEE guidelines for ensuring a complete SRS document.
-    - completeness_types: Returns a detailed explanation of the concept of completeness in Software Requirements
-    Specifications (SRS) and outlines three levels of completeness in SRS documents.
-
 """
 
 
@@ -27,20 +19,6 @@ def system_default_role():
 
 
 def instructions_few_shot():
-    """
-    Provides a prompt for an assistant tasked with identifying incompleteness in Software Specification Documents.
-
-    The prompt details the steps the assistant should follow:
-        1. Refer to the requirement by its unique identifier, section number, or "N/A" if it's document-wide.
-        2. State the issue found.
-        3. Offer a correction or suggestion.
-
-    Output Format:
-        The output is expected to be a CSV file with columns: "Label", "Issue", and "Suggestion".
-
-    Returns:
-        A string containing the instructions and an example output.
-    """
     return """
     Identify all the instances of incompleteness in the following document by:
     1. Referring to the requirement by its unique identifier/label. If it's more than one requirement then you can
@@ -61,20 +39,6 @@ def instructions_few_shot():
 
 
 def instructions_chain_of_thought():
-    """
-    Provides a prompt for an assistant tasked with identifying incompleteness in Software Specification Documents.
-
-    The prompt details the steps the assistant should follow:
-        1. Refer to the requirement by its unique identifier, section number, or "N/A" if it's document-wide.
-        2. State the issue found.
-        3. Offer a correction or suggestion.
-
-    Output Format:
-        The output is expected to be a CSV file with columns: "Label", "Issue", and "Suggestion".
-
-    Returns:
-        A string containing the instructions and an example output.
-    """
     return """
     First, read the following document thoroughly and identify all the instances of incompleteness.
     Then, take your time and think about these instances if they really are accurate and valid.
@@ -89,20 +53,6 @@ def instructions_chain_of_thought():
 
 
 def instructions_zero_shot():
-    """
-    Provides a prompt for an assistant tasked with identifying incompleteness in Software Specification Documents.
-
-    The prompt details the steps the assistant should follow:
-        1. Refer to the requirement by its unique identifier, section number, or "N/A" if it's document-wide.
-        2. State the issue found.
-        3. Offer a correction or suggestion.
-
-    Output Format:
-        The output is expected to be a CSV file with columns: "Label", "Issue", and "Suggestion".
-
-    Returns:
-        A string containing the instructions and an example output.
-    """
     return """
     Identify all the instances of incompleteness in the following document by:
     1. Referring to the requirement by its unique identifier/label. If it's more than one requirement then you can
@@ -125,12 +75,6 @@ def generate_ieee_guidelines():
 
 
 def completeness_types():
-    """
-    Provides a detailed explanation of the concept of completeness in Software Requirements Specifications (SRS)
-    and the importance of adhering to IEEE guidelines. The function outlines three levels of completeness in SRS
-    documents, emphasizing the implications of incompleteness and the necessity for comprehensive requirement
-    documentation.
-    """
     return """
     7 Completeness
 

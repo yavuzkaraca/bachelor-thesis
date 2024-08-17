@@ -1,0 +1,52 @@
+"cument is a Software Requirements Specification (SRS) for the DigitalHome System, which is a smart home product developed by HomeOwner Inc. The SRS provides detailed requirements for the system's functionality, user interface, and security."
+
+**Overview**
+
+"The DigitalHome System is designed to provide users with online documentation about the system installed in their home. The system will include an FAQ section, a section explaining how DH parameters are set and sensor values are read, and a section describing how to use the DH Planner."
+
+**Functional Requirements**
+
+1. **User Documentation**: The DigitalHome System shall provide users with online documentation about the system installed in their home.
+2. **FAQ Section**: The FAQ section shall include answers to frequently asked questions about using and maintaining the DigitalHome System.
+"3. **DH Parameters and Sensor Values**: The system shall explain how DH parameters are set and sensor values are read, including information on limitations and constraints."
+
+**Non-Functional Requirements**
+
+1. **Security**: The system shall ensure that all data transmitted over the network is encrypted using Transport Layer Security (TLS) protocol.
+2. **Authentication**: The system shall authenticate users using a username and password combination.
+3. **Gateway Device**: The system shall connect to the Internet or other Wide Area Networks through a Gateway Device.
+
+**Glossary**
+
+"The document includes a glossary of terms related to the DigitalHome System, including:"
+
+"* ASHRAE (American Society of Heating, Refrigerating and Air-Conditioning Engineers)"
+* Authentication
+* Broadband Internet
+* DH (Digital Home)
+* DigitalHomeOwner
+* DSL (Digital Subscriber Line)
+* Encryption
+* FAQ
+* Gateway Device
+* HomeOwner Inc.
+"* HVAC (Heating, Ventilation and Air Conditioning)"
+* Humidistat
+* ISP (Internet Service Provider)
+* PDA (Personal Digital Assistant)
+* RF (Radio Frequency)
+* Security Breach
+* Set Point
+* SRS (Software Requirements Specification)
+
+**References**
+
+"The document includes references to various standards and documents related to software development, including:"
+
+"* IEEE Std 830-1998, IEEE Recommended Practice for Software Requirements Specifications"
+"* ANSI/IEEE Std 1008-1987, IEEE Standard for Software Unit Testing"
+"* IEEE Std 1012-2004, IEEE Standard for Software Verification and Validation"
+"* IEEE Std 1016-2009, IEEE Standard for Information Technology - Systems Design - Software Design Descriptions"
+"* IEEE Std 1028-2008, IEEE Standard for Software Reviews and Audits"
+
+"Overall, the SRS provides a comprehensive overview of the DigitalHome System's requirements, including functional and non-functional requirements, glossary, and references"

@@ -1,0 +1,13 @@
+re the summaries for each page:
+
+Page 1:
+"The document outlines the software requirements specification, architectural design specification, module detailed design, module source code, and test plans for the DigitalHome System. The Homeowner document format should be used, and all documents should reside in the HomeOwner Document Archive at project completion."
+
+Page 2-5 (not summarized):
+"These pages likely contain additional information about software development methodologies, object-oriented development using UML 2.0, and exceptions to this rule that must be approved by the CIO."
+
+Page 6:
+"The Glossary defines various terms related to the DigitalHome System, including ASHRAE, Authentication, Broadband Internet, DH (Digital Home), DigitalHomeOwner, DSL, Encryption, FAQ, Gateway Device, HomeOwner Inc., HVAC, Humidistat, ISP, PDA, RF, Security Breach, Set Point, SRS, and Transport Layer Security."
+
+Page 8:
+References page with citations for various documents and standards used in the development of the DigitalHome System

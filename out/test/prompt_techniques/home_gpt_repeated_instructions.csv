@@ -1,0 +1,22 @@
+Label,Issue,Correction
+Section 3.1,does not specify the types of web-ready devices supported,"The system shall support web-ready devices including but not limited to computers, smartphones, and tablets."
+Section 3.2.1,does not specify the process for adding or removing users,The system shall provide an interface for the Master User to add or remove users.
+Section 3.3,does not specify the development process to be used,The development team shall use the Agile development process for the project.
+Section 4.1,does not specify the types of small appliances that can be controlled,"The system shall support control of small appliances such as coffee makers, lamps, and fans."
+Section 4.2,does not specify the response time for thermostat adjustments,The system shall adjust the thermostat settings within 5 seconds of user input.
+Section 4.3,does not specify the response time for humidistat adjustments,The system shall adjust the humidistat settings within 5 seconds of user input.
+Section 4.4,does not specify the types of alarms supported,The system shall support both audible and visual alarms.
+Section 4.5,does not specify the types of small appliances that can be managed,"The system shall support management of small appliances such as coffee makers, lamps, and fans."
+Section 4.6,does not specify the format of the monthly planner,The monthly planner shall be presented in a calendar format with daily time slots for setting parameters.
+Section 5.1,does not specify total supported number of concurrent users,"The system shall handle up to 10,000 concurrent users without performance degradation."
+Section 5.2,does not specify the recovery time after a failure,The system shall recover and restore data within 5 minutes of a failure.
+Section 5.3,does not specify safety measures for power switches,The system shall include safety measures to prevent accidental activation of power switches.
+Section 5.4,does not specify the encryption method for data transmission,The system shall use AES-256 encryption for all data transmissions.
+Section 5.5,does not specify the frequency of maintenance updates,The system shall receive maintenance updates at least once every quarter.
+Section 5.6,does not specify the process for updating business rules,The system shall provide an interface for administrators to update business rules as needed.
+Section 5.7,does not specify the format of the user documentation,The user documentation shall be provided in both PDF and HTML formats.
+N/A,does not include a section for system scalability requirements,The system shall be scalable to support future expansion of up to 200% of the initial capacity.
+N/A,does not include a section for user training requirements,The system shall include a comprehensive user training program with video tutorials and user manuals.
+N/A,does not include a section for data privacy requirements,The system shall comply with GDPR and other relevant data privacy regulations.
+N/A,does not include a section for system integration requirements,The system shall integrate with existing home automation systems and third-party services.
+``

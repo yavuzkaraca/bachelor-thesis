@@ -1,5 +1,4 @@
-from src.utils import csv_writer
-from src.llm import llm_creator, invoker
+from src.llm import llm_creator
 from src.utils.dataset_loader import paginate_pdf
 
 test_path_esa = "../dataset/PURE/2001_esa.pdf"
@@ -38,24 +37,9 @@ def test_text_conversion():
     print(pages[6])
 
 
-def test_single_document(pdf_path):
+def test_generated_ieee():
     """
-    This is just for testing a single document to not consume unnecessary API Calls
-    """
-    llm = llm_creator.create_llm_openai()
-
-    pages = paginate_pdf(pdf_path)
-
-    result = invoker.few_shot(llm, pages)
-    print(result)
-
-    csv_writer.save_results_to_csv(result, "neutero_gpt_instruction_only.csv")
-    return result
-
-
-def generate_ieee():
-    """
-    This is just for testing a single document to not consume unnecessary API Calls
+    To see if model generates the same guidelines
     """
     llm = llm_creator.create_llm_openai()
 
@@ -67,17 +51,7 @@ def generate_ieee():
     print(answer.content)
 
 
-def test_generated_knowledge():
-    """
-    This is just for testing a single document to not consume unnecessary API Calls
-    """
-    llm = llm_creator.create_llm_openai()
-    pages = paginate_pdf(test_path_esa)
-
-    invoker.generated_knowledge(llm,pages)
-
-
 if __name__ == '__main__':
-    # test_single_document(test_path_neutero)
-    # generate_ieee()
-    test_generated_knowledge()
+    test_chat_memory()
+    test_generated_ieee()
+    test_text_conversion()
