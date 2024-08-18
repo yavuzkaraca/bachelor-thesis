@@ -1,1 +1,29 @@
 Label,Level,Issue,Correction,Native
+2.2,2,document mentions an export function but does not provide a requirement,"The 'Export Configuration' menu item opens a dialog where the current file can be saved by giving a name and the location.",yes
+F11,2,does not specify the format and size of the PCAP files,The system shall support PCAP files in the .pcap and .pcapng formats up to 1GB in size.,yes
+F20,2,does not specify what happens if the (default) configuration values are invalid,"If the default configuration values are invalid, the system shall display an error message and reset the values to 'none'.",yes
+F20,2,does not specify the optimizer options,"user can select between adam and adagrad",yes
+F21a,2,does not mention how these changes affect the current configuration,Changes to default values also update all the used default values in the current configuration.,yes
+F22,2,does not specify what happens if the preprocessor fails to run,"If the preprocessor fails to run, the system shall display an error message indicating the failure and provide options to reconfigure the preprocessor or reload the PCAP file.",yes
+F30,2,does not specify the maximum number of nodes and edges that can be displayed,The system shall support displaying up to 1000 nodes and 5000 edges in the network topology graph.,yes
+F30,2,does not specify the default colors for protocols,"The system shall use the following color-coding scheme for protocols: HTTP - Blue, FTP - Green, SSH - Red, etc.",yes
+F30,3,"does not account for networks with no communication, potentially leaving the user without feedback if the PCAP is empty or irrelevant",In case the network topology is empty or there is no communication a message will be shown and the display will be empty.,yes
+F30,3,does not specify if and how the nodes are enumerated or left unidentified,The nodes in the graph are enumerated by selecting any node with the minimum degree and applying bfs with this node at the root.,yes
+F31,2,does not specify how the user is going to configure,The user can click a toggle switch to choose edge property., yes
+F40,2,does not specify the types of graphs used,Representation of the preprocessor is as an undirected graph, yes
+F40,2,does not specify the update procedure,The user can update the results panel by clicking the update button,yes
+F50,2,does not specify how the two graphs can be merged into one,"The plots can be overlaid on top of the same graph, each value is converted to percentage to normalize the lines within 0 and 100.",yes
+F50,2,does not specify the update procedure,The user can update the performance panel by clicking the update button,yes
+F60,2,does not specify the zoom range for the graphs,The system shall support zoom levels from 10% to 500% for all graphs.,yes
+F70,2,does not specify the image format for saving graphs,The system shall support saving graphs in PNG and JPEG formats.,yes
+F72a,2,does not specify what happens if the user chooses not to save changes,"If the user chooses not to save changes, the system shall close without saving any changes made during the session.",yes
+F73,2,does not specify the file format for saving configuration,The system shall support saving configuration in JASON format.,yes
+F80,2,does not specify the maximum number of runs that can be compared,The system shall support comparing up to 5 preprocessor runs simultaneously.,yes
+F90,1,does not refer to the related requirement,refer to P10,yes
+F100,2,does not specify the update procedure,The user can update the statistics by clicking the update button,yes
+F103,2,does not cover what happens if data is incomplete or missing,"For incomplete and missing data, a placeholder will be displayed."yes,yes
+F200,2,does not specify the window size for separate graph windows,The separate graph windows shall have a default size of 800x600 pixels.,yes
+F220,2,does not specify the format of the identifiers,The identifiers shall be in the format of a 32-character hexadecimal string.,yes
+P10,1,does not refer to the behaviour defining requirement,refer to F230,yes
+S10,3,does not specify the security measures to prevent data leaks,The system shall ensure that no information about the PCAP is accessible by inspecting the source of the website through encryption and secure data handling practices.,yes
+E10,2,does not specify the the possible features for expandability,"The system shall be designed using modular principles to allow easy addition or removal of menus, menu items, preprocessor configuration options, and statistics without restructuring the program.",yes

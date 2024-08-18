@@ -21,7 +21,7 @@ def test_ollama_csv():
                                            "```"}]
     answer = llm.invoke(message)
 
-    csv_writer.save_results_to_csv(answer.content, "ollama_paris_tour_semicolon.csv")
+    csv_writer.save_results_to_csv(answer.content, "ollama_paris_tour_semicolon.csv","test_out/")
 
     print(answer.content)
 
@@ -42,7 +42,7 @@ def test_ollama_document_read(pdf_path):
                                            + "\n".join([page.page_content for page in pages])}]
     answer = llm.invoke(message)
 
-    csv_writer.save_results_to_csv(answer.content, "ollama_home_fq_summary.csv")
+    csv_writer.save_results_to_csv(answer.content, "ollama_home_fq_summary.csv", "test_out/")
 
     print(answer.content)
 

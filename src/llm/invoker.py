@@ -16,7 +16,8 @@ from langchain_core.chat_history import (
 from langchain_core.runnables.history import RunnableWithMessageHistory
 
 from llm.prompts import generate_ieee_guidelines, instructions_few_shot, system_default_role, \
-    instructions_zero_shot, system_engineer_role, instructions_chain_of_thought, completeness_types
+    instructions_zero_shot, system_engineer_role, instructions_chain_of_thought_zero_shot, completeness_types, \
+    instructions_chain_of_thought_few_shot
 
 
 def combined(llm, docs):
@@ -33,8 +34,9 @@ def combined(llm, docs):
         (
             "system", system_engineer_role()
         ),
-        ("user", instructions_chain_of_thought() + completeness_types() + "\n".join([doc.page_content for doc in docs])
-         + "\n" + instructions_chain_of_thought()),
+        ("user", instructions_chain_of_thought_zero_shot() + completeness_types() + "\n".join(
+            [doc.page_content for doc in docs])
+         + "\n" + instructions_chain_of_thought_zero_shot()),
     ]
     response = llm.invoke(messages)
     return response.content
@@ -114,12 +116,24 @@ def repeated_instructions(llm, docs):
     return response.content
 
 
-def chain_of_thought(llm, docs):
+def chain_of_thought_zero_shot(llm, docs):
     messages = [
         (
             "system", system_default_role()
         ),
-        ("user", instructions_chain_of_thought() + "\n".join([doc.page_content for doc in docs])),
+        ("user", instructions_chain_of_thought_zero_shot() + "\n".join([doc.page_content for doc in docs])),
+    ]
+
+    response = llm.invoke(messages)
+    return response.content
+
+
+def chain_of_thought_few_shot(llm, docs):
+    messages = [
+        (
+            "system", system_default_role()
+        ),
+        ("user", instructions_chain_of_thought_few_shot() + "\n".join([doc.page_content for doc in docs])),
     ]
 
     response = llm.invoke(messages)

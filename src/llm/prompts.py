@@ -18,6 +18,13 @@ def system_default_role():
     """
 
 
+def instructions_reminder_must_have():
+    return """
+    Remember, the must and optional criteria at the beginning are just overviews, they refer to the functional 
+    requirements that come after
+    """
+
+
 def instructions_few_shot():
     return """
     Identify all the instances of incompleteness in the following document by:
@@ -38,7 +45,7 @@ def instructions_few_shot():
     """
 
 
-def instructions_chain_of_thought():
+def instructions_chain_of_thought_zero_shot():
     return """
     First, read the following document thoroughly and identify all the instances of incompleteness.
     Then, take your time and think about these instances if they really are accurate and valid.
@@ -48,6 +55,25 @@ def instructions_chain_of_thought():
     Output Format:
     Produce a CSV file with the following columns: "Label", "Issue", and "Correction". Ensure that each cell 
     value in the CSV file is separated with a semicolon (;).
+    \n
+    """
+
+
+def instructions_chain_of_thought_few_shot():
+    return """
+    First, read the following document thoroughly and identify all the instances of incompleteness.
+    Then, take your time and think about these instances if they really are accurate and valid.
+    After that, explain the reason of incompleteness for each instance referring to their unique identifier.
+    Finally, depending on the reason, provide an example of a requirement that addresses the identified incompleteness.
+
+    Output Format:
+    Produce a CSV file with the following columns: "Label", "Issue", and "Correction". Ensure that each cell 
+    value in the CSV file is separated with a semicolon (;).
+    
+    Example Output:
+    R19;does not specify what happens if the message is ignored;If the immunization reminder is ignored, the system shall send an alert to the administrator
+    Section 5.1;does not specify total supported number of concurrent users;The system shall handle up to 10.000 concurrent users without performance degradation
+    FR-A-30;does not specify recovery or program state when selection is improper;Improper Selection is undone and the previous state before the selection is still valid
     \n
     """
 
