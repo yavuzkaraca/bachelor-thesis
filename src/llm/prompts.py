@@ -20,8 +20,9 @@ def system_default_role():
 
 def instructions_reminder_must_have():
     return """
-    Remember, the must and optional criteria at the beginning are just overviews, they refer to the functional 
-    requirements that come after
+    Remember, the must and optional criteria at the beginning are just a quick overview, the actual requirements are
+    provided later in the document. Focus on the functional and non-functional requirements that come later.
+    \n
     """
 
 

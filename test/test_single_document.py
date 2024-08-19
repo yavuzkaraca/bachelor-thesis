@@ -17,10 +17,10 @@ def test_single_document(pdf_path):
 
     pages = paginate_pdf(pdf_path)
 
-    result = invoker.chain_of_thought_few_shot(llm, pages)
+    result = invoker.combined_pse_reminder(llm, pages)
     print(result)
 
-    csv_writer.save_results_to_csv(result, "octo_gpt_cot_few.csv", "test_out/")
+    csv_writer.save_results_to_csv(result, "octo_gpt_combined.csv", "test_out/")
     return result
 
 

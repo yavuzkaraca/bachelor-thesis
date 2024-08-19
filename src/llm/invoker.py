@@ -17,10 +17,31 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 
 from llm.prompts import generate_ieee_guidelines, instructions_few_shot, system_default_role, \
     instructions_zero_shot, system_engineer_role, instructions_chain_of_thought_zero_shot, completeness_types, \
-    instructions_chain_of_thought_few_shot
+    instructions_chain_of_thought_few_shot,instructions_reminder_must_have
 
 
-def combined(llm, docs):
+def combined_pse_reminder(llm,docs):
+    """
+    Combines:
+     1. chain of though
+     2. repeated instructions
+     3. few shots
+     5. provided completeness types
+     6. reminder
+    """
+    messages = [
+        (
+            "system", system_default_role()
+        ),
+        ("user", instructions_chain_of_thought_few_shot() + completeness_types() + "\n".join(
+            [doc.page_content for doc in docs])
+         + "\n" + instructions_reminder_must_have() + instructions_chain_of_thought_few_shot()),
+    ]
+    response = llm.invoke(messages)
+    return response.content
+
+
+def combined_five(llm, docs):
     """
     Combines:
      1. chain of though

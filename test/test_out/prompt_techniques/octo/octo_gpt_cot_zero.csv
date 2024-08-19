@@ -1,0 +1,22 @@
+Label,Issue,Correction
+/M10/,The requirement does not specify how often the tests should be run or if there is a schedule.,"/M10/ Run a program's test functions repeatedly to analyze the project in different revisions, with the ability to schedule tests at specified intervals (e.g., daily, weekly)."
+/M30/,The requirement does not specify the format for the exported files and stdout output.,"/M30/ Standardized format for exported files and the output to stdout, supporting formats such as JSON and XML."
+/M40/,The requirement does not specify how the lines between versions are identified as relevant to the test outcome.,"/M40/ Identify lines between versions that are relevant to the test outcome using a specified algorithm or criteria (e.g., lines with the highest frequency of changes)."
+/M50/,The requirement does not specify how the history of tests is accumulated or stored.,"/M50/ Accumulate history of tests in a centralized database, with options for local or remote storage."
+/M60/,The requirement does not specify if other testing frameworks besides JUnit will be supported in the future.,"/M60/ Support projects that use JUnit as a testing framework, with the potential to extend support to other frameworks in future versions."
+/M70/,The requirement does not specify how the files or tests to be ignored are selected or specified.,/M70/ Allow users to specify files or tests to be ignored by the framework through a configuration file or command-line options.
+/M80/,The requirement does not specify how the framework ensures that the underlying project's source code is not modified.,"/M80/ Implement safeguards to ensure the framework operates in a read-only mode, preventing any modifications to the underlying project's source code."
+/M90/,The requirement does not specify the types of filters available for viewing metadata.,"/M90/ Add filters to view metadata selectively based on specified criteria such as date range, test status, or commit author."
+/W10/,The requirement does not specify the containerization technology to be used.,/W10/ Containerize the tested code using Docker or a similar containerization technology.
+/W20/,The requirement does not specify which programming languages will be supported.,"/W20/ Make the application usable for different programming languages, starting with support for Java, Python, and JavaScript."
+/W30/,The requirement does not specify which platforms will be supported.,"/W30/ Ensure multi-platform support, including Windows, macOS, and Linux."
+/W40/,The requirement does not specify which common testing frameworks will be supported.,"/W40/ Usable with multiple common testing frameworks such as JUnit, NUnit, and PyTest."
+/W50/,The requirement does not specify the format or content of the quick review and table of tests and commits.,"/W50/ Support displaying a quick review, a table of tests and commits, with customizable columns and filters."
+/W60/,The requirement does not specify how frequently modified code sections will be scanned for potential weaknesses.,/W60/ Scan frequently modified code sections for potential weaknesses using static code analysis tools.
+/W70/,The requirement does not specify how code coverage analysis will be included in the test analytics.,"/W70/ Include code coverage analysis into the test analytics, with support for tools like JaCoCo or Cobertura."
+/W80/,The requirement does not specify the formats in which output will be provided.,"/W80/ Provide output in multiple formats, including JSON, XML, and CSV."
+/D10/,The requirement does not specify how simultaneous testing of multiple projects will be managed.,/D10/ Support simultaneous testing of multiple projects by running tests in isolated environments or containers.
+/D20/,The requirement does not specify which uncommon testing frameworks will be supported.,"/D20/ Support testing frameworks that are uncommon, with the ability to add custom testing frameworks through plugins."
+/D30/,The requirement does not specify how the framework will run outside the git directory.,/D30/ Allow the framework to run outside the git directory by specifying the path to the git repository as a parameter.
+/D40/,The requirement does not specify how the data will be stored on a server.,/D40/ Store the data on a server using a centralized database or cloud storage solution.
+/D50/,The requirement does not specify how the machine learning model will be trained.,"/D50/ Train the machine learning model using the accumulated test data, with options for supervised and unsupervised learning."

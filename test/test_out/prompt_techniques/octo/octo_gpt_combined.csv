@@ -1,0 +1,42 @@
+Label,Issue,Correction
+/M10,does not specify the types of programs or languages supported,"The system shall support running test functions for programs written in Java, Python, and JavaScript."
+/M20,does not specify the format of the dataset,The dataset shall be exported in CSV and JSON formats.
+/M30,does not specify the standardized format,The standardized format for exported files shall be JSON.
+/M40,does not specify how lines between versions are identified,The system shall use a diff algorithm to identify lines between versions that are relevant to the test outcome.
+/M50,does not specify how the history of tests is accumulated,The system shall store test results in a version-controlled database to accumulate the history of tests.
+/M60,does not specify the version of JUnit supported,The system shall support JUnit version 4.12 and above.
+/M70,does not specify how to ignore specific files or tests,The system shall allow users to specify files or tests to be ignored via a configuration file named .octoignore.
+/M80,does not specify how the underlying project's source code is protected,The system shall operate in a read-only mode to ensure that the underlying project's source code is not modified.
+/M90,does not specify the types of metadata filters available,"The system shall provide filters for metadata based on test status, commit author, and date range."
+/W10,does not specify the containerization technology,The system shall support containerization using Docker.
+/W20,does not specify the programming languages supported,"The system shall support Java, Python, and JavaScript programming languages."
+/W30,does not specify the platforms supported,"The system shall support Windows, macOS, and Linux platforms."
+/W40,does not specify the common testing frameworks supported,"The system shall support JUnit, PyTest, and Mocha testing frameworks."
+/W50,does not specify the format of the quick review,The quick review shall be displayed in a tabular format summarizing test results and commit impacts.
+/W60,does not specify how frequently modified code sections are identified,The system shall use a heuristic based on commit frequency to identify frequently modified code sections.
+/W70,does not specify the code coverage tool,The system shall integrate with JaCoCo for code coverage analysis.
+/W80,does not specify the multiple formats for output,"The system shall provide output in JSON, XML, and CSV formats."
+/D10,does not specify how simultaneous testing is managed,The system shall use parallel processing to support simultaneous testing of multiple projects.
+/D20,does not specify the uncommon testing frameworks,The system shall allow users to define custom testing frameworks via plugins.
+/D30,does not specify how to run outside the git directory,The system shall allow users to specify the path to the git directory via a configuration file.
+/D40,does not specify the server storage requirements,The system shall store data on a server with at least 100GB of available storage.
+/D50,does not specify how the machine learning model is trained,The system shall use the accumulated test data to train a machine learning model using a supervised learning algorithm.
+/F10,does not specify the format of the output file,The output file shall be in JSON format.
+/F20,does not specify the format of the CLI output,The CLI output shall be in a human-readable tabular format.
+/F30,does not specify how to handle invalid commits,The system shall display an error message if an invalid commit is specified.
+/F40,does not specify the format of the exported JSON file,"The exported JSON file shall include commit ID, test results, and code changes."
+/F50,does not specify the criteria for frequently changed lines,The system shall consider lines changed in more than 50% of commits as frequently changed.
+/F60,does not specify the criteria for often changing tests,The system shall consider tests that alternate between pass and fail in more than 30% of runs as often changing.
+/F70,does not specify the format of the .octoignore file,The .octoignore file shall follow the same format as .gitignore.
+/F80,does not specify the default format options,The default format options shall be JSON and XML.
+/F90,does not specify the structure of the SQLite database,"The SQLite database shall include tables for commits, tests, and results."
+/F100,does not specify the colors used for highlighting,The system shall use red for frequently changed lines and green for stable lines.
+/F110,does not specify the structure of the config file,"The config file shall be in JSON format and include settings for output format, ignored files, and metadata filters."
+/NF10,does not specify the maximum response time,The system shall provide output within 2 seconds for standard operations.
+/NF20,does not specify how the project is protected,The system shall operate in a read-only mode to ensure that the project's source code is not modified.
+/NF30,does not specify the performance metrics,The system shall handle projects with up to 1000 commits with a response time of less than 5 seconds.
+/NF40,does not specify the user interface guidelines,The CLI shall provide clear and concise commands with helpful error messages.
+/NF50,does not specify how to extend the system,The system shall provide a plugin architecture to allow developers to add custom commands.
+/NF60,does not specify the language settings,All interactions and outputs shall be in English.
+/NF70,does not specify the maintenance procedures,The system shall include comprehensive documentation for maintenance and troubleshooting.
+``
