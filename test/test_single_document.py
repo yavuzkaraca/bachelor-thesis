@@ -2,11 +2,11 @@ from src.utils import csv_writer
 from src.llm import llm_creator, invoker
 from src.utils.dataset_loader import paginate_pdf
 
-test_path_esa = "../dataset/PURE/2001_esa.pdf"
-test_path_neutero = "../dataset/PSE/2022_neutero.pdf"
-test_path_home = "../dataset/PURE/2010_home_1.3.pdf"
-test_path_init = "../dataset/PSE/2021_init-v.pdf"
-test_path_octo = "../dataset/PSE/2023_octo.pdf"
+test_path_esa = "../dataset/PURE/2001_esa/2001_esa.pdf"
+test_path_neutero = "../dataset/PSE/2022_neutero/2022_neutero.pdf"
+test_path_home = "../dataset/PURE/2010_home_1.3/2010_home_1.3.pdf"
+test_path_init = "../dataset/PSE/2021_init-v/2021_init-v.pdf"
+test_path_octo = "../dataset/PSE/2023_octo/2023_octo.pdf"
 
 
 def test_single_document(pdf_path):

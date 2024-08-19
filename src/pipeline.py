@@ -44,25 +44,40 @@ def process_all_pdfs_all_prompt_variants(llm, identifier, output_base_dir):
     for pdf_path in pdf_paths:
         pages = paginate_pdf(pdf_path)
 
-        result_full_prompt = invoker.generated_knowledge_all(llm, pages)
-        csv_writer.save_results_to_csv(result_full_prompt, generate_filename(pdf_path, identifier),
-                                       os.path.join(output_base_dir, "full_prompt"))
-        results[pdf_path, 0] = result_full_prompt
+        result_zero_shot = invoker.zero_shot(llm, pages)
+        csv_writer.save_results_to_csv(result_zero_shot, generate_filename(pdf_path, identifier),
+                                       os.path.join(output_base_dir, "zero_shot"))
 
-        result_instructions_ieee = invoker.generated_knowledge_ieee(llm, pages)
-        csv_writer.save_results_to_csv(result_instructions_ieee, generate_filename(pdf_path, identifier),
-                                       os.path.join(output_base_dir, "instructions_ieee"))
-        results[pdf_path, 1] = result_instructions_ieee
+        result_few_shot = invoker.few_shot(llm, pages)
+        csv_writer.save_results_to_csv(result_few_shot, generate_filename(pdf_path, identifier),
+                                       os.path.join(output_base_dir, "few_shot"))
 
-        result_instructions_only = invoker.few_shot(llm, pages)
-        csv_writer.save_results_to_csv(result_instructions_only, generate_filename(pdf_path, identifier),
-                                       os.path.join(output_base_dir, "instructions_only"))
-        results[pdf_path, 2] = result_instructions_only
+        result_chain_of_thought_zero_shot = invoker.chain_of_thought_zero_shot(llm, pages)
+        csv_writer.save_results_to_csv(result_chain_of_thought_zero_shot, generate_filename(pdf_path, identifier),
+                                       os.path.join(output_base_dir, "chain_of_thought_zero_shot"))
 
-    return results
+        result_chain_of_thought_few_shot = invoker.chain_of_thought_few_shot(llm, pages)
+        csv_writer.save_results_to_csv(result_chain_of_thought_few_shot, generate_filename(pdf_path, identifier),
+                                       os.path.join(output_base_dir, "chain_of_thought_few_shot"))
+
+        result_generated_knowledge = invoker.generated_knowledge(llm, pages)
+        csv_writer.save_results_to_csv(result_generated_knowledge, generate_filename(pdf_path, identifier),
+                                       os.path.join(output_base_dir, "generated_knowledge"))
+
+        result_engineer_persona = invoker.engineer_persona(llm, pages)
+        csv_writer.save_results_to_csv(result_engineer_persona, generate_filename(pdf_path, identifier),
+                                       os.path.join(output_base_dir, "engineer_persona"))
+
+        result_completeness_types = invoker.provided_completeness_types(llm, pages)
+        csv_writer.save_results_to_csv(result_completeness_types, generate_filename(pdf_path, identifier),
+                                       os.path.join(output_base_dir, "completeness_types"))
+
+        result_repeated_instructions = invoker.repeated_instructions(llm, pages)
+        csv_writer.save_results_to_csv(result_repeated_instructions, generate_filename(pdf_path, identifier),
+                                       os.path.join(output_base_dir, "repeated_instructions"))
 
 
-def openai_process_all(output_base_dir="../out"):
+def openai_process_all(output_base_dir="../out/exploration"):
     """
     Processes all PDF files in the dataset using the GPT-4o model.
 

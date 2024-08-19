@@ -2,9 +2,9 @@ from src.utils import csv_writer
 from src.llm import llm_creator
 from src.utils.dataset_loader import paginate_pdf
 
-test_path_esa = "../dataset/PURE/2001_esa.pdf"
-test_path_neutero = "../dataset/PSE/2022_neutero.pdf"
-test_path_home = "../dataset/PURE/2010_home_1.3.pdf"
+test_path_esa = "../dataset/PURE/2001_esa/2001_esa.pdf"
+test_path_neutero = "../dataset/PSE/2022_neutero/2022_neutero.pdf"
+test_path_home = "../dataset/PURE/2010_home_1.3/2010_home_1.3.pdf"
 
 
 def test_ollama_csv():
