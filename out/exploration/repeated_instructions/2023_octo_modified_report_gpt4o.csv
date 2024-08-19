@@ -1,0 +1,41 @@
+Label,Issue,Correction
+/M10/,does not specify the types of test functions supported,"The framework shall support unit tests, integration tests, and system tests for repeated execution."
+/M20/,does not specify the format of the dataset,The dataset shall be exported in CSV and JSON formats.
+/M30/,does not specify the standardized format,The standardized format for exported files shall be JSON and XML.
+/M40/,does not specify how lines are identified as relevant,The framework shall use a diff algorithm to identify lines between versions that are relevant to the test outcome.
+/M50/,does not specify how the history is accumulated,The framework shall store test results in an SQLite database to accumulate the history of tests.
+/M60/,does not specify the version of JUnit supported,The framework shall support JUnit version 4 and above.
+/M70/,does not specify how files or tests are ignored,The framework shall use a .octoignore file to specify files or tests to be ignored.
+/M80/,does not specify how the source code is protected,The framework shall operate in read-only mode to ensure it does not modify the underlying project's source code.
+/M90/,does not specify the types of filters available,"The framework shall support filters based on test status, date, and author to view metadata selectively."
+/W10/,does not specify the containerization technology,The framework shall support Docker for containerizing the tested code.
+/W20/,does not specify the programming languages supported,"The framework shall support Java, Python, and JavaScript programming languages."
+/W30/,does not specify the platforms supported,"The framework shall support Windows, macOS, and Linux platforms."
+/W40/,does not specify the testing frameworks supported,"The framework shall support JUnit, PyTest, and Mocha testing frameworks."
+/W50/,does not specify the format of the quick review,"The quick review shall be displayed in a tabular format with columns for test name, status, and execution time."
+/W60/,does not specify how frequently modified code sections are identified,The framework shall use a heuristic algorithm to scan frequently modified code sections for potential weaknesses.
+/W70/,does not specify the code coverage tool,The framework shall integrate with JaCoCo for code coverage analysis.
+/W80/,does not specify the output formats,"The framework shall provide output in JSON, XML, and HTML formats."
+/D10/,does not specify how simultaneous testing is managed,The framework shall use parallel execution to support simultaneous testing of multiple projects.
+/D20/,does not specify the uncommon testing frameworks,The framework shall support uncommon testing frameworks like TestNG and Spock.
+/D30/,does not specify how it runs outside the git directory,The framework shall use environment variables to locate the git directory when running outside it.
+/D40/,does not specify the server storage requirements,The framework shall store data on a server with at least 100GB of available storage.
+/D50/,does not specify the machine learning model training process,The framework shall use TensorFlow to train the machine learning model with the collected dataset.
+/F10/,does not specify the format of the output file,The output file shall be in JSON format by default.
+/F20/,does not specify the format of the CLI output,The CLI output shall be in a human-readable tabular format.
+/F30/,does not specify how the commit is validated,The framework shall validate the commit using the git rev-parse command.
+/F40/,does not specify the format of the exported JSON file,"The exported JSON file shall include commit ID, test results, and metadata."
+/F50/,does not specify the format of the filtered lines,The filtered lines shall be displayed in a tabular format with columns for line number and content.
+/F60/,does not specify the format of the output,"The output shall be in a tabular format with columns for test name, status, and frequency of change."
+/F70/,does not specify the format of the .octoignore file,The .octoignore file shall follow the same format as .gitignore.
+/F80/,does not specify the supported formats,The supported formats for the output file shall be JSON and XML.
+/F90/,does not specify the database schema,"The metadata shall be stored in an SQLite database with tables for commits, tests, and results."
+/F100/,does not specify the colors used for highlighting,The framework shall use red for frequently changed lines and green for less frequently changed lines.
+/F110/,does not specify the format of the config file,The config file shall be in JSON format.
+/NF10/,does not specify the maximum response time,The system shall provide output within 2 seconds for most commands.
+/NF20/,does not specify how the project is protected,The program shall operate in read-only mode to protect the given project and data.
+/NF30/,does not specify the performance metrics,The system shall handle projects with up to 1000 commits with a response time of less than 5 seconds.
+/NF40/,does not specify the CLI usability criteria,The CLI shall provide auto-completion and context-sensitive help to ensure ease of use.
+/NF50/,does not specify how the system is extendable,The system shall provide a plugin architecture to allow easy addition of new commands.
+/NF60/,does not specify the language for error messages,All error messages shall be in English.
+/NF70/,does not specify the maintenance process,The system shall include a comprehensive set of unit tests to ensure low maintenance needs.

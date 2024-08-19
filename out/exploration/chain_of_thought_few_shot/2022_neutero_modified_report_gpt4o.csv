@@ -1,0 +1,6 @@
+Label,Issue,Correction
+Section 2.3,"References ""specified environment"" and ""specified hardware"" without providing details","The program can only be run on the specified environment: Xubuntu 20.04 with Intel Movidius, CPU, and GPU support."
+FR-U-50,Mentions initiating /FR-A-30/ but does not specify what /FR-A-30/ entails,"Selecting a hardware component initiates /FR-A-30/, which checks the validity of the selected hardware against the neural network requirements."
+FR-A-30,Does not specify what happens if arguments are invalid,"If arguments are invalid, an error message is displayed, and the user is prompted to correct the invalid selections."
+PD20,"References ""specified hardware"" without detailing what hardware is specified","Imported neural network topology should be compatible with the specified hardware: CPU, GPU, and Intel Movidius."
+RC10,"The reference ""see ??"" is incomplete","The program can only be run on the specified environment: Xubuntu 20.04 with Intel Movidius, CPU, and GPU support."

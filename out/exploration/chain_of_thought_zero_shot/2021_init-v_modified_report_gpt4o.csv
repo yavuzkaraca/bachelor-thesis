@@ -1,0 +1,10 @@
+Label,Issue,Correction
+/F21a/,"The requirement to change default values of the preprocessor is mentioned, but the specific default values are not listed.",Include a detailed list of default values that can be changed.
+/F22/,The requirement to run the preprocessor does not specify the expected output format or any error handling.,Specify the expected output format and error handling procedures.
+/F30/,The visual representation of the network topology does not specify how to handle large networks or performance considerations.,Include details on handling large networks and performance considerations.
+/F40/,The visual representation of the preprocessor results does not specify the types of graphs or visual elements to be used.,Specify the types of graphs and visual elements to be used.
+/F50/,The performance analysis of the preprocessor does not specify the metrics to be used for evaluation.,Specify the metrics to be used for performance evaluation.
+/F60/,The zoom functionality for graphs does not specify the range or limits of zooming.,Specify the range or limits of zooming.
+/F70/,The requirement to save graphs and configurations does not specify the file formats supported.,Specify the file formats supported for saving graphs and configurations.
+/F80/,The comparison of preprocessor performance and results does not specify how differences will be highlighted.,Specify how differences will be highlighted in the comparison.
+/F90/,The asynchronous interaction with panels does not specify the types of interactions allowed.,Specify the types of interactions allowed during asynchronous operations.

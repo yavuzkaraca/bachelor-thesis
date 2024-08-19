@@ -1,0 +1,23 @@
+Label,Issue,Correction
+/M10,does not specify the frequency of test runs,The system shall run the project's test functions every 24 hours to analyze the project in different revisions.
+/M20,does not specify the format of the dataset,The system shall build and export a dataset with test results and metadata in JSON format.
+/M30,does not specify the exact format for stdout output,The system shall use a standardized JSON format for exported files and the output to stdout.
+/M40,does not specify how the relevant lines are identified,The system shall identify lines between versions that are relevant to the test outcome by comparing the differences in the codebase.
+/M50,does not specify how the history of tests is accumulated,The system shall accumulate the history of tests by storing the results in an SQLite database.
+/M60,does not specify support for other testing frameworks,The system shall support projects that use JUnit as a testing framework and provide plugins for other common frameworks.
+/M70,does not specify how to ignore specific files or tests,The system shall allow users to specify files or tests to be ignored by adding them to a .octoignore file.
+/M80,does not specify how the source code is protected,The system shall not modify the underlying project's source code and shall operate in a read-only mode.
+/M90,does not specify the types of filters available,"The system shall provide filters to view metadata selectively based on the specified filter, such as date range, test status, and author."
+/W10,does not specify the containerization technology,The system shall containerize the tested code using Docker.
+/W20,does not specify the programming languages supported,"The system shall be usable for different programming languages, including Java, Python, and JavaScript."
+/W30,does not specify the platforms supported,"The system shall ensure multi-platform support, including Windows, macOS, and Linux."
+/W40,does not specify the testing frameworks supported,"The system shall be usable with multiple common testing frameworks, including JUnit, pytest, and Mocha."
+/W50,does not specify the format of the quick review,"The system shall support displaying a quick review in a tabular format, showing tests and commits."
+/W60,does not specify how frequently modified code sections are identified,The system shall scan frequently modified code sections for potential weaknesses by analyzing commit history.
+/W70,does not specify the code coverage analysis tool,The system shall include code coverage analysis into the test analytics using tools like JaCoCo or Coverage.py.
+/W80,does not specify the output formats supported,"The system shall provide output in multiple formats, including JSON, XML, and CSV."
+/D10,does not specify how simultaneous testing is managed,The system shall support simultaneous testing of multiple projects by running tests in isolated environments.
+/D20,does not specify the uncommon testing frameworks supported,The system shall support testing frameworks that are uncommon by allowing users to define custom test runners.
+/D30,does not specify how to run outside the git directory,The system shall run outside the git directory by specifying the path to the repository in the command.
+/D40,does not specify the server storage requirements,The system shall store the data on a server with at least 100GB of available storage.
+/D50,does not specify how the machine learning model is trained,The system shall train the machine learning model using the accumulated test data and metadata.

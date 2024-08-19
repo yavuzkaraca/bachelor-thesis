@@ -1,0 +1,15 @@
+Label,Issue,Correction
+Section 2.3,does not specify the environment in which the program can be run,"The program can only be run on the specified environment: Windows 10, Ubuntu 20.04, and macOS 11.0 or later."
+Section 2.3,does not specify the compatible neural network topologies,Only such neural network topologies are supported that are compatible with ONNX format.
+FR-U-50,does not specify what happens if an invalid hardware component is selected,"If an invalid hardware component is selected, an error message shall be displayed and the selection shall be reset to the previous valid state."
+FR-U-60,does not specify supported image formats,"The system shall support importing images in JPEG, JPG, and PNG formats."
+FR-U-100,does not specify the format of the results and diagnostic data,"The results and diagnostic data shall be displayed in a tabular format with columns for inference result, confidence score, latency, hardware information, and neural network identifier."
+FR-U-110,does not specify the format for exporting results and diagnostic data,The results and diagnostic data shall be exported in CSV format.
+FR-A-10,does not specify what happens if an improper selection is made,"If an improper selection is made, an error message shall be displayed and the selection shall be reset to the previous valid state."
+FR-A-30,does not specify recovery or program state when selection is improper,Improper Selection is undone and the previous state before the selection is still valid.
+FR-A-70,does not specify the format of the runtime log file,The runtime log file shall be in plain text format.
+PD10,does not specify the minimum dimensions for input images,The height and width of import image(s) should be at least 224x224 pixels.
+PD20,does not specify the format for imported neural networks,Imported neural network topology should be compatible with the specified hardware and in ONNX format.
+PD30,does not specify the format for inference results and diagnostic data,Inference results and diagnostic data shall be in JSON format.
+PD40,does not specify the format for the runtime log file,The runtime log file shall be in plain text format.
+PD50,does not specify the format for translation files,Translation files shall be in Compiled Qt Linguist File (.qm) format.

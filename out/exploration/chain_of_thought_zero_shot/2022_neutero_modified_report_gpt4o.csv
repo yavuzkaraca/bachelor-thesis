@@ -1,0 +1,3 @@
+Label,Issue,Correction
+/RC10/,The program can only be run on the specified environment. (see ??),The program can only be run on the specified environment. (see Section 7)
+/RC30/,Only such neural network topology are supported that are compatible with in ?? specified hardware.,Only such neural network topology are supported that are compatible with the hardware specified in Section 2.1.
