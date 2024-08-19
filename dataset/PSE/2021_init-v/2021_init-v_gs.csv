@@ -28,3 +28,11 @@ F220,2,does not specify the format of the identifiers,The identifiers shall be i
 P10,1,does not refer to the behaviour defining requirement,refer to F230,yes
 S10,3,does not specify the security measures to prevent data leaks,The system shall ensure that no information about the PCAP is accessible by inspecting the source of the website through encryption and secure data handling practices.,yes
 E10,2,does not specify the the possible features for expandability,"The system shall be designed using modular principles to allow easy addition or removal of menus, menu items, preprocessor configuration options, and statistics without restructuring the program.",yes
+Glossary,1,lacks definition of Autoencoder,"An autoencoder is a neural network. It can be used to learn codings for each packet.",no
+N/A,1,lacks sections on 'Product Data',...,no
+F220,1,does not fulfill the template of three elements,"... and Hash to identify the results.",no
+F210,1,does not fulfill the template of stating precondition,...,no
+F101,1,does not fulfill the template of stating precondition,...,no
+F102,1,does not fulfill the template of stating description,...,no
+F50,1,does not fulfill the template of three lines,"... Test Accuracy",no
+F41,1,does not refer to related requirement,refer to F40,no

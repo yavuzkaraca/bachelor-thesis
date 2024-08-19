@@ -11,7 +11,7 @@ F40,1,does not refer to the related section that defines the command,refer to Se
 F40,2,does not specify the schema of the JSON output,The system shall export the results in a JSON file with a standardized schema.,yes
 F50,2,does not specify the how the user will configure parameters,The system shall consider lines changed in more than 30% of commits as frequently changed.,yes
 F50,1,does not refer to the related section that defines the command,refer to Section 10,yes
-F70,2,does not specify the format of the .octoignore file,The .octoignore file shall follow the same format as .gitignore.,yes
+F70,3,does not specify the format of the .octoignore file,The .octoignore file shall follow the same format as .gitignore.,yes
 F80,1,does not refer to the related section that defines the command,refer to Section 10,yes
 F90,2,does not specify the schema of the SQLite database,"The system shall store metadata in an SQLite database with a schema that includes tables for commits, tests, and results.",yes
 F100,1,does not refer to the related section that defines the command,refer to Section 10,yes
@@ -19,6 +19,8 @@ F100,2,does not specify the highlighting colors,The system shall use orange to h
 F100,2,does not specify the criteria for often changed lines,The system shall consider lines changed in more than 30% of commits as often changed.,yes
 F110,2,does not specify the structure of the config file,"The config file shall be in JSON format and include settings for output format, ignored files, and metadata filters.",yes
 NF10,2,does not specify the maximum response time,The system shall provide output within 3 seconds for standard operations.,yes
+NF20,3,does not address domain-specific data protection needs,"Incorporate domain-specific data protection measures, especially for sensitive industries like healthcare or finance.",yes
+NF30,3,lacks performance benchmarks for domain-specific applications,"Include performance benchmarks tailored to specific domains, such as real-time processing for gaming or high availability for financial services.",yes
 NF40,3,does not specify the CLI usability features,The CLI shall provide auto-completion and context-sensitive help.,yes
 NF70,2,does not specify the measures and maintenance procedures,The system shall include comprehensive documentation for maintenance and troubleshooting and offer runtime-log for easy diagnostics.,yes
 Section 7.2,2,does not specify recovery or program state when a command is improper,Improper command is ignored.,yes
@@ -30,3 +32,10 @@ Section 10,2,does not provide a requirement about the command 'project-scan',...
 Section 10,2,does not provide a requirement about the configuration of 'project-scan',...,yes
 Section 10,2,does not provide a requirement about the configuration 'set',...,yes
 Section 10,2,does not provide a requirement about the command 'get',...,yes
+Glossary,1,lacks definition of ML,Machine learning,no
+N/A,1,lacks section 'Scope',...,no
+N/A,1,lacks section 'Software Environment' in both Product Environment and Development Environment,...,no
+Section 3.2.3,2,does not specify exact resource requirements,"The framework requires a minimum of 4 CPU cores, 8GB of RAM, and 50GB of available storage to operate efficiently. For large projects with over 10,000 lines of code or 1,000 commits, it is recommended to have at least 8 CPU cores, 16GB of RAM, and 100GB of storage to handle the increased computational load and data processing needs",no
+Section 3.2.5,2,lacks details on software adaptability,"The framework must be flexible enough to adapt to different software projects, including those written in Java, Python, and C++. It should support various testing libraries such as JUnit for Java, pytest for Python, and GoogleTest for C++",no
+NF40,1,does not fulfill the template of stating the title,Title: Easy Usage,no
+Section 10.3,1,does not fulfill the template of stating the name,NAME analyse,no
