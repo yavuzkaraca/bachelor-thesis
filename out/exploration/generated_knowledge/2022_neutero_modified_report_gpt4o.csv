@@ -1,24 +1,11 @@
 Label,Issue,Correction
-N/A,No section for non-functional requirements,"Include a section detailing non-functional requirements such as performance, security, and usability."
-N/A,No section for assumptions and dependencies,Include a section that outlines any assumptions and dependencies that the system relies on.
-N/A,No section for glossary of terms,Include a glossary section to define technical terms and acronyms used in the document.
-MC10,Does not specify the format of the neural network topology,The system shall support neural network topologies in ONNX format.
-MC60,Does not specify the supported image formats,"The system shall support input images in JPEG, JPG, and PNG formats."
-MC100,Does not specify the error message content,"If a missing hardware component is selected, the system shall display an error message indicating the component is not available."
-FR-U-10,Does not specify how the list of neural networks is updated,The system shall update the list of available neural networks in real-time as new networks are imported.
-FR-U-50,Does not specify what happens if an invalid hardware component is selected,"If an invalid hardware component is selected, the system shall display an error message and prompt the user to select a valid component."
-FR-U-60,Does not specify the supported image formats,"The system shall support input images in JPEG, JPG, and PNG formats."
-FR-U-100,Does not specify the format of the results,"The inference results shall be displayed in a tabular format with columns for image name, confidence score, and hardware component used."
-FR-A-30,Does not specify what happens if arguments are invalid,"If the arguments are invalid, the system shall display an error message and highlight the invalid fields."
-FR-A-70,Does not specify the format of the runtime log file,The runtime log file shall be in plain text format and include timestamps for each event.
-PD10,Does not specify the minimum image dimensions,The height and width of the input image(s) should be at least 224x224 pixels.
-PD20,Does not specify the format of the neural network topology,The imported neural network topology should be in ONNX format.
-PD30,Does not specify the format of the inference results,The inference results and diagnostic data shall be saved in CSV format.
-PD40,Does not specify the format of the runtime log file,The runtime log file shall be in plain text format.
-PD50,Does not specify the format of the translation files,The translation files shall be in .qm format.
-Section 5.1,Does not specify the expected behavior for each scenario,Each scenario should include expected behavior and system responses for each step.
-Section 6.1,Does not specify the initial state of the system,"The system shall initialize with no selected hardware component, neural network, or imported image."
-Section 6.2,Does not specify the expected results for each test case,Each test case should include the expected results and system responses.
-Section 6.3,Does not specify the error messages for each error case,Each error case should include the specific error message that will be displayed.
-Section 6.4,Does not specify the expected results for each optional case,Each optional case should include the expected results and system responses.
-``
+/FR-U-10/,Does not specify the format for user-imported neural network topology,The system shall accept user-imported neural network topologies in ONNX format only.
+/FR-U-60/,Does not specify the supported file formats for input images,"The system shall support input images in JPEG, JPG, and PNG formats only."
+/FR-U-100/,Does not specify the format for exporting results and diagnostic data,The system shall export results and diagnostic data in CSV format.
+/FR-A-10/,Does not specify the types of error and warning messages,"The system shall display error and warning messages for invalid selections, missing files, and unsupported formats."
+/PD10/,Does not specify the minimum dimensions for input images,The system shall support input images with a minimum resolution of 128x128 pixels.
+/PD20/,Does not specify the compatibility requirements for imported neural networks,The system shall only accept neural network topologies that are compatible with the specified hardware components.
+/PD30/,Does not specify the format for inference results and diagnostic data,The system shall store inference results and diagnostic data in JSON format.
+/TC-INF-10/,Does not specify the expected output format for inference results,The system shall display inference results in a pop-up window with confidence scores and diagnostic data in tabular format.
+/TC-ERR-10/,Does not specify the types of invalid neural networks,"The system shall display an error message for unsupported neural network formats, corrupted files, and incompatible topologies."
+/TC-ERR-30/,Does not specify the types of invalid images,"The system shall display an error message for unsupported image formats, corrupted files, and images with dimensions smaller than the minimum supported size."

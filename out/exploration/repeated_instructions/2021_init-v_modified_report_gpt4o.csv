@@ -1,11 +1,16 @@
 Label,Issue,Correction
-N/A,Missing section on user authentication and authorization,The system shall include user authentication and authorization mechanisms to ensure secure access.
-N/A,Missing section on data backup and recovery,The system shall provide data backup and recovery options to prevent data loss.
-N/A,Missing section on system performance metrics,"The system shall define performance metrics such as response time, throughput, and resource utilization."
-N/A,Missing section on error handling and logging,The system shall include error handling and logging mechanisms to capture and report system errors.
-N/A,Missing section on scalability requirements,The system shall be scalable to handle increasing amounts of data and users without performance degradation.
-N/A,Missing section on compatibility with other systems,The system shall be compatible with other systems and software used in the industrial network.
-N/A,Missing section on user training and documentation,The system shall provide user training and comprehensive documentation to ensure proper usage.
-N/A,Missing section on data privacy and compliance,The system shall comply with data privacy regulations and ensure the protection of sensitive information.
-N/A,Missing section on maintenance and support,The system shall include provisions for ongoing maintenance and technical support.
-N/A,Missing section on system decommissioning,The system shall include a plan for decommissioning and data migration when the system is no longer in use.
+/F10/,Does not specify the maximum file size for PCAP files,The system shall support loading PCAP files up to a maximum size of 500MB.
+/F20/,Does not specify the default values for the preprocessor configuration,"The system shall provide default values for the preprocessor configuration: Length scaling: 150, Value scaling: Off, Normalization: None, Autoencoder and PCA are selected, Number of hidden layers: 4, Number of nodes in hidden layers: (256, 64, 32, 8), Loss function: MSE, Number of epochs for the training: 100, Optimizer: adam."
+/F30/,Does not specify the maximum number of nodes and edges that can be displayed in the network topology graph,The system shall support displaying up to 1000 nodes and 2000 edges in the network topology graph.
+/F40/,Does not specify the maximum number of points that can be displayed in the preprocessor results graph,"The system shall support displaying up to 10,000 points in the preprocessor results graph."
+/F50/,Does not specify the update frequency for the performance analysis graphs,The system shall update the performance analysis graphs every 5 seconds during the preprocessor run.
+/F60/,Does not specify the zoom level limits for the graphs,The system shall support zooming in and out of the graphs with a minimum zoom level of 10% and a maximum zoom level of 500%.
+/F70/,Does not specify the supported image formats for saving graphs,"The system shall support saving graphs as PNG, JPEG, and SVG image formats."
+/F80/,Does not specify the maximum number of runs that can be compared simultaneously,The system shall support comparing up to 5 preprocessor runs simultaneously.
+/F90/,Does not specify the responsiveness criteria for asynchronous interaction,The system shall ensure that the user interface remains responsive with a maximum delay of 1 second during asynchronous interactions.
+/F100/,Does not specify the types of statistics to be displayed for the input PCAP file,"The system shall display the following statistics for the input PCAP file: Total number of packets, Number of unique devices, Number of protocols used, and Packet size distribution."
+/F200/,Does not specify the window management options for graphs,"The system shall allow users to open, close, and rearrange graph windows independently."
+/F210/,Does not specify the default key bindings for commonly used functionalities,"The system shall provide default key bindings for commonly used functionalities: Ctrl + O for opening a saved session, Ctrl + S for saving a session, Ctrl + Alt + S for saving a session by selecting a file, Ctrl + R for running the preprocessor."
+/F220/,Does not specify the format for identifiers inside a saved session,"The system shall include identifiers in the saved session file in the following format: Program version hash, PCAP file hash."
+/F230/,Does not specify the threshold for displaying a warning when handling large amounts of data,The system shall display a warning if the selected PCAP file contains information on more than 2 million packets.
+/F240/,Does not specify the format and content of the PDF report for the current session,"The system shall create a PDF report containing the configurations, results, and performance graphs of the current session."

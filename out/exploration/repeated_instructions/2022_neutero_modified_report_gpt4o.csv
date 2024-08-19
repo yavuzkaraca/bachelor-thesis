@@ -1,15 +1,17 @@
 Label,Issue,Correction
-Section 2.3,does not specify the environment in which the program can be run,"The program can only be run on the specified environment: Windows 10, Ubuntu 20.04, and macOS 11.0 or later."
-Section 2.3,does not specify the compatible neural network topologies,Only such neural network topologies are supported that are compatible with ONNX format.
-FR-U-50,does not specify what happens if an invalid hardware component is selected,"If an invalid hardware component is selected, an error message shall be displayed and the selection shall be reset to the previous valid state."
-FR-U-60,does not specify supported image formats,"The system shall support importing images in JPEG, JPG, and PNG formats."
-FR-U-100,does not specify the format of the results and diagnostic data,"The results and diagnostic data shall be displayed in a tabular format with columns for inference result, confidence score, latency, hardware information, and neural network identifier."
-FR-U-110,does not specify the format for exporting results and diagnostic data,The results and diagnostic data shall be exported in CSV format.
-FR-A-10,does not specify what happens if an improper selection is made,"If an improper selection is made, an error message shall be displayed and the selection shall be reset to the previous valid state."
-FR-A-30,does not specify recovery or program state when selection is improper,Improper Selection is undone and the previous state before the selection is still valid.
-FR-A-70,does not specify the format of the runtime log file,The runtime log file shall be in plain text format.
-PD10,does not specify the minimum dimensions for input images,The height and width of import image(s) should be at least 224x224 pixels.
-PD20,does not specify the format for imported neural networks,Imported neural network topology should be compatible with the specified hardware and in ONNX format.
-PD30,does not specify the format for inference results and diagnostic data,Inference results and diagnostic data shall be in JSON format.
-PD40,does not specify the format for the runtime log file,The runtime log file shall be in plain text format.
-PD50,does not specify the format for translation files,Translation files shall be in Compiled Qt Linguist File (.qm) format.
+/FR-U-10/,Does not specify the format for listing neural networks,The system shall list neural networks in a drop-down menu with each entry showing the network name and version.
+/FR-U-30/,Does not specify the supported file formats for importing neural network topology,The system shall support importing neural network topologies in ONNX format only.
+/FR-U-60/,Does not specify the supported file formats for input images,"The system shall support input images in JPEG, JPG, and PNG formats only."
+/FR-U-100/,Does not specify the format for displaying inference results,The system shall display inference results in a pop-up window with a scrollable list if multiple results are present.
+/FR-U-110/,Does not specify the format for exporting results and diagnostic data,The system shall export results and diagnostic data in a CSV file format.
+/FR-A-10/,Does not specify the types of error and warning messages,The system shall display error messages for invalid selections and warning messages for suboptimal configurations.
+/FR-A-30/,Does not specify the types of arguments to be checked for validity,"The system shall check the validity of selected neural network, hardware component, and input image."
+/FR-A-70/,Does not specify the format for the runtime log file,The system shall write the runtime log in a plain text file format with timestamps for each event.
+/PD10/,Does not specify the minimum dimensions for input images,The system shall support input images with a minimum resolution of 224x224 pixels.
+/PD20/,Does not specify the compatibility requirements for imported neural networks,The system shall ensure that imported neural networks are compatible with the selected hardware components.
+/PD30/,Does not specify the format for inference results and diagnostic data,The system shall store inference results and diagnostic data in a structured JSON format.
+/TC-INF-10/,Does not specify the expected format of the valid result,The system shall display the inference result in a pop-up window with the confidence score and diagnostic data.
+/TC-ERR-10/,Does not specify the types of errors for invalid neural networks,The system shall display an error message for unsupported file formats or corrupted neural network files.
+/TC-ERR-20/,Does not specify the types of errors for missing hardware components,The system shall display an error message if the selected hardware component is not connected or recognized.
+/TC-ERR-30/,Does not specify the types of errors for invalid images,The system shall display an error message for unsupported image formats or corrupted image files.
+/TC-OPT-10/,Does not specify the expected behavior after aborting an inference,The system shall display a message indicating that the inference was aborted and reset the interface to the initial state.

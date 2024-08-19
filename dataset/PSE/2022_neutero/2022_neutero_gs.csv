@@ -1,5 +1,4 @@
 Label,Level,Issue,Correction,Native
-Glossary,1,lacks definition of FPGA.,Expand the glossary to include "FPGA.",yes
 FR-A-30,2,does not specify recovery or program state when selection is improper.,"... Improper Selection is undone and the previous state before the selection is still valid.",yes
 FR-A-40,2,does not specify the behavior if user tries to start multiple inference instances simultaneously,"... or an inference is already started.",yes
 FR-U-20,1,does not refer to behavior specifying requirement.,refer to FR-A-10,yes
@@ -24,3 +23,4 @@ Section 3.2,3,does not mention the loading animation while inference is running,
 PD30,1,does not fulfill the template of five elements,...,no
 N/A,1,missing section on Non-functional requirements,...,no
 Section 7,2,does not specify the main implementation language,"C++ as the main implementation language",no
+Glossary,1,lacks definition of inference,Inference the process of using the knowledge of a trained neural network to predict the result based on the given input.,no

@@ -15,30 +15,8 @@ from langchain_core.chat_history import (
 
 from langchain_core.runnables.history import RunnableWithMessageHistory
 
-from llm.prompts import generate_ieee_guidelines, instructions_few_shot, system_default_role, \
-    instructions_zero_shot, system_engineer_role, instructions_chain_of_thought_zero_shot, completeness_types, \
-    instructions_chain_of_thought_few_shot,instructions_reminder_must_have
-
-
-def combined_pse_reminder(llm,docs):
-    """
-    Combines:
-     1. chain of though
-     2. repeated instructions
-     3. few shots
-     5. provided completeness types
-     6. reminder
-    """
-    messages = [
-        (
-            "system", system_default_role()
-        ),
-        ("user", instructions_chain_of_thought_few_shot() + completeness_types() + "\n".join(
-            [doc.page_content for doc in docs])
-         + "\n" + instructions_reminder_must_have() + instructions_chain_of_thought_few_shot()),
-    ]
-    response = llm.invoke(messages)
-    return response.content
+from llm.prompts import (generate_ieee_guidelines, instructions_simple, system_default_role, system_engineer_role,
+                         instructions_chain_of_thought, completeness_types, examples, output_format)
 
 
 def combined_five(llm, docs):
@@ -55,9 +33,9 @@ def combined_five(llm, docs):
         (
             "system", system_engineer_role()
         ),
-        ("user", instructions_chain_of_thought_zero_shot() + completeness_types() + "\n".join(
+        ("user", instructions_chain_of_thought() + completeness_types() + "\n".join(
             [doc.page_content for doc in docs])
-         + "\n" + instructions_chain_of_thought_zero_shot()),
+         + "\n" + instructions_chain_of_thought() + output_format() + examples()),
     ]
     response = llm.invoke(messages)
     return response.content
@@ -80,7 +58,7 @@ def generated_knowledge(llm, docs):
 
     messages = [
         ("system", system_default_role()),
-        ("user", instructions_few_shot() + "\n".join([doc.page_content for doc in docs])),
+        ("user", instructions_simple() + output_format() + examples() + "\n".join([doc.page_content for doc in docs])),
     ]
 
     response = with_message_history.invoke(messages, config=config)
@@ -93,7 +71,7 @@ def few_shot(llm, docs):
         (
             "system", system_default_role()
         ),
-        ("user", instructions_few_shot() + "\n".join([doc.page_content for doc in docs])),
+        ("user", instructions_simple() + output_format() + examples() + "\n".join([doc.page_content for doc in docs])),
     ]
 
     response = llm.invoke(messages)
@@ -105,7 +83,7 @@ def zero_shot(llm, docs):
         (
             "system", system_default_role()
         ),
-        ("user", instructions_zero_shot() + "\n".join([doc.page_content for doc in docs])),
+        ("user", instructions_simple() + output_format() + "\n".join([doc.page_content for doc in docs])),
     ]
 
     response = llm.invoke(messages)
@@ -117,7 +95,7 @@ def engineer_persona(llm, docs):
         (
             "system", system_engineer_role()
         ),
-        ("user", instructions_few_shot() + "\n".join([doc.page_content for doc in docs])),
+        ("user", instructions_simple() + output_format() + examples() + "\n".join([doc.page_content for doc in docs])),
     ]
 
     response = llm.invoke(messages)
@@ -129,8 +107,8 @@ def repeated_instructions(llm, docs):
         (
             "system", system_default_role()
         ),
-        ("user", instructions_few_shot() + "\n".join([doc.page_content for doc in docs])
-         + "\n" + instructions_few_shot()),
+        ("user", instructions_simple() + output_format() + examples() + "\n".join([doc.page_content for doc in docs])
+         + "\n" + instructions_simple() + output_format() + examples())
     ]
 
     response = llm.invoke(messages)
@@ -142,7 +120,7 @@ def chain_of_thought_zero_shot(llm, docs):
         (
             "system", system_default_role()
         ),
-        ("user", instructions_chain_of_thought_zero_shot() + "\n".join([doc.page_content for doc in docs])),
+        ("user", instructions_chain_of_thought() + output_format() + "\n".join([doc.page_content for doc in docs])),
     ]
 
     response = llm.invoke(messages)
@@ -154,7 +132,8 @@ def chain_of_thought_few_shot(llm, docs):
         (
             "system", system_default_role()
         ),
-        ("user", instructions_chain_of_thought_few_shot() + "\n".join([doc.page_content for doc in docs])),
+        ("user", instructions_chain_of_thought() + output_format() + examples() + "\n".join(
+            [doc.page_content for doc in docs])),
     ]
 
     response = llm.invoke(messages)
@@ -166,7 +145,8 @@ def provided_completeness_types(llm, docs):
         (
             "system", system_default_role()
         ),
-        ("user", instructions_few_shot() + completeness_types() + "\n".join([doc.page_content for doc in docs])),
+        ("user", instructions_simple() + output_format() + completeness_types() + "\n".join(
+            [doc.page_content for doc in docs])),
     ]
 
     response = llm.invoke(messages)

@@ -1,12 +1,8 @@
 Label,Issue,Correction
-N/A,Missing section on system's response to erroneous inputs,The system shall provide detailed error messages and recovery options for all erroneous inputs.
-Section 3.2.3,Does not specify the exact resource requirements,"The system shall require a minimum of 4GB RAM, 2 CPU cores, and 10GB of storage space."
-Section 4.1,Does not specify hardware compatibility details,The system shall be compatible with x86 and ARM architectures.
-Section 5.1,Does not specify the development tools and software used,"The development environment shall include IntelliJ IDEA, JDK 11, and Maven 3.6.3."
-Section 6.1,Missing detailed use cases,Use Case: User requests test results for a specific commit. Preconditions: User is in a git repository. Postconditions: Test results are displayed or saved.
-Section 7,Does not specify all functional requirements,The system shall allow users to schedule automated test runs at specified intervals.
-Section 8,Does not specify performance benchmarks,The system shall execute tests and generate reports within 5 minutes for projects with up to 1000 commits.
-Section 9,Does not specify data retention policy,The system shall retain test data for a minimum of 1 year and allow users to archive older data.
-Section 10,Does not specify user interface accessibility features,The user interface shall include options for high contrast mode and screen reader compatibility.
-Section 11,Does not specify test scenarios for edge cases,Test Scenario: User inputs an invalid commit ID. Expected Result: System displays an error message and prompts for a valid ID.
-``
+3.2.3,"Does not specify the exact resource requirements for CPU, memory, and storage","The framework shall require a minimum of 2 CPU cores, 4GB of RAM, and 10GB of available storage space."
+3.2.4,Does not specify how data management and privacy will be ensured,The application shall encrypt all data transfers using TLS and store data in encrypted format using AES-256.
+4.1,Does not specify the minimum hardware requirements for the framework,"The framework shall support hardware with at least 2 CPU cores, 4GB of RAM, and 10GB of available storage space."
+5.1,Does not specify the development environment's software requirements,"The development environment shall include JDK 11, Maven 3.6.3, and Git 2.24 or higher."
+6.1,Does not provide detailed use cases,"The use case for ""Output tests from a single version to a file"" shall include steps for user interaction, system response, and error handling."
+NF40,Does not specify the ease of use for the CLI,"The CLI shall provide auto-completion for commands and flags, and include detailed help documentation accessible via the --help flag."
+NF70,Does not specify the maintenance procedures,"The program shall include a maintenance guide detailing common issues and troubleshooting steps, and provide automated scripts for routine maintenance tasks."

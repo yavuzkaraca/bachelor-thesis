@@ -1,6 +1,11 @@
 Label,Issue,Correction
-Section 2.3,"References ""specified environment"" and ""specified hardware"" without providing details","The program can only be run on the specified environment: Xubuntu 20.04 with Intel Movidius, CPU, and GPU support."
-FR-U-50,Mentions initiating /FR-A-30/ but does not specify what /FR-A-30/ entails,"Selecting a hardware component initiates /FR-A-30/, which checks the validity of the selected hardware against the neural network requirements."
-FR-A-30,Does not specify what happens if arguments are invalid,"If arguments are invalid, an error message is displayed, and the user is prompted to correct the invalid selections."
-PD20,"References ""specified hardware"" without detailing what hardware is specified","Imported neural network topology should be compatible with the specified hardware: CPU, GPU, and Intel Movidius."
-RC10,"The reference ""see ??"" is incomplete","The program can only be run on the specified environment: Xubuntu 20.04 with Intel Movidius, CPU, and GPU support."
+/FR-U-10/,Does not specify the format for user-imported neural network topology,The system shall accept user-imported neural network topologies in the Open Neural Network eXchange (ONNX) format.
+/FR-U-60/,Does not specify the supported image formats for input images,"The system shall support input images in JPEG, JPG, and PNG formats."
+/FR-U-110/,Does not specify the format for exporting results and diagnostic data,The system shall export results and diagnostic data in a CSV file format.
+/FR-A-30/,Does not specify the criteria for argument validity checks,The system shall check arguments for validity based on compatibility with the selected neural network and hardware components.
+/PD10/,Does not specify the minimum height and width for input images,The height and width of input images should be at least 224x224 pixels.
+/PD20/,Does not specify the compatibility requirements for imported neural networks,Imported neural network topology should be compatible with the specified hardware and should be in ONNX format.
+/PD30/,Does not specify the format for inference results and diagnostic data,Inference results and diagnostic data shall be provided in a structured JSON format.
+/TC-INF-10/,Does not specify the expected format of the inference result,"The inference result should include a confidence score, latency, hardware information, and the identifier of the neural network."
+/TC-ERR-10/,Does not specify the criteria for an invalid neural network,An invalid neural network is one that is not in the ONNX format or is incompatible with the selected hardware.
+/TC-ERR-30/,Does not specify the criteria for an invalid image,"An invalid image is one that is not in the supported formats (JPEG, JPG, PNG) or does not meet the minimum size requirements."

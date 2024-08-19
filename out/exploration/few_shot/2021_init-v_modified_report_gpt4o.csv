@@ -1,22 +1,17 @@
 Label,Issue,Correction
-N/A,No mention of user roles or permissions,"The system shall define user roles such as Admin, User, and Guest, each with specific permissions and access levels."
-N/A,No mention of error handling or recovery mechanisms,The system shall provide error messages and recovery options when a file fails to load or a process fails to complete.
-N/A,No mention of security requirements,The system shall ensure data encryption for all data transfers and storage to protect sensitive information.
-N/A,No mention of performance benchmarks,The system shall process a PCAP file of up to 1GB within 5 minutes.
-N/A,No mention of data backup and restore,The system shall provide options to backup and restore user data and configurations.
-N/A,No mention of system scalability,The system shall support scalability to handle increasing amounts of data and users without performance degradation.
-N/A,No mention of compatibility with other systems,The system shall be compatible with other network analysis tools and allow data import/export in standard formats.
-N/A,No mention of user training or documentation,The system shall include user manuals and training materials to help users understand and utilize the system effectively.
-N/A,No mention of system maintenance and updates,The system shall provide regular updates and maintenance to ensure it remains functional and secure.
-N/A,No mention of accessibility requirements,The system shall comply with accessibility standards to ensure it is usable by people with disabilities.
-N/A,No mention of data retention policies,The system shall define data retention policies to manage how long data is stored and when it is deleted.
-N/A,No mention of user feedback mechanisms,The system shall provide a feedback mechanism for users to report issues and suggest improvements.
-N/A,No mention of system availability and uptime,The system shall ensure 99.9% uptime to guarantee availability for users.
-N/A,No mention of internationalization and localization,The system shall support multiple languages and regional settings to cater to a global user base.
-N/A,No mention of legal and regulatory compliance,"The system shall comply with relevant legal and regulatory requirements, such as GDPR for data protection."
-N/A,No mention of data integrity checks,The system shall perform data integrity checks to ensure the accuracy and consistency of data.
-N/A,No mention of audit trails,The system shall maintain audit trails to track user actions and system changes for security and accountability.
-N/A,No mention of system decommissioning,The system shall provide a process for safely decommissioning and disposing of data when it is no longer needed.
-N/A,No mention of third-party integrations,The system shall support integrations with third-party tools and services to extend its functionality.
-N/A,No mention of system testing and quality assurance,The system shall undergo rigorous testing and quality assurance processes to ensure it meets all specified requirements.
-``
+Section 1.1,Does not specify the format for the PCAP file,The system shall accept PCAP files in the standard libpcap format.
+Section 2.1.1,Does not specify the supported operating systems for the program,"The program shall support Windows 10, macOS 10.15, and Ubuntu 20.04 or later."
+Section 2.2.1,Does not specify the maximum file size for PCAP files,The system shall support PCAP files up to 2GB in size.
+Section 2.2.1,Does not specify the default values for the normalization methods,The default normalization method shall be set to None.
+Section 2.2.1,Does not specify the format for saving configurations,Configurations shall be saved in JSON format.
+Section 2.2.1,Does not specify the format for exporting graphs as images,Graphs shall be exported as PNG images.
+Section 2.2.1,Does not specify the maximum number of hidden layers for the autoencoder,The autoencoder shall support up to 10 hidden layers.
+Section 2.2.1,Does not specify the maximum number of nodes per hidden layer for the autoencoder,Each hidden layer in the autoencoder shall support up to 1024 nodes.
+Section 2.2.1,Does not specify the supported loss functions for the autoencoder,The autoencoder shall support MSE and MAE as loss functions.
+Section 2.2.1,Does not specify the supported optimizers for the autoencoder,"The autoencoder shall support Adam, SGD, and RMSprop as optimizers."
+Section 2.2.1,Does not specify the format for the performance analysis graphs,Performance analysis graphs shall be displayed as line charts.
+Section 2.2.1,Does not specify the format for the session save files,Session save files shall be in JSON format.
+Section 2.2.1,Does not specify the format for the exported PDF report,"The PDF report shall include configurations, results, and performance graphs in a structured format."
+Section 2.3.1,Does not specify the response time for showing results from preprocessing,The system shall display results from preprocessing within 1 second.
+Section 2.3.1,Does not specify the security measures to prevent data leaks,The system shall use HTTPS for all data transmissions and encrypt all stored data.
+Section 2.3.1,Does not specify the documentation format,The implementation and design documentation shall be provided in Markdown format.

@@ -1,3 +1,7 @@
 Label,Issue,Correction
-/RC10/,The program can only be run on the specified environment. (see ??),The program can only be run on the specified environment. (see Section 7)
-/RC30/,Only such neural network topology are supported that are compatible with in ?? specified hardware.,Only such neural network topology are supported that are compatible with the hardware specified in Section 2.1.
+/FR-U-50/,"The requirement mentions that selecting a hardware component initiates /FR-A-30/, but /FR-A-30/ is not clearly defined in the document.",Define /FR-A-30/ clearly in the document.
+/FR-A-40/,"The requirement states that the ""Start the inference"" button is disabled until all arguments are selected, but it does not specify what happens if the arguments are invalid.","Specify that the ""Start the inference"" button remains disabled if any selected argument is invalid."
+/PD10/,"The requirement mentions that the height and width of the import image(s) should be bigger than the minimum the selected neural network supports, but it does not specify what happens if the image dimensions are smaller.",Specify that an error message will be shown if the image dimensions are smaller than the minimum supported by the selected neural network.
+/PD30/,The requirement lists the items included in the inference results and diagnostic data but does not specify the format in which these results will be saved.,"Specify the format (e.g., JSON, CSV) in which the inference results and diagnostic data will be saved."
+/TC-ERR-20/,The requirement mentions selecting a missing hardware component but does not specify how the system identifies a hardware component as missing.,Specify the criteria or method used to identify a hardware component as missing.
+/TC-OPT-20/,The requirement mentions the automatic detection of Intel Movidius but does not specify the actions taken if the detection fails.,Specify the actions taken if the automatic detection of Intel Movidius fails.

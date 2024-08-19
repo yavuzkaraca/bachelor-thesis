@@ -18,78 +18,47 @@ def system_default_role():
     """
 
 
-def instructions_reminder_must_have():
+def examples():
     return """
-    Remember, the must and optional criteria at the beginning are just a quick overview, the actual requirements are
-    provided later in the document. Focus on the functional and non-functional requirements that come later.
+    Example Output:
+    Label;Issue;Correction
+    R10;Does not specify the format for international phone numbers;The system shall accept phone numbers in the E.164 international format (e.g., +1 234-567-890).
+    Section 10.1;Does not specify the minimum hardware requirements for mobile devices;The mobile app shall support devices with at least 2GB RAM and running Android 8.0 or iOS 12.0 and above.    
+    REQ-10 (2.1.4);Does not specify the maximum character length for user comments;The system shall limit user comments to a maximum of 500 characters.
+    FR22;Does not specify the method for user feedback collection;The system shall provide a feedback form accessible from the main dashboard, allowing users to submit feedback directly.
+    NF10;Does not fulfill the template of three elements;"... and protected mode"
+    4.2.1.a;Does not specify the supported file formats for document uploads;The system shall support document uploads in PDF, DOCX, and TXT formats only.
+    Section 8.3;Does not define user access levels for different roles within the system;The system shall define three user roles: Admin, Editor, and Viewer, each with specific access rights.
     \n
     """
 
 
-def instructions_few_shot():
+def output_format():
     return """
-    Identify all the instances of incompleteness in the following document by:
-    1. Referring to the requirement by its unique identifier/label. If it's more than one requirement then you can
-     refer to the section number. If the section is totally missing than you can say "N/A".
-    2. Stating the issue.
-    3. Providing an example of a requirement that addresses the identified incompleteness.
-
     Output Format:
     Produce a CSV file with the following columns: "Label", "Issue", and "Correction". Ensure that each cell 
     value in the CSV file is separated with a semicolon (;).
-
-    Example Output:
-    R19;does not specify what happens if the message is ignored;If the immunization reminder is ignored, the system shall send an alert to the administrator
-    Section 5.1;does not specify total supported number of concurrent users;The system shall handle up to 10.000 concurrent users without performance degradation
-    FR-A-30;does not specify recovery or program state when selection is improper;Improper Selection is undone and the previous state before the selection is still valid
     \n
     """
 
 
-def instructions_chain_of_thought_zero_shot():
+def instructions_simple():
+    return """
+    Identify all the instances of incompleteness in the following document by:
+    1. Referring to the requirement by its unique identifier/label. If it's more than just one requirement then you can
+     refer to the section number. 
+    2. Stating the issue.
+    3. Providing an example of a requirement that addresses the identified incompleteness.
+    \n
+    """
+
+
+def instructions_chain_of_thought():
     return """
     First, read the following document thoroughly and identify all the instances of incompleteness.
     Then, take your time and think about these instances if they really are accurate and valid.
     After that, explain the reason of incompleteness for each instance referring to their unique identifier.
     Finally, depending on the reason, provide an example of a requirement that addresses the identified incompleteness.
-
-    Output Format:
-    Produce a CSV file with the following columns: "Label", "Issue", and "Correction". Ensure that each cell 
-    value in the CSV file is separated with a semicolon (;).
-    \n
-    """
-
-
-def instructions_chain_of_thought_few_shot():
-    return """
-    First, read the following document thoroughly and identify all the instances of incompleteness.
-    Then, take your time and think about these instances if they really are accurate and valid.
-    After that, explain the reason of incompleteness for each instance referring to their unique identifier.
-    Finally, depending on the reason, provide an example of a requirement that addresses the identified incompleteness.
-
-    Output Format:
-    Produce a CSV file with the following columns: "Label", "Issue", and "Correction". Ensure that each cell 
-    value in the CSV file is separated with a semicolon (;).
-    
-    Example Output:
-    R19;does not specify what happens if the message is ignored;If the immunization reminder is ignored, the system shall send an alert to the administrator
-    Section 5.1;does not specify total supported number of concurrent users;The system shall handle up to 10.000 concurrent users without performance degradation
-    FR-A-30;does not specify recovery or program state when selection is improper;Improper Selection is undone and the previous state before the selection is still valid
-    \n
-    """
-
-
-def instructions_zero_shot():
-    return """
-    Identify all the instances of incompleteness in the following document by:
-    1. Referring to the requirement by its unique identifier/label. If it's more than one requirement then you can
-     refer to the section number. If the section is totally missing than you can say "N/A".
-    2. Stating the issue.
-    3. Providing an example of a requirement that addresses the identified incompleteness.
-
-    Output Format:
-    Produce a CSV file with the following columns: "Label", "Issue", and "Correction". Ensure that each cell 
-    value in the CSV file is separated with a semicolon (;).
     \n
     """
 

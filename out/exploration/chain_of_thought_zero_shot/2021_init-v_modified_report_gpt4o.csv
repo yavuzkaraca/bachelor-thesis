@@ -1,10 +1,22 @@
 Label,Issue,Correction
-/F21a/,"The requirement to change default values of the preprocessor is mentioned, but the specific default values are not listed.",Include a detailed list of default values that can be changed.
-/F22/,The requirement to run the preprocessor does not specify the expected output format or any error handling.,Specify the expected output format and error handling procedures.
-/F30/,The visual representation of the network topology does not specify how to handle large networks or performance considerations.,Include details on handling large networks and performance considerations.
-/F40/,The visual representation of the preprocessor results does not specify the types of graphs or visual elements to be used.,Specify the types of graphs and visual elements to be used.
-/F50/,The performance analysis of the preprocessor does not specify the metrics to be used for evaluation.,Specify the metrics to be used for performance evaluation.
-/F60/,The zoom functionality for graphs does not specify the range or limits of zooming.,Specify the range or limits of zooming.
-/F70/,The requirement to save graphs and configurations does not specify the file formats supported.,Specify the file formats supported for saving graphs and configurations.
-/F80/,The comparison of preprocessor performance and results does not specify how differences will be highlighted.,Specify how differences will be highlighted in the comparison.
-/F90/,The asynchronous interaction with panels does not specify the types of interactions allowed.,Specify the types of interactions allowed during asynchronous operations.
+/F10/,No description of how to handle errors when loading a PCAP file.,"Add error handling for loading PCAP files: ""If the PCAP file fails to load, an error message should be displayed to the user."""
+/F20/,No details on how to handle invalid configurations.,"Add validation for preprocessor configurations: ""If the configuration is invalid, an error message should be displayed and the preprocessor should not run."""
+/F21/,No description of default values for PCA configuration.,"Add default values for PCA configuration: ""Default values for PCA: Number of components: 2."""
+/F22/,No details on how to handle errors during preprocessing.,"Add error handling for preprocessing: ""If preprocessing fails, an error message should be displayed to the user."""
+/F30/,No details on how to handle large network topologies.,"Add handling for large network topologies: ""If the network topology is too large to display, a warning message should be shown and the graph should be simplified."""
+/F40/,No details on how to handle errors in visual representation.,"Add error handling for visual representation: ""If the visual representation fails, an error message should be displayed to the user."""
+/F50/,No details on how to handle errors in performance analysis.,"Add error handling for performance analysis: ""If the performance analysis fails, an error message should be displayed to the user."""
+/F60/,No details on how to handle errors in zoom functionality.,"Add error handling for zoom functionality: ""If zoom functionality fails, an error message should be displayed to the user."""
+/F70/,No details on how to handle errors when saving graphs and configurations.,"Add error handling for saving: ""If saving fails, an error message should be displayed to the user."""
+/F80/,No details on how to handle errors during comparison of preprocessor performance.,"Add error handling for comparison: ""If comparison fails, an error message should be displayed to the user."""
+/F90/,No details on how to handle errors during asynchronous interaction.,"Add error handling for asynchronous interaction: ""If asynchronous interaction fails, an error message should be displayed to the user."""
+/F100/,No details on how to handle errors in statistics subwindow.,"Add error handling for statistics subwindow: ""If the statistics subwindow fails, an error message should be displayed to the user."""
+/F200/,No details on how to handle errors when opening graphs in separate windows.,"Add error handling for opening graphs: ""If opening graphs in separate windows fails, an error message should be displayed to the user."""
+/F210/,No details on how to handle errors in key bindings.,"Add error handling for key bindings: ""If key bindings fail, an error message should be displayed to the user."""
+/F220/,No details on how to handle errors when including identifiers in saved sessions.,"Add error handling for identifiers: ""If including identifiers fails, an error message should be displayed to the user."""
+/F230/,No details on how to handle errors when displaying warnings for large data.,"Add error handling for large data warnings: ""If displaying warnings for large data fails, an error message should be displayed to the user."""
+/F240/,No details on how to handle errors when creating PDF reports.,"Add error handling for PDF reports: ""If creating PDF reports fails, an error message should be displayed to the user."""
+/P10/,No details on how to handle errors in responsiveness.,"Add error handling for responsiveness: ""If the system becomes unresponsive, an error message should be displayed to the user."""
+/S10/,No details on how to handle data leaks.,"Add measures to prevent data leaks: ""Implement security measures to ensure no data leaks occur."""
+/E10/,No details on how to handle errors when adding functionality.,"Add error handling for adding functionality: ""If adding functionality fails, an error message should be displayed to the user."""
+/E11/,No details on how to handle errors in documentation.,"Add error handling for documentation: ""If documentation fails, an error message should be displayed to the user."""

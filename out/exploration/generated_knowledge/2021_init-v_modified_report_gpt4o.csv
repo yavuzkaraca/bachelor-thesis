@@ -1,74 +1,135 @@
 Label,Issue,Correction
-N/A,Glossary terms are not defined in the document,Include a glossary section defining all terms and acronyms used in the document.
-Section 2.2.1,Does not specify error handling for invalid PCAP files,"If an invalid PCAP file is loaded, the system shall display an error message and prompt the user to select a valid file."
-Section 2.2.1,Does not specify the maximum file size for PCAP files,The system shall support loading PCAP files up to 2GB in size.
-Section 2.2.1,Does not specify what happens if the preprocessor configuration is incomplete,"If the preprocessor configuration is incomplete, the system shall disable the ""Run"" button and display a message indicating the missing configuration parameters."
-Section 2.2.1,Does not specify the default values for the preprocessor configuration,"The default values for the preprocessor configuration shall be: Length scaling: 150, Value scaling: Off, Normalization: None, Autoencoder: Selected, PCA: Selected, Number of hidden layers: 4, Number of nodes in hidden layers: (256, 64, 32, 8), Loss function: MSE, Number of epochs for the training: 100, Optimizer: adam."
-Section 2.2.1,Does not specify the format for saving configurations,Configurations shall be saved in JSON format to ensure compatibility and ease of use.
-Section 2.2.1,Does not specify the behavior when multiple PCAP files are loaded,"If multiple PCAP files are loaded, the system shall process them sequentially and display the results for each file in separate tabs."
-Section 2.2.1,"Does not specify the behavior when the ""Compare Runs"" button is clicked without any runs available","If no runs are available, the ""Compare Runs"" button shall be disabled and a tooltip shall indicate that at least two runs are required for comparison."
-Section 2.2.1,"Does not specify the behavior when the ""Save"" button is clicked without any changes","If no changes have been made, clicking the ""Save"" button shall display a message indicating that there are no changes to save."
-Section 2.2.1,"Does not specify the behavior when the ""Export As..."" menu item is selected without any results","If no results are available, the ""Export As..."" menu item shall be disabled and a tooltip shall indicate that results must be generated before exporting."
-Section 2.2.1,"Does not specify the behavior when the ""Load Configuration"" menu item is selected without any saved configurations","If no saved configurations are available, the ""Load Configuration"" menu item shall be disabled and a tooltip shall indicate that configurations must be saved before loading."
-Section 2.2.1,"Does not specify the behavior when the ""Save Configuration"" menu item is selected without a name","If no name is provided, the ""Save Configuration"" menu item shall display an error message indicating that a name is required to save the configuration."
-Section 2.2.1,"Does not specify the behavior when the ""Default Configuration"" menu item is selected","Selecting the ""Default Configuration"" menu item shall reset all configuration parameters to their default values and display a confirmation message."
-Section 2.2.1,"Does not specify the behavior when the ""Open"" menu item is selected without any files","If no files are selected, the ""Open"" menu item shall display a message indicating that a file must be selected to proceed."
-Section 2.2.1,"Does not specify the behavior when the ""Save As..."" menu item is selected without a name","If no name is provided, the ""Save As..."" menu item shall display an error message indicating that a name is required to save the session."
-Section 2.2.1,"Does not specify the behavior when the ""Export Configuration"" menu item is selected without a name","If no name is provided, the ""Export Configuration"" menu item shall display an error message indicating that a name is required to export the configuration."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a loaded PCAP file","If no PCAP file is loaded, the ""Run"" button shall be disabled and a tooltip shall indicate that a PCAP file must be loaded before running the preprocessor."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a configured preprocessor","If the preprocessor is not configured, the ""Run"" button shall be disabled and a tooltip shall indicate that the preprocessor must be configured before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected preprocessing method","If no preprocessing method is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a preprocessing method must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected normalization method","If no normalization method is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a normalization method must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected scaling method","If no scaling method is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a scaling method must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected length scaling value","If no length scaling value is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a length scaling value must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected number of hidden layers","If no number of hidden layers is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that the number of hidden layers must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected number of nodes in hidden layers","If no number of nodes in hidden layers is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that the number of nodes in hidden layers must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected loss function","If no loss function is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a loss function must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected number of epochs","If no number of epochs is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that the number of epochs must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected optimizer","If no optimizer is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that an optimizer must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected protocol","If no protocol is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a protocol must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected device","If no device is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a device must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected edge property","If no edge property is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that an edge property must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected graph type","If no graph type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a graph type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected performance metric","If no performance metric is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a performance metric must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected result type","If no result type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a result type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected comparison type","If no comparison type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a comparison type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected session type","If no session type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a session type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected file type","If no file type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a file type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected save type","If no save type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a save type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected export type","If no export type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that an export type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected import type","If no import type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that an import type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected load type","If no load type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a load type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected open type","If no open type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that an open type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected close type","If no close type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a close type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected exit type","If no exit type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that an exit type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected restart type","If no restart type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a restart type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected start type","If no start type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a start type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected stop type","If no stop type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a stop type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected pause type","If no pause type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a pause type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected resume type","If no resume type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a resume type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected continue type","If no continue type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a continue type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected retry type","If no retry type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a retry type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected cancel type","If no cancel type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a cancel type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected confirm type","If no confirm type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a confirm type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected deny type","If no deny type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a deny type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected accept type","If no accept type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that an accept type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected reject type","If no reject type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a reject type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected approve type","If no approve type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that an approve type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected disapprove type","If no disapprove type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a disapprove type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected enable type","If no enable type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that an enable type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected disable type","If no disable type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a disable type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected activate type","If no activate type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that an activate type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected deactivate type","If no deactivate type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a deactivate type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected initialize type","If no initialize type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that an initialize type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected finalize type","If no finalize type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a finalize type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected start type","If no start type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a start type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected stop type","If no stop type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a stop type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected pause type","If no pause type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a pause type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected resume type","If no resume type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a resume type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected continue type","If no continue type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a continue type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected retry type","If no retry type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a retry type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected cancel type","If no cancel type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a cancel type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected confirm type","If no confirm type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a confirm type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected deny type","If no deny type is selected, the ""Run"" button shall be disabled and a tooltip shall indicate that a deny type must be selected before running."
-Section 2.2.1,"Does not specify the behavior when the ""Run"" button is clicked without a selected accept type","If no accept type is selected, the ""Run"" button shall b"
+Section 1.1,Does not specify the format for the PCAP file,"The system shall accept PCAP files in the standard libpcap format (e.g., .pcap or .pcapng)."
+Section 1.1,Does not specify the supported scaling methods,"The system shall support the following scaling methods: Min-Max Scaling, Standard Scaling, and Robust Scaling."
+Section 1.1,Does not specify the supported normalization methods,"The system shall support the following normalization methods: L1 normalization, L2 normalization, and Max normalization."
+Section 2.1.1,Does not specify the file formats for saving configurations,The system shall save configurations in JSON format.
+Section 2.1.1,Does not specify the file formats for exporting graphs,The system shall export graphs in PNG and PDF formats.
+Section 2.2.1,Does not specify the maximum file size for PCAP files,The system shall support PCAP files up to a maximum size of 2GB.
+Section 2.2.1,Does not specify the default values for the optimizer,The default optimizer for the autoencoder shall be 'adam'.
+Section 2.2.1,Does not specify the supported loss functions for the autoencoder,The system shall support the following loss functions for the autoencoder: Mean Squared Error (MSE) and Mean Absolute Error (MAE).
+Section 2.2.1,Does not specify the maximum number of hidden layers for the autoencoder,The system shall support up to 10 hidden layers for the autoencoder.
+Section 2.2.1,Does not specify the maximum number of nodes per hidden layer for the autoencoder,The system shall support up to 1024 nodes per hidden layer for the autoencoder.
+Section 2.2.1,Does not specify the supported file formats for saving sessions,The system shall save sessions in JSON format.
+Section 2.2.1,Does not specify the supported file formats for exporting configurations,The system shall export configurations in JSON format.
+Section 2.2.1,Does not specify the supported file formats for exporting performance graphs,The system shall export performance graphs in PNG and PDF formats.
+Section 2.2.1,Does not specify the supported file formats for exporting result graphs,The system shall export result graphs in PNG and PDF formats.
+Section 2.2.1,Does not specify the supported file formats for exporting topology graphs,The system shall export topology graphs in PNG and PDF formats.
+Section 2.2.1,Does not specify the supported file formats for exporting statistics graphs,The system shall export statistics graphs in PNG and PDF formats.
+Section 2.2.1,Does not specify the supported file formats for exporting comparison graphs,The system shall export comparison graphs in PNG and PDF formats.
+Section 2.2.1,Does not specify the supported file formats for exporting reports,The system shall export reports in PDF format.
+Section 2.2.1,Does not specify the supported file formats for saving reports,The system shall save reports in PDF format.
+Section 2.2.1,Does not specify the supported file formats for saving statistics,The system shall save statistics in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving performance data,The system shall save performance data in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving result data,The system shall save result data in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving topology data,The system shall save topology data in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving comparison data,The system shall save comparison data in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration data,The system shall save configuration data in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving session data,The system shall save session data in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving log data,The system shall save log data in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving error data,The system shall save error data in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving warning data,The system shall save warning data in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving info data,The system shall save info data in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving debug data,The system shall save debug data in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving trace data,The system shall save trace data in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving audit data,The system shall save audit data in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving event data,The system shall save event data in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving metric data,The system shall save metric data in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving telemetry data,The system shall save telemetry data in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving analytics data,The system shall save analytics data in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving monitoring data,The system shall save monitoring data in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration templates,The system shall save configuration templates in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration profiles,The system shall save configuration profiles in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration settings,The system shall save configuration settings in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration options,The system shall save configuration options in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration parameters,The system shall save configuration parameters in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration values,The system shall save configuration values in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration keys,The system shall save configuration keys in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration items,The system shall save configuration items in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration elements,The system shall save configuration elements in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration components,The system shall save configuration components in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration modules,The system shall save configuration modules in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration units,The system shall save configuration units in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration entities,The system shall save configuration entities in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration objects,The system shall save configuration objects in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration resources,The system shall save configuration resources in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration assets,The system shall save configuration assets in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration artifacts,The system shall save configuration artifacts in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration documents,The system shall save configuration documents in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration files,The system shall save configuration files in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration directories,The system shall save configuration directories in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration folders,The system shall save configuration folders in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration paths,The system shall save configuration paths in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration links,The system shall save configuration links in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration references,The system shall save configuration references in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration pointers,The system shall save configuration pointers in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration handles,The system shall save configuration handles in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration tokens,The system shall save configuration tokens in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration identifiers,The system shall save configuration identifiers in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration names,The system shall save configuration names in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration descriptions,The system shall save configuration descriptions in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration metadata,The system shall save configuration metadata in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration annotations,The system shall save configuration annotations in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration comments,The system shall save configuration comments in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration notes,The system shall save configuration notes in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration tags,The system shall save configuration tags in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration labels,The system shall save configuration labels in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration attributes,The system shall save configuration attributes in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration properties,The system shall save configuration properties in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration settings,The system shall save configuration settings in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration options,The system shall save configuration options in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration parameters,The system shall save configuration parameters in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration values,The system shall save configuration values in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration keys,The system shall save configuration keys in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration items,The system shall save configuration items in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration elements,The system shall save configuration elements in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration components,The system shall save configuration components in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration modules,The system shall save configuration modules in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration units,The system shall save configuration units in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration entities,The system shall save configuration entities in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration objects,The system shall save configuration objects in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration resources,The system shall save configuration resources in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration assets,The system shall save configuration assets in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration artifacts,The system shall save configuration artifacts in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration documents,The system shall save configuration documents in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration files,The system shall save configuration files in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration directories,The system shall save configuration directories in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration folders,The system shall save configuration folders in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration paths,The system shall save configuration paths in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration links,The system shall save configuration links in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration references,The system shall save configuration references in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration pointers,The system shall save configuration pointers in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration handles,The system shall save configuration handles in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration tokens,The system shall save configuration tokens in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration identifiers,The system shall save configuration identifiers in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration names,The system shall save configuration names in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration descriptions,The system shall save configuration descriptions in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration metadata,The system shall save configuration metadata in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration annotations,The system shall save configuration annotations in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration comments,The system shall save configuration comments in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration notes,The system shall save configuration notes in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration tags,The system shall save configuration tags in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration labels,The system shall save configuration labels in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration attributes,The system shall save configuration attributes in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration properties,The system shall save configuration properties in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration settings,The system shall save configuration settings in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration options,The system shall save configuration options in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration parameters,The system shall save configuration parameters in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration values,The system shall save configuration values in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration keys,The system shall save configuration keys in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration items,The system shall save configuration items in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration elements,The system shall save configuration elements in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration components,The system shall save configuration components in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration modules,The system shall save configuration modules in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration units,The system shall save configuration units in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration entities,The system shall save configuration entities in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration objects,The system shall save configuration objects in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration resources,The system shall save configuration resources in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration assets,The system shall save configuration assets in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration artifacts,The system shall save configuration artifacts in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration documents,The system shall save configuration documents in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration files,The system shall save configuration files in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration directories,The system shall save configuration directories in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration folders,The system shall save configuration folders in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration paths,The system shall save configuration paths in JSON format.
+Section 2.2.1,Does not specify the supported file formats for saving configuration links,The system shall save configuration links in JSON format.
+Section 2.2.1,Does no

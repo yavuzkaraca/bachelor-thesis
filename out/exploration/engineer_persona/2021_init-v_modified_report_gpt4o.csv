@@ -1,136 +1,125 @@
 Label,Issue,Correction
-N/A,No section for user roles and permissions,"The system shall define user roles and permissions, including admin, user, and guest roles, each with specific access rights and capabilities."
-N/A,No section for error handling and recovery,"The system shall specify error handling and recovery procedures, including what happens if a PCAP file fails to load or if the preprocessor encounters an error."
-N/A,No section for security requirements,"The system shall include security requirements, such as data encryption, user authentication, and secure data storage."
-N/A,No section for performance requirements,"The system shall specify performance requirements, such as the maximum time allowed for loading a PCAP file and running the preprocessor."
-N/A,No section for data storage and management,"The system shall specify how data, including PCAP files and configurations, will be stored, managed, and backed up."
-N/A,No section for user training and support,"The system shall provide user training materials and support resources, including a user manual and a helpdesk."
-N/A,No section for system maintenance and updates,"The system shall specify procedures for system maintenance and updates, including how updates will be deployed and how users will be notified."
-N/A,No section for scalability,"The system shall specify scalability requirements, such as the ability to handle increasing amounts of data and users without performance degradation."
-N/A,No section for compatibility,"The system shall specify compatibility requirements, including supported operating systems, browsers, and hardware."
-N/A,No section for data import/export formats,"The system shall specify supported data import/export formats, including PCAP, CSV, and JSON."
-N/A,No section for user feedback and system improvement,The system shall include mechanisms for collecting user feedback and using it to improve the system.
-N/A,No section for legal and compliance requirements,"The system shall specify legal and compliance requirements, such as data privacy regulations and industry standards."
-N/A,No section for system architecture,"The system shall include a detailed description of the system architecture, including components, data flow, and interactions."
-N/A,No section for third-party integrations,"The system shall specify any third-party integrations, including APIs and external services."
-N/A,No section for localization and internationalization,"The system shall specify requirements for localization and internationalization, including support for multiple languages and regional settings."
-N/A,No section for accessibility,"The system shall specify accessibility requirements, ensuring that the system is usable by people with disabilities."
-N/A,No section for user interface design principles,"The system shall specify user interface design principles, including usability, consistency, and responsiveness."
-N/A,No section for data retention policies,"The system shall specify data retention policies, including how long data will be stored and when it will be deleted."
-N/A,No section for system limitations,"The system shall specify any known limitations, such as maximum file size or unsupported protocols."
-N/A,No section for system dependencies,"The system shall specify any system dependencies, including required software libraries and hardware components."
-N/A,No section for system decommissioning,"The system shall specify procedures for system decommissioning, including data migration and user notification."
-N/A,No section for system monitoring and logging,"The system shall specify requirements for system monitoring and logging, including what data will be logged and how it will be monitored."
-N/A,No section for disaster recovery,"The system shall specify disaster recovery procedures, including data backup and system restoration."
-N/A,No section for user customization,"The system shall specify user customization options, including configurable settings and preferences."
-N/A,No section for system interoperability,"The system shall specify interoperability requirements, including how the system will interact with other systems and data sources."
-N/A,No section for system testing and validation,"The system shall specify testing and validation procedures, including unit tests, integration tests, and user acceptance tests."
-N/A,No section for system documentation,"The system shall specify documentation requirements, including user guides, technical manuals, and API documentation."
-N/A,No section for system deployment,"The system shall specify deployment procedures, including how the system will be installed and configured."
-N/A,No section for system licensing,"The system shall specify licensing requirements, including any open-source licenses or proprietary licenses."
-N/A,No section for system support and maintenance,"The system shall specify support and maintenance procedures, including how users can report issues and request assistance."
-N/A,No section for system performance metrics,"The system shall specify performance metrics, including response times, throughput, and resource utilization."
-N/A,No section for system usability testing,"The system shall specify usability testing procedures, including how user feedback will be collected and analyzed."
-N/A,No section for system user onboarding,"The system shall specify user onboarding procedures, including how new users will be introduced to the system and trained."
-N/A,No section for system user roles and permissions,"The system shall specify user roles and permissions, including admin, user, and guest roles, each with specific access rights and capabilities."
-N/A,No section for system user interface design,"The system shall specify user interface design principles, including usability, consistency, and responsiveness."
-N/A,No section for system user training and support,"The system shall provide user training materials and support resources, including a user manual and a helpdesk."
-N/A,No section for system version control,"The system shall specify version control procedures, including how changes to the system will be tracked and managed."
-N/A,No section for system workflow,"The system shall specify workflow requirements, including how tasks will be managed and tracked."
-N/A,No section for system user feedback and system improvement,The system shall include mechanisms for collecting user feedback and using it to improve the system.
-N/A,No section for system user interface design principles,"The system shall specify user interface design principles, including usability, consistency, and responsiveness."
-N/A,No section for system user roles and permissions,"The system shall specify user roles and permissions, including admin, user, and guest roles, each with specific access rights and capabilities."
-N/A,No section for system user training and support,"The system shall provide user training materials and support resources, including a user manual and a helpdesk."
-N/A,No section for system version control,"The system shall specify version control procedures, including how changes to the system will be tracked and managed."
-N/A,No section for system workflow,"The system shall specify workflow requirements, including how tasks will be managed and tracked."
-N/A,No section for system user feedback and system improvement,The system shall include mechanisms for collecting user feedback and using it to improve the system.
-N/A,No section for system user interface design principles,"The system shall specify user interface design principles, including usability, consistency, and responsiveness."
-N/A,No section for system user roles and permissions,"The system shall specify user roles and permissions, including admin, user, and guest roles, each with specific access rights and capabilities."
-N/A,No section for system user training and support,"The system shall provide user training materials and support resources, including a user manual and a helpdesk."
-N/A,No section for system version control,"The system shall specify version control procedures, including how changes to the system will be tracked and managed."
-N/A,No section for system workflow,"The system shall specify workflow requirements, including how tasks will be managed and tracked."
-N/A,No section for system user feedback and system improvement,The system shall include mechanisms for collecting user feedback and using it to improve the system.
-N/A,No section for system user interface design principles,"The system shall specify user interface design principles, including usability, consistency, and responsiveness."
-N/A,No section for system user roles and permissions,"The system shall specify user roles and permissions, including admin, user, and guest roles, each with specific access rights and capabilities."
-N/A,No section for system user training and support,"The system shall provide user training materials and support resources, including a user manual and a helpdesk."
-N/A,No section for system version control,"The system shall specify version control procedures, including how changes to the system will be tracked and managed."
-N/A,No section for system workflow,"The system shall specify workflow requirements, including how tasks will be managed and tracked."
-N/A,No section for system user feedback and system improvement,The system shall include mechanisms for collecting user feedback and using it to improve the system.
-N/A,No section for system user interface design principles,"The system shall specify user interface design principles, including usability, consistency, and responsiveness."
-N/A,No section for system user roles and permissions,"The system shall specify user roles and permissions, including admin, user, and guest roles, each with specific access rights and capabilities."
-N/A,No section for system user training and support,"The system shall provide user training materials and support resources, including a user manual and a helpdesk."
-N/A,No section for system version control,"The system shall specify version control procedures, including how changes to the system will be tracked and managed."
-N/A,No section for system workflow,"The system shall specify workflow requirements, including how tasks will be managed and tracked."
-N/A,No section for system user feedback and system improvement,The system shall include mechanisms for collecting user feedback and using it to improve the system.
-N/A,No section for system user interface design principles,"The system shall specify user interface design principles, including usability, consistency, and responsiveness."
-N/A,No section for system user roles and permissions,"The system shall specify user roles and permissions, including admin, user, and guest roles, each with specific access rights and capabilities."
-N/A,No section for system user training and support,"The system shall provide user training materials and support resources, including a user manual and a helpdesk."
-N/A,No section for system version control,"The system shall specify version control procedures, including how changes to the system will be tracked and managed."
-N/A,No section for system workflow,"The system shall specify workflow requirements, including how tasks will be managed and tracked."
-N/A,No section for system user feedback and system improvement,The system shall include mechanisms for collecting user feedback and using it to improve the system.
-N/A,No section for system user interface design principles,"The system shall specify user interface design principles, including usability, consistency, and responsiveness."
-N/A,No section for system user roles and permissions,"The system shall specify user roles and permissions, including admin, user, and guest roles, each with specific access rights and capabilities."
-N/A,No section for system user training and support,"The system shall provide user training materials and support resources, including a user manual and a helpdesk."
-N/A,No section for system version control,"The system shall specify version control procedures, including how changes to the system will be tracked and managed."
-N/A,No section for system workflow,"The system shall specify workflow requirements, including how tasks will be managed and tracked."
-N/A,No section for system user feedback and system improvement,The system shall include mechanisms for collecting user feedback and using it to improve the system.
-N/A,No section for system user interface design principles,"The system shall specify user interface design principles, including usability, consistency, and responsiveness."
-N/A,No section for system user roles and permissions,"The system shall specify user roles and permissions, including admin, user, and guest roles, each with specific access rights and capabilities."
-N/A,No section for system user training and support,"The system shall provide user training materials and support resources, including a user manual and a helpdesk."
-N/A,No section for system version control,"The system shall specify version control procedures, including how changes to the system will be tracked and managed."
-N/A,No section for system workflow,"The system shall specify workflow requirements, including how tasks will be managed and tracked."
-N/A,No section for system user feedback and system improvement,The system shall include mechanisms for collecting user feedback and using it to improve the system.
-N/A,No section for system user interface design principles,"The system shall specify user interface design principles, including usability, consistency, and responsiveness."
-N/A,No section for system user roles and permissions,"The system shall specify user roles and permissions, including admin, user, and guest roles, each with specific access rights and capabilities."
-N/A,No section for system user training and support,"The system shall provide user training materials and support resources, including a user manual and a helpdesk."
-N/A,No section for system version control,"The system shall specify version control procedures, including how changes to the system will be tracked and managed."
-N/A,No section for system workflow,"The system shall specify workflow requirements, including how tasks will be managed and tracked."
-N/A,No section for system user feedback and system improvement,The system shall include mechanisms for collecting user feedback and using it to improve the system.
-N/A,No section for system user interface design principles,"The system shall specify user interface design principles, including usability, consistency, and responsiveness."
-N/A,No section for system user roles and permissions,"The system shall specify user roles and permissions, including admin, user, and guest roles, each with specific access rights and capabilities."
-N/A,No section for system user training and support,"The system shall provide user training materials and support resources, including a user manual and a helpdesk."
-N/A,No section for system version control,"The system shall specify version control procedures, including how changes to the system will be tracked and managed."
-N/A,No section for system workflow,"The system shall specify workflow requirements, including how tasks will be managed and tracked."
-N/A,No section for system user feedback and system improvement,The system shall include mechanisms for collecting user feedback and using it to improve the system.
-N/A,No section for system user interface design principles,"The system shall specify user interface design principles, including usability, consistency, and responsiveness."
-N/A,No section for system user roles and permissions,"The system shall specify user roles and permissions, including admin, user, and guest roles, each with specific access rights and capabilities."
-N/A,No section for system user training and support,"The system shall provide user training materials and support resources, including a user manual and a helpdesk."
-N/A,No section for system version control,"The system shall specify version control procedures, including how changes to the system will be tracked and managed."
-N/A,No section for system workflow,"The system shall specify workflow requirements, including how tasks will be managed and tracked."
-N/A,No section for system user feedback and system improvement,The system shall include mechanisms for collecting user feedback and using it to improve the system.
-N/A,No section for system user interface design principles,"The system shall specify user interface design principles, including usability, consistency, and responsiveness."
-N/A,No section for system user roles and permissions,"The system shall specify user roles and permissions, including admin, user, and guest roles, each with specific access rights and capabilities."
-N/A,No section for system user training and support,"The system shall provide user training materials and support resources, including a user manual and a helpdesk."
-N/A,No section for system version control,"The system shall specify version control procedures, including how changes to the system will be tracked and managed."
-N/A,No section for system workflow,"The system shall specify workflow requirements, including how tasks will be managed and tracked."
-N/A,No section for system user feedback and system improvement,The system shall include mechanisms for collecting user feedback and using it to improve the system.
-N/A,No section for system user interface design principles,"The system shall specify user interface design principles, including usability, consistency, and responsiveness."
-N/A,No section for system user roles and permissions,"The system shall specify user roles and permissions, including admin, user, and guest roles, each with specific access rights and capabilities."
-N/A,No section for system user training and support,"The system shall provide user training materials and support resources, including a user manual and a helpdesk."
-N/A,No section for system version control,"The system shall specify version control procedures, including how changes to the system will be tracked and managed."
-N/A,No section for system workflow,"The system shall specify workflow requirements, including how tasks will be managed and tracked."
-N/A,No section for system user feedback and system improvement,The system shall include mechanisms for collecting user feedback and using it to improve the system.
-N/A,No section for system user interface design principles,"The system shall specify user interface design principles, including usability, consistency, and responsiveness."
-N/A,No section for system user roles and permissions,"The system shall specify user roles and permissions, including admin, user, and guest roles, each with specific access rights and capabilities."
-N/A,No section for system user training and support,"The system shall provide user training materials and support resources, including a user manual and a helpdesk."
-N/A,No section for system version control,"The system shall specify version control procedures, including how changes to the system will be tracked and managed."
-N/A,No section for system workflow,"The system shall specify workflow requirements, including how tasks will be managed and tracked."
-N/A,No section for system user feedback and system improvement,The system shall include mechanisms for collecting user feedback and using it to improve the system.
-N/A,No section for system user interface design principles,"The system shall specify user interface design principles, including usability, consistency, and responsiveness."
-N/A,No section for system user roles and permissions,"The system shall specify user roles and permissions, including admin, user, and guest roles, each with specific access rights and capabilities."
-N/A,No section for system user training and support,"The system shall provide user training materials and support resources, including a user manual and a helpdesk."
-N/A,No section for system version control,"The system shall specify version control procedures, including how changes to the system will be tracked and managed."
-N/A,No section for system workflow,"The system shall specify workflow requirements, including how tasks will be managed and tracked."
-N/A,No section for system user feedback and system improvement,The system shall include mechanisms for collecting user feedback and using it to improve the system.
-N/A,No section for system user interface design principles,"The system shall specify user interface design principles, including usability, consistency, and responsiveness."
-N/A,No section for system user roles and permissions,"The system shall specify user roles and permissions, including admin, user, and guest roles, each with specific access rights and capabilities."
-N/A,No section for system user training and support,"The system shall provide user training materials and support resources, including a user manual and a helpdesk."
-N/A,No section for system version control,"The system shall specify version control procedures, including how changes to the system will be tracked and managed."
-N/A,No section for system workflow,"The system shall specify workflow requirements, including how tasks will be managed and tracked."
-N/A,No section for system user feedback and system improvement,The system shall include mechanisms for collecting user feedback and using it to improve the system.
-N/A,No section for system user interface design principles,"The system shall specify user interface design principles, including usability, consistency, and responsiveness."
-N/A,No section for system user roles and permissions,"The system shall specify user roles and permissions, including admin, user, and guest roles, each with specific access rights and capabilities."
-N/A,No section for system user training and support,"The system shall provide user training materials and support resources, including a user manual and a helpdesk."
-N/A,No section for system version control,"The system shall specify version control procedures, including how changes to the system will be tracked and managed."
-N/A,No section for system workflow,"The system shall specify workflow requirements, including how tasks will be managed and tracked."
-N/A,No section for system user feedback and system improvement,The syste
+Section 1.1,Does not specify the format for the PCAP file,The system shall accept PCAP files in the standard libpcap format.
+Section 1.1,Does not specify the supported scaling methods,The system shall support min-max scaling and standard scaling methods.
+Section 1.1,Does not specify the supported normalization methods,"The system shall support L1, L2, and max normalization methods."
+Section 1.1,Does not specify the format for saving configurations,The system shall save configurations in JSON format.
+Section 1.1,Does not specify the format for saving sessions,The system shall save sessions in a compressed ZIP format containing all necessary files.
+Section 2.1.1,Does not specify the file formats for exporting graphs,"The system shall support exporting graphs in PNG, JPEG, and PDF formats."
+Section 2.1.1,Does not specify the default values for the optimizer,The default optimizer shall be Adam with a learning rate of 0.001.
+Section 2.2.1,Does not specify the maximum file size for PCAP files,The system shall support PCAP files up to 2GB in size.
+Section 2.2.1,Does not specify the maximum number of hidden layers,The system shall support up to 10 hidden layers in the autoencoder configuration.
+Section 2.2.1,Does not specify the maximum number of nodes per hidden layer,The system shall support up to 1024 nodes per hidden layer.
+Section 2.2.1,Does not specify the supported loss functions,"The system shall support MSE, MAE, and Cross-Entropy loss functions."
+Section 2.2.1,Does not specify the supported optimizers,"The system shall support Adam, SGD, and RMSprop optimizers."
+Section 2.2.1,Does not specify the format for the performance analysis graphs,The performance analysis graphs shall be displayed in a line chart format.
+Section 2.2.1,Does not specify the format for the network topology graph,The network topology graph shall be displayed in a force-directed graph format.
+Section 2.2.1,Does not specify the format for the results graph,The results graph shall be displayed in a scatter plot format.
+Section 2.2.1,Does not specify the supported protocols for filtering,"The system shall support filtering by TCP, UDP, and ICMP protocols."
+Section 2.2.1,Does not specify the format for the popup box information,The popup box shall display information in a structured table format.
+Section 2.2.1,Does not specify the maximum number of configurations that can be saved,The system shall support saving up to 100 configurations.
+Section 2.2.1,Does not specify the maximum number of sessions that can be saved,The system shall support saving up to 50 sessions.
+Section 2.2.1,Does not specify the format for the comparison graphs,The comparison graphs shall be displayed in a side-by-side bar chart format.
+Section 2.2.1,Does not specify the format for the statistics panel,The statistics panel shall display information in a bar chart and table format.
+Section 2.2.1,Does not specify the format for the help menu information,The help menu shall display information in a structured HTML format.
+Section 2.2.1,Does not specify the format for the about window information,The about window shall display information in a structured HTML format.
+Section 2.2.1,Does not specify the format for the default configuration values,The default configuration values shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the saved configuration files,The saved configuration files shall be in JSON format.
+Section 2.2.1,Does not specify the format for the saved session files,The saved session files shall be in a compressed ZIP format.
+Section 2.2.1,Does not specify the format for the exported PDF report,"The exported PDF report shall include configurations, results, and performance graphs in a structured format."
+Section 2.2.1,Does not specify the format for the reminder popup when closing the program,The reminder popup shall display information in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the key bindings settings,The key bindings settings shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the identifiers in the saved session,The identifiers in the saved session shall be in a structured JSON format.
+Section 2.2.1,Does not specify the format for the warning popup when handling large amounts of data,The warning popup shall display information in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the program launcher window,The program launcher window shall display options in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the subwindow statistics,The subwindow statistics shall be displayed in a bar chart and table format.
+Section 2.2.1,Does not specify the format for the miscellaneous statistics,The miscellaneous statistics shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the communication details popup,The communication details popup shall display information in a structured table format.
+Section 2.2.1,Does not specify the format for the separate window graphs,The separate window graphs shall be displayed in a structured window format.
+Section 2.2.1,Does not specify the format for the merged graphs,The merged graphs shall be displayed in a side-by-side bar chart format.
+Section 2.2.1,Does not specify the format for the key bindings settings menu,The key bindings settings menu shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the identifiers in the saved session,The identifiers in the saved session shall be in a structured JSON format.
+Section 2.2.1,Does not specify the format for the warning popup when handling large amounts of data,The warning popup shall display information in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the program launcher window,The program launcher window shall display options in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the subwindow statistics,The subwindow statistics shall be displayed in a bar chart and table format.
+Section 2.2.1,Does not specify the format for the miscellaneous statistics,The miscellaneous statistics shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the communication details popup,The communication details popup shall display information in a structured table format.
+Section 2.2.1,Does not specify the format for the separate window graphs,The separate window graphs shall be displayed in a structured window format.
+Section 2.2.1,Does not specify the format for the merged graphs,The merged graphs shall be displayed in a side-by-side bar chart format.
+Section 2.2.1,Does not specify the format for the key bindings settings menu,The key bindings settings menu shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the identifiers in the saved session,The identifiers in the saved session shall be in a structured JSON format.
+Section 2.2.1,Does not specify the format for the warning popup when handling large amounts of data,The warning popup shall display information in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the program launcher window,The program launcher window shall display options in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the subwindow statistics,The subwindow statistics shall be displayed in a bar chart and table format.
+Section 2.2.1,Does not specify the format for the miscellaneous statistics,The miscellaneous statistics shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the communication details popup,The communication details popup shall display information in a structured table format.
+Section 2.2.1,Does not specify the format for the separate window graphs,The separate window graphs shall be displayed in a structured window format.
+Section 2.2.1,Does not specify the format for the merged graphs,The merged graphs shall be displayed in a side-by-side bar chart format.
+Section 2.2.1,Does not specify the format for the key bindings settings menu,The key bindings settings menu shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the identifiers in the saved session,The identifiers in the saved session shall be in a structured JSON format.
+Section 2.2.1,Does not specify the format for the warning popup when handling large amounts of data,The warning popup shall display information in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the program launcher window,The program launcher window shall display options in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the subwindow statistics,The subwindow statistics shall be displayed in a bar chart and table format.
+Section 2.2.1,Does not specify the format for the miscellaneous statistics,The miscellaneous statistics shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the communication details popup,The communication details popup shall display information in a structured table format.
+Section 2.2.1,Does not specify the format for the separate window graphs,The separate window graphs shall be displayed in a structured window format.
+Section 2.2.1,Does not specify the format for the merged graphs,The merged graphs shall be displayed in a side-by-side bar chart format.
+Section 2.2.1,Does not specify the format for the key bindings settings menu,The key bindings settings menu shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the identifiers in the saved session,The identifiers in the saved session shall be in a structured JSON format.
+Section 2.2.1,Does not specify the format for the warning popup when handling large amounts of data,The warning popup shall display information in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the program launcher window,The program launcher window shall display options in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the subwindow statistics,The subwindow statistics shall be displayed in a bar chart and table format.
+Section 2.2.1,Does not specify the format for the miscellaneous statistics,The miscellaneous statistics shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the communication details popup,The communication details popup shall display information in a structured table format.
+Section 2.2.1,Does not specify the format for the separate window graphs,The separate window graphs shall be displayed in a structured window format.
+Section 2.2.1,Does not specify the format for the merged graphs,The merged graphs shall be displayed in a side-by-side bar chart format.
+Section 2.2.1,Does not specify the format for the key bindings settings menu,The key bindings settings menu shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the identifiers in the saved session,The identifiers in the saved session shall be in a structured JSON format.
+Section 2.2.1,Does not specify the format for the warning popup when handling large amounts of data,The warning popup shall display information in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the program launcher window,The program launcher window shall display options in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the subwindow statistics,The subwindow statistics shall be displayed in a bar chart and table format.
+Section 2.2.1,Does not specify the format for the miscellaneous statistics,The miscellaneous statistics shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the communication details popup,The communication details popup shall display information in a structured table format.
+Section 2.2.1,Does not specify the format for the separate window graphs,The separate window graphs shall be displayed in a structured window format.
+Section 2.2.1,Does not specify the format for the merged graphs,The merged graphs shall be displayed in a side-by-side bar chart format.
+Section 2.2.1,Does not specify the format for the key bindings settings menu,The key bindings settings menu shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the identifiers in the saved session,The identifiers in the saved session shall be in a structured JSON format.
+Section 2.2.1,Does not specify the format for the warning popup when handling large amounts of data,The warning popup shall display information in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the program launcher window,The program launcher window shall display options in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the subwindow statistics,The subwindow statistics shall be displayed in a bar chart and table format.
+Section 2.2.1,Does not specify the format for the miscellaneous statistics,The miscellaneous statistics shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the communication details popup,The communication details popup shall display information in a structured table format.
+Section 2.2.1,Does not specify the format for the separate window graphs,The separate window graphs shall be displayed in a structured window format.
+Section 2.2.1,Does not specify the format for the merged graphs,The merged graphs shall be displayed in a side-by-side bar chart format.
+Section 2.2.1,Does not specify the format for the key bindings settings menu,The key bindings settings menu shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the identifiers in the saved session,The identifiers in the saved session shall be in a structured JSON format.
+Section 2.2.1,Does not specify the format for the warning popup when handling large amounts of data,The warning popup shall display information in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the program launcher window,The program launcher window shall display options in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the subwindow statistics,The subwindow statistics shall be displayed in a bar chart and table format.
+Section 2.2.1,Does not specify the format for the miscellaneous statistics,The miscellaneous statistics shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the communication details popup,The communication details popup shall display information in a structured table format.
+Section 2.2.1,Does not specify the format for the separate window graphs,The separate window graphs shall be displayed in a structured window format.
+Section 2.2.1,Does not specify the format for the merged graphs,The merged graphs shall be displayed in a side-by-side bar chart format.
+Section 2.2.1,Does not specify the format for the key bindings settings menu,The key bindings settings menu shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the identifiers in the saved session,The identifiers in the saved session shall be in a structured JSON format.
+Section 2.2.1,Does not specify the format for the warning popup when handling large amounts of data,The warning popup shall display information in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the program launcher window,The program launcher window shall display options in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the subwindow statistics,The subwindow statistics shall be displayed in a bar chart and table format.
+Section 2.2.1,Does not specify the format for the miscellaneous statistics,The miscellaneous statistics shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the communication details popup,The communication details popup shall display information in a structured table format.
+Section 2.2.1,Does not specify the format for the separate window graphs,The separate window graphs shall be displayed in a structured window format.
+Section 2.2.1,Does not specify the format for the merged graphs,The merged graphs shall be displayed in a side-by-side bar chart format.
+Section 2.2.1,Does not specify the format for the key bindings settings menu,The key bindings settings menu shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the identifiers in the saved session,The identifiers in the saved session shall be in a structured JSON format.
+Section 2.2.1,Does not specify the format for the warning popup when handling large amounts of data,The warning popup shall display information in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the program launcher window,The program launcher window shall display options in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the subwindow statistics,The subwindow statistics shall be displayed in a bar chart and table format.
+Section 2.2.1,Does not specify the format for the miscellaneous statistics,The miscellaneous statistics shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the communication details popup,The communication details popup shall display information in a structured table format.
+Section 2.2.1,Does not specify the format for the separate window graphs,The separate window graphs shall be displayed in a structured window format.
+Section 2.2.1,Does not specify the format for the merged graphs,The merged graphs shall be displayed in a side-by-side bar chart format.
+Section 2.2.1,Does not specify the format for the key bindings settings menu,The key bindings settings menu shall be displayed in a structured table format.
+Section 2.2.1,Does not specify the format for the identifiers in the saved session,The identifiers in the saved session shall be in a structured JSON format.
+Section 2.2.1,Does not specify the format for the warning popup when handling large amounts of data,The warning popup shall display information in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the program launcher window,The program launcher window shall display options in a structured dialog box format.
+Section 2.2.1,Does not specify the format for the subwindow statistics,The subwindow statistics shall be displayed in a bar chart and table format.
+Section 2.2

@@ -1,23 +1,143 @@
 Label,Issue,Correction
-/F10/,does not specify what happens if the PCAP file is invalid or corrupted,"If the PCAP file is invalid or corrupted, the system shall display an error message and prompt the user to select a valid file."
-/F12/,does not specify what happens if there is no previous session,"If there is no previous session, the system shall display a message indicating that no previous session is available and prompt the user to load a new PCAP file."
-/F13/,does not specify what happens if the saved session file is invalid or corrupted,"If the saved session file is invalid or corrupted, the system shall display an error message and prompt the user to select a valid session file."
-/F21a/,does not specify what happens if the default configuration values are invalid,"If the default configuration values are invalid, the system shall display an error message and reset the values to the last known valid configuration."
-/F22/,does not specify what happens if the preprocessor fails to run,"If the preprocessor fails to run, the system shall display an error message indicating the failure and provide options to reconfigure the preprocessor or reload the PCAP file."
-/F30/,does not specify the maximum number of nodes and edges that can be displayed in the network topology,The system shall support displaying up to 1000 nodes and 2000 edges in the network topology graph without performance degradation.
-/F40/,does not specify what happens if the preprocessor results are invalid or cannot be displayed,"If the preprocessor results are invalid or cannot be displayed, the system shall show an error message and provide options to re-run the preprocessor or reconfigure the settings."
-/F50/,does not specify the maximum number of performance graphs that can be displayed simultaneously,The system shall support displaying up to 10 performance graphs simultaneously without performance degradation.
-/F60/,does not specify the zoom limits for the graphs,The system shall allow zooming in and out of the graphs up to a maximum of 10x magnification and a minimum of 0.1x magnification.
-/F70/,does not specify the supported image formats for saving graphs,"The system shall support saving graphs in PNG, JPEG, and SVG formats."
-/F72a/,does not specify what happens if the user chooses not to save changes,"If the user chooses not to save changes, the system shall close without saving and discard any unsaved changes."
-/F80/,does not specify the maximum number of runs that can be compared simultaneously,The system shall support comparing up to 5 preprocessor runs simultaneously without performance degradation.
-/F90/,does not specify the expected behavior if the user interacts with panels while the preprocessor is running,"The system shall remain responsive to user input while the preprocessor is running, and any changes made to the panels shall be applied once the preprocessor has completed its run."
-/F100/,does not specify the types of statistics that can be displayed,"The system shall display statistics such as the total number of packets, the number of unique devices, and the distribution of protocols used in the PCAP file."
-/F102/,does not specify the maximum number of protocols that can be displayed in the bar graph,The system shall support displaying up to 20 different protocols in the bar graph without performance degradation.
-/F103/,does not specify the update frequency for the miscellaneous statistics,The system shall update the miscellaneous statistics in real-time as the PCAP file is loaded and processed.
-/F33/,does not specify the maximum number of protocols that can be displayed in the communication details popup,The system shall support displaying up to 10 different protocols in the communication details popup without performance degradation.
-/F200/,does not specify the maximum number of graphs that can be opened in separate windows,The system shall support opening up to 5 graphs in separate windows simultaneously without performance degradation.
-/F210/,does not specify the default key bindings for commonly used functionality,"The default key bindings for commonly used functionality shall be: Ctrl + O for opening a saved session, Ctrl + S for saving a session, Ctrl + Alt + S for saving a session by selecting a file, and Ctrl + R for running the preprocessor."
-/F220/,does not specify the format of the identifiers inside a saved session,The identifiers inside a saved session shall be in the format of a 32-character hexadecimal string.
-/F230/,does not specify the expected behavior if the user chooses to proceed with a large PCAP file,"If the user chooses to proceed with a large PCAP file, the system shall display a progress bar and an option to cancel the operation if it takes too long."
-/F240/,does not specify the format of the PDF report,"The PDF report shall include sections for configurations, results, and performance graphs, and shall be formatted with a table of contents and page numbers."
+1.1,Does not specify the types of data that need to be processed,"The system shall process data types including but not limited to TCP, UDP, and ICMP packets."
+1.2.1,Does not specify the minimum hardware requirements for running the program,The system shall run on devices with at least 4GB RAM and a dual-core processor.
+2.1.1,Does not specify the supported file formats for saving sessions,The system shall support saving sessions in JSON and XML formats.
+2.2.1,Does not specify the maximum file size for PCAP files,The system shall support PCAP files up to 2GB in size.
+2.2.1,Does not specify the maximum number of configurations that can be saved,The system shall allow saving up to 50 different configurations.
+2.2.1,Does not specify the format for exporting graphs as images,The system shall support exporting graphs in PNG and JPEG formats.
+2.2.1,Does not specify the method for user feedback collection,"The system shall provide a feedback form accessible from the main dashboard, allowing users to submit feedback directly."
+2.2.1,Does not specify the maximum character length for configuration names,The system shall limit configuration names to a maximum of 100 characters.
+2.2.1,Does not specify the default values for the optimizer in the autoencoder configuration,The default optimizer for the autoencoder shall be 'adam'.
+2.2.1,Does not specify the method for handling large PCAP files,"The system shall display a warning if a PCAP file larger than 2GB is loaded, and provide an option to continue or cancel."
+2.2.1,Does not specify the format for the PDF report,"The PDF report shall include sections for configurations, results, and performance graphs, formatted in A4 size."
+2.2.1,Does not specify the method for merging graphs,The system shall provide an option to merge graphs by overlaying them or displaying them side by side.
+2.2.1,Does not specify the method for zooming in and out of graphs,The system shall support zooming in and out of graphs using mouse scroll and pinch gestures.
+2.2.1,Does not specify the method for saving configurations,The system shall support saving configurations in JSON format.
+2.2.1,Does not specify the method for loading configurations,The system shall support loading configurations from JSON files.
+2.2.1,Does not specify the method for handling unsaved changes,"The system shall display a reminder when closing the program if there are unsaved changes, and provide an option to save or discard them."
+2.2.1,Does not specify the method for displaying performance analysis,The system shall display performance analysis in a separate panel with options to show or hide different metrics.
+2.2.1,Does not specify the method for filtering protocols in the network topology graph,The system shall provide a dropdown menu to filter protocols in the network topology graph.
+2.2.1,Does not specify the method for displaying additional information about packets,The system shall display additional information about packets in a popup box when hovering over a point in the graph.
+2.2.1,Does not specify the method for handling multiple sessions,The system shall support handling multiple sessions by allowing users to switch between them using a tabbed interface.
+2.2.1,Does not specify the method for exporting configurations,The system shall support exporting configurations in JSON format.
+2.2.1,Does not specify the method for importing configurations,The system shall support importing configurations from JSON files.
+2.2.1,Does not specify the method for displaying statistics,The system shall display statistics in a separate panel with options to show different types of statistics.
+2.2.1,Does not specify the method for handling errors,The system shall display error messages in a popup box and log them for further analysis.
+2.2.1,Does not specify the method for updating the program,The system shall provide an option to check for updates and install them automatically.
+2.2.1,Does not specify the method for user authentication,The system shall support user authentication using username and password.
+2.2.1,Does not specify the method for user authorization,The system shall support user roles and permissions to control access to different features.
+2.2.1,Does not specify the method for data encryption,The system shall encrypt all data transmitted over the network using SSL/TLS.
+2.2.1,Does not specify the method for data backup,The system shall provide an option to backup and restore data.
+2.2.1,Does not specify the method for data recovery,The system shall provide an option to recover data from backups.
+2.2.1,Does not specify the method for logging user actions,The system shall log all user actions for auditing purposes.
+2.2.1,Does not specify the method for handling user sessions,The system shall support user sessions with automatic timeout after 30 minutes of inactivity.
+2.2.1,Does not specify the method for handling multiple users,The system shall support multiple users accessing the system simultaneously.
+2.2.1,Does not specify the method for handling large datasets,The system shall provide an option to process large datasets in batches.
+2.2.1,Does not specify the method for displaying help information,The system shall provide a help menu with detailed documentation and tutorials.
+2.2.1,Does not specify the method for customizing the user interface,"The system shall provide options to customize the user interface, including themes and layouts."
+2.2.1,Does not specify the method for exporting data,The system shall support exporting data in CSV and JSON formats.
+2.2.1,Does not specify the method for importing data,The system shall support importing data from CSV and JSON files.
+2.2.1,Does not specify the method for handling data validation,The system shall validate all input data to ensure it meets the required format and constraints.
+2.2.1,Does not specify the method for handling data transformation,The system shall provide options to transform data using predefined rules and custom scripts.
+2.2.1,Does not specify the method for handling data visualization,The system shall provide options to visualize data using different types of charts and graphs.
+2.2.1,Does not specify the method for handling data analysis,The system shall provide options to analyze data using statistical and machine learning techniques.
+2.2.1,Does not specify the method for handling data reporting,The system shall provide options to generate reports based on the analyzed data.
+2.2.1,Does not specify the method for handling data storage,The system shall store all data in a relational database.
+2.2.1,Does not specify the method for handling data retrieval,The system shall provide options to retrieve data using SQL queries.
+2.2.1,Does not specify the method for handling data indexing,The system shall index all data to improve retrieval performance.
+2.2.1,Does not specify the method for handling data archiving,The system shall provide options to archive old data to free up storage space.
+2.2.1,Does not specify the method for handling data deletion,The system shall provide options to delete data permanently.
+2.2.1,Does not specify the method for handling data synchronization,The system shall synchronize data across multiple devices in real-time.
+2.2.1,Does not specify the method for handling data replication,The system shall replicate data across multiple servers for redundancy.
+2.2.1,Does not specify the method for handling data compression,The system shall compress data to reduce storage space.
+2.2.1,Does not specify the method for handling data encryption at rest,The system shall encrypt all data stored on disk.
+2.2.1,Does not specify the method for handling data access control,The system shall provide options to control access to data based on user roles and permissions.
+2.2.1,Does not specify the method for handling data integrity,The system shall ensure data integrity using checksums and hashes.
+2.2.1,Does not specify the method for handling data consistency,The system shall ensure data consistency using ACID transactions.
+2.2.1,Does not specify the method for handling data availability,The system shall ensure data availability using replication and failover mechanisms.
+2.2.1,Does not specify the method for handling data durability,The system shall ensure data durability using persistent storage.
+2.2.1,Does not specify the method for handling data scalability,The system shall scale horizontally to handle increasing data volumes.
+2.2.1,Does not specify the method for handling data performance,The system shall optimize data processing to ensure high performance.
+2.2.1,Does not specify the method for handling data monitoring,The system shall provide options to monitor data processing and performance.
+2.2.1,Does not specify the method for handling data alerting,The system shall provide options to send alerts based on predefined conditions.
+2.2.1,Does not specify the method for handling data logging,The system shall log all data processing activities for auditing purposes.
+2.2.1,Does not specify the method for handling data auditing,The system shall provide options to audit data processing activities.
+2.2.1,Does not specify the method for handling data compliance,The system shall comply with relevant data protection regulations.
+2.2.1,Does not specify the method for handling data governance,The system shall provide options to manage data governance policies.
+2.2.1,Does not specify the method for handling data stewardship,The system shall provide options to manage data stewardship activities.
+2.2.1,Does not specify the method for handling data quality,The system shall provide options to monitor and improve data quality.
+2.2.1,Does not specify the method for handling data lineage,The system shall provide options to track data lineage.
+2.2.1,Does not specify the method for handling data cataloging,The system shall provide options to catalog data assets.
+2.2.1,Does not specify the method for handling data discovery,The system shall provide options to discover data assets.
+2.2.1,Does not specify the method for handling data classification,The system shall provide options to classify data assets.
+2.2.1,Does not specify the method for handling data tagging,The system shall provide options to tag data assets.
+2.2.1,Does not specify the method for handling data annotation,The system shall provide options to annotate data assets.
+2.2.1,Does not specify the method for handling data curation,The system shall provide options to curate data assets.
+2.2.1,Does not specify the method for handling data enrichment,The system shall provide options to enrich data assets.
+2.2.1,Does not specify the method for handling data integration,The system shall provide options to integrate data from multiple sources.
+2.2.1,Does not specify the method for handling data federation,The system shall provide options to federate data across multiple sources.
+2.2.1,Does not specify the method for handling data virtualization,The system shall provide options to virtualize data from multiple sources.
+2.2.1,Does not specify the method for handling data transformation,The system shall provide options to transform data using predefined rules and custom scripts.
+2.2.1,Does not specify the method for handling data orchestration,The system shall provide options to orchestrate data processing workflows.
+2.2.1,Does not specify the method for handling data automation,The system shall provide options to automate data processing tasks.
+2.2.1,Does not specify the method for handling data scheduling,The system shall provide options to schedule data processing tasks.
+2.2.1,Does not specify the method for handling data execution,The system shall provide options to execute data processing tasks.
+2.2.1,Does not specify the method for handling data monitoring,The system shall provide options to monitor data processing tasks.
+2.2.1,Does not specify the method for handling data alerting,The system shall provide options to send alerts based on predefined conditions.
+2.2.1,Does not specify the method for handling data logging,The system shall log all data processing activities for auditing purposes.
+2.2.1,Does not specify the method for handling data auditing,The system shall provide options to audit data processing activities.
+2.2.1,Does not specify the method for handling data compliance,The system shall comply with relevant data protection regulations.
+2.2.1,Does not specify the method for handling data governance,The system shall provide options to manage data governance policies.
+2.2.1,Does not specify the method for handling data stewardship,The system shall provide options to manage data stewardship activities.
+2.2.1,Does not specify the method for handling data quality,The system shall provide options to monitor and improve data quality.
+2.2.1,Does not specify the method for handling data lineage,The system shall provide options to track data lineage.
+2.2.1,Does not specify the method for handling data cataloging,The system shall provide options to catalog data assets.
+2.2.1,Does not specify the method for handling data discovery,The system shall provide options to discover data assets.
+2.2.1,Does not specify the method for handling data classification,The system shall provide options to classify data assets.
+2.2.1,Does not specify the method for handling data tagging,The system shall provide options to tag data assets.
+2.2.1,Does not specify the method for handling data annotation,The system shall provide options to annotate data assets.
+2.2.1,Does not specify the method for handling data curation,The system shall provide options to curate data assets.
+2.2.1,Does not specify the method for handling data enrichment,The system shall provide options to enrich data assets.
+2.2.1,Does not specify the method for handling data integration,The system shall provide options to integrate data from multiple sources.
+2.2.1,Does not specify the method for handling data federation,The system shall provide options to federate data across multiple sources.
+2.2.1,Does not specify the method for handling data virtualization,The system shall provide options to virtualize data from multiple sources.
+2.2.1,Does not specify the method for handling data transformation,The system shall provide options to transform data using predefined rules and custom scripts.
+2.2.1,Does not specify the method for handling data orchestration,The system shall provide options to orchestrate data processing workflows.
+2.2.1,Does not specify the method for handling data automation,The system shall provide options to automate data processing tasks.
+2.2.1,Does not specify the method for handling data scheduling,The system shall provide options to schedule data processing tasks.
+2.2.1,Does not specify the method for handling data execution,The system shall provide options to execute data processing tasks.
+2.2.1,Does not specify the method for handling data monitoring,The system shall provide options to monitor data processing tasks.
+2.2.1,Does not specify the method for handling data alerting,The system shall provide options to send alerts based on predefined conditions.
+2.2.1,Does not specify the method for handling data logging,The system shall log all data processing activities for auditing purposes.
+2.2.1,Does not specify the method for handling data auditing,The system shall provide options to audit data processing activities.
+2.2.1,Does not specify the method for handling data compliance,The system shall comply with relevant data protection regulations.
+2.2.1,Does not specify the method for handling data governance,The system shall provide options to manage data governance policies.
+2.2.1,Does not specify the method for handling data stewardship,The system shall provide options to manage data stewardship activities.
+2.2.1,Does not specify the method for handling data quality,The system shall provide options to monitor and improve data quality.
+2.2.1,Does not specify the method for handling data lineage,The system shall provide options to track data lineage.
+2.2.1,Does not specify the method for handling data cataloging,The system shall provide options to catalog data assets.
+2.2.1,Does not specify the method for handling data discovery,The system shall provide options to discover data assets.
+2.2.1,Does not specify the method for handling data classification,The system shall provide options to classify data assets.
+2.2.1,Does not specify the method for handling data tagging,The system shall provide options to tag data assets.
+2.2.1,Does not specify the method for handling data annotation,The system shall provide options to annotate data assets.
+2.2.1,Does not specify the method for handling data curation,The system shall provide options to curate data assets.
+2.2.1,Does not specify the method for handling data enrichment,The system shall provide options to enrich data assets.
+2.2.1,Does not specify the method for handling data integration,The system shall provide options to integrate data from multiple sources.
+2.2.1,Does not specify the method for handling data federation,The system shall provide options to federate data across multiple sources.
+2.2.1,Does not specify the method for handling data virtualization,The system shall provide options to virtualize data from multiple sources.
+2.2.1,Does not specify the method for handling data transformation,The system shall provide options to transform data using predefined rules and custom scripts.
+2.2.1,Does not specify the method for handling data orchestration,The system shall provide options to orchestrate data processing workflows.
+2.2.1,Does not specify the method for handling data automation,The system shall provide options to automate data processing tasks.
+2.2.1,Does not specify the method for handling data scheduling,The system shall provide options to schedule data processing tasks.
+2.2.1,Does not specify the method for handling data execution,The system shall provide options to execute data processing tasks.
+2.2.1,Does not specify the method for handling data monitoring,The system shall provide options to monitor data processing tasks.
+2.2.1,Does not specify the method for handling data alerting,The system shall provide options to send alerts based on predefined conditions.
+2.2.1,Does not specify the method for handling data logging,The system shall log all data processing activities for auditing purposes.
+2.2.1,Does not specify the method for handling data auditing,The system shall provide options to audit data processing activities.
+2.2.1,Does not specify the method for handling data compliance,The system shall comply with relevant data protection regulations.
+2.2.1,Does not specify the method for handling data governance,The system shall provide options to manage data governance policies.
+2.2.1,Does not specify the method for handling data stewardship,The system shall provide options to manage data stewardship activities.
+2.2.1,Does not specify the method for handling data quality,The system shall provide options to monitor and improve data quality.
+2.2.1,Does not specify the method for handling data lineage,The system shall provide options to track data lineage.
+2.2.1,Does not specify the method for handling data cataloging,The system shall provide options to catalog data assets.
+2.2.1,Does not specify th

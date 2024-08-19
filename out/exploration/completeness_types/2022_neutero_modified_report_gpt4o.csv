@@ -1,197 +1,49 @@
 Label,Issue,Correction
-N/A,Missing section on non-functional requirements,The system shall have a response time of less than 2 seconds for any user action.
-N/A,Missing section on constraints,"The system shall operate on Windows, macOS, and Linux operating systems."
-N/A,Missing section on data requirements,The system shall support data encryption for all stored and transmitted data.
-N/A,Missing section on interface requirements,The system shall provide a RESTful API for external integrations.
-N/A,Missing section on environmental requirements,The system shall be able to run on hardware with at least 8GB RAM and 4 CPU cores.
-N/A,Missing section on implicit domain knowledge,The system shall support real-time image processing for live video feeds.
-N/A,Missing section on performance requirements,The system shall handle up to 1000 concurrent users without performance degradation.
-N/A,Missing section on security requirements,The system shall implement user authentication and role-based access control.
-N/A,Missing section on maintainability requirements,The system shall include comprehensive documentation for developers and users.
-N/A,Missing section on scalability requirements,The system shall be able to scale horizontally to handle increased load.
-N/A,Missing section on reliability requirements,The system shall have an uptime of 99.9% over a 12-month period.
-N/A,Missing section on usability requirements,The system shall provide a user-friendly interface with intuitive navigation.
-N/A,Missing section on legal and regulatory requirements,The system shall comply with GDPR for data protection and privacy.
-N/A,Missing section on backup and recovery requirements,The system shall perform daily backups and support data recovery within 24 hours.
-N/A,Missing section on logging and monitoring requirements,The system shall log all user activities and provide real-time monitoring dashboards.
-N/A,Missing section on support and maintenance requirements,The system shall include a support plan with a response time of less than 24 hours.
-N/A,Missing section on training requirements,The system shall provide training materials and sessions for new users.
-N/A,Missing section on decommissioning requirements,The system shall include a plan for decommissioning and data migration.
-N/A,Missing section on third-party dependencies,The system shall list all third-party libraries and their versions.
-N/A,Missing section on configuration management,The system shall use a version control system for all code and configuration files.
-N/A,Missing section on testing requirements,"The system shall include unit, integration, and acceptance tests."
-N/A,Missing section on deployment requirements,The system shall support automated deployment using CI/CD pipelines.
-N/A,Missing section on user feedback and improvement,The system shall include a mechanism for users to provide feedback and request features.
-N/A,Missing section on ethical considerations,The system shall ensure that AI models are free from bias and discrimination.
-N/A,Missing section on accessibility requirements,The system shall comply with WCAG 2.1 guidelines for accessibility.
-N/A,Missing section on internationalization and localization,The system shall support multiple languages and regional settings.
-N/A,Missing section on data retention policies,The system shall define data retention periods and deletion policies.
-N/A,Missing section on audit and compliance,The system shall support audit trails and compliance reporting.
-N/A,Missing section on disaster recovery,The system shall include a disaster recovery plan with defined RTO and RPO.
-N/A,Missing section on interoperability,The system shall be able to integrate with other systems using standard protocols.
-N/A,Missing section on data integrity,The system shall ensure data integrity through checksums and validation mechanisms.
-N/A,Missing section on user roles and permissions,The system shall define user roles and permissions for accessing different features.
-N/A,Missing section on data migration,The system shall support data migration from legacy systems.
-N/A,Missing section on system updates and patches,The system shall support regular updates and security patches.
-N/A,Missing section on user notifications,The system shall notify users of important events and updates.
-N/A,Missing section on system performance metrics,The system shall provide performance metrics and reports.
-N/A,Missing section on user documentation,The system shall include user manuals and help guides.
-N/A,Missing section on developer documentation,The system shall include API documentation and code examples.
-N/A,Missing section on system architecture,The system shall include a detailed architecture diagram and description.
-N/A,Missing section on data flow diagrams,The system shall include data flow diagrams for all major processes.
-N/A,Missing section on use case diagrams,The system shall include use case diagrams for all user interactions.
-N/A,Missing section on sequence diagrams,The system shall include sequence diagrams for all major workflows.
-N/A,Missing section on state diagrams,The system shall include state diagrams for all major states and transitions.
-N/A,Missing section on class diagrams,The system shall include class diagrams for all major classes and relationships.
-N/A,Missing section on component diagrams,The system shall include component diagrams for all major components.
-N/A,Missing section on deployment diagrams,The system shall include deployment diagrams for all environments.
-N/A,Missing section on activity diagrams,The system shall include activity diagrams for all major activities.
-N/A,Missing section on package diagrams,The system shall include package diagrams for all major packages.
-N/A,Missing section on communication diagrams,The system shall include communication diagrams for all major interactions.
-N/A,Missing section on timing diagrams,The system shall include timing diagrams for all major time-dependent processes.
-N/A,Missing section on interaction overview diagrams,The system shall include interaction overview diagrams for all major interactions.
-N/A,Missing section on composite structure diagrams,The system shall include composite structure diagrams for all major structures.
-N/A,Missing section on object diagrams,The system shall include object diagrams for all major objects and their states.
-N/A,Missing section on profile diagrams,The system shall include profile diagrams for all major profiles and stereotypes.
-N/A,Missing section on requirements traceability,The system shall include a requirements traceability matrix.
-N/A,Missing section on risk management,The system shall include a risk management plan and mitigation strategies.
-N/A,Missing section on quality assurance,The system shall include a quality assurance plan and testing procedures.
-N/A,Missing section on project management,The system shall include a project management plan and timeline.
-N/A,Missing section on stakeholder analysis,The system shall include a stakeholder analysis and communication plan.
-N/A,Missing section on change management,The system shall include a change management plan and procedures.
-N/A,Missing section on configuration management,The system shall include a configuration management plan and tools.
-N/A,Missing section on release management,The system shall include a release management plan and schedule.
-N/A,Missing section on service level agreements,The system shall include service level agreements for uptime and support.
-N/A,Missing section on vendor management,The system shall include a vendor management plan and contracts.
-N/A,Missing section on procurement management,The system shall include a procurement management plan and procedures.
-N/A,Missing section on financial management,The system shall include a financial management plan and budget.
-N/A,Missing section on human resources management,The system shall include a human resources management plan and roles.
-N/A,Missing section on communication management,The system shall include a communication management plan and tools.
-N/A,Missing section on stakeholder engagement,The system shall include a stakeholder engagement plan and activities.
-N/A,Missing section on project closure,The system shall include a project closure plan and deliverables.
-N/A,Missing section on lessons learned,The system shall include a lessons learned document and review process.
-N/A,Missing section on project evaluation,The system shall include a project evaluation plan and criteria.
-N/A,Missing section on continuous improvement,The system shall include a continuous improvement plan and activities.
-N/A,Missing section on innovation management,The system shall include an innovation management plan and initiatives.
-N/A,Missing section on knowledge management,The system shall include a knowledge management plan and repository.
-N/A,Missing section on intellectual property management,The system shall include an intellectual property management plan and policies.
-N/A,Missing section on sustainability,The system shall include a sustainability plan and practices.
-N/A,Missing section on social responsibility,The system shall include a social responsibility plan and activities.
-N/A,Missing section on ethical considerations,The system shall include an ethical considerations plan and guidelines.
-N/A,Missing section on cultural considerations,The system shall include a cultural considerations plan and practices.
-N/A,Missing section on diversity and inclusion,The system shall include a diversity and inclusion plan and initiatives.
-N/A,Missing section on health and safety,The system shall include a health and safety plan and procedures.
-N/A,Missing section on environmental impact,The system shall include an environmental impact assessment and mitigation plan.
-N/A,Missing section on community engagement,The system shall include a community engagement plan and activities.
-N/A,Missing section on public relations,The system shall include a public relations plan and strategies.
-N/A,Missing section on marketing,The system shall include a marketing plan and campaigns.
-N/A,Missing section on sales,The system shall include a sales plan and targets.
-N/A,Missing section on customer service,The system shall include a customer service plan and support channels.
-N/A,Missing section on user training,The system shall include a user training plan and materials.
-N/A,Missing section on user adoption,The system shall include a user adoption plan and activities.
-N/A,Missing section on user satisfaction,The system shall include a user satisfaction survey and feedback mechanism.
-N/A,Missing section on user retention,The system shall include a user retention plan and strategies.
-N/A,Missing section on user engagement,The system shall include a user engagement plan and activities.
-N/A,Missing section on user experience,The system shall include a user experience plan and design principles.
-N/A,Missing section on user interface design,The system shall include a user interface design plan and guidelines.
-N/A,Missing section on user accessibility,The system shall include a user accessibility plan and compliance.
-N/A,Missing section on user feedback,The system shall include a user feedback mechanism and improvement process.
-N/A,Missing section on user community,The system shall include a user community plan and engagement activities.
-N/A,Missing section on user advocacy,The system shall include a user advocacy plan and initiatives.
-N/A,Missing section on user loyalty,The system shall include a user loyalty plan and rewards program.
-N/A,Missing section on user onboarding,The system shall include a user onboarding plan and materials.
-N/A,Missing section on user support,The system shall include a user support plan and channels.
-N/A,Missing section on user documentation,The system shall include user documentation and help guides.
-N/A,Missing section on user training,The system shall include user training materials and sessions.
-N/A,Missing section on user adoption,The system shall include a user adoption plan and activities.
-N/A,Missing section on user satisfaction,The system shall include a user satisfaction survey and feedback mechanism.
-N/A,Missing section on user retention,The system shall include a user retention plan and strategies.
-N/A,Missing section on user engagement,The system shall include a user engagement plan and activities.
-N/A,Missing section on user experience,The system shall include a user experience plan and design principles.
-N/A,Missing section on user interface design,The system shall include a user interface design plan and guidelines.
-N/A,Missing section on user accessibility,The system shall include a user accessibility plan and compliance.
-N/A,Missing section on user feedback,The system shall include a user feedback mechanism and improvement process.
-N/A,Missing section on user community,The system shall include a user community plan and engagement activities.
-N/A,Missing section on user advocacy,The system shall include a user advocacy plan and initiatives.
-N/A,Missing section on user loyalty,The system shall include a user loyalty plan and rewards program.
-N/A,Missing section on user onboarding,The system shall include a user onboarding plan and materials.
-N/A,Missing section on user support,The system shall include a user support plan and channels.
-N/A,Missing section on user documentation,The system shall include user documentation and help guides.
-N/A,Missing section on user training,The system shall include user training materials and sessions.
-N/A,Missing section on user adoption,The system shall include a user adoption plan and activities.
-N/A,Missing section on user satisfaction,The system shall include a user satisfaction survey and feedback mechanism.
-N/A,Missing section on user retention,The system shall include a user retention plan and strategies.
-N/A,Missing section on user engagement,The system shall include a user engagement plan and activities.
-N/A,Missing section on user experience,The system shall include a user experience plan and design principles.
-N/A,Missing section on user interface design,The system shall include a user interface design plan and guidelines.
-N/A,Missing section on user accessibility,The system shall include a user accessibility plan and compliance.
-N/A,Missing section on user feedback,The system shall include a user feedback mechanism and improvement process.
-N/A,Missing section on user community,The system shall include a user community plan and engagement activities.
-N/A,Missing section on user advocacy,The system shall include a user advocacy plan and initiatives.
-N/A,Missing section on user loyalty,The system shall include a user loyalty plan and rewards program.
-N/A,Missing section on user onboarding,The system shall include a user onboarding plan and materials.
-N/A,Missing section on user support,The system shall include a user support plan and channels.
-N/A,Missing section on user documentation,The system shall include user documentation and help guides.
-N/A,Missing section on user training,The system shall include user training materials and sessions.
-N/A,Missing section on user adoption,The system shall include a user adoption plan and activities.
-N/A,Missing section on user satisfaction,The system shall include a user satisfaction survey and feedback mechanism.
-N/A,Missing section on user retention,The system shall include a user retention plan and strategies.
-N/A,Missing section on user engagement,The system shall include a user engagement plan and activities.
-N/A,Missing section on user experience,The system shall include a user experience plan and design principles.
-N/A,Missing section on user interface design,The system shall include a user interface design plan and guidelines.
-N/A,Missing section on user accessibility,The system shall include a user accessibility plan and compliance.
-N/A,Missing section on user feedback,The system shall include a user feedback mechanism and improvement process.
-N/A,Missing section on user community,The system shall include a user community plan and engagement activities.
-N/A,Missing section on user advocacy,The system shall include a user advocacy plan and initiatives.
-N/A,Missing section on user loyalty,The system shall include a user loyalty plan and rewards program.
-N/A,Missing section on user onboarding,The system shall include a user onboarding plan and materials.
-N/A,Missing section on user support,The system shall include a user support plan and channels.
-N/A,Missing section on user documentation,The system shall include user documentation and help guides.
-N/A,Missing section on user training,The system shall include user training materials and sessions.
-N/A,Missing section on user adoption,The system shall include a user adoption plan and activities.
-N/A,Missing section on user satisfaction,The system shall include a user satisfaction survey and feedback mechanism.
-N/A,Missing section on user retention,The system shall include a user retention plan and strategies.
-N/A,Missing section on user engagement,The system shall include a user engagement plan and activities.
-N/A,Missing section on user experience,The system shall include a user experience plan and design principles.
-N/A,Missing section on user interface design,The system shall include a user interface design plan and guidelines.
-N/A,Missing section on user accessibility,The system shall include a user accessibility plan and compliance.
-N/A,Missing section on user feedback,The system shall include a user feedback mechanism and improvement process.
-N/A,Missing section on user community,The system shall include a user community plan and engagement activities.
-N/A,Missing section on user advocacy,The system shall include a user advocacy plan and initiatives.
-N/A,Missing section on user loyalty,The system shall include a user loyalty plan and rewards program.
-N/A,Missing section on user onboarding,The system shall include a user onboarding plan and materials.
-N/A,Missing section on user support,The system shall include a user support plan and channels.
-N/A,Missing section on user documentation,The system shall include user documentation and help guides.
-N/A,Missing section on user training,The system shall include user training materials and sessions.
-N/A,Missing section on user adoption,The system shall include a user adoption plan and activities.
-N/A,Missing section on user satisfaction,The system shall include a user satisfaction survey and feedback mechanism.
-N/A,Missing section on user retention,The system shall include a user retention plan and strategies.
-N/A,Missing section on user engagement,The system shall include a user engagement plan and activities.
-N/A,Missing section on user experience,The system shall include a user experience plan and design principles.
-N/A,Missing section on user interface design,The system shall include a user interface design plan and guidelines.
-N/A,Missing section on user accessibility,The system shall include a user accessibility plan and compliance.
-N/A,Missing section on user feedback,The system shall include a user feedback mechanism and improvement process.
-N/A,Missing section on user community,The system shall include a user community plan and engagement activities.
-N/A,Missing section on user advocacy,The system shall include a user advocacy plan and initiatives.
-N/A,Missing section on user loyalty,The system shall include a user loyalty plan and rewards program.
-N/A,Missing section on user onboarding,The system shall include a user onboarding plan and materials.
-N/A,Missing section on user support,The system shall include a user support plan and channels.
-N/A,Missing section on user documentation,The system shall include user documentation and help guides.
-N/A,Missing section on user training,The system shall include user training materials and sessions.
-N/A,Missing section on user adoption,The system shall include a user adoption plan and activities.
-N/A,Missing section on user satisfaction,The system shall include a user satisfaction survey and feedback mechanism.
-N/A,Missing section on user retention,The system shall include a user retention plan and strategies.
-N/A,Missing section on user engagement,The system shall include a user engagement plan and activities.
-N/A,Missing section on user experience,The system shall include a user experience plan and design principles.
-N/A,Missing section on user interface design,The system shall include a user interface design plan and guidelines.
-N/A,Missing section on user accessibility,The system shall include a user accessibility plan and compliance.
-N/A,Missing section on user feedback,The system shall include a user feedback mechanism and improvement process.
-N/A,Missing section on user community,The system shall include a user community plan and engagement activities.
-N/A,Missing section on user advocacy,The system shall include a user advocacy plan and initiatives.
-N/A,Missing section on user loyalty,The system shall include a user loyalty plan and rewards program.
-N/A,Missing section on user onboarding,The system shall include a user onboarding plan and materials.
-N/A,Missing section on user support,The system shall include a user support plan and channels.
-N/A,Missing section on user documentation,The system shall include user documentation and help guides.
-N/A,Missing section on user training,The system shall include user training materials and sessions.
-N/A,Missing section on user adoption,The system shall include a user adoption plan and activities.
-N/A,Missing section on user satisfaction,The system shall include a user satisfaction survey an
+/FR-U-10/,Does not specify what happens if no neural networks are available.,The system shall display a message 'No neural networks available' if the list is empty.
+/FR-U-20/,Does not specify what happens if the user selects an invalid neural network.,The system shall display an error message 'Invalid neural network selected' if the user selects an invalid neural network.
+/FR-U-30/,Does not specify supported file formats for importing neural network topology.,The system shall support importing neural network topologies in ONNX format.
+/FR-U-40/,Does not specify what happens if no hardware components are available.,The system shall display a message 'No hardware components available' if the list is empty.
+/FR-U-50/,Does not specify what happens if the user selects an invalid hardware component.,The system shall display an error message 'Invalid hardware component selected' if the user selects an invalid hardware component.
+/FR-U-60/,Does not specify supported file formats for importing images.,"The system shall support importing images in JPEG, JPG, and PNG formats."
+/FR-U-70/,Does not specify what happens if the user tries to remove an image that is not imported.,The system shall display an error message 'No image to remove' if the user tries to remove an image that is not imported.
+/FR-U-80/,Does not specify what happens if the inference fails.,The system shall display an error message 'Inference failed' if the inference process fails.
+/FR-U-100/,Does not specify the format of the diagnostic data.,"The diagnostic data shall include inference result, confidence score, latency, hardware information, and neural network identifier."
+/FR-U-110/,Does not specify the format in which results and diagnostic data are exported.,The system shall export results and diagnostic data in a CSV file format.
+/FR-U-120/,Does not specify what happens if the user tries to abort an inference that is not running.,The system shall display an error message 'No inference to abort' if the user tries to abort an inference that is not running.
+/FR-U-130/,Does not specify the maximum number of images that can be selected for batch processing.,The system shall allow a maximum of 10 images to be selected for batch processing.
+/FR-U-140/,Does not specify what happens if the user tries to reorder images when no images are imported.,The system shall display an error message 'No images to reorder' if the user tries to reorder images when no images are imported.
+/FR-U-150/,Does not specify the maximum number of hardware components that can be selected for batch processing.,The system shall allow a maximum of 5 hardware components to be selected for batch processing.
+/FR-U-160/,Does not specify the types of graphs that will be shown for benchmarking.,"The system shall display performance graphs including latency, throughput, and resource utilization for benchmarking."
+/FR-U-170/,Does not specify the maximum number of inference runs that can be specified.,The system shall allow a maximum of 100 inference runs to be specified with the same arguments.
+/FR-U-180/,Does not specify the languages supported for the user interface.,"The system shall support English, German, and French languages for the user interface."
+/FR-U-190/,Does not specify what happens if the user tries to remove a neural network that is not in the list.,The system shall display an error message 'Neural network not found' if the user tries to remove a neural network that is not in the list.
+/FR-A-10/,Does not specify what happens if the user interface update fails.,The system shall display an error message 'User interface update failed' if the user interface update fails.
+/FR-A-20/,Does not specify the maximum number of image previews that can be shown.,The system shall display a maximum of 10 image previews in the user interface.
+/FR-A-30/,Does not specify the types of conflicts that will be checked for arguments.,"The system shall check for conflicts including invalid file formats, unsupported hardware, and missing arguments."
+/FR-A-40/,Does not specify what happens if the start button remains disabled due to missing arguments.,The system shall display a message 'Please select all required arguments' if the start button remains disabled due to missing arguments.
+/FR-A-60/,Does not specify the format of the completion message.,The completion message shall include 'Inference completed successfully' and the time taken for the inference.
+/FR-A-70/,Does not specify the format of the run-time log file.,The run-time log file shall be in plain text format and include timestamps for each event.
+/FR-A-80/,Does not specify what happens if the arguments cannot be preserved.,The system shall display an error message 'Failed to preserve arguments' if the arguments cannot be preserved.
+/PD10/,Does not specify the minimum height and width for input images.,The height and width of input images shall be at least 224 pixels.
+/PD20/,Does not specify what happens if the imported neural network is not compatible with the hardware.,The system shall display an error message 'Neural network not compatible with selected hardware' if the imported neural network is not compatible.
+/PD30/,Does not specify the format of the inference results and diagnostic data.,The inference results and diagnostic data shall be in JSON format.
+/PD40/,Does not specify the format of the run-time log file.,The run-time log file shall be in plain text format.
+/PD50/,Does not specify what happens if the translation files are missing.,The system shall display an error message 'Translation files missing' if the translation files are not found.
+/TC-INI-10/,Does not specify what happens if the program fails to start.,The system shall display an error message 'Program failed to start' if the program fails to launch.
+/TC-INI-20/,Does not specify what happens if the hardware component or neural network selection fails.,The system shall display an error message 'Selection failed' if the hardware component or neural network selection fails.
+/TC-INI-30/,Does not specify what happens if the image removal fails.,The system shall display an error message 'Image removal failed' if the image removal process fails.
+/TC-INF-10/,Does not specify what happens if the inference process fails.,The system shall display an error message 'Inference process failed' if the inference process fails.
+/TC-INF-20/,Does not specify what happens if the imported neural network is invalid.,The system shall display an error message 'Invalid neural network' if the imported neural network is invalid.
+/TC-INF-30/,Does not specify the format of the inference results and diagnostic data.,The inference results and diagnostic data shall be displayed in a tabular format.
+/TC-INF-40/,Does not specify the format in which results and diagnostic data are exported.,The system shall export results and diagnostic data in a CSV file format.
+/TC-INF-50/,Does not specify what happens if the used arguments cannot be preserved.,The system shall display an error message 'Failed to preserve arguments' if the used arguments cannot be preserved.
+/TC-ERR-10/,Does not specify the types of errors that can occur when importing an invalid neural network.,"The system shall display specific error messages for different types of errors, such as 'File format not supported' or 'File corrupted'."
+/TC-ERR-20/,Does not specify the types of errors that can occur when selecting a missing hardware component.,"The system shall display specific error messages for different types of errors, such as 'Hardware component not found' or 'Hardware component not supported'."
+/TC-ERR-30/,Does not specify the types of errors that can occur when importing an invalid image.,"The system shall display specific error messages for different types of errors, such as 'File format not supported' or 'File corrupted'."
+/TC-ERR-40/,Does not specify the types of errors that can occur when importing an invalid image after a valid image.,"The system shall display specific error messages for different types of errors, such as 'File format not supported' or 'File corrupted'."
+/TC-OPT-10/,Does not specify what happens if the abort process fails.,The system shall display an error message 'Abort process failed' if the abort process fails.
+/TC-OPT-20/,Does not specify what happens if the automatic detection of Intel Movidius fails.,The system shall display an error message 'Intel Movidius detection failed' if the automatic detection process fails.
+/TC-OPT-30/,Does not specify the maximum number of images that can be imported for batch processing.,The system shall allow a maximum of 10 images to be imported for batch processing.
+/TC-OPT-40/,Does not specify the maximum number of hardware components that can be selected for batch processing.,The system shall allow a maximum of 5 hardware components to be selected for batch processing.
+/TC-OPT-50/,Does not specify the types of benchmark statistics that will be shown.,"The system shall display benchmark statistics including latency, throughput, and resource utilization."
+/TC-OPT-60/,Does not specify the languages supported for the user interface.,"The system shall support English, German, and French languages for the user interface."
