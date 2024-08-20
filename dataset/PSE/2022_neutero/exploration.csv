@@ -1,0 +1,9 @@
+Id,Total tp,Total fp,Total fn,Recall,Precision,F1 score
+Few Shot,9,6,23,0.281,0.6,0.383
+Zero Shot,8,18,24,0.25,0.308,0.276
+CoT (FS),4,4,28,0.125,0.5,0.2
+CoT (ZS),2,3,30,0.062,0.4,0.107
+Completeness Types,10,21,22,0.312,0.323,0.317
+Engineer Persona,7,5,25,0.219,0.583,0.318
+Generated Knowledge,7,1,25,0.219,0.875,0.35
+Repeated Instructions,7,5,25,0.219,0.583,0.318

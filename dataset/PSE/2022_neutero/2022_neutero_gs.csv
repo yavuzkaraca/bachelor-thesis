@@ -1,6 +1,9 @@
 Label,Level,Issue,Correction,Native
+Section 2.2,2,does not specify the implied function of automatically scanning and updating available hardware,System scans every 30 seconds to see if there is available hardware,yes
 FR-A-30,2,does not specify recovery or program state when selection is improper.,"... Improper Selection is undone and the previous state before the selection is still valid.",yes
+FR-A-30,2,Does not specify the criteria for argument validity checks,The system shall check arguments for validity based on compatibility with the selected neural network and availability of hardware components.,yes
 FR-A-40,2,does not specify the behavior if user tries to start multiple inference instances simultaneously,"... or an inference is already started.",yes
+FR-U-10,2,does not specify the default networks,LeNet and Alexnet are default and are always included in the list,yes
 FR-U-20,1,does not refer to behavior specifying requirement.,refer to FR-A-10,yes
 FR-U-30,1,does not refer to behavior specifying requirement.,refer to PD20,yes
 FR-U-40,2,does not specify if the listed hardware are all available and how it's updated.,"The system shall display an error message and prevent the selection of unavailable hardware components",yes
@@ -10,7 +13,9 @@ FR-U-80,1,does not refer to behavior specifying requirement.,refer to FR-A-40,ye
 FR-U-80,2,does not specify the behavior if the inference fails.,"If inference fails the program returns to parameter selection state and the error is printed as specified in FR-A-70.",yes
 FR-U-100,1,does not refer to behavior specifying requirement.,refer to PD30,yes
 FR-U-100,2,does not specify the behaviour if user tries to view results without running an inference,"The system shall disable the 'View results' button until an inference has been run, analogous to FR-A-40.",yes
+FR-U-110,2,does not refer to behavior specifying requirement.,refer to PD30,yes
 FR-U-110,2,does not specify the behaviour if user tries to export results without running an inference,"The system shall disable the 'Export results' button until an inference has been run, analogous to FR-A-40.",yes
+FR-U-130,2,Does not specify the maximum number of images that can be selected for batch processing.,The system shall allow a maximum of 10 images to be selected for batch processing.,yes
 PD20,2,does not specify the maximum number of neural networks that can be imported,"The system shall allow importing up to 10 neural networks simultaneously.",yes
 PD20,3,does not specify what kind of topology is supported,"The system shall allow importing only such topologies with nodes consisting: Relu, Abs, SoftMax, MaxPool, Flatten and Convolutional",yes
 PD40,2,does not specify the maximum size of the runtime log file.,"The system shall limit the runtime log file size to 10MB and create new log files when the limit is reached.",yes
@@ -18,9 +23,10 @@ Section 8,2,does not specify the performance requirements for the system.,"Infer
 N/A,3,does not mention that neural networks should be trained for image processing,The imported neural network topologies should be specifically crafted for image processing,yes
 FR-U-120,2,does not specify the behaviour if user tries abort while there is no running inference,"The 'Abort' button will be only clickable when inference is running",no
 PD10,2,does not specify the limit for images,"...Max. 100 images per inference run",no
+PD10,2,Does not specify the minimum height and width for input images,The height and width of input images should be at least 224x224 pixels.,yes
 FR-A-50,1,requirement missing,...,no
 Section 3.2,3,does not mention the loading animation while inference is running,"Loading animation will be shown after starting the inference.",no
 PD30,1,does not fulfill the template of five elements,...,no
 N/A,1,missing section on Non-functional requirements,...,no
-Section 7,2,does not specify the main implementation language,"C++ as the main implementation language",no
+Section 5,2,does not specify the main implementation language,"C++ as the main implementation language",no
 Glossary,1,lacks definition of inference,Inference the process of using the knowledge of a trained neural network to predict the result based on the given input.,no

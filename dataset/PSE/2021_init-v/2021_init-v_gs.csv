@@ -12,6 +12,7 @@ F30,3,"does not account for networks with no communication if the PCAP is empty 
 F30,3,does not specify if and how the nodes are enumerated or left unidentified,The nodes in the graph are enumerated by selecting any node with the minimum degree and applying bfs with this node at the root.,yes
 F31,2,does not specify how the user is going to configure,The user can click a toggle switch to choose edge property.,yes
 F40,2,does not specify the types of graphs used,Representation of the preprocessor is as an undirected graph,yes
+F40,2,does not specify the maximum number of points that can be displayed in the preprocessor results graph,"The system shall support displaying up to 10,000 points in the preprocessor results graph.",yes
 F40,2,does not specify the update procedure,The user can update the results panel by clicking the update button,yes
 F50,2,does not specify how the two graphs can be merged into one,"The plots can be overlaid on top of the same graph, each value is converted to percentage to normalize the lines within 0 and 100.",yes
 F50,2,does not specify the update procedure,The user can update the performance panel by clicking the update button,yes
