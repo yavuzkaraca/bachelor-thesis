@@ -7,7 +7,7 @@ Specification Documents.
 
 def system_engineer_role():
     return """
-    You are an experienced Requirements Engineer that identifies incompleteness in Software Requirement Specification 
+    You are an experienced Requirements Engineer who identifies incompleteness in Software Requirement Specification 
     documents.
     """
 
@@ -46,7 +46,7 @@ def instructions_simple():
     Identify all the instances of incompleteness in the following document by:
     1. Referring to the requirement by its unique identifier/label.
     2. Stating the issue.
-    3. Providing an example (correction) of a requirement that addresses the identified incompleteness.
+    3. Providing an example of a requirement that addresses the identified incompleteness.
     \n
     """
 

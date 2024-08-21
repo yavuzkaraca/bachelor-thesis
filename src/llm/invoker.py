@@ -115,7 +115,6 @@ def combined_gk_types(llm, docs):
     return response.content
 
 
-
 def generated_knowledge(llm, docs):
     store = {}
 
