@@ -7,6 +7,7 @@ F20,1,does not refer to the related section that defines the command,refer to Se
 F20,1,does not refer to the related section that defines output format,refer to Section 9,yes
 F20,1,does not refer to the related section that defines the command,refer to Section 10,yes
 F30,1,does not refer to the related section that defines the command,refer to Section 10,yes
+F30,2,Does not specify the validation process for the commit,The system shall validate the commit by checking its existence in the repository and ensuring it is not a merge commit.,yes
 F40,1,does not refer to the related section that defines the command,refer to Section 10,yes
 F40,2,does not specify the schema of the JSON output,The system shall export the results in a JSON file with a standardized schema.,yes
 F50,2,does not specify the how the user will configure parameters,The system shall consider lines changed in more than 30% of commits as frequently changed.,yes
@@ -39,3 +40,4 @@ Section 3.2.3,2,does not specify exact resource requirements,"The framework requ
 Section 3.2.5,2,lacks details on software adaptability,"The framework must be flexible enough to adapt to different software projects, including those written in Java, Python, and C++. It should support various testing libraries such as JUnit for Java, pytest for Python, and GoogleTest for C++",no
 NF40,1,does not fulfill the template of stating the title,Title: Easy Usage,no
 Section 10.3,1,does not fulfill the template of stating the name,NAME analyse,no
+6.1,1,Does not provide detailed use cases,"The system shall include use cases such as ""User uploads a file"", ""User views test results"", and ""User configures the framework"".",no

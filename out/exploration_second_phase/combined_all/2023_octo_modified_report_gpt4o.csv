@@ -1,0 +1,26 @@
+Label,Issue,Correction
+3.2.3,"Does not specify the exact resource requirements (CPU, memory, storage)","The system shall require a minimum of 2 GHz CPU, 4 GB RAM, and 10 GB of available storage."
+3.2.4,Does not specify how data privacy will be ensured,The system shall ensure data privacy by encrypting all data transfers using TLS 1.2 or higher.
+3.2.5,Does not specify how the framework will adapt to different software projects,The system shall provide configuration options to adapt to different software project structures and requirements.
+3.2.6,Does not specify the type of documentation and training resources,"The system shall provide user manuals, API documentation, and video tutorials for training purposes."
+4.1,Does not specify the hardware environment requirements,The system shall require a server with at least 8 GB RAM and 100 GB of storage for optimal performance.
+5.1,Does not specify the development environment requirements,"The system shall be developed using Java 11, Maven 3.6, and JUnit 5."
+6.1,Does not provide detailed use cases,"The system shall include use cases such as ""User uploads a file"", ""User views test results"", and ""User configures the framework""."
+/F10/,Does not specify the format of the output file,"The system shall output test results in JSON format by default, with an option to export in XML format."
+/F20/,Does not specify the format of the CLI output,"The system shall display CLI output in a human-readable format, with options for JSON and XML formats."
+/F30/,Does not specify the validation process for the commit,The system shall validate the commit by checking its existence in the repository and ensuring it is not a merge commit.
+/F40/,Does not specify the format of the analyzed results,"The system shall output analyzed results in JSON format by default, with an option to export in XML format."
+/F50/,Does not specify the criteria for filtering frequently changed code,The system shall filter lines of code that have changed more than 5 times in the last 100 commits.
+/F60/,Does not specify the criteria for emphasizing often changing tests,The system shall emphasize tests that have changed results more than 3 times in the last 50 test runs.
+/F70/,Does not specify the format of the .octoignore file,The .octoignore file shall be a plain text file with each line representing a file or directory to be ignored.
+/F80/,Does not specify the supported output formats,The system shall support output formats including JSON and XML.
+/F90/,Does not specify the structure of the SQLite database,"The SQLite database shall include tables for commits, tests, and results, with appropriate foreign key relationships."
+/F100/,Does not specify the criteria for highlighting often changed lines,The system shall highlight lines of code that have changed more than 5 times in the last 100 commits.
+/F110/,Does not specify the structure of the config file,"The config file shall be a JSON file with settings for output format, ignored files, and other user preferences."
+/NF10/,Does not specify the maximum response time for user interactions,The system shall provide responses to user interactions within 2 seconds.
+/NF20/,Does not specify the method for protecting project data,The system shall use access control mechanisms to ensure that only authorized users can access project data.
+/NF30/,Does not specify the performance metrics for handling commits,"The system shall handle projects with up to 1000 commits, processing each commit within 5 seconds."
+/NF40/,Does not specify the user interface guidelines,The CLI shall provide clear and concise commands with helpful error messages and documentation.
+/NF50/,Does not specify the method for extending the system,The system shall provide a plugin architecture to allow developers to add custom commands and functionalities.
+/NF60/,Does not specify the language support,"The system shall support English for all interactions, with potential for localization in future versions."
+/NF70/,Does not specify the maintenance procedures,The system shall include detailed maintenance documentation and automated tests to ensure easy repair and updates.

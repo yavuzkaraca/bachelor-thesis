@@ -23,7 +23,6 @@ def examples():
     Example Output:
     Label;Issue;Correction
     R10;Does not specify the format for international phone numbers;The system shall accept phone numbers in the E.164 international format (e.g., +1 234-567-890).
-    Section 10.1;Does not specify the minimum hardware requirements for mobile devices;The mobile app shall support devices with at least 2GB RAM and running Android 8.0 or iOS 12.0 and above.    
     REQ-10 (2.1.4);Does not specify the maximum character length for user comments;The system shall limit user comments to a maximum of 500 characters.
     FR22;Does not specify the method for user feedback collection;The system shall provide a feedback form accessible from the main dashboard, allowing users to submit feedback directly.
     NF10;Does not fulfill the template of three elements;"... and protected mode"
@@ -45,10 +44,9 @@ def output_format():
 def instructions_simple():
     return """
     Identify all the instances of incompleteness in the following document by:
-    1. Referring to the requirement by its unique identifier/label. If it's more than just one requirement then you can
-     refer to the section number. 
+    1. Referring to the requirement by its unique identifier/label.
     2. Stating the issue.
-    3. Providing an example of a requirement that addresses the identified incompleteness.
+    3. Providing an example (correction) of a requirement that addresses the identified incompleteness.
     \n
     """
 
@@ -56,9 +54,10 @@ def instructions_simple():
 def instructions_chain_of_thought():
     return """
     First, read the following document thoroughly and identify all the instances of incompleteness.
-    Then, take your time and think about these instances if they really are accurate and valid.
-    After that, explain the reason of incompleteness for each instance referring to their unique identifier.
-    Finally, depending on the reason, provide an example of a requirement that addresses the identified incompleteness.
+    Then, explain the reason of incompleteness for each instance referring to their unique identifier.
+    After that, depending on the reason, provide an example of a requirement that addresses the identified incompleteness.
+    Finally, take your time and think about these instances. Are they really accurate and valid? Check if you included
+    all the instances of incompleteness. 
     \n
     """
 

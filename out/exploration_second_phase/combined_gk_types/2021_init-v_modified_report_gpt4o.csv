@@ -1,0 +1,20 @@
+Label,Issue,Correction
+/F10/,Does not specify the format for PCAP files,"The system shall accept PCAP files in the standard libpcap format (e.g., .pcap, .pcapng)."
+/F20/,Does not specify the default values for the preprocessor configuration,"The system shall use the following default values for the preprocessor configuration: Length scaling: 150, Value scaling: Off, Normalization: None, Autoencoder and PCA are selected, Number of hidden layers: 4, Number of nodes in hidden layers: (256, 64, 32, 8), Loss function: MSE, Number of epochs for the training: 100, Optimizer: adam."
+/F30/,Does not specify the color coding for protocols,"The system shall use distinct colors for each protocol in the network topology graph, e.g., HTTP: blue, FTP: green, TCP: red."
+/F40/,Does not specify the visual representation for each protocol,"The system shall use distinct shapes and colors for each protocol in the result graph, e.g., HTTP: blue circle, FTP: green square, TCP: red triangle."
+/F50/,Does not specify the method for merging performance graphs,The system shall provide an option to merge performance graphs by overlaying them with different colors for each run.
+/F60/,Does not specify the zoom functionality for graphs,"The system shall allow users to zoom in and out of graphs using mouse scroll or pinch gestures, and pan the view by clicking and dragging."
+/F70/,Does not specify the image format for saving graphs,"The system shall save graphs as images in PNG format by default, with options for JPEG and SVG."
+/F80/,Does not specify the method for selecting runs to compare,"The system shall provide a dropdown menu to select runs for comparison, and an option to overlay or display them side by side."
+/F90/,Does not specify the asynchronous interaction capabilities,"The system shall allow users to interact with the network topology, performance analysis, and result graphs while the preprocessor is running, without freezing the UI."
+/F100/,Does not specify the statistics to be shown for the PCAP file,"The system shall show the following statistics for the PCAP file: Count of devices, Count of used protocols, Count of packets, Device that sent the most packets."
+/F200/,Does not specify the method for opening graphs in a new window,The system shall provide a button next to each graph to open it in a new window for detailed viewing.
+/F210/,Does not specify the default key bindings,"The system shall use the following default key bindings: Open session: Ctrl + O, Save session: Ctrl + S, Save session as: Ctrl + Alt + S, Run preprocessor: Ctrl + R."
+/F220/,Does not specify the identifiers for saved sessions,"The system shall include the following identifiers in saved sessions: Hash to identify program version, Hash to identify the PCAP."
+/F230/,Does not specify the warning message for large data,"The system shall display a warning message when opening a PCAP file with more than 2 million packets, indicating potential performance issues."
+/F240/,Does not specify the content of the PDF report,"The system shall include the following in the PDF report: Configurations of preprocessing runs, Results of those configurations, Performance graphs of those configurations."
+/P10/,Does not specify the response time for showing results,The system shall show results from preprocessing done in this session within 1 second of user request.
+/S10/,Does not specify the method for ensuring data privacy,The system shall ensure no information about the PCAP is accessible by inspecting the source of the website.
+/E10/,Does not specify the design principles for expandability,"The system shall be designed to allow easy addition or removal of menus, menu items, preprocessor options, and statistics without major restructuring."
+/E11/,Does not specify the documentation requirements,The system shall include detailed documentation of the code and design to facilitate understanding and extension by future developers.

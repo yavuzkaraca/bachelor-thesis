@@ -1,0 +1,23 @@
+Label,Issue,Correction
+3.2.3,"Does not specify the exact resource requirements for CPU, memory, and storage","The framework shall require a minimum of 2 CPU cores, 4GB of RAM, and 10GB of storage space."
+3.2.6,Does not specify the format or location of the documentation,"The framework shall provide comprehensive documentation in HTML and PDF formats, accessible from the project's root directory."
+4.1,Does not specify the exact hardware requirements for different scales of operation,"The framework shall require a minimum of 2 CPU cores, 4GB of RAM, and 10GB of storage space for small projects, scaling up to 8 CPU cores, 16GB of RAM, and 100GB of storage for large projects."
+5.1,Does not specify the development environment setup,"The development environment shall include Java JDK 11, Maven 3.6.3, and IntelliJ IDEA 2020.3."
+6.1,Does not provide detailed use cases,"The framework shall support use cases such as running tests, generating reports, and analyzing commit impacts."
+F10,Does not specify the format of the output file,"The output file shall be in JSON format by default, with an option to export in XML."
+F20,Does not specify the format of the CLI output,"The CLI output shall be in plain text format, with an option to include additional metadata in JSON format."
+F30,Does not specify the error message for invalid commit,"The framework shall display the error message ""Invalid commit specified"" if the commit is not found."
+F40,Does not specify the format of the exported JSON file,"The exported JSON file shall include commit ID, test results, and metadata such as author and timestamp."
+F50,Does not specify the criteria for frequently changed lines,The framework shall consider lines changed more than 5 times as frequently changed.
+F60,Does not specify the criteria for often changing tests,The framework shall consider tests that alternate between pass and fail more than 3 times as often changing.
+F70,Does not specify the format of the .octoignore file,"The .octoignore file shall be a plain text file listing file paths to be ignored, one per line."
+F80,Does not specify the default output format,The default output format shall be JSON.
+F90,Does not specify the structure of the SQLite database,"The SQLite database shall include tables for commits, tests, and results, with appropriate foreign key relationships."
+F100,Does not specify the color scheme for highlighting,The framework shall use orange to highlight frequently changed lines.
+F110,Does not specify the structure of the config file,"The config file shall be in JSON format, containing settings for output format, highlight color, and ignored files."
+NF10,Does not specify the maximum acceptable response time,The system shall provide output within 2 seconds for typical operations.
+NF30,Does not specify the warning message for exceeding 1000 commits,"The system shall display the warning message ""Processing more than 1000 commits may lead to performance issues."""
+NF40,Does not specify the user interface guidelines,"The CLI shall follow standard Unix command-line interface guidelines, with clear and concise commands and options."
+NF50,Does not specify the extension mechanism,The framework shall provide a plugin architecture allowing developers to add custom commands.
+NF70,Does not specify the maintenance procedures,The framework shall include a maintenance guide detailing common issues and troubleshooting steps.
+9,Does not specify the data retention policy,"The framework shall retain test data for a minimum of 30 days, with an option to archive older data."

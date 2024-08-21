@@ -1,0 +1,6 @@
+Label,Issue,Correction
+FR-U-30,Does not specify the maximum file size for imported neural networks,The system shall limit the file size of imported neural networks to a maximum of 100MB.
+FR-U-60,Does not specify the maximum file size for input images,The system shall limit the file size of input images to a maximum of 10MB.
+FR-U-30,Does not define the response to unsupported file formats for neural networks,The system shall display an error message if an unsupported neural network file format is selected.
+FR-U-60,Does not define the response to unsupported file formats for input images,The system shall display an error message if an unsupported input image file format is selected.
+Section 4,Missing diagrams for system architecture and data flow,Include diagrams that illustrate the system architecture and data flow.

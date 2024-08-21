@@ -7,3 +7,6 @@ Completeness Types,10,21,22,0.312,0.323,0.317
 Engineer Persona,7,5,25,0.219,0.583,0.318
 Generated Knowledge,7,1,25,0.219,0.875,0.35
 Repeated Instructions,7,5,25,0.219,0.583,0.318
+Combined All,5,0,26,0,0,0
+Combined CoT + RI,8,9,23,0,0,0
+Combined GK + CT,8,2,23,0,0,0

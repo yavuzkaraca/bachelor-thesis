@@ -1,0 +1,11 @@
+Label,Issue,Correction
+/FR-U-10/,Does not specify the format for listing neural networks,The system shall list neural networks in a drop-down menu with each entry showing the network name and version.
+/FR-U-30/,Does not specify the supported file formats for importing neural network topology,The system shall support importing neural network topologies in ONNX and HDF5 formats.
+/FR-U-60/,Does not specify the supported file formats for input images,"The system shall support input images in JPEG, JPG, and PNG formats."
+/FR-U-100/,Does not specify the format for displaying inference results,"The system shall display inference results in a pop-up window with a table format showing the image name, confidence score, and hardware used."
+/FR-U-110/,Does not specify the file format for exporting results and diagnostic data,The system shall export results and diagnostic data in CSV format.
+/FR-U-120/,Does not specify the behavior after aborting the inference,The system shall return to the starting screen and clear all selected arguments after aborting the inference.
+/FR-A-10/,Does not specify the types of error and warning messages,The system shall display error messages for invalid selections and warning messages for suboptimal configurations.
+/FR-A-30/,Does not specify the types of arguments to be checked,"The system shall check arguments for validity, including neural network compatibility, input image format, and hardware selection."
+/FR-A-70/,Does not specify the format for the run-time log file,The system shall save the run-time log file in a plain text format with timestamps for each event.
+/PD10/,Does not specify the minimum height and width for input images,The system shall support input images with a minimum height and width of 224 pixels.

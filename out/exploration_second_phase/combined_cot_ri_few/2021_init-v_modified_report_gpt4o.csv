@@ -1,0 +1,16 @@
+Label,Issue,Correction
+/F10/,Does not specify the maximum file size for PCAP files,The system shall support loading PCAP files up to a maximum size of 2GB.
+/F20/,Does not specify the default values for the preprocessor configuration,"The system shall provide default values for the preprocessor configuration: Length scaling: 150, Value scaling: Off, Normalization: None, Autoencoder and PCA are selected, Number of hidden layers: 4, Number of nodes in hidden layers: (256, 64, 32, 8), Loss function: MSE, Number of epochs for the training: 100, Optimizer: adam."
+/F30/,Does not specify the color coding for different protocols in the network topology graph,"The system shall use distinct colors for each protocol in the network topology graph, e.g., HTTP: Blue, FTP: Green, TCP: Red."
+/F40/,Does not specify the shapes used for different protocols in the preprocessor results graph,"The system shall use distinct shapes for each protocol in the preprocessor results graph, e.g., HTTP: Circle, FTP: Square, TCP: Triangle."
+/F50/,Does not specify the method for merging performance graphs,The system shall provide an option to merge performance graphs by overlaying them with different colors for each run.
+/F60/,Does not specify the zoom level increments for graphs,The system shall allow zooming in and out of graphs in increments of 10%.
+/F70/,Does not specify the image file formats for saving graphs,"The system shall support saving graphs as images in PNG, JPEG, and SVG formats."
+/F80/,Does not specify the method for selecting runs to compare,"The system shall provide a dropdown menu to select runs for comparison, allowing users to choose up to three runs at a time."
+/F90/,Does not specify the responsiveness criteria for asynchronous interaction,The system shall ensure that the user interface remains responsive with a maximum delay of 500ms during asynchronous interactions.
+/F100/,Does not specify the types of statistics to be shown for the input PCAP file,"The system shall display the following statistics for the input PCAP file: Total number of packets, Number of unique devices, Number of protocols used, and Packet size distribution."
+/F200/,Does not specify the window size for opening graphs in their own window,"The system shall open graphs in a new window with a default size of 800x600 pixels, which can be resized by the user."
+/F210/,Does not specify the default key bindings for commonly used functionality,"The system shall provide the following default key bindings: Open saved session: Ctrl + O, Save session: Ctrl + S, Save session as: Ctrl + Alt + S, Run preprocessor: Ctrl + R."
+/F220/,Does not specify the format for identifiers inside a saved session,The system shall use UUID format for identifiers inside a saved session.
+/F230/,Does not specify the warning message for handling large amounts of data,"The system shall display a warning message: ""The selected PCAP file contains more than 2 million packets. The program may become less responsive."""
+/F240/,Does not specify the format for the PDF report of the current session,"The system shall generate a PDF report with the following sections: Preprocessing configurations, Results, Performance graphs, and Summary."

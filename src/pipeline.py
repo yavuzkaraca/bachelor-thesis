@@ -15,7 +15,7 @@ from utils.csv_writer import generate_filename
 from utils.dataset_loader import paginate_pdf, get_pdf_file_paths
 
 
-def process_all_pdfs_all_prompt_variants(llm, identifier, output_base_dir):
+def process_all_pdfs_all_prompt_variants(llm, identifier, output_base_dir="../out/exploration_second_phase"):
     """
 
     Processes all PDF files in the dataset using the specified language model.
@@ -44,6 +44,7 @@ def process_all_pdfs_all_prompt_variants(llm, identifier, output_base_dir):
     for pdf_path in pdf_paths:
         pages = paginate_pdf(pdf_path)
 
+        """
         result_zero_shot = invoker.zero_shot(llm, pages)
         csv_writer.save_results_to_csv(result_zero_shot, generate_filename(pdf_path, identifier),
                                        os.path.join(output_base_dir, "zero_shot"))
@@ -75,9 +76,22 @@ def process_all_pdfs_all_prompt_variants(llm, identifier, output_base_dir):
         result_repeated_instructions = invoker.repeated_instructions(llm, pages)
         csv_writer.save_results_to_csv(result_repeated_instructions, generate_filename(pdf_path, identifier),
                                        os.path.join(output_base_dir, "repeated_instructions"))
+        """
+
+        result_combined_gk_types = invoker.combined_gk_types(llm, pages)
+        csv_writer.save_results_to_csv(result_combined_gk_types, generate_filename(pdf_path, identifier),
+                                       os.path.join(output_base_dir, "combined_gk_types"))
+
+        result_combined_cot_ri_few = invoker.combined_cot_ri(llm, pages)
+        csv_writer.save_results_to_csv(result_combined_cot_ri_few, generate_filename(pdf_path, identifier),
+                                       os.path.join(output_base_dir, "combined_cot_ri_few"))
+
+        result_combined_all = invoker.combined_all(llm, pages)
+        csv_writer.save_results_to_csv(result_combined_all, generate_filename(pdf_path, identifier),
+                                       os.path.join(output_base_dir, "combined_all"))
 
 
-def openai_process_all(output_base_dir="../out/exploration"):
+def openai_process_all():
     """
     Processes all PDF files in the dataset using the GPT-4o model.
 
@@ -88,10 +102,10 @@ def openai_process_all(output_base_dir="../out/exploration"):
         A dictionary containing the results of the validations for each PDF.
     """
     llm = llm_creator.create_llm_openai()
-    return process_all_pdfs_all_prompt_variants(llm, "gpt4o", output_base_dir)
+    return process_all_pdfs_all_prompt_variants(llm, "gpt4o")
 
 
-def ollama_process_all(output_base_dir="../out"):
+def ollama_process_all():
     """
     Processes all PDF files in the dataset using the Ollama model.
 
@@ -102,4 +116,4 @@ def ollama_process_all(output_base_dir="../out"):
         A dictionary containing the results of the validations for each PDF.
     """
     llm = llm_creator.create_llm_ollama()
-    return process_all_pdfs_all_prompt_variants(llm, "ollama", output_base_dir)
+    return process_all_pdfs_all_prompt_variants(llm, "ollama")

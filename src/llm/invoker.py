@@ -19,26 +19,101 @@ from llm.prompts import (generate_ieee_guidelines, instructions_simple, system_d
                          instructions_chain_of_thought, completeness_types, examples, output_format)
 
 
-def combined_five(llm, docs):
+def combined_all(llm, docs):
     """
     Combines:
      1. chain of though
      2. repeated instructions
-     3. persona pattern
-     4. zero shots
-     5. provided completeness types
+     3. few shot
+     4. generated knowledge
+     5. completeness types
+
+    """
+
+    store = {}
+
+    def get_session_history(session_id: str) -> BaseChatMessageHistory:
+        if session_id not in store:
+            store[session_id] = InMemoryChatMessageHistory()
+        return store[session_id]
+
+    with_message_history = RunnableWithMessageHistory(llm, get_session_history)
+
+    config = {"configurable": {"session_id": "abc"}}
+
+    first_response = with_message_history.invoke([HumanMessage(content=generate_ieee_guidelines())],
+                                                 config=config)
+
+    messages = [
+        (
+            "system", system_default_role()
+        ),
+        ("user",
+         instructions_chain_of_thought() + output_format() + first_response.content + completeness_types() + examples()
+         + "\n".join([doc.page_content for doc in docs])
+         + instructions_chain_of_thought() + output_format() + first_response.content + completeness_types() + examples()),
+    ]
+
+    response = with_message_history.invoke(messages, config=config)
+
+    return response.content
+
+
+def combined_cot_ri(llm, docs):
+    """
+    Combines:
+     1. chain of though
+     2. repeated instructions
+     3. few shot
 
     """
     messages = [
         (
-            "system", system_engineer_role()
+            "system", system_default_role()
         ),
-        ("user", instructions_chain_of_thought() + completeness_types() + "\n".join(
+        ("user", instructions_chain_of_thought() + output_format() + examples() + "\n".join(
             [doc.page_content for doc in docs])
          + "\n" + instructions_chain_of_thought() + output_format() + examples()),
     ]
     response = llm.invoke(messages)
     return response.content
+
+
+def combined_gk_types(llm, docs):
+    """
+    Combines:
+     1. few shot
+     2. generated knowledge
+     3. completeness types
+
+    """
+
+    store = {}
+
+    def get_session_history(session_id: str) -> BaseChatMessageHistory:
+        if session_id not in store:
+            store[session_id] = InMemoryChatMessageHistory()
+        return store[session_id]
+
+    with_message_history = RunnableWithMessageHistory(llm, get_session_history)
+
+    config = {"configurable": {"session_id": "abc"}}
+
+    first_response = with_message_history.invoke([HumanMessage(content=generate_ieee_guidelines())],
+                                                 config=config)
+
+    messages = [
+        (
+            "system", system_default_role()
+        ),
+        ("user", instructions_simple() + output_format() + first_response.content + completeness_types() + examples()
+         + "\n".join([doc.page_content for doc in docs])),
+    ]
+
+    response = with_message_history.invoke(messages, config=config)
+
+    return response.content
+
 
 
 def generated_knowledge(llm, docs):

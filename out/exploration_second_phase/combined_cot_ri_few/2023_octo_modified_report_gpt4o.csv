@@ -1,0 +1,24 @@
+Label,Issue,Correction
+3.2.3,Does not specify the minimum or maximum resource requirements,"The system shall require a minimum of 2 CPU cores, 4GB of RAM, and 10GB of storage space."
+3.2.4,Does not specify how data privacy will be ensured,The system shall ensure data privacy by encrypting all data transfers using TLS 1.2 or higher.
+3.2.5,Does not specify how the framework will adapt to different software projects,The system shall provide configuration options to adapt to different software project structures and requirements.
+3.2.6,Does not specify the type of documentation and training resources,"The system shall provide user manuals, API documentation, and video tutorials for training purposes."
+4.1,Does not specify the hardware requirements for the product environment,"The system shall require a minimum of 2 CPU cores, 4GB of RAM, and 10GB of storage space for the product environment."
+5.1,Does not specify the hardware requirements for the development environment,"The development environment shall require a minimum of 2 CPU cores, 4GB of RAM, and 10GB of storage space."
+6.1,Does not provide detailed use cases,"The system shall include detailed use cases such as ""User requests test results for a specific commit"" and ""User filters frequently changed code lines."""
+/F10/,Does not specify the format of the output file,"The system shall generate output files in JSON format by default, with an option to choose XML format."
+/F20/,Does not specify the format of the CLI output,"The system shall display CLI output in a human-readable format, with an option to output in JSON format."
+/F30/,Does not specify the format of the success message,"The system shall output the success message in the format ""Project changed to version: <commit>""."
+/F40/,Does not specify the format of the JSON file,"The system shall export results in JSON format by default, with an option to choose XML format."
+/F50/,Does not specify the format of the output for frequently changed lines,"The system shall display frequently changed lines in a human-readable format, with an option to output in JSON format."
+/F60/,Does not specify the format of the output for often changing tests,"The system shall display often changing tests in a human-readable format, with an option to output in JSON format."
+/F70/,Does not specify the format of the .octoignore file,The .octoignore file shall be a plain text file with each filename on a new line.
+/F80/,Does not specify the default format of the output file,"The default format of the output file shall be JSON, with an option to change to XML."
+/F90/,Does not specify the structure of the SQLite database,"The SQLite database shall have tables for commits, tests, and results, with appropriate foreign key relationships."
+/F100/,Does not specify the colors used for highlighting,The system shall use orange for frequently changed lines and blue for less frequently changed lines.
+/F110/,Does not specify the structure of the config file,The config file shall be a JSON file with key-value pairs for each setting.
+/NF10/,Does not specify the maximum response time,The system shall provide output or results within 2 seconds for typical operations.
+/NF30/,Does not specify the warning message for more than 1000 commits,"The system shall display a warning message ""Processing more than 1000 commits may lead to performance issues."""
+/NF40/,Does not specify the user experience requirements for the CLI,The CLI shall provide auto-completion and context-sensitive help to enhance user experience.
+/NF50/,Does not specify how the system will be extendable,The system shall provide a plugin architecture to allow developers to add custom commands easily.
+/NF70/,Does not specify the maintenance procedures,The system shall include a maintenance guide with procedures for troubleshooting and updating the software.
