@@ -18,8 +18,12 @@ df3['Project'] = '2023 octo'
 # Combine the DataFrames
 combined_df = pd.concat([df1, df2, df3])
 
+# Filter the DataFrame by 'Id'
+allowed_ids = ['Combined GK + CT', 'Combined CoT + RI', 'Combined All']
+filtered_df = combined_df[combined_df['Id'].isin(allowed_ids)]
+
 # Step 2: Group data by 'Id' and 'Project'
-grouped_df = combined_df.pivot_table(index='Id', columns='Project', values='F1 score')
+grouped_df = filtered_df.pivot_table(index='Id', columns='Project', values='F1 score')
 
 # Step 3: Plot the data as a bar chart
 grouped_df.plot(kind='bar', figsize=(10, 6))
@@ -28,7 +32,7 @@ grouped_df.plot(kind='bar', figsize=(10, 6))
 plt.title('F1 Scores Grouped by Prompts')
 plt.xlabel('Prompt Technique')
 plt.ylabel('F1 Score')
-plt.xticks(rotation=30, ha='right')
+plt.xticks(rotation=0, ha='right')
 plt.legend(title='Document')
 
 # Show the plot

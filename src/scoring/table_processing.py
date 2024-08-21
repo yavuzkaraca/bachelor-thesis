@@ -10,8 +10,8 @@ def calculate_metrics(tp, fp, fn):
 
 
 # Read the CSV file
-input_file = '../../dataset/PSE/2023_octo/exploration.csv'  # Replace with your input file name
-output_file = '../../dataset/PSE/2023_octo/exploration.csv'  # Replace with your desired output file name
+input_file = '../../dataset/PSE/2021_init-v/exploration.csv'  # Replace with your input file name
+output_file = '../../dataset/PSE/2021_init-v/exploration.csv'  # Replace with your desired output file name
 
 df = pd.read_csv(input_file)
 
