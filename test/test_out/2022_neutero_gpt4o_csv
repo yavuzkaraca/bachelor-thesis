@@ -1,0 +1,12 @@
+Label,Issue,Correction
+/FR-U-20/,Does not specify the behavior when no neural network is selected,The system shall display an error message if the user attempts to start the inference without selecting a neural network.
+/FR-U-60/,Does not specify the supported file formats for input images,"The system shall support input images in JPEG, JPG, and PNG formats only."
+/FR-U-80/,Does not specify the behavior when no input image is selected,The system shall display an error message if the user attempts to start the inference without selecting an input image.
+/FR-U-100/,Does not specify the format for exporting results and diagnostic data,The system shall export results and diagnostic data in a CSV format.
+/FR-U-120/,Does not specify the behavior when the inference is aborted,The system shall display a confirmation message when the inference is aborted and return to the starting screen.
+/FR-A-30/,Does not specify the types of arguments to be checked for validity,"The system shall check the validity of neural network selection, input image selection, and hardware component selection."
+/PD10/,Does not specify the minimum height and width for input images,The height and width of input images should be at least 224x224 pixels.
+/PD20/,Does not specify the behavior when an incompatible neural network is imported,The system shall display an error message if the imported neural network topology is not compatible with the specified hardware.
+/PD30/,Does not specify the format for inference results and diagnostic data,"The inference results and diagnostic data shall be provided in a structured format, such as JSON or XML."
+/4.1.1,Does not specify the behavior when the default neural networks are not available,The system shall display an error message if no default neural networks are available for selection.
+``

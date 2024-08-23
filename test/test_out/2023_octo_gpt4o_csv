@@ -1,0 +1,25 @@
+Label,Issue,Correction
+3.2.1,Does not specify the required runtime environment and libraries,"The framework shall specify the required runtime environment and libraries, such as Java 11 and Maven 3.6.3."
+3.2.3,"Does not specify the minimum CPU, memory, and storage requirements","The framework shall require a minimum of 4 CPU cores, 8GB of RAM, and 50GB of available storage."
+3.2.5,Does not specify how the framework adapts to different software projects,"The framework shall provide configuration options to adapt to different software projects, including customizable test parameters and environment settings."
+4.1,Does not specify the exact hardware requirements for storing test results,The framework shall require a minimum of 100GB of storage space for storing test results.
+5.1,Does not specify the development tools and environments used,"The development environment shall include tools such as IntelliJ IDEA, Eclipse, and Git for version control."
+6.1,Does not provide detailed use cases,"The use cases shall include scenarios such as ""Running tests on a new commit"", ""Generating a test report"", and ""Analyzing test results over a range of commits""."
+/F10/,Does not specify the format of the output file,"The output file shall be generated in JSON format by default, with an option to choose XML format."
+/F20/,Does not specify the format of the CLI output,"The CLI output shall be formatted in a human-readable table format, with options for JSON and XML formats."
+/F30/,Does not specify the error handling for invalid commits,"The system shall display an error message ""Invalid commit ID"" if the specified commit does not exist."
+/F40/,Does not specify the format of the exported JSON file,"The exported JSON file shall include fields such as commit ID, test results, and code changes."
+/F50/,Does not specify the criteria for identifying frequently changed lines,The system shall identify lines of code that have changed more than 5 times in the last 100 commits.
+/F60/,Does not specify the criteria for identifying often changing tests,The system shall identify tests that have changed results more than 3 times in the last 50 test runs.
+/F70/,Does not specify the format of the .octoignore file,"The .octoignore file shall follow the same format as the .gitignore file, listing file patterns to be excluded."
+/F80/,Does not specify the supported output formats,The system shall support JSON and XML as output formats for test results.
+/F90/,Does not specify the structure of the SQLite database,"The SQLite database shall include tables for commits, tests, and test results, with appropriate foreign key relationships."
+/F100/,Does not specify the color scheme for highlighting,"The system shall use red for frequently changed lines, yellow for moderately changed lines, and green for rarely changed lines."
+/F110/,Does not specify the structure of the config file,"The config file shall be in JSON format and include settings such as default output format, test parameters, and ignored files."
+/NF10/,Does not specify the maximum response time for user interactions,The system shall respond to user interactions within 2 seconds.
+/NF20/,Does not specify the method for ensuring data protection,The system shall use read-only access to the project files and store all test data in a separate directory.
+/NF30/,Does not specify the performance metrics for handling commits,"The system shall handle projects with up to 1000 commits, processing each commit within 5 seconds on average."
+/NF40/,Does not specify the user interface guidelines,"The CLI shall provide clear and concise commands, with help options for each command."
+/NF50/,Does not specify the method for extending the framework,The framework shall provide a plugin architecture to allow developers to add custom commands and features.
+/NF60/,Does not specify the language support for non-English users,"The system shall provide localization support for at least 3 additional languages, including Spanish, French, and German."
+/NF70/,Does not specify the maintenance procedures,"The system shall include a maintenance guide with procedures for updating dependencies, fixing bugs, and adding new features."

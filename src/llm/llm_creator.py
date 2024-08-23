@@ -29,20 +29,11 @@ headers = {"Authorization": "Basic " + base64.b64encode(f"{username}:{password}"
 def create_llm_openai():
     """
     Creates an instance of the ChatOpenAI model with predefined settings for GPT-4o.
-
-    The model is configured with:
-        - Temperature: 0 (for deterministic outputs)
-        - No token limit
-        - No timeout
-        - 2 max retries in case of failure
-
-    Returns:
-        An instance of ChatOpenAI ready for use.
     """
     llm = ChatOpenAI(
         model="gpt-4o",
         temperature=0,
-        max_tokens=None,  # 4096?
+        max_tokens=None,
         timeout=None,
         max_retries=2,
         api_key=OPENAI_API_KEY

@@ -9,12 +9,14 @@ def system_engineer_role():
     return """
     You are an experienced Requirements Engineer who identifies incompleteness in Software Requirement Specification 
     documents.
+    \n
     """
 
 
 def system_default_role():
     return """
     You are an AI assistant that validates completeness in Software Requirement Specification documents.
+    \n
     """
 
 
@@ -41,7 +43,7 @@ def output_format():
     """
 
 
-def instructions_simple():
+def instructions_base():
     return """
     Identify all the instances of incompleteness in the following document by:
     1. Referring to the requirement by its unique identifier/label.

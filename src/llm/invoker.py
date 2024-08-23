@@ -1,10 +1,5 @@
 """
-This module provides functions to invoke a language model (LLM) with different prompts for document validation.
-
-Functions:
-    - validate_with_full_prompt: Validates documents using a prompt containing instructions, IEEE guidelines, and completeness types.
-    - validate_without_completeness_types: Validates documents using a prompt containing instructions and IEEE guidelines, excluding completeness types.
-    - validate_with_instructions_only: Validates documents using a prompt containing only instructions.
+This module provides functions to invoke a language model (LLM) with different prompts.
 """
 from langchain_core.messages import HumanMessage
 
@@ -15,11 +10,11 @@ from langchain_core.chat_history import (
 
 from langchain_core.runnables.history import RunnableWithMessageHistory
 
-from llm.prompts import (generate_ieee_guidelines, instructions_simple, system_default_role, system_engineer_role,
+from llm.prompts import (generate_ieee_guidelines, instructions_base, system_default_role, system_engineer_role,
                          instructions_chain_of_thought, completeness_types, examples, output_format)
 
 
-def combined_all(llm, docs):
+def combined_all(llm, doc):
     """
     Combines:
      1. chain of though
@@ -46,12 +41,12 @@ def combined_all(llm, docs):
 
     messages = [
         (
-            "system", system_default_role()
+            "system", system_default_role() + output_format()
         ),
         ("user",
-         instructions_chain_of_thought() + output_format() + first_response.content + completeness_types() + examples()
-         + "\n".join([doc.page_content for doc in docs])
-         + instructions_chain_of_thought() + output_format() + first_response.content + completeness_types() + examples()),
+         instructions_chain_of_thought() + first_response.content + completeness_types() + examples()
+         + "\n".join([page.page_content for page in doc])
+         + instructions_chain_of_thought() + first_response.content + completeness_types() + examples()),
     ]
 
     response = with_message_history.invoke(messages, config=config)
@@ -59,7 +54,7 @@ def combined_all(llm, docs):
     return response.content
 
 
-def combined_cot_ri(llm, docs):
+def combined_cot_ri(llm, doc):
     """
     Combines:
      1. chain of though
@@ -69,17 +64,17 @@ def combined_cot_ri(llm, docs):
     """
     messages = [
         (
-            "system", system_default_role()
+            "system", system_default_role() + output_format()
         ),
-        ("user", instructions_chain_of_thought() + output_format() + examples() + "\n".join(
-            [doc.page_content for doc in docs])
-         + "\n" + instructions_chain_of_thought() + output_format() + examples()),
+        ("user", instructions_chain_of_thought() + examples() + "\n".join(
+            [page.page_content for page in doc])
+         + "\n" + instructions_chain_of_thought() + examples()),
     ]
     response = llm.invoke(messages)
     return response.content
 
 
-def combined_gk_types(llm, docs):
+def combined_gk_types(llm, doc):
     """
     Combines:
      1. few shot
@@ -104,10 +99,10 @@ def combined_gk_types(llm, docs):
 
     messages = [
         (
-            "system", system_default_role()
+            "system", system_default_role() + output_format()
         ),
-        ("user", instructions_simple() + output_format() + first_response.content + completeness_types() + examples()
-         + "\n".join([doc.page_content for doc in docs])),
+        ("user", instructions_base() + examples() + first_response.content + completeness_types()
+         + "\n".join([page.page_content for page in doc])),
     ]
 
     response = with_message_history.invoke(messages, config=config)
@@ -115,7 +110,7 @@ def combined_gk_types(llm, docs):
     return response.content
 
 
-def generated_knowledge(llm, docs):
+def generated_knowledge(llm, doc):
     store = {}
 
     def get_session_history(session_id: str) -> BaseChatMessageHistory:
@@ -131,8 +126,8 @@ def generated_knowledge(llm, docs):
                                                  config=config)
 
     messages = [
-        ("system", system_default_role()),
-        ("user", instructions_simple() + output_format() + examples() + "\n".join([doc.page_content for doc in docs])),
+        ("system", system_default_role() + output_format()),
+        ("user", instructions_base() + examples() + "\n".join([page.page_content for page in doc])),
     ]
 
     response = with_message_history.invoke(messages, config=config)
@@ -140,87 +135,87 @@ def generated_knowledge(llm, docs):
     return response.content
 
 
-def few_shot(llm, docs):
+def few_shot(llm, doc):
     messages = [
         (
-            "system", system_default_role()
+            "system", system_default_role() + output_format()
         ),
-        ("user", instructions_simple() + output_format() + examples() + "\n".join([doc.page_content for doc in docs])),
+        ("user", instructions_base() + examples() + "\n".join([page.page_content for page in doc])),
     ]
 
     response = llm.invoke(messages)
     return response.content
 
 
-def zero_shot(llm, docs):
+def zero_shot(llm, doc):
     messages = [
         (
-            "system", system_default_role()
+            "system", system_default_role() + output_format()
         ),
-        ("user", instructions_simple() + output_format() + "\n".join([doc.page_content for doc in docs])),
+        ("user", instructions_base() + "\n".join([page.page_content for page in doc])),
     ]
 
     response = llm.invoke(messages)
     return response.content
 
 
-def engineer_persona(llm, docs):
+def engineer_persona(llm, doc):
     messages = [
         (
-            "system", system_engineer_role()
+            "system", system_engineer_role() + output_format()
         ),
-        ("user", instructions_simple() + output_format() + examples() + "\n".join([doc.page_content for doc in docs])),
+        ("user", instructions_base() + examples() + "\n".join([page.page_content for page in doc])),
     ]
 
     response = llm.invoke(messages)
     return response.content
 
 
-def repeated_instructions(llm, docs):
+def repeated_instructions(llm, doc):
     messages = [
         (
-            "system", system_default_role()
+            "system", system_default_role() + output_format()
         ),
-        ("user", instructions_simple() + output_format() + examples() + "\n".join([doc.page_content for doc in docs])
-         + "\n" + instructions_simple() + output_format() + examples())
+        ("user", instructions_base() + examples() + "\n".join([page.page_content for page in doc])
+         + "\n" + instructions_base() + examples())
     ]
 
     response = llm.invoke(messages)
     return response.content
 
 
-def chain_of_thought_zero_shot(llm, docs):
+def chain_of_thought_zero_shot(llm, doc):
     messages = [
         (
-            "system", system_default_role()
+            "system", system_default_role() + output_format()
         ),
-        ("user", instructions_chain_of_thought() + output_format() + "\n".join([doc.page_content for doc in docs])),
+        ("user", instructions_chain_of_thought() + "\n".join([page.page_content for page in doc])),
     ]
 
     response = llm.invoke(messages)
     return response.content
 
 
-def chain_of_thought_few_shot(llm, docs):
+def chain_of_thought_few_shot(llm, doc):
     messages = [
         (
-            "system", system_default_role()
+            "system", system_default_role() + output_format()
         ),
-        ("user", instructions_chain_of_thought() + output_format() + examples() + "\n".join(
-            [doc.page_content for doc in docs])),
+        ("user", instructions_chain_of_thought() + examples() + "\n".join(
+            [page.page_content for page in doc])),
     ]
 
     response = llm.invoke(messages)
     return response.content
 
 
-def provided_completeness_types(llm, docs):
+def provided_completeness_types(llm, doc):
     messages = [
         (
-            "system", system_default_role()
+            "system", system_default_role() + output_format()
         ),
-        ("user", instructions_simple() + output_format() + completeness_types() + "\n".join(
-            [doc.page_content for doc in docs])),
+        ("user", instructions_base() + completeness_types() + "\n".join(
+            [page.page_content for page in doc])),
     ]
 
     response = llm.invoke(messages)
