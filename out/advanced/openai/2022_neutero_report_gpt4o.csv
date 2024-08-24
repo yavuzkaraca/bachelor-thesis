@@ -1,9 +1,16 @@
 Label,Issue,Correction
-/FR-U-10/,Does not specify the format for user-imported neural network topologies,The system shall accept user-imported neural network topologies in the Open Neural Network eXchange (ONNX) format.
-/FR-U-60/,Does not specify the supported file formats for input images,"The system shall support input images in JPEG, JPG, and PNG formats."
-/FR-U-80/,Does not specify the behavior if the inference fails,"The system shall display an error message if the inference fails, detailing the reason for the failure."
-/FR-U-100/,Does not specify the format for exporting results and diagnostic data,The system shall export results and diagnostic data in a CSV format.
-/FR-U-110/,Does not specify the location where results and diagnostic data will be saved,The system shall prompt the user to select a location on the local device to save the results and diagnostic data.
-/FR-A-30/,Does not specify the types of conflicts that will be checked for validity,"The system shall check for conflicts such as incompatible neural network topologies and hardware components, and unsupported input image formats."
-/PD10/,Does not specify the minimum height and width for input images,The system shall support input images with a minimum height and width of 224 pixels.
-/PD20/,Does not specify the hardware compatibility requirements for imported neural networks,The system shall ensure that imported neural network topologies are compatible with the specified hardware components.
+/FR-U-20/,Does not specify the behavior if no neural network is selected,The system shall display an error message if the user attempts to proceed without selecting a neural network.
+/FR-U-50/,Does not specify the behavior if no hardware component is selected,The system shall display an error message if the user attempts to proceed without selecting a hardware component.
+/FR-U-60/,Does not specify the supported file formats for image uploads,"The system shall support image uploads in JPEG, JPG, and PNG formats only."
+/FR-U-80/,Does not specify the behavior if no input image is selected,The system shall display an error message if the user attempts to start the inference without selecting an input image.
+/FR-U-100/,Does not specify the format for displaying diagnostic data,"The system shall display diagnostic data in a tabular format, including columns for inference result, confidence score, latency, and hardware information."
+/FR-U-110/,Does not specify the file format for exporting results,The system shall export results and diagnostic data in CSV format.
+/FR-U-120/,Does not specify the behavior if the inference is aborted,The system shall display a confirmation message when the inference is aborted and return to the starting screen.
+/FR-U-130/,Does not specify the maximum number of input images for batch processing,The system shall allow a maximum of 10 input images for batch processing.
+/FR-U-150/,Does not specify the maximum number of hardware components for batch processing,The system shall allow a maximum of 5 hardware components for batch processing.
+/FR-U-170/,Does not specify the maximum number of inference runs,The system shall allow a maximum of 100 inference runs with the same arguments.
+/FR-A-30/,Does not specify the criteria for argument validity,"The system shall check that all selected arguments (neural network, hardware component, input image) are compatible and valid before enabling the ""Start the inference"" button."
+/FR-A-70/,Does not specify the format for the runtime log file,The system shall save the runtime log file in plain text format.
+/PD10/,Does not specify the minimum dimensions for input images,The system shall only accept input images with dimensions of at least 224x224 pixels.
+/PD20/,Does not specify the behavior if the imported neural network is incompatible,The system shall display an error message if the imported neural network topology is not compatible with the specified hardware.
+/PD30/,Does not specify the format for inference results and diagnostic data,The system shall save inference results and diagnostic data in CSV format.

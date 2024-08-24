@@ -13,7 +13,7 @@ FR-U-80,1,does not refer to behavior specifying requirement.,refer to FR-A-40,ye
 FR-U-80,2,does not specify the behavior if the inference fails.,"If inference fails the program returns to parameter selection state and the error is printed as specified in FR-A-70.",yes
 FR-U-100,1,does not refer to behavior specifying requirement.,refer to PD30,yes
 FR-U-100,2,does not specify the behaviour if user tries to view results without running an inference,"The system shall disable the 'View results' button until an inference has been run, analogous to FR-A-40.",yes
-FR-U-110,2,does not refer to behavior specifying requirement.,refer to PD30,yes
+FR-U-110,1,does not refer to behavior specifying requirement.,refer to PD30,yes
 FR-U-110,2,does not specify the behaviour if user tries to export results without running an inference,"The system shall disable the 'Export results' button until an inference has been run, analogous to FR-A-40.",yes
 FR-U-130,2,Does not specify the maximum number of images that can be selected for batch processing.,The system shall allow a maximum of 10 images to be selected for batch processing.,yes
 PD20,2,does not specify the maximum number of neural networks that can be imported,"The system shall allow importing up to 10 neural networks simultaneously.",yes

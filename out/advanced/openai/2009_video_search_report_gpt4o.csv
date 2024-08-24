@@ -1,15 +1,9 @@
 Label,Issue,Correction
-REQ-1 (3.1.3),Does not specify the maximum number of torrent sites that can be queried simultaneously,The system shall query a maximum of 10 torrent sites simultaneously to ensure optimal performance.
-REQ-4 (3.1.3),Does not specify the format for displaying the date posted,The system shall display the date posted in the format YYYY-MM-DD.
-REQ-5 (3.1.3),Does not specify the behavior if the search term is invalid or empty,"The system shall display a message ""Please enter a valid search term"" if the search term is invalid or empty."
-REQ-2 (3.2.3),Does not specify the frequency of database updates for video hosting and linking sites,The system shall update the database of video hosting and linking sites weekly.
-REQ-5 (3.2.3),Does not specify the format for displaying the length of the video,The system shall display the length of the video in the format HH:MM:SS.
-REQ-7 (3.2.3),Does not specify the behavior if the search term is invalid or empty,"The system shall display a message ""Please enter a valid search term"" if the search term is invalid or empty."
-4.1,Does not specify the supported screen resolutions for the user interface,The system shall support screen resolutions of 1024x768 and higher.
-4.2,Does not specify the supported web browsers for hyperlinks,"The system shall support hyperlinks in the following web browsers: Internet Explorer, Firefox, Safari, and Chrome."
-5.1,Does not specify the maximum file size for torrent results,The system shall not display torrent results with a file size greater than 10 GB.
-5.2,Does not specify the criteria for identifying illegal or harmful content,The system shall use a predefined list of keywords and URLs to identify and block illegal or harmful content.
-5.3,Does not specify the method for ensuring data privacy,The system shall use encryption to ensure the privacy of any user data transmitted.
-5.4,Does not specify the legal jurisdictions considered for compliance,The system shall comply with legal requirements in the United States and the European Union.
-Glossary,"Does not define the term ""BitTorrent client""",A BitTorrent client is a software application that implements the BitTorrent protocol for peer-to-peer file sharing.
-``
+1.2,Missing section title,"Add a section title for 1.2, such as ""Intended Audience""."
+3.2.3,Missing functional requirement,REQ-9: There will be a page button for the user to navigate the results.
+5.1,Missing performance requirement for search speed,REQ-1: The system shall return search results within 5 seconds.
+5.2,Does not specify the method for investigating websites,The development team shall use automated tools and manual reviews to investigate each website within the database monthly.
+5.3,Does not specify security measures for data transmission,The system shall use HTTPS for all data transmissions to ensure security.
+5.4,Does not specify the legal jurisdictions considered,"The system shall comply with the legal requirements of the jurisdictions in which it operates, including but not limited to the United States and the European Union."
+A,Glossary is incomplete,"Add definitions for terms such as ""Seed"", ""Leech"", and ""BitTorrent""."
+B,Diagrams are not included,Include all relevant diagrams and figures to illustrate the system architecture and user interface.

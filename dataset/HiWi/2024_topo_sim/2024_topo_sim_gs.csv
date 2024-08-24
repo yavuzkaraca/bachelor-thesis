@@ -22,3 +22,6 @@ FR-11,1,reference too general,refer to the specific requirement,yes
 FR-16,1,requirement missing,...,no
 FR-10,1,does not fulfill the template of four elements,...,no
 FR-10,2,does not specify completion,The simulation completes after iterating through all the specified steps for each growth cone. The final state of the growth cones is recorded and returned as the simulation result,no
+FR-50,2,Does not specify the visualization methods for growth cone history,"History includes adaptation coefficient and resetting powers, potentials and positions",yes
+NR-20,2,Does not specify the early stopping mechanisms,"The system shall calculate total potential to implement early stopping mechanism similar to machine learning approach",yes
+NR-40,2,Does not specify the entry and exit points for integration,"A dictionary that includes all the parameters necessary for configuration is the entry point, while the results are the exit point",yes

@@ -1,11 +1,11 @@
 Label,Issue,Correction
-APAF-FR-01,Does not specify the format for telemetry data,The system shall acquire telemetry data in a standardized format such as CCSDS.
-APAF-FR-02,Does not specify the processing time for data sets,The system shall process all ASPERA-3 science data into IDFS data sets within 24 hours of acquisition.
-APAF-FR-07,Does not specify the update frequency for web-based displays,The system shall update web-based displays of the most current ASPERA-3 data every 15 minutes.
-APAF-PR-01,Does not specify the encryption method for password protection,The system web server shall use AES-256 encryption for password protection to allow only pertinent ASPERA-3 team members access.
-APAF-CR-02,Does not specify the storage capacity for the production computer,The UNIX-based APAF system production computer shall have a minimum storage capacity of 10TB with an archival system.
-APAF-DR-01a,Does not specify the error handling mechanism for data distribution,The system shall log and notify the administrator of any errors during the electronic distribution of ASPERA-3 IDFS data within 24 hours.
-APAF-DR-02c,Does not specify the format for data submission to NASA PDS,The system shall provide ASPERA-3 data to NASA PDS in PDS4-compliant format no later than 6 months after acquisition.
-APAF-DS-II-4,Does not specify the type of operator input required,The system shall accept operator input for configuration changes via a secure web interface.
-APAF-DS-OI-1,Does not specify the distribution method for data sets,The system shall distribute ASPERA-3 and MEX OA IDFS data sets via secure FTP.
-APAF-DS-OI-4,Does not specify the user authentication method for web-based displays,The system shall use OAuth 2.0 for user authentication for web-based displays.
+APAF-FR-01,Does not specify the frequency of data acquisition,The APAF system shall acquire telemetry data of the ASPERA-3 Experiment and Mars Express Orbit/Attitude every 24 hours.
+APAF-FR-02,Does not specify the format of IDFS data sets,The APAF system shall process all ASPERA-3 science data into IDFS data sets in CSV format.
+APAF-FR-05,Does not specify the duration for data storage,The ASPERA-3 and MEX OA telemetry data shall be stored on a local SwRI archive for a minimum of 5 years.
+APAF-FR-07,Does not specify the update frequency for web-based displays,Web-based displays of the most current ASPERA-3 data shall be updated every 6 hours for public view.
+APAF-PR-01,Does not specify the password policy,"The APAF system web server shall be password protected with passwords that are at least 12 characters long and include a mix of letters, numbers, and special characters."
+APAF-CR-02,Does not specify the backup frequency for the production computer,There shall be a UNIX-based APAF system production computer with an archival system that performs daily backups.
+APAF-DR-01a,Does not specify the error handling procedure,"ASPERA-3 IDFS data that are electronically distributed shall be provided to the ASPERA-3 Co-I’s within 24 hours of acquiring ASPERA-3 telemetry as long as the transmission and processing are error-free. In case of errors, the system shall retry every hour until successful."
+APAF-DR-02c,Does not specify the format for data submission,ASPERA-3 data shall be provided to NASA PDS no later than 6 months after acquisition in PDS-compliant XML format.
+APAF-DS-II-1,Does not specify the type of system parameters,"System Parameters shall include CPU usage, memory usage, and disk space availability."
+APAF-DS-OI-2,Does not specify the retention period for system logs,System Logs shall be retained for a minimum of 1 year.

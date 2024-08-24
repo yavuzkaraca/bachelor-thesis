@@ -1,18 +1,17 @@
 Label,Issue,Correction
-/F10/,Does not specify the supported file formats for PCAP files,The system shall support PCAP file uploads in .pcap and .pcapng formats only.
-/F20/,Does not specify the default values for the preprocessor configuration,"The system shall provide default values for the preprocessor configuration: Length scaling: 150, Value scaling: Off, Normalization: None, Autoencoder and PCA are selected, Number of hidden layers: 4, Number of nodes in hidden layers: (256, 64, 32, 8), Loss function: MSE, Number of epochs for the training: 100, Optimizer: adam."
-/F22/,Does not specify the expected time for preprocessing to complete,The system shall complete the preprocessing within 5 minutes for a PCAP file of up to 1GB.
-/F30/,Does not specify the color coding for different protocols,"The system shall use distinct colors for each protocol in the network topology graph: e.g., HTTP - Blue, FTP - Green, TCP - Red."
-/F40/,Does not specify the shapes used for different protocols in the result graph,"The system shall use distinct shapes for each protocol in the result graph: e.g., HTTP - Circle, FTP - Square, TCP - Triangle."
-/F50/,Does not specify the performance metrics for PCA,The system shall display the performance of PCA using the explained variance ratio for each principal component.
-/F60/,Does not specify the zoom levels for graphs,The system shall support zoom levels from 10% to 200% for all graphs.
-/F70/,Does not specify the image formats for saving graphs,The system shall support saving graphs as images in PNG and JPEG formats.
-/F80/,Does not specify the method for selecting runs to compare,The system shall provide a dropdown menu to select and compare up to three different runs side by side.
+1.1,Does not specify the format for the PCAP file,"The system shall accept PCAP files in the standard libpcap format (e.g., .pcap, .pcapng)."
+1.2.1,Does not specify the supported versions of Firefox and Chromium-based browsers,The system shall support the current stable versions of Firefox (94.0.2) and Chromium-based browsers like Google Chrome (96.0.4664.45) or Microsoft Edge (96.0.1054.34).
+/F10/,Does not specify the maximum file size for PCAP files,The system shall support loading PCAP files up to a maximum size of 2GB.
+/F20/,Does not specify the default values for the preprocessor configuration,"The default values for the preprocessor configuration shall be: Length scaling: 150, Value scaling: Off, Normalization: None, Autoencoder and PCA are selected, Number of hidden layers: 4, Number of nodes in hidden layers: (256, 64, 32, 8), Loss function: MSE, Number of epochs for the training: 100, Optimizer: adam."
+/F22/,Does not specify the expected time for preprocessing to complete,The system shall complete the preprocessing of a PCAP file within 5 minutes for files up to 2GB in size.
+/F30/,Does not specify the color coding for different protocols,"The system shall use distinct colors for each protocol in the network topology graph, such as blue for TCP, green for UDP, and red for ICMP."
+/F40/,Does not specify the visual representation for different protocols,"The system shall use distinct shapes and colors for each protocol in the preprocessor results graph, such as circles for TCP, squares for UDP, and triangles for ICMP."
+/F50/,Does not specify the performance metrics for PCA,The performance of the PCA shall be described by two values: the loss on the train data and the loss on the test data.
+/F60/,Does not specify the zoom levels for graphs,The system shall support zoom levels ranging from 10% to 200% for all graphs.
+/F70/,Does not specify the file formats for saving graphs and configurations,The system shall support saving graphs and configurations in PNG and JSON formats respectively.
+/F80/,Does not specify the comparison metrics for preprocessor runs,"The system shall support comparison of preprocessor runs based on accuracy, loss, and execution time."
 /F90/,Does not specify the responsiveness criteria for asynchronous interaction,The system shall remain responsive to user input with a maximum delay of 1 second while the preprocessor is running.
-/F100/,Does not specify the types of statistics to be shown,"The system shall display the following statistics for the PCAP file: Count of devices, Count of used protocols, Count of packets, Device that sent the most packets."
-/F200/,Does not specify the window size for graphs,The system shall open graphs in a new window with a default size of 800x600 pixels.
-/F210/,Does not specify the default key bindings,"The system shall provide the following default key bindings: Open session - Ctrl + O, Save session - Ctrl + S, Save session as - Ctrl + Alt + S, Run preprocessor - Ctrl + R."
-/F220/,Does not specify the format for identifiers in saved sessions,"The system shall include identifiers in the saved session file in the format: Program version hash, PCAP file hash."
-/F230/,Does not specify the threshold for large data warnings,The system shall display a warning if the selected PCAP file contains more than 2 million packets.
-/F240/,Does not specify the contents of the PDF report,"The system shall include the following in the PDF report: Configurations of preprocessing runs, Results of those configurations, Performance graphs of those configurations."
-``
+2.2.1,Does not specify the error handling for invalid PCAP files,"The system shall display an error message if an invalid PCAP file is loaded, and shall not proceed with preprocessing."
+2.3.1,Does not specify the security measures for data protection,The system shall ensure that no information about the PCAP is accessible by inspecting the source of the website.
+2.4.1,Does not specify the version of PyCharm to be used,The system shall use PyCharm 2021.1 or later as the IDE.
+2.4.2,Does not specify the versions of plotly and pytest to be used,The system shall use plotly version 5.3.1 and pytest version 6.2.5 for the GUI and testing respectively.

@@ -116,17 +116,35 @@ def completeness_types():
     Formal Completeness, as delineated by Kuchta [16], encompasses:
 
     1. **Template Completeness**:
-       - Refers to the extent to which all required sections and elements within a
-         document template are present and accounted for. Measuring template 
-         completeness involves counting the elements required by the document template, 
-         also known as "the number of required metaclasses" [16], and identifying any 
-         missing elements. For instance, if a document lacks an entire chapter, such as
-         an introduction or constraints, this results in template incompleteness. This 
-         thesis extends the notion of template completeness beyond document-wide 
-         templates to include specific requirement-driven templates. If a specific 
-         requirement establishes a template, such as "the program does the following
-         three modes," then the items of this list can be validated similarly, and a 
-         missing item would result in a failure to fulfill the template.
+       - Template Completeness: This component refers to the extent to which all required
+        sections and elements within a document template are present and accounted for.
+        Measuring template completeness identifying any missing elements required by the
+        document template as known as "required meta-classes" [19]. If a required element is
+        skipped, it can be detected through enumeration, as the missing element creates a gap
+        in the sequence unless it is the last element. Additionally, tables may be present but
+        contain unfilled cells, which also indicates incompleteness. This applies to chapters
+        as well. For instance, if a document lacks an entire chapter, such as an introduction
+        or constraints this results in template incompleteness. Various templates exist for
+        SRS documents, including those recommended by IEEE 830–1998 for Object-Oriented
+        development, as well as V-Modell and Agile Development frameworks [2]. Despite
+        differences, these templates share many common elements. Thus, a foundational
+        template that encompasses all essential components should include the following
+        items:
+        • Introduction
+        • Purpose (or Goals and Objectives)
+        • Scope
+        • Overview
+        • Functional Requirements
+        • Non-functional Requirements
+        • Constraints
+        • Glossary (or Definitions/Acronyms)
+        Building on Kuchta’s definition [19], this thesis extends the notion of template completeness 
+        beyond document-wide templates to include specific requirement-driven
+        templates. If a specific requirement establishes a template, for example by stating "the
+        program does the following three modes," then the items of this list can be validated
+        the same way, and a missing item would result in a failure to fulfill the template. Thus,
+        the concept of template completeness solely focuses on identifying gaps by checking if
+        all expected items are present and correctly matched, without any additional analysis.
 
     2. **Definition Completeness**:
        - Assesses the completeness of definitions within the document. It examines 
