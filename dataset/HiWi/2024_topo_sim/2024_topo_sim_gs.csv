@@ -1,17 +1,24 @@
 Label,Level,Issue,Correction,Native
 N/A,2,does not specify the behaviour if invalid parameters are given,"The system will be extended by a GUI that ensures users to set the parameters only to valid values",yes
 FR-11,2,does not specify how the growth cones are configured,"growth cones are configured by entering a min and max value for each ligand and receptor",yes
-FR-20,2,does not specify the range or limits for the parameters,"... must be a positive integer",yes
-FR-30,2,does not specify the range or limits for the parameters,"... must be a positive double",yes
-FR-30,2,does not specify the range or limits for the parameters,"... must be a positive double",yes
-FR-31,2,does not specify the range or limits for the parameters,"... must be a double",yes
-FR-32,2,does not specify the range or limits for the parameters,"... must be a positive double",yes
-FR-33,2,does not specify the range or limits for the parameters,"... must be a boolean",yes
-FR-40,2,does not specify the range or limits for the parameters,"... must be an integer",yes
-FR-42,2,does not specify the range or limits for the parameters,"... must be a positive double",yes
-FR-43,2,does not specify the range or limits for the parameters,"... must be a positive double",yes
-FR-44,2,does not specify the range or limits for the parameters,"... must be a positive double",yes
-FR-45,2,does not specify the range or limits for the parameters,"... must be a positive double",yes
-FR-60,2,does not detail the format for saving simulation results,"Textual format will be plain text while visual results are saved as png",yes
-FR-70,2,does not specify how the estimated time remaining indicator is calculated,"Remaining time is calculated by the ratio between current step number and total step number",yes
-CN-10,2,does not specify the version of Python to be used for development,"... to Python 3.8 or higher",yes
+FR-20,2,does not specify the range or limits for the parameters,"... must be a positive integer",no
+FR-30,2,does not specify the range or limits for the parameters,"... must be a positive double",no
+FR-31,2,does not specify the range or limits for the parameters,"... must be a double",no
+FR-32,2,does not specify the range or limits for the parameters,"... must be a positive double",no
+FR-33,2,does not specify the range or limits for the parameters,"... must be a boolean",no
+FR-40,2,does not specify the range or limits for the parameters,"... must be an integer",no
+FR-42,2,does not specify the range or limits for the parameters,"... must be a positive double",no
+FR-43,2,does not specify the range or limits for the parameters,"... must be a positive double",no
+FR-44,2,does not specify the range or limits for the parameters,"... must be a positive double",no
+FR-45,2,does not specify the range or limits for the parameters,"... must be a positive double",no
+FR-60,2,does not detail the format for saving simulation results,"Textual format will be plain text while visual results are saved as png",no
+FR-70,2,does not specify how the estimated time remaining indicator is calculated,"Remaining time is calculated by the ratio between current step number and total step number",no
+CN-10,2,does not specify the version of Python to be used for development,"... to Python 3.8 or higher",no
+Glossary,1,does not define Growth Cone,"A dynamic, motile structure at the tip of a growing axon or dendrite, which explores the environment to find its path.",no
+Section 7,1,title missing,Case Study: Continuous Gradients,no
+HE-30,2,does not specify the minimum size for the free disk space,A minimum of 500 MB of free disk space is required,no
+Section 2,1,Purpose section is missing,...,yes
+FR-11,1,reference too general,refer to the specific requirement,yes
+FR-16,1,requirement missing,...,no
+FR-10,1,does not fulfill the template of four elements,...,no
+FR-10,2,does not specify completion,The simulation completes after iterating through all the specified steps for each growth cone. The final state of the growth cones is recorded and returned as the simulation result,no
