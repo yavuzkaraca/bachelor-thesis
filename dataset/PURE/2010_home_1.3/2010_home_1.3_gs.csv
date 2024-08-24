@@ -1,5 +1,5 @@
 Label,Level,Issue,Correction,Native
-N/A,does not include a section on user interface design,"The system shall provide a user-friendly interface with intuitive navigation, consistent layout, and responsive design for various devices."
+N/A,1,does not include a section on user interface design,"The system shall provide a user-friendly interface with intuitive navigation, consistent layout, and responsive design for various devices.",yes
 3.4.2.1,2,does not specify the type of home computer required for the DH home web server,"The DH home web server shall be hosted on a home computer running at least Windows 10, macOS 10.15, or a Linux distribution with kernel version 5.4 or higher.",yes
 4.4.1,2,does not specify the type of contact sensors and alarms,The DigitalHome security system shall use magnetic contact sensors and piezoelectric sound alarms.,yes
 5.2.2.2,3,does not specify the time required for system recovery,The system recovery mechanism shall restore system data within 5 minutes of a failure.,yes

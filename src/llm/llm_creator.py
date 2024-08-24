@@ -15,7 +15,7 @@ import base64
 import os
 
 from langchain_community.chat_models import ChatOllama
-from langchain_openai import ChatOpenAI
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 
 # Securely setting up the OpenAI API key
 OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
@@ -65,3 +65,8 @@ def create_llm_ollama():
         headers=headers
     )
     return llm
+
+
+def create_embedder():
+    embeddings_model = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
+    return embeddings_model

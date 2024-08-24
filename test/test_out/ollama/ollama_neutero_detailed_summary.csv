@@ -1,0 +1,64 @@
+re the detailed summaries for each page:
+
+**Page 4:**
+
+4.1.2 Scenario 1:
+"To import into the application but thanks to the design, importing a neural network is not necessary. He clicks on the button ""Choose neural network"" and default neural networks are shown in drop down menu. He selects randomly one of them by clicking on it. User interface is updated and identifier of the neural network is visible. Then he clicks on ""Import an image"" button and a window for file selection opens. He selects a cat image which was already saved in the computer. User interface is updated once again. Then he clicks on ""Choose a hardware"" button and chooses ""CPU"" from the drop down menu. User interface is updated with this selection. At last he clicks on ""Start inference"". The inference starts running on CPU. ""Start inference"" is replaced by ""Running..."" and nothing is clickable. After a while, a completion message is shown. He clicks on ""View results"" and results are opened in a separate window. He finds out that the image is recognized by neural network as a cat with 97% confidence. He closes the ""Results"" window as well as the main window."
+
+**Page 4:**
+
+4.1.2 Scenario 2:
+"Ada is a computer scientist working on neural network based algorithms for image recognition. She has already trained a neural network available in ONNX format. She has the supported hardware at her office and Neutero is already installed in her Xubuntu system. She opens the application and clicks on ""Import a neural network"" button. She selects her neural network which was already saved in her computer. Then she selects the hardware component as ""Intel Movidius"" to find out how well her neural network runs on this Movidius stick she recently bought. She clicks on ""Import image"" button and selects multiple images at once. Then she starts the inference. This results in batch processing and after a while, inference results are shown in a single separate window. She clicks on ""Export results and diagnostics"" and a window opens to select the saving location. She selects the folder, into which she wants to save results and everything is exported. She will then analyze the results and diagnostic data to find out how well her neural network performs on different images."
+
+**Page 5: Development Environment**
+
+The following software are to be used while developing our product:
+
+* Git for version control
+* LaTeX as software system for document preparation
+"* Overleaf for creating, editing and compiling TeX documents"
+* Pencil Project for designing GUI mockups
+* Qt for creating the user interface
+"* Qt Creator, Visual Studio Code, and VIM as IDE and Text Editor"
+"* diagrams.net, draw.io, and PlantUML for UML diagrams"
+* DocTest for unit testing
+* Squish for Qt for GUI testing
+* Qmlbench for performance testing
+
+**Page 9: Glossary**
+
+argument: user-changeable values of the program. Arguments are given before execution.
+
+"batch processing: running multiple jobs automatically with a single command. In Neutero, this refers to processing multiple images within a single run in an optimized way."
+
+CPU: Central Processing Unit. Electronic circuitry that executes instructions comprising a computer program.
+
+"diagnostic data: data from the program which can be used for diagnosing program procedure. Such as but not limited to: time elapsed, model of the hardware used. Specified in /PD30/."
+
+GPU: Graphics Processing Unit. Electronic circuit designed to rapidly manipulate and alter memory to accelerate the creation of images.
+
+image classification/detection: the process of identifying an image according to predefined classes and rules.
+
+inference result: it contains predictions made by the neural network for the input image and corresponding confidence scores for each prediction..
+
+input image: image that is given to neural network for inference.
+
+Intel Movidius: a Vision Processing Unit (VPU) which enables demanding computer vision and edge AI workloads with efficiency.
+
+latency: time elapsed during inference run.
+
+neural network: a computational learning system inspired by biological neural networks that uses a network of functions to understand and translate a data input of one form into a desired output.
+
+"ONNX: stands for Open Neural Network eXchange, an open standard for representing machine learning models. See https://en.wikipedia.org/wiki/Open_Neural_Network_Exchange ."
+
+supervised learning: a subcategory of machine learning and artificial intelligence. It is defined by its use of labeled datasets to train algorithms that to classify data or predict outcomes accurately.
+
+"the program: used for in this document, specified software, Neutero."
+
+trained neural network: a neural network that has been went through a process called “training” to show accurate results.
+
+user: person who uses our product.
+
+"user interface: the means of interaction between user and program. In this document, a Qt-based graphical interface is implied."
+
+**Page 11:*

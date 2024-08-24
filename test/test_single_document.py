@@ -13,16 +13,16 @@ def test_single_document(pdf_path):
     """
     This is just for testing a single document to not consume unnecessary API Calls
     """
-    llm = llm_creator.create_llm_openai()
+    llm = llm_creator.create_llm_ollama()
 
     pages = paginate_pdf(pdf_path)
 
-    result = invoker.combined_gk_types(llm, pages)
+    result = invoker.few_shot(llm, pages)
     print(result)
 
-    csv_writer.save_results_to_csv(result, "2023_octo_gpt4o_csv", "test_out/")
+    csv_writer.save_results_to_csv(result, "2022_neutero_llama3_csv", "test_out/")
     return result
 
 
 if __name__ == '__main__':
-    test_single_document(test_path_octo)
+    test_single_document(test_path_neutero)

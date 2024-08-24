@@ -9,6 +9,10 @@ Functions:
 import os
 from langchain_community.document_loaders import PyPDFLoader
 
+from llm.llm_creator import create_embedder
+
+embeddings_model = create_embedder()
+
 
 def get_pdf_file_paths():
     """
@@ -38,3 +42,11 @@ def paginate_pdf(pdf_path):
     loader = PyPDFLoader(pdf_path)
     pages = loader.load_and_split()
     return pages
+
+
+def embed_text(pages):
+    """
+    Currently unused, a vector_store and retriever is also needed to pair embeddings with.
+    """
+    embeddings = embeddings_model.embed_documents(pages)
+    return embeddings
