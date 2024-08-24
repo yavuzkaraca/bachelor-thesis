@@ -1,0 +1,13 @@
+Label,Issue,Correction
+3.1,Does not specify the types of web-ready devices supported,"The system shall support web-ready devices including computers, smartphones, and tablets."
+3.2.1.4,Does not specify the process for adding a user account,"The system shall provide a user-friendly interface for the Master User to add new user accounts, including fields for username, password, and user role."
+3.4.2.a.iv,Does not specify the backup frequency for user account information,"The system shall perform a daily backup of user account information, user plans, and the home database."
+4.1.1,Does not specify the types of small appliances that can be controlled,"The system shall allow control of small appliances such as coffee makers, lamps, and fans."
+4.2.1.b,Does not specify the behavior when the temperature is set outside the specified range,The system shall display an error message if the user attempts to set the thermostat temperature outside the range of 60°F to 80°F.
+4.3.1.b,Does not specify the behavior when the humidity level is set outside the specified range,The system shall display an error message if the user attempts to set the humidity level outside the range of 30% to 60%.
+4.4.2,Does not specify the duration for which the alarm will be activated,The system shall activate the alarm for a duration of 5 minutes when a security breach occurs.
+4.5.5,Does not specify the behavior when the manual state change conflicts with the planned setting,The system shall notify the user if a manual state change conflicts with the planned setting and allow the user to confirm or cancel the change.
+5.1.1,Does not specify the format for displaying environmental conditions,"The system shall display environmental conditions in a user-friendly format, including graphical representations such as charts and graphs."
+5.2.2.b,Does not specify the time frame for system recovery after a failure,The system shall restore data from the most recent backup within 5 minutes of system recovery.
+5.4.1,Does not specify the encryption algorithm to be used,The system shall use AES-256 encryption for securing user data.
+5.7.1.b,Does not specify the accuracy of sensor readings,The system shall provide sensor readings with an accuracy of ±1% for humidity and ±1°F for temperature.

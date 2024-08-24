@@ -1,0 +1,14 @@
+Label,Issue,Correction
+R7,Does not specify the method for password reset,The system shall provide a password reset feature accessible via email verification.
+R10,Does not specify the format for alphanumeric characters in passwords,"The password shall contain 6 to 8 alphanumeric characters, including at least one uppercase letter, one lowercase letter, and one number."
+R13,Does not specify the method for logging off users after inactivity,"If there is no activity for 10 minutes, the user shall be automatically logged off and redirected to the login page."
+R18,Does not specify the format for recording immunization dates,A child’s record shall contain the dates that their required immunizations were received in the format YYYY-MM-DD.
+R20,Does not specify the format for recording physical examination dates,A child’s record shall contain the date of their last physical examination in the format YYYY-MM-DD.
+R23,Does not specify the billing cycle or method of payment,"If only a single child is enrolled, a parent shall be billed $90 at the end of each month via credit card or direct debit."
+R26,Does not specify the format for account history entries,"An account history for each customer shall contain all activity by date in the format YYYY-MM-DD, including transaction type and amount."
+R28,Does not specify the method for calculating late pick-up fees,"Customers shall be billed $10 an hour (per child) for late pick-ups, calculated in 15-minute increments."
+R30,Does not specify the format for customer directory report,A Customer Directory Report shall list the customers alphabetically by last name and include their address and phone number in a tabular format.
+R39,Does not specify the format for recording user edits,"When a user edits an account, their user ID along with the date (YYYY-MM-DD), time (HH:MM), and a description of the change shall be recorded in the database."
+R41,Does not specify the format for child’s record information,"The Child’s record shall contain the following information: Name (First Last), Date of birth (YYYY-MM-DD), Gender (M/F), Classroom name, Special needs, Photo (JPEG/PNG), Teacher’s comments, Immunization dates (YYYY-MM-DD)."
+R48,Does not specify the supported versions of Internet Explorer and Netscape Navigator,"The system shall have a Web-based interface that works with Internet Explorer version 11 and above, and Netscape Navigator version 9 and above."
+``

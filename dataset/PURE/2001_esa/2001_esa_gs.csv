@@ -1,7 +1,17 @@
 Label,Level,Issue,Correction,Native
 N/A,3,does not specify requirements for data redundancy and backup.,"The APAF system shall implement data redundancy and backup procedures to ensure no data loss, with backups performed daily and stored at multiple locations.",yes
 N/A,3,does not mention a disaster recovery plan.,"The APAF system shall maintain a detailed disaster recovery plan that includes procedures for daily data backups, offsite storage, and step-by-step instructions for system restoration.",yes
+APAF-FR-01,2,Does not specify the format for telemetry data,The system shall acquire telemetry data in a standardized format such as CCSDS.,yes
+APAF-FR-02,2,Does not specify the processing time for data sets,The system shall process all ASPERA-3 science data into IDFS data sets within 24 hours of acquisition.,yes
+APAF-FR-05,1,does not fulfill the template: missing 'Verification Method' field,Demonstration,no
+APAF-FR-07,2,Does not specify the update frequency for web-based displays,The system shall update web-based displays of the most current ASPERA-3 data every 15 minutes.,yes
 APAF-PR-01,2,implies a login functionality that isn't specified,"There will be a user authentication in web server for the team to log in.",yes
 APAF-CR-01,2,lacks specific details on hardware specifications and software dependencies.,"The UNIX-based system shall have at least 1 GB RAM and 256 GB storage.",yes
 APAF-CR-02,2,Does not specify the archival system to be used for the UNIX-based APAF system production computer.,"The archival system shall use a RAID-5 configuration for data redundancy and integrity.",yes
 APAF-LR-01 to APAF-LR-02,2,does not specify detailed maintenance and support procedures.,"The SwRI software team shall perform routine maintenance tasks on the APAF system monthly, including system updates, backups, and performance checks.",yes
+APAF-DS-II-1,1,Does not refer to the related Document,"ESOC Data Disposition System Interface Control Document (DDID), ME-ESC-IF-5001, Mars Express Space / Ground Interface Control Document (SGICD) (ESA Document)".,no
+APAF-DS-II-3,1,does not fulfill the template: missing requirement,...,no
+Section 1.2,3,lacks other necessary physical instruments that make up the ASPERA-3 experiment,include Neutral Particle Imager (NPI) and Neutral Particle Detector (NPD),no
+Scope,1,lacks section 'Goals and Objectives',...,no
+Acronyms,1,missing definition of PI,Principal Investigator,no
+Acronyms,1,missing definition of MEX,Mars Express,no

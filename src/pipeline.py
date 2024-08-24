@@ -87,7 +87,7 @@ def openai_process_all():
     Processes all PDF files in the dataset using the GPT-4o model.
     """
     llm = llm_creator.create_llm_openai()
-    return process_all_pdfs_all_prompt_variants(llm, "gpt4o")
+    return process_all_pdfs(llm, "gpt4o")
 
 
 def ollama_process_all():

@@ -1,0 +1,24 @@
+Label,Issue,Correction
+3.2.1,Does not specify the required runtime environment and libraries,The framework shall specify the required runtime environment and libraries for the tested software.
+3.2.3,Does not specify the exact resource requirements,"The framework shall specify the exact CPU, memory, and storage requirements for efficient test execution and data processing."
+3.2.6,Does not provide details on the documentation and training resources,"The framework shall provide comprehensive documentation and training resources, including user manuals, tutorials, and troubleshooting guides."
+4.1,Does not specify the exact hardware requirements,"The framework shall specify the exact hardware requirements, including minimum disk space, CPU, and memory specifications."
+5.1,Does not specify the development environment requirements,"The framework shall specify the development environment requirements, including supported operating systems, IDEs, and necessary tools."
+6.1,Does not provide detailed use cases,"The framework shall provide detailed use cases, including step-by-step scenarios of how users will interact with the system."
+F10,Does not specify the format of the output file,"The system shall generate output files in JSON format by default, with an option to choose XML format."
+F20,Does not specify the format of the CLI output,"The system shall display CLI output in a structured format, including test results, error messages, and metadata."
+F30,Does not specify the validation process for the commit,The system shall validate the specified commit against the git repository and provide detailed error messages if the commit is invalid.
+F40,Does not specify the format of the analyzed results,"The system shall output analyzed results in JSON format by default, with an option to choose XML format."
+F50,Does not specify the criteria for filtering frequently changed code,The system shall filter lines of code that have changed more than five times within the specified commit range.
+F60,Does not specify the criteria for emphasizing often changing tests,The system shall emphasize tests that have changed results more than three times within the specified commit range.
+F70,Does not specify the format of the .octoignore file,"The system shall use a plain text format for the .octoignore file, listing each file to be ignored on a new line."
+F80,Does not specify the supported output file formats,The system shall support output file formats in JSON and XML.
+F90,Does not specify the structure of the metadata to be stored,"The system shall store metadata in an SQLite database with fields for commit ID, test ID, test results, and timestamps."
+F100,Does not specify the criteria for highlighting often changed lines,The system shall highlight lines of code that have changed more than five times within the specified commit range.
+F110,Does not specify the structure of the config file,"The system shall store user settings in a config file in JSON format, with fields for each configurable parameter."
+NF10,Does not specify the maximum response time for user interactions,The system shall provide responses to user interactions within 2 seconds.
+NF30,Does not specify the performance metrics for handling commits,"The system shall handle projects with up to 1000 commits, processing each commit within 5 seconds."
+NF40,Does not specify the usability criteria for the CLI,"The CLI shall provide clear and concise commands, with detailed help messages and examples for each command."
+NF50,Does not specify the guidelines for extending the framework,"The framework shall provide guidelines for extending the system, including code structure, API documentation, and example extensions."
+NF70,Does not specify the maintenance procedures,"The system shall provide maintenance procedures, including regular updates, bug fixes, and user support channels."
+``

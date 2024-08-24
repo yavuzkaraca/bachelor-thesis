@@ -1,0 +1,9 @@
+Label,Issue,Correction
+/FR-U-10/,Does not specify the format for user-imported neural network topologies,The system shall accept user-imported neural network topologies in the Open Neural Network eXchange (ONNX) format.
+/FR-U-60/,Does not specify the supported file formats for input images,"The system shall support input images in JPEG, JPG, and PNG formats."
+/FR-U-80/,Does not specify the behavior if the inference fails,"The system shall display an error message if the inference fails, detailing the reason for the failure."
+/FR-U-100/,Does not specify the format for exporting results and diagnostic data,The system shall export results and diagnostic data in a CSV format.
+/FR-U-110/,Does not specify the location where results and diagnostic data will be saved,The system shall prompt the user to select a location on the local device to save the results and diagnostic data.
+/FR-A-30/,Does not specify the types of conflicts that will be checked for validity,"The system shall check for conflicts such as incompatible neural network topologies and hardware components, and unsupported input image formats."
+/PD10/,Does not specify the minimum height and width for input images,The system shall support input images with a minimum height and width of 224 pixels.
+/PD20/,Does not specify the hardware compatibility requirements for imported neural networks,The system shall ensure that imported neural network topologies are compatible with the specified hardware components.

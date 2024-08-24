@@ -63,15 +63,13 @@ def save_results_to_csv(result, filename, output_dir="../out"):
 def generate_filename(pdf_path, identifier):
     """
     Generates a filename for the output CSV file based on the PDF path and model identifier.
-
-    Parameters:
-    - pdf_path: The path to the PDF file that was analyzed.
-    - identifier: A string representing the model identifier (e.g., "gpt4o" or "ollama").
-
-    Returns:
-    - A string representing the generated filename, which includes the base name of the PDF, an identifier, and a ".csv" extension.
     """
     basename = os.path.basename(pdf_path)
-    name_without_extension, _ = os.path.splitext(basename)
+
+    name_without_extension, _ = os.path.splitext(basename)  # removes file extension (.pdf or .html)
+
+    if name_without_extension.endswith('_modified'):
+        name_without_extension = name_without_extension[:-9]  # removes the last 9 characters ('_modified')
+
     filename = name_without_extension + "_report_" + identifier + ".csv"
     return filename
