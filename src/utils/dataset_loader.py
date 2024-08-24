@@ -22,7 +22,7 @@ def get_pdf_file_paths():
         A list of strings, each representing the file path of a PDF file found in the directory.
     """
     pdf_paths = []
-    for root, dirs, files in os.walk("../dataset/PSE"):
+    for root, dirs, files in os.walk("../dataset/"):
         for file in files:
             if file.endswith('modified.pdf'):
                 pdf_paths.append(os.path.join(root, file))
