@@ -169,7 +169,7 @@ comparison_df.plot(kind='bar', color=['plum', 'teal'], edgecolor='black')
 plt.yscale('log')
 
 # Add titles and labels
-plt.title('Delimiter Comparsion: 2024_topo_sim Levels of Incompleteness)')
+plt.title('Delimiter Comparsion: 2005_nenios Levels of Incompleteness)')
 plt.xlabel('Columns')
 plt.ylabel('Score (Log Scale)')
 
