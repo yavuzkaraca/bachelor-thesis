@@ -57,18 +57,18 @@ df_filtered = df_filtered.apply(pd.to_numeric, errors='coerce').fillna(0)
 
 # Sum all the rows for each numeric column
 column_sums = df_filtered.sum()
-
+column_average = column_sums.div(8)
 
 # Create the bar plot
 plt.figure(figsize=(12, 6))
-bar_plot = column_sums.plot(kind='bar', color='plum', edgecolor='black')
+bar_plot = column_average.plot(kind='bar', color='plum', edgecolor='black')
 # Set y-axis to logarithmic scale
 plt.yscale('log')
 
 # Add titles and labels
-plt.title('Sum of the Dataset for each Level of Incompleteness')
+plt.title('Average of the Dataset for each Level of Incompleteness')
 plt.xlabel('Columns')
-plt.ylabel('Sum (Log Scale)')
+plt.ylabel('Average (Log Scale)')
 
 # Add gridlines for better readability
 plt.grid(True, which="both", linestyle='--', linewidth=0.5, alpha=0.7)
