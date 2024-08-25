@@ -15,14 +15,14 @@ def test_single_document(pdf_path):
     """
     This is just for testing a single document to not consume unnecessary API Calls
     """
-    llm = llm_creator.create_llm_openai()
+    llm = llm_creator.create_llm_ollama()
 
     pages = paginate_pdf(pdf_path)
 
     result = invoker.combined_gk_types(llm, pages)
     print(result)
 
-    csv_writer.save_results_to_csv(result, "2005_nenios_gpt4o_csv", "test_out/comma delimeter")
+    csv_writer.save_results_to_csv(result, "2005_nenios_ollama_csv", "test_out/")
     return result
 
 
