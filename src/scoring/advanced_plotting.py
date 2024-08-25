@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Define the path to the CSV file
-file_path = "../../out/delimiter_difference/comma_delimiter_score.csv"
+file_path = "../../out/advanced/advanced_score.csv"
 
 # Read the CSV file into a DataFrame
 df = pd.read_csv(file_path)
@@ -41,13 +41,12 @@ extracted_df = df[['Id', 'Total Recall', 'Total Precision', 'Total F1 Score']]
 extracted_df.set_index('Id', inplace=True)
 
 # Plot the data with specific colors
-plt.figure(figsize=(12, 6))
-ax = extracted_df.plot(kind='bar', figsize=(12, 6), width=0.8, color=['#FFD700', '#FFA500', '#FF4500'])  # Yellow, Orange, Red
+ax = extracted_df.plot(kind='bar', figsize=(8, 6), width=0.4, color=['#333333', '#B0C4DE', 'teal'], edgecolor='black')  # Yellow, Orange, Red
 plt.title('Total Recall, Precision, and F1 Score by ID')
 plt.ylabel('Scores')
 plt.xticks(rotation=45, ha='right')
 plt.legend(loc='best')
-plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.grid(axis='y', linestyle='--', linewidth=0.3, alpha=0.5)
 plt.tight_layout()
 
 # Show the plot
@@ -71,7 +70,7 @@ column_average = column_sums.div(len(df))
 
 # Create the bar plot
 plt.figure(figsize=(12, 6))
-bar_plot = column_average.plot(kind='bar', color='plum', edgecolor='black')
+bar_plot = column_average.plot(kind='bar', color='#F39C12', edgecolor='black')
 # Set y-axis to logarithmic scale
 plt.yscale('log')
 
@@ -81,7 +80,7 @@ plt.xlabel('Columns')
 plt.ylabel('Average (Log Scale)')
 
 # Add gridlines for better readability
-plt.grid(True, which="both", linestyle='--', linewidth=0.5, alpha=0.7)
+plt.grid(True, which="both", linestyle='--', linewidth=0.3, alpha=0.5)
 
 # Rotate x-axis labels for better readability
 plt.xticks(rotation=45, ha='right')
@@ -126,12 +125,12 @@ comparison_df = pd.DataFrame({
 
 # Plot the comparison
 plt.figure(figsize=(12, 6))
-comparison_df.plot(kind='bar', color=['#FFD700', '#FF4500'], edgecolor='black')
+comparison_df.plot(kind='bar', width=0.35, color=['#2C3E50', '#F39C12'], edgecolor='black')
 plt.title('Comma vs Semicolon Delimiter')
 plt.ylabel('Average Scores')
 plt.xticks(rotation=0, ha='center')
 plt.legend(loc='best')
-plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.grid(axis='y', linestyle='--', linewidth=0.3, alpha=0.5)
 plt.tight_layout()
 plt.show()
 
@@ -174,7 +173,7 @@ plt.xlabel('Columns')
 plt.ylabel('Score (Log Scale)')
 
 # Add gridlines for better readability
-plt.grid(True, which="both", linestyle='--', linewidth=0.5, alpha=0.7)
+plt.grid(True, which="both", linestyle='--', linewidth=0.3, alpha=0.5)
 
 # Rotate x-axis labels for better readability
 plt.xticks(rotation=45, ha='right')
@@ -223,7 +222,7 @@ plt.xlabel('Columns')
 plt.ylabel('Score (Log Scale)')
 
 # Add gridlines for better readability
-plt.grid(True, which="both", linestyle='--', linewidth=0.5, alpha=0.7)
+plt.grid(True, which="both", linestyle='--', linewidth=0.3, alpha=0.5)
 
 # Rotate x-axis labels for better readability
 plt.xticks(rotation=45, ha='right')
