@@ -13,7 +13,7 @@ if (Valid Instance Found?) then (yes)
 else (no)
 endif
 
-repeat while (Satisfied?) is (no) not (yes)
+repeat while (Iterative Inspection Over?) is (no) not (yes)
 
 :Edit Documents;
 

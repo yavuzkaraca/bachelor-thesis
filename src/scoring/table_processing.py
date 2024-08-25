@@ -25,7 +25,6 @@ for index, row in df.iterrows():
     df.at[index, 'Total tp'] = total_tp
 """
 
-
 for index, row in df.iterrows():
     tp = row['Total tp']
     fp = row['Total fp']
