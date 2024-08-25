@@ -1,0 +1,17 @@
+Label,Issue,Correction
+/FR-U-20/,Does not specify the behavior if no neural network is selected,The system shall display an error message if the user attempts to start the inference without selecting a neural network.
+/FR-U-50/,Does not specify the behavior if no hardware component is selected,The system shall display an error message if the user attempts to start the inference without selecting a hardware component.
+/FR-U-60/,Does not specify the supported file formats for input images,"The system shall support input images in JPEG, JPG, and PNG formats."
+/FR-U-80/,Does not specify the behavior if no input image is selected,The system shall display an error message if the user attempts to start the inference without selecting an input image.
+/FR-U-100/,Does not specify the format for displaying results,"The system shall display inference results in a tabular format with columns for image name, confidence score, and hardware component."
+/FR-U-110/,Does not specify the file format for exporting results,The system shall export results and diagnostic data in CSV format.
+/FR-U-120/,Does not specify the behavior if the inference is aborted,The system shall display a confirmation message when the inference is aborted and return to the starting screen.
+/FR-U-130/,Does not specify the maximum number of images for batch processing,The system shall allow a maximum of 50 images for batch processing.
+/FR-U-150/,Does not specify the maximum number of hardware components for batch processing,The system shall allow a maximum of 5 hardware components for batch processing.
+/FR-A-30/,Does not specify the types of arguments to be checked,"The system shall check arguments for validity, including neural network compatibility, input image format, and hardware component availability."
+/FR-A-70/,Does not specify the format for the runtime log file,The system shall save the runtime log file in plain text format.
+/PD10/,Does not specify the minimum dimensions for input images,The system shall support input images with a minimum resolution of 128x128 pixels.
+/PD20/,Does not specify the behavior if the neural network is incompatible with the hardware,The system shall display an error message if the imported neural network topology is incompatible with the selected hardware.
+/PD30/,Does not specify the format for inference results and diagnostic data,The system shall save inference results and diagnostic data in JSON format.
+/PD50/,Does not specify the behavior if the translation file is missing,The system shall display an error message if the specified translation file is missing or corrupted.
+``

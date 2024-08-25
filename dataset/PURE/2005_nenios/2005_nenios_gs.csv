@@ -1,13 +1,13 @@
 Label,Level,Issue,Correction,Native
 N/A,1,overview / overall description is missing,...,yes
 N/A,1,glossary is missing,...,yes
+N/A,1,report formats are not specified,...,yes
 Section 1.1,2,The goals and objectives section does not specify measurable goals or success criteria.,"Include specific, measurable goals and success criteria for the project.",yes
 Section 1.2,2,"The statement of scope does not detail the boundaries of the system, such as what is out of scope.",Clearly define what functionalities and features are out of scope for the NCCM system.,yes
 R01,1,does not fulfill the template of three levels,...,no
 R02,2,does not specify time format,"Product Data Entry: Time (HH:MM): The time at which an action occurs, recorded in hours, minutes, and seconds. The time should be recorded in Coordinated Universal Time (UTC) to ensure consistency across different time zones.",yes
 Section 2.1,2,does not specify details on how the access privileges are managed and updated.,"The system shall provide an interface for administrators to manage and update access privileges for each user role.",yes
 R08,1,does not fulfill the template of providing priority,low,no
-R10,1,"the term ""alphanumeric characters"" is undefined.","Alphanumeric Characters: Characters that consist of letters (A-Z, a-z) and numbers (0-9).",yes
 R11,2,does not specify the process for resetting a password.,"Reset is achieved either through 'forgot password' feature or by admins on demand.",yes
 R12,2,does not specify how the user can call the 'forgotten password' function.,"The system shall provide a 'Forgot Password' feature that allows users to reset their password via email verification.",yes
 R13,3,does not specify what happens to unsaved data when a user is logged off due to inactivity.,The system shall save the user's work automatically before logging off due to inactivity.,yes
@@ -31,3 +31,4 @@ R50,1,does not fulfill the template of providing priority,High,no
 R44,2,does not specify the maximum,Each classroom shall only accept a maximum of 20 children.,no
 R33,1,requirement number missing,R33,no
 Section 2.3,1,section title missing,Daily Reminders,no
+R19,2,Notification function not specified,"When a child is within two weeks of a required immunization, a message shall be displayed when their teacher logs onto the system, and an email notification shall be sent to the parent.",yes

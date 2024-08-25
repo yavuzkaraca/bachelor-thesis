@@ -44,7 +44,7 @@ def save_results_to_csv(result, filename, output_dir="../out"):
     csv_data = result[csv_start:csv_end].strip()
 
     # Use StringIO to simulate a file object for the csv reader
-    csv_reader = csv.reader(StringIO(csv_data), delimiter=';')
+    csv_reader = csv.reader(StringIO(csv_data), delimiter=',')
 
     # Define the full path to the output file
     output_file = os.path.join(output_dir, filename)

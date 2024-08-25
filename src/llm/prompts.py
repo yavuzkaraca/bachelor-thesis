@@ -23,13 +23,13 @@ def system_default_role():
 def examples():
     return """
     Example Output:
-    Label;Issue;Correction
-    R10;Does not specify the format for international phone numbers;The system shall accept phone numbers in the E.164 international format (e.g., +1 234-567-890).
-    REQ-10 (2.1.4);Does not specify the maximum character length for user comments;The system shall limit user comments to a maximum of 500 characters.
-    FR22;Does not specify the method for user feedback collection;The system shall provide a feedback form accessible from the main dashboard, allowing users to submit feedback directly.
-    NF10;Does not fulfill the template of three elements;"... and protected mode"
-    4.2.1.a;Does not specify the supported file formats for document uploads;The system shall support document uploads in PDF, DOCX, and TXT formats only.
-    Section 8.3;Does not define user access levels for different roles within the system;The system shall define three user roles: Admin, Editor, and Viewer, each with specific access rights.
+    Label,Issue,Correction
+    R10,Does not specify the format for international phone numbers,"the system shall accept phone numbers in the E.164 international format (e.g., +1 234-567-890)."
+    REQ-10 (2.1.4),Does not specify the maximum character length for user comments,"The system shall limit user comments to a maximum of 500 characters."
+    FR22,Does not specify the method for user feedback collection,"The system shall provide a feedback form accessible from the main dashboard, allowing users to submit feedback directly."
+    NF10,Does not fulfill the template of three elements,"... and protected mode."
+    4.2.1.a,Does not specify the supported file formats for document uploads,"The system shall support document uploads in PDF, DOCX, and TXT formats only."
+    Section 8.3,Does not define user access levels for different roles within the system,"The system shall define three user roles: Admin, Editor, and Viewer, each with specific access rights."
     \n
     """
 
@@ -37,8 +37,7 @@ def examples():
 def output_format():
     return """
     Output Format:
-    Produce a CSV file with the following columns: "Label", "Issue", and "Correction". Ensure that each cell 
-    value in the CSV file is separated with a semicolon (;).
+    Produce a CSV file with the following columns: "Label", "Issue", and "Correction".
     \n
     """
 

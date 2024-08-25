@@ -1,0 +1,13 @@
+Label,Issue,Correction
+APAF-FR-01,Does not specify the frequency of data acquisition,The APAF system shall acquire telemetry data of the ASPERA-3 Experiment and Mars Express Orbit/Attitude every 24 hours.
+APAF-FR-02,Does not specify the format of IDFS data sets,The APAF system shall process all ASPERA-3 science data into IDFS data sets in XML format.
+APAF-FR-03,Does not specify the types of engineering and ancillary information,"The APAF system shall process the engineering and ancillary information, including temperature, pressure, and voltage data, necessary for calibration and science validation into IDFS data sets."
+APAF-FR-05,Does not specify the duration for data storage,The ASPERA-3 and MEX OA telemetry data shall be stored on a local SwRI archive for a minimum of 5 years.
+APAF-FR-07,Does not specify the update frequency for web-based displays,Web-based displays of the most current ASPERA-3 data shall be updated every 6 hours for public view.
+APAF-PR-01,Does not specify the encryption method for password protection,The APAF system web server shall be password protected using AES-256 encryption where appropriate to allow only pertinent ASPERA-3 team members access.
+APAF-CR-02,Does not specify the backup frequency for the production computer,There shall be a UNIX-based APAF system production computer with an archival system that performs daily backups.
+APAF-DR-01a,Does not specify the error handling procedure for data distribution,"ASPERA-3 IDFS data that are electronically distributed shall be provided to the ASPERA-3 Co-I’s within 24 hours of acquiring ASPERA-3 telemetry as long as the transmission and processing are error-free. In case of errors, the system shall retry the transmission every hour until successful."
+APAF-DR-02c,Does not specify the validation process for data before submission,"ASPERA-3 data shall be provided to NASA PDS no later than 6 months after acquisition, following a thorough validation process to ensure data accuracy."
+APAF-DS-II-1,Does not specify the format for system parameters,System Parameters shall be provided in JSON format.
+APAF-DS-OI-1,Does not specify the method of data distribution,Distribution of ASPERA-3 and MEX OA IDFS Data Sets shall be performed via secure FTP.
+APAF-DS-OI-3,Does not specify the retention period for local archives,Local Archive of ASPERA-3 and MEX OA Telemetry & IDFS Data shall be retained for a minimum of 5 years.
