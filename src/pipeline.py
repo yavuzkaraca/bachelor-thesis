@@ -10,7 +10,7 @@ from utils.csv_writer import generate_filename
 from utils.dataset_loader import paginate_pdf, get_pdf_file_paths
 
 
-def process_all_pdfs_all_prompt_variants(llm, identifier, output_base_dir="../out/exploration"):
+def process_all_pdfs_explore(llm, identifier, output_base_dir="../out/exploration"):
     """
     Processes all PDF files in the dataset using all prompt variants.
     """
@@ -66,7 +66,7 @@ def process_all_pdfs_all_prompt_variants(llm, identifier, output_base_dir="../ou
                                        os.path.join(output_base_dir, "combined_all"))
 
 
-def process_all_pdfs(llm, identifier, output_base_dir="../out/advanced"):
+def process_all_pdfs_advanced(llm, identifier, output_base_dir="../out/advanced"):
     """
     Processes all PDF files in the dataset using only one prompt: Combined GK + CT.
     """
@@ -87,7 +87,7 @@ def openai_process_all():
     Processes all PDF files in the dataset using the GPT-4o model.
     """
     llm = llm_creator.create_llm_openai()
-    return process_all_pdfs(llm, "gpt4o")
+    return process_all_pdfs_advanced(llm, "gpt4o")
 
 
 def ollama_process_all():
@@ -95,4 +95,4 @@ def ollama_process_all():
     Processes all PDF files in the dataset using the Ollama model.
     """
     llm = llm_creator.create_llm_ollama()
-    return process_all_pdfs(llm, "llama3")
+    return process_all_pdfs_advanced(llm, "llama3")
