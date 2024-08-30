@@ -66,7 +66,7 @@ def process_all_pdfs_explore(llm, identifier, output_base_dir="../out/exploratio
                                        os.path.join(output_base_dir, "combined_all"))
 
 
-def process_all_pdfs_advanced(llm, identifier, output_base_dir="../out/advanced"):
+def process_all_pdfs_advanced(llm, identifier, output_base_dir="../out/"):
     """
     Processes all PDF files in the dataset using only one prompt: Combined GK + CT.
     """
