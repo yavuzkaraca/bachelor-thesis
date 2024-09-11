@@ -3,10 +3,10 @@ Copyright (c) 2024 Yavuz Karaca
 
 
 ## Overview
-This research investigates the use of Large Language Models (LLMs) to automate the validation of Software Requirements Specifications (SRS) for completeness. By leveraging LLMs, specifically GPT-4 and LLaMA3, this study aims to identify incomplete SRS elements. Experiments were conducted using various datasets and prompting techniques, with the F1 score as the primary performance metric.
+This research explores the application of Large Language Models (LLMs) to automate the validation of Software Requirements Specifications (SRS) for completeness. By leveraging models such as GPT-4 and LLaMA3, the study aims to detect incomplete elements in SRS documents. The process involves sequentially feeding SRS documents to LLMs, along with specific prompts instructing them to identify instances of incompleteness. The LLMs then generate validation reports in CSV format. Experiments were conducted using various datasets and prompting techniques, with the F1 score serving as the primary performance metric.
 
 This repository holds all the artifacts produced during the study except the paper itself. To read the paper: 
-[Read the paper](https://journals.biologists.com/dev/article/139/2/335/45409/Balancing-of-ephrin-Eph-forward-and-reverse)
+[Add the link for the paper](https://place-holder.com)
 
 
 ## Structure
