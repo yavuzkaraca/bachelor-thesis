@@ -23,27 +23,31 @@ color_palette = {
     'dark_orange': '#542D13',
 }
 
+# Define the new color palette based on the provided image
+bar_colors = [color_palette['teal'], color_palette['light_blue'], color_palette['gray']]
+
 # Common column rename mapping
 columns_rename = {
     'L1 tp': 'Level 1 tp',
     'L1 fp': 'Level 1 fp',
     'L1 fn': 'Level 1 fn',
-    'L1 Recall': 'Level 1 Recall',
-    'L1 Precision': 'Level 1 Precision',
+    'L1 Precision': 'Level 1 Precision',  # Precision first
+    'L1 Recall': 'Level 1 Recall',        # Recall second
     'L1 F1 Score': 'Level 1 F1 Score',
     'L2 tp': 'Level 2 tp',
     'L2 fp': 'Level 2 fp',
     'L2 fn': 'Level 2 fn',
-    'L2 Recall': 'Level 2 Recall',
-    'L2 Precision': 'Level 2 Precision',
+    'L2 Precision': 'Level 2 Precision',  # Precision first
+    'L2 Recall': 'Level 2 Recall',        # Recall second
     'L2 F1 Score': 'Level 2 F1 Score',
     'L3 tp': 'Level 3 tp',
     'L3 fp': 'Level 3 fp',
     'L3 fn': 'Level 3 fn',
-    'L3 Recall': 'Level 3 Recall',
-    'L3 Precision': 'Level 3 Precision',
+    'L3 Precision': 'Level 3 Precision',  # Precision first
+    'L3 Recall': 'Level 3 Recall',        # Recall second
     'L3 F1 Score': 'Level 3 F1 Score'
 }
+
 
 rows_rename = {
     '2001_esa': '2001 - esa',
@@ -111,34 +115,6 @@ def plot_grouped_bar(data, custom_order, title, xlabel, ylabel):
     plt.show()
 
 
-def plot_comparison(data1, data2, entries_to_compare, title):
-    df1_filtered = data1[data1['Id'].isin(entries_to_compare)]
-    df2_filtered = data2[data2['Id'].isin(entries_to_compare)]
-
-    extracted_df1 = df1_filtered[['Total Recall', 'Total Precision', 'Total F1 Score']]
-    extracted_df2 = df2_filtered[['Total Recall', 'Total Precision', 'Total F1 Score']]
-
-    avg_df1 = extracted_df1.mean()
-    avg_df2 = extracted_df2.mean()
-
-    comparison_df = pd.DataFrame({
-        'Comma Delimiter': avg_df1,
-        'Semicolon Delimiter': avg_df2
-    })
-
-    plot_bar(
-        comparison_df,
-        title,
-        'Metrics',
-        'Average F1 Scores',
-        xtick_rotation=0,
-        xtick_ha='center',
-        colors=[color_palette['dark_blue'], color_palette['orange']],
-        width=0.25,
-        figsize=(9, 6)
-    )
-
-
 def main():
     # Load data
     df1 = load_and_prepare_data(csv_files['2021_init-v'], '2021 - init-v')
@@ -160,104 +136,47 @@ def main():
     plot_grouped_bar(combined_df, custom_order, 'F1 Scores Grouped by Prompts', 'Prompt Technique', 'F1 Score')
 
     # Document Total Scores Dataset-wide
-    extracted_df = df_adv[['Id', 'Total Recall', 'Total Precision', 'Total F1 Score']].set_index('Id')
+    extracted_df = df_adv[['Id', 'Total Precision', 'Total Recall', 'Total F1 Score']].set_index(
+        'Id')  # Precision first
     plot_bar(
         extracted_df,
-        'Total Recall, Precision, and F1 Score by ID',
+        'Total Precision, Recall, and F1 Score by ID',  # Update title to reflect Precision first
         'Document',
         'Scores',
         xtick_rotation=0,
         xtick_ha='center',
-        colors=[color_palette['gray'], color_palette['light_blue'], color_palette['teal']]
+        colors=bar_colors
     )
 
     # Level Detailed average Dataset-wide
     df_filtered = df_adv.drop(columns=['Id']).filter(regex='^(?!.*(tp|fp|fn)).*$').apply(pd.to_numeric,
                                                                                          errors='coerce').fillna(0)
+
+    # Select and reorder columns to ensure Precision comes first, then Recall, and finally F1 Score
+    column_order = [col for col in df_filtered.columns if 'Precision' in col] + \
+                   [col for col in df_filtered.columns if 'Recall' in col] + \
+                   [col for col in df_filtered.columns if 'F1 Score' in col]
+
+    df_filtered = df_filtered[column_order]
     column_average = df_filtered.sum().div(len(df_filtered))
 
-    bar_colors = []
-    for column in df_filtered.columns:
-        if 'F1 Score' in column:
-            bar_colors.append(color_palette['dark_blue'])  # Use the desired color for F1 Score
-        else:
-            bar_colors.append(color_palette['light_blue'])  # Default color or provided colors
+    # Reshape data to group by Level, including "Artificial" and "Total"
+    grouped_data = pd.DataFrame({
+        'Level 1': [column_average['Level 1 Precision'], column_average['Level 1 Recall'],
+                    column_average['Level 1 F1 Score']],
+        'Level 2': [column_average['Level 2 Precision'], column_average['Level 2 Recall'],
+                    column_average['Level 2 F1 Score']],
+        'Level 3': [column_average['Level 3 Precision'], column_average['Level 3 Recall'],
+                    column_average['Level 3 F1 Score']],
+        'Artificial': [column_average['Artificial Precision'], column_average['Artificial Recall'],
+                       column_average['Artificial F1 Score']],
+        'Total': [column_average['Total Precision'], column_average['Total Recall'], column_average['Total F1 Score']]
+    }, index=['Precision', 'Recall', 'F1 Score']).T
 
+    # Plot grouped bars with correct order
     plot_bar(
-        column_average,
+        grouped_data,
         'Average of the Dataset for each Level of Incompleteness',
-        'Level Specific Metric',
-        'Average (Log Scale)',
-        yscale='log',
-        colors=bar_colors,
-        axv_line=12
-    )
-
-    # Comma vs Semicolon
-    df_comma = load_and_prepare_data(csv_files['comma_delimiter']).rename(columns=columns_rename)
-    df_semi = load_and_prepare_data(csv_files['advanced']).rename(columns=columns_rename)
-
-    plot_comparison(
-        df_comma,
-        df_semi,
-        entries_to_compare=['2005_nenios', '2024_topo_sim'],
-        title='Comma vs Semicolon Delimiter'
-    )
-
-    # Document wise delimiter comparison plots
-    for entry in ['2005_nenios', '2024_topo_sim']:
-        df1_filtered = df_comma[df_comma['Id'] == entry].drop(columns=['Id']).filter(regex='^(?!.*(tp|fp|fn)).*$')
-        df2_filtered = df_semi[df_semi['Id'] == entry].drop(columns=['Id']).filter(regex='^(?!.*(tp|fp|fn)).*$')
-
-        df1_average = df1_filtered.apply(pd.to_numeric, errors='coerce').fillna(0).mean()
-        df2_average = df2_filtered.apply(pd.to_numeric, errors='coerce').fillna(0).mean()
-
-        comparison_df = pd.DataFrame({
-            'Comma Delimiter': df1_average,
-            'Semicolon Delimiter': df2_average
-        })
-
-        plot_bar(
-            comparison_df,
-            f'Delimiter Comparison: {entry} Levels of Incompleteness',
-            'Level Specific Metric',
-            'Score (Log Scale)',
-            yscale='log',
-            colors=[color_palette['orange'], color_palette['teal']]
-        )
-
-    # 2 Plots for comma delimiter
-    df_comma = load_and_prepare_data(csv_files['comma_delimiter']).rename(columns=columns_rename)
-    df_comma['Id'] = df_comma['Id'].replace(rows_rename)
-
-    extracted_df = df_comma[['Id', 'Total Recall', 'Total Precision', 'Total F1 Score']].set_index('Id')
-    plot_bar(
-        extracted_df,
-        'Total Scores for Comma Delimiter Tested Documents',
-        'Document',
-        'Scores',
-        xtick_rotation=0,
-        xtick_ha='center',
-        colors=[color_palette['gray'], color_palette['light_blue'], color_palette['teal']],
-        width=0.25,
-        figsize=(9, 6)
-    )
-
-    # Level Detailed average Dataset-wide
-    df_filtered = df_comma.drop(columns=['Id']).filter(regex='^(?!.*(tp|fp|fn)).*$').apply(pd.to_numeric,
-                                                                                         errors='coerce').fillna(0)
-    column_average = df_filtered.sum().div(len(df_filtered))
-
-    bar_colors = []
-    for column in df_filtered.columns:
-        if 'F1 Score' in column:
-            bar_colors.append(color_palette['dark_blue'])  # Use the desired color for F1 Score
-        else:
-            bar_colors.append(color_palette['light_blue'])  # Default color or provided colors
-
-    plot_bar(
-        column_average,
-        'Average Scores for Comma Delimiter Tested Documents',
         'Level Specific Metric',
         'Average (Log Scale)',
         yscale='log',
