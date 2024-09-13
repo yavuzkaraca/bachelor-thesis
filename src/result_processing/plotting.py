@@ -145,7 +145,8 @@ def main():
         'Scores',
         xtick_rotation=0,
         xtick_ha='center',
-        colors=bar_colors
+        colors=bar_colors,
+        axv_line=4,
     )
 
     # Level Detailed average Dataset-wide
