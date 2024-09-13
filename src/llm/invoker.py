@@ -27,6 +27,7 @@ def combined_all(llm, doc):
 
     store = {}
 
+    #
     def get_session_history(session_id: str) -> BaseChatMessageHistory:
         if session_id not in store:
             store[session_id] = InMemoryChatMessageHistory()
@@ -78,7 +79,7 @@ def combined_gk_types(llm, doc):
     """
     Combines:
      1. few shot
-     2. generated knowledge
+     2. generated knowledge (gk)
      3. completeness types
 
     """

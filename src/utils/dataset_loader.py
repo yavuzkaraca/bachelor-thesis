@@ -23,6 +23,7 @@ def get_pdf_file_paths():
     """
     pdf_paths = []
     for root, dirs, files in os.walk("../dataset/"):
+        # check if dirs can be ignored using "_"
         for file in files:
             if file.endswith('modified.pdf'):
                 pdf_paths.append(os.path.join(root, file))
@@ -44,9 +45,5 @@ def paginate_pdf(pdf_path):
     return pages
 
 
-def embed_text(pages):
-    """
-    Currently unused, a vector_store and retriever is also needed to pair embeddings with.
-    """
-    embeddings = embeddings_model.embed_documents(pages)
-    return embeddings
+
+

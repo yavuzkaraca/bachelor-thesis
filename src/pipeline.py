@@ -66,13 +66,14 @@ def process_all_pdfs_explore(llm, identifier, output_base_dir="../out/exploratio
                                        os.path.join(output_base_dir, "combined_all"))
 
 
-def process_all_pdfs_advanced(llm, identifier, output_base_dir="../out/"):
+def process_all_pdfs_advanced(llm, identifier):
     """
     Processes all PDF files in the dataset using only one prompt: Combined GK + CT.
     """
     pdf_paths = get_pdf_file_paths()
+    output_base_dir = "../out/"
 
-    print(pdf_paths)
+    print(pdf_paths)  # this can be a test
 
     for pdf_path in pdf_paths:
         pages = paginate_pdf(pdf_path)

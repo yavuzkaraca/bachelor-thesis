@@ -1,3 +1,5 @@
+import sys
+
 import pandas as pd
 
 
@@ -10,7 +12,7 @@ def calculate_metrics(tp, fp, fn):
 
 
 # Read the CSV file
-file_path = '../../out/delimiter_difference/comma_delimeter_score.csv'  # Replace with your input file name
+file_path = '../../out/delimiter_difference/comma_delimiter_score.csv'  # Replace with your input file name
 
 df = pd.read_csv(file_path)
 
@@ -107,3 +109,7 @@ for index, row in df.iterrows():
 
 # Save the updated DataFrame back to a CSV file
 df.to_csv(file_path, index=False)
+
+if __name__ == '__main__':
+    main()
+    sys.argv
