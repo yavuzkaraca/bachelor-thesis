@@ -17,8 +17,11 @@ import os
 from langchain_community.chat_models import ChatOllama
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 
+ORGANIZATION_ID = "org-JOZZVGILnxuXT7NdjxlKF7g8"
+BASE_URL = "https://ollama.vdl.sdq.kastel.kit.edu"
+
 # Securely setting up the OpenAI API key
-OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
 # Securely setting up Ollama Header
 username = os.environ.get("OLLAMA_USER")
@@ -31,12 +34,13 @@ def create_llm_openai():
     Creates an instance of the ChatOpenAI model with predefined settings for GPT-4o.
     """
     llm = ChatOpenAI(
-        model="gpt-4o",
+        model="gpt-4o-2024-05-13",
         temperature=0,
         max_tokens=None,
         timeout=None,
         max_retries=2,
-        api_key=OPENAI_API_KEY
+        api_key=OPENAI_API_KEY,
+        organization=ORGANIZATION_ID
     )
     return llm
 
@@ -61,7 +65,7 @@ def create_llm_ollama():
         max_tokens=None,  # 4096?
         timeout=None,
         max_retries=2,
-        base_url="https://ollama.vdl.sdq.kastel.kit.edu",
+        base_url=BASE_URL,
         headers=headers
     )
     return llm

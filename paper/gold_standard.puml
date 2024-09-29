@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+
+:  Manual Inspection  ;
+#Lavender:  Gold Standard Draft  ;
+
+repeat :  Use GPT-4  ;
+
+if (  Valid Instance Found?  ) then (yes)
+  #Lavender:  Add to Gold Standard  ;
+else (no)
+endif
+
+repeat while (  Iterative Inspection Over?  ) is (no) not (yes)
+
+:  Introduce Artificial Incompleteness  ;
+
+#Lavender:Update Gold Standard;
+
+stop
+
+@enduml
+

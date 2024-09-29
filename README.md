@@ -14,6 +14,7 @@ This repository holds all the artifacts produced during the study except the pap
   - Original
   - Modified
   - Gold Standard
+- **Paper**: Holds presentation and thesis along with the diagrams used in them
 - **Out**: Holds the following experiments, each with results, evaluation, and plots
   - Exploration
   - Advanced
@@ -62,7 +63,7 @@ git clone https://gitlab.kit.edu/kit/kastel/sdq/stud/abschlussarbeiten/masterarb
 ```
 
 ### Configuring Parameters
-- **Model Selection**: Only the "gpt-4o" model is currently invoked. To include LLaMA3, uncomment line 6 in `main.py`
+- **Model Selection**: To change the model, adjust the model parameters in `llm_creator.py`. Also, only the "gpt-4o" model is currently invoked. To include LLaMA3, uncomment line 6 in `main.py`
 - **Output Directory**: Results are saved to the "out" directory. To change this, update the `output_base_dir` parameter in `pipeline.py`
 - **Prompt Selection**: Only the default prompt is used. To modify it, update the method called by the invoker in `pipeline.py`
 - **Dataset Processing**: The script processes all files in the dataset ending with "modified.pdf." To change this, edit line 25 in `dataset_loader.py`
