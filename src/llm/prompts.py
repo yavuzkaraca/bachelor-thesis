@@ -1,11 +1,10 @@
 """
 This module provides template functions that generate standard prompts and guidelines for validating Software
 Specification Documents.
-
 """
 
 
-def system_engineer_role():
+def system_engineer_role() -> str:
     return """
     You are an experienced Requirements Engineer who identifies incompleteness in Software Requirement Specification 
     documents.
@@ -13,14 +12,14 @@ def system_engineer_role():
     """
 
 
-def system_default_role():
+def system_default_role() -> str:
     return """
     You are an AI assistant that validates completeness in Software Requirement Specification documents.
     \n
     """
 
 
-def examples():
+def examples() -> str:
     return """
     Example Output:
     Label,Issue,Correction
@@ -34,7 +33,7 @@ def examples():
     """
 
 
-def output_format():
+def output_format() -> str:
     return """
     Output Format:
     Produce a CSV file with the following columns: "Label", "Issue", and "Correction".
@@ -42,7 +41,7 @@ def output_format():
     """
 
 
-def instructions_base():
+def instructions_base() -> str:
     return """
     Identify all the instances of incompleteness in the following document by:
     1. Referring to the requirement by its unique identifier/label.
@@ -52,7 +51,7 @@ def instructions_base():
     """
 
 
-def instructions_chain_of_thought():
+def instructions_chain_of_thought() -> str:
     return """
     First, read the following document thoroughly and identify all the instances of incompleteness.
     Then, explain the reason of incompleteness for each instance referring to their unique identifier.
@@ -63,14 +62,14 @@ def instructions_chain_of_thought():
     """
 
 
-def generate_ieee_guidelines():
+def generate_ieee_guidelines() -> str:
     return """
     Provide the IEEE guidelines for Software Requirement Specification documents about the Completeness aspect. 
     According to IEEE, documents should fulfill three things to be complete. What are these?
     """
 
 
-def completeness_types():
+def completeness_types() -> str:
     return """
     7 Completeness
 

@@ -10,6 +10,14 @@ from utils.csv_writer import generate_filename
 from utils.dataset_loader import paginate_pdf, get_pdf_file_paths
 
 
+
+def do(func, filename):
+    result = func(llm, pages)
+    csv_writer.save_results_to_csv(result, generate_filename(pdf_path, identifier), os.path.join(output_base_dir, filename))
+
+do(invoker.zero_shot, "zero_shot")
+
+
 def process_all_pdfs_explore(llm, identifier, output_base_dir="../out/exploration"):
     """
     Processes all PDF files in the dataset using all prompt variants.
@@ -53,11 +61,11 @@ def process_all_pdfs_explore(llm, identifier, output_base_dir="../out/exploratio
         csv_writer.save_results_to_csv(result_repeated_instructions, generate_filename(pdf_path, identifier),
                                        os.path.join(output_base_dir, "repeated_instructions"))
 
-        result_combined_gk_types = invoker.combined_gk_types(llm, pages)
+        result_combined_gk_types = invoker.combined_generated_knowledge_completeness_types(llm, pages)
         csv_writer.save_results_to_csv(result_combined_gk_types, generate_filename(pdf_path, identifier),
                                        os.path.join(output_base_dir, "combined_gk_types"))
 
-        result_combined_cot_ri_few = invoker.combined_cot_ri(llm, pages)
+        result_combined_cot_ri_few = invoker.combined_chain_of_thought_repeated_instructions(llm, pages)
         csv_writer.save_results_to_csv(result_combined_cot_ri_few, generate_filename(pdf_path, identifier),
                                        os.path.join(output_base_dir, "combined_cot_ri_few"))
 
@@ -78,7 +86,7 @@ def process_all_pdfs_advanced(llm, identifier):
     for pdf_path in pdf_paths:
         pages = paginate_pdf(pdf_path)
 
-        result = invoker.combined_gk_types(llm, pages)
+        result = invoker.combined_generated_knowledge_completeness_types(llm, pages)
         csv_writer.save_results_to_csv(result, generate_filename(pdf_path, identifier),
                                        os.path.join(output_base_dir, "openai"))
 

@@ -19,7 +19,7 @@ def test_single_document(pdf_path):
 
     pages = paginate_pdf(pdf_path)
 
-    result = invoker.combined_gk_types(llm, pages)
+    result = invoker.combined_generated_knowledge_completeness_types(llm, pages)
     print(result)
 
     csv_writer.save_results_to_csv(result, "2005_nenios_ollama_csv", "test_out/")
