@@ -9,9 +9,6 @@ Functions:
 import os
 from langchain_community.document_loaders import PyPDFLoader
 
-from llm.llm_creator import create_embedder
-
-embeddings_model = create_embedder()
 
 
 def get_pdf_file_paths():

@@ -44,7 +44,7 @@ def create_llm_ollama() -> ChatOllama:
     llm = ChatOllama(
         model="llama3:8b",
         temperature=0,
-        max_tokens=None,  # 4096?
+        max_tokens=None,
         timeout=None,
         max_retries=2,
         base_url=BASE_URL,

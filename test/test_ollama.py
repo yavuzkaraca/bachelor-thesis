@@ -48,4 +48,4 @@ def test_ollama_document_read(pdf_path):
 
 
 if __name__ == '__main__':
-    test_ollama_document_read(test_path_neutero)
+    test_ollama_csv()
