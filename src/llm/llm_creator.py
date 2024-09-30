@@ -21,12 +21,12 @@ password = os.environ.get("OLLAMA_PASSWORD")
 headers = {"Authorization": "Basic " + base64.b64encode(f"{username}:{password}".encode('utf-8')).decode("ascii")}
 
 
-def create_llm_openai() -> ChatOpenAI:
+def create_llm_openai(model="gpt-4o-2024-05-13") -> ChatOpenAI:
     """
     Creates an instance of the ChatOpenAI model with predefined settings for GPT-4o.
     """
     llm = ChatOpenAI(
-        model="gpt-4o-2024-05-13",
+        model=model,
         temperature=0,
         max_tokens=None,
         timeout=None,
@@ -37,12 +37,12 @@ def create_llm_openai() -> ChatOpenAI:
     return llm
 
 
-def create_llm_ollama() -> ChatOllama:
+def create_llm_ollama(model="llama3:8b") -> ChatOllama:
     """
     Creates an instance of the ChatOllama model with predefined settings for the llama3:8b model.
     """
     llm = ChatOllama(
-        model="llama3:8b",
+        model=model,
         temperature=0,
         max_tokens=None,
         timeout=None,

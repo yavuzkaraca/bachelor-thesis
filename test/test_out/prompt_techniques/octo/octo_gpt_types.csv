@@ -1,8 +1,0 @@
-Label,Issue,Correction
-N/A,"Missing section on ""Constraints""","The document should include a section detailing constraints such as interface requirements, environmental requirements, and data requirements."
-Section 7.1,Does not specify the total supported number of concurrent users,"The system shall handle up to 10,000 concurrent users without performance degradation."
-Section 7.2,Does not specify recovery or program state when selection is improper,Improper selection is undone and the previous state before the selection is still valid.
-Section 7.2,Does not specify behavior for invalid inputs,The system shall display an error message and prompt the user to enter a valid input when an invalid input is detected.
-Section 8,Non-functional requirements lack specific performance metrics,The system shall respond to user commands within 2 seconds under normal operating conditions.
-Section 8,Non-functional requirements lack security measures,The system shall encrypt all user data using AES-256 encryption.
-Section 8,Non-functional requirements lack maintainability guidelines,The system shall include comprehensive documentation and follow coding standards to ensure maintainability.

@@ -15,7 +15,7 @@ import os
 from io import StringIO
 
 
-def save_results_to_csv(result, filename, output_dir="../out"):
+def save_results_to_csv(result, filename, output_dir="../out") -> None:
     """
     Saves the analysis results to a CSV file.
 
@@ -60,7 +60,7 @@ def save_results_to_csv(result, filename, output_dir="../out"):
     print(f"Results have been saved to {output_file}")
 
 
-def generate_filename(pdf_path, identifier):
+def generate_filename(pdf_path, identifier) -> str:
     """
     Generates a filename for the output CSV file based on the PDF path and model identifier.
     """
