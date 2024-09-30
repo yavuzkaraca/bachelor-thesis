@@ -3,14 +3,25 @@ Copyright (c) 2024 Yavuz Karaca
 
 
 ## Overview
-This research explores the application of Large Language Models (LLMs) to automate the validation of Software Requirements Specifications (SRS) for completeness. By leveraging models such as GPT-4 and LLaMA3, the study aims to detect incomplete elements in SRS documents. The process involves sequentially feeding SRS documents to LLMs, along with specific prompts instructing them to identify instances of incompleteness. The LLMs then generate validation reports in CSV format. Experiments were conducted using various datasets and prompting techniques, with the F1 score serving as the primary performance metric.
+Traditional validation of SRS completeness is a manual, complex, and time-consuming
+process that often results in overlooked requirements, potentially increasing costs. Large
+Language Models (LLMs) offer a potential solution by automating the detection of incom-
+pleteness in SRS documents. This work defines completeness types and evaluates state of
+the art LLMs’ ability to correctly identify violations of them. The evaluation used various
+prompt strategies, including generated knowledge, few-shot, and chain-of-thought, with
+performance measured across multiple levels of completeness. Results showed GPT-4o
+achieved an overall F1 score of 0.3, with precision consistently higher than recall across
+all types. Validating completeness by understanding the document’s content had lowest
+precision, while detecting gaps such as missing labels and references exhibited the lowest
+recall. Overall, LLMs provide a useful supporting tool, but thorough validation still requires
+human oversight.
 
 ## Structure
 - **Dataset** 
   - Original
   - Modified
   - Gold Standard
-- **Paper**: Holds presentation and thesis along with the diagrams used in them
+- **Misc**: Holds few minor experiments relating to Ollama's capabilities
 - **Out**: Holds the following experiments, each with results, evaluation, and plots
   - Exploration
   - Advanced
@@ -19,7 +30,7 @@ This research explores the application of Large Language Models (LLMs) to automa
   - LLM: Creation and invoking of the LLMs, including prompts
   - Result Processing: Tools for calculating scores and plotting
   - Utilities: Tools for loading PDFs and writing CSV files
-- **Test**: Used as a playground during development
+- **Thesis**: Holds presentation and thesis along with the diagrams used in them
 
 
 ## Acknowledgments
