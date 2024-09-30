@@ -1,9 +1,14 @@
-from typing import Tuple, Any
+"""
+This module fetches tp, fp and tp values from a CSV table and calculates scores, then saves these back into the table.
+"""
 
 import pandas as pd
 
 
 def calculate_metrics(tp, fp, fn) -> tuple[float, float, float]:
+    """
+    Calculates precision, recall and f1_score and rounds before returning
+    """
     precision = (tp / (tp + fp)) if (tp + fp) > 0 else 0.0
     recall = (tp / (tp + fn)) if (tp + fn) > 0 else 0.0
     f1_score = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0.0
@@ -106,5 +111,5 @@ def main(file_path) -> None:
 
 
 if __name__ == '__main__':
-    file_path = '../../out/delimiter_difference/comma_delimiter_score.csv'  # Replace with your input file name
+    file_path = '../../out/delimiter_difference/comma_delimiter_score.csv'  # Change this file path to process a table
     main(file_path)

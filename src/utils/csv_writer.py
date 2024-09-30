@@ -1,13 +1,7 @@
 """
-This module provides functions for processing analysis results and saving them to CSV files. It includes functionality for extracting CSV data from text and generating appropriate filenames for output files.
+This module provides functions for processing analysis results and saving them to CSV files. It includes functionality
+for extracting CSV data from text and generating appropriate filenames for output files.
 
-Constants:
-    - OPEN_AI_IDENTIFIER: Identifier for the OpenAI model used.
-    - LLAMA_IDENTIFIER: Identifier for the LLama model used.
-
-Functions:
-    - save_results_to_csv: Extracts CSV data from a result string and saves it to a CSV file in the specified output directory.
-    - generate_filename: Generates a filename for the output CSV file based on the input PDF path and the model identifier.
 """
 
 import csv
@@ -17,21 +11,7 @@ from io import StringIO
 
 def save_results_to_csv(result, filename, output_dir="../out") -> None:
     """
-    Saves the analysis results to a CSV file.
-
-    Parameters:
-    - result: A string containing the analysis results, which includes a CSV section.
-    - filename: The name of the file where the results will be saved.
-    - output_dir: Directory where the CSV file will be saved (default is "../out").
-
-    The function:
-    1. Ensures the output directory exists.
-    2. Extracts the CSV section from the result string.
-    3. Parses the CSV data.
-    4. Writes the CSV data to the specified file.
-
-    Outputs:
-    - A CSV file saved in the specified directory containing the analysis results.
+    Parses the string related to CSV from LLMs' answer and constructs a CSV file from that string.
     """
     # Ensure the output directory exists
     os.makedirs(output_dir, exist_ok=True)

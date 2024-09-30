@@ -1,3 +1,7 @@
+"""
+This module contains abstract plotting methods that are used by concrete scenarios.
+"""
+
 import pandas as pd
 from matplotlib import pyplot as plt
 from pandas import DataFrame
@@ -15,7 +19,7 @@ color_palette = {
     'dark_orange': '#542D13',
 }
 
-# Define the new color palette based on the provided image
+# Standard Bar Colors
 bar_colors = [color_palette['teal'], color_palette['light_blue'], color_palette['gray']]
 
 # Common column rename mapping
@@ -40,6 +44,7 @@ columns_rename = {
     'L3 F1 Score': 'Level 3 F1 Score'
 }
 
+# Common row rename mapping
 rows_rename = {
     '2001_esa': '2001 - esa',
     '2005_nenios': '2005 - nenios',
@@ -53,6 +58,10 @@ rows_rename = {
 
 
 def load_and_prepare_data(file_path, document_name=None) -> DataFrame:
+    """
+    Loads dataframe from filepath and adds the document name as an entry if specified (useful for merging CSV files
+    by name)
+    """
     df = pd.read_csv(file_path)
     df.rename(columns=columns_rename, inplace=True)
     df['Id'] = df['Id'].replace(rows_rename)
@@ -65,6 +74,9 @@ def load_and_prepare_data(file_path, document_name=None) -> DataFrame:
 
 def plot_bar(data, title, xlabel, ylabel, xtick_rotation=45, xtick_ha='right', yscale=None, colors=None,
              axv_line=0, width=0.4, figsize=(12, 6)):
+    """
+    The default abstract plotting method, which can be customized by providing labels and more
+    """
     ax = data.plot(kind='bar', figsize=figsize, color=colors, edgecolor='black', width=width)
     plt.title(title, fontsize=12, color=color_palette['dark_blue'])
     plt.xlabel(xlabel, fontsize=10, color=color_palette['dark_blue'])
@@ -88,6 +100,9 @@ def plot_bar(data, title, xlabel, ylabel, xtick_rotation=45, xtick_ha='right', y
 
 
 def plot_grouped_bar(data, custom_order, title, xlabel, ylabel):
+    """
+    Groups and reorders bars before plotting
+    """
     grouped_df = data.pivot_table(index='Id', columns='Document', values='F1 score')
     grouped_df = grouped_df.reindex(custom_order)
 
@@ -106,6 +121,9 @@ def plot_grouped_bar(data, custom_order, title, xlabel, ylabel):
 
 
 def plot_comparison(data1, data2, entries_to_compare, title):
+    """
+    Compares and plots two dataframes,each holding scores for either comma delimiter or a semicolon delimiter
+    """
     df1_filtered = data1[data1['Id'].isin(entries_to_compare)]
     df2_filtered = data2[data2['Id'].isin(entries_to_compare)]
 

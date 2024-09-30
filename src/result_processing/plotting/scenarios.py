@@ -17,12 +17,11 @@ def plot_exploration(dataframe):
 
 
 def plot_scores_for_documents(dataframe):
-    # Document Total Scores Dataset-wide
     extracted_df = dataframe[['Id', 'Total Precision', 'Total Recall', 'Total F1 Score']].set_index(
-        'Id')  # Precision first
+        'Id')
     plot_bar(
         extracted_df,
-        'Total Precision, Recall, and F1 Score by ID',  # Update title to reflect Precision first
+        'Total Precision, Recall, and F1 Score by ID',
         'Document',
         'Scores',
         xtick_rotation=0,

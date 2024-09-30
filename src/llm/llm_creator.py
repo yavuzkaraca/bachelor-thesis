@@ -9,16 +9,16 @@ import os
 from langchain_community.chat_models import ChatOllama
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 
-ORGANIZATION_ID = "org-JOZZVGILnxuXT7NdjxlKF7g8"
-BASE_URL = "https://ollama.vdl.sdq.kastel.kit.edu"
 
-# Securely setting up the OpenAI API key
+# Securely setting up the OpenAI Parameters
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+ORGANIZATION_ID = "SDQ at KIT"
 
-# Securely setting up Ollama Header
+# Securely setting up Ollama Parameters
 username = os.environ.get("OLLAMA_USER")
 password = os.environ.get("OLLAMA_PASSWORD")
 headers = {"Authorization": "Basic " + base64.b64encode(f"{username}:{password}".encode('utf-8')).decode("ascii")}
+BASE_URL = "https://ollama.vdl.sdq.kastel.kit.edu"
 
 
 def create_llm_openai(model="gpt-4o-2024-05-13") -> ChatOpenAI:

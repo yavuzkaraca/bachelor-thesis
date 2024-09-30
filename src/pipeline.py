@@ -60,6 +60,9 @@ def process_exploration(llm) -> None:
 
 
 def do(func, llm, filename, output_base_dir, identifier) -> None:
+    """
+    Lambda Expression that encapsulates invoking LLMs with documents and saving results
+    """
     pdf_paths = get_pdf_file_paths()
 
     for pdf_path in pdf_paths:

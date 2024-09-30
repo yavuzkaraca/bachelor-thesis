@@ -1,5 +1,6 @@
 """
-This module provides functions to invoke a language model (LLM) with different prompts.
+This module provides functions to invoke a language model (LLM) with different prompts, by taking an LLM object and a
+document.
 """
 from langchain_core.messages import HumanMessage
 
@@ -55,9 +56,6 @@ def repeated_instructions(llm, doc) -> str:
                 'user_first': instructions_base() + examples(), 'user_second': instructions_base() + examples()}
     return invoke_helper(llm, doc, messages)
 
-
-import sys
-print (sys.version)
 
 def generated_knowledge(llm, doc) -> str:
     # Default example for a Chat with Message History, which is needed for Generated Knowledge
@@ -161,6 +159,11 @@ def combined_generated_knowledge_completeness_types(llm, doc) -> str:
 
 
 def invoke_helper(llm, doc, messages) -> str:
+    """
+    Helper method that encapsulates invoking the llm with given prompt and returning the answer.
+    Couldn't be used for generated knowledge and combinations that include that prompting technique due to
+    message history.
+    """
     msg = [
         ("system", messages['system']),
         ("user", messages['user_first'] + "\n".join([page.page_content for page in doc]) + messages['user_second']),
