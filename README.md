@@ -5,10 +5,6 @@ Copyright (c) 2024 Yavuz Karaca
 ## Overview
 This research explores the application of Large Language Models (LLMs) to automate the validation of Software Requirements Specifications (SRS) for completeness. By leveraging models such as GPT-4 and LLaMA3, the study aims to detect incomplete elements in SRS documents. The process involves sequentially feeding SRS documents to LLMs, along with specific prompts instructing them to identify instances of incompleteness. The LLMs then generate validation reports in CSV format. Experiments were conducted using various datasets and prompting techniques, with the F1 score serving as the primary performance metric.
 
-This repository holds all the artifacts produced during the study except the paper itself. To read the paper: 
-[Add the link for the paper](https://place-holder.com)
-
-
 ## Structure
 - **Dataset** 
   - Original
@@ -33,10 +29,10 @@ This study was supervised by M.Sc. Lars König
 ## Getting Started
 
 ### Prerequisites
-Ensure you have Python 3.x installed on your system. You may also need to install additional packages:
+Ensure you have Python 3.12.4 installed on your system. You may also need to install additional packages:
 
 ```bash
-pip install numpy matplotlib pandas langchain
+pip install -r requirements.txt
 ```
 
 #### Setting Up API Keys

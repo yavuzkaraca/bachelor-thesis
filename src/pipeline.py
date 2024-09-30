@@ -10,39 +10,39 @@ from utils.csv_writer import generate_filename
 from utils.dataset_loader import paginate_pdf, get_pdf_file_paths
 
 
-def openai_process_all():
+def openai_process_all() -> None:
     """
     Processes all PDF files in the dataset using an OpenAI model.
     """
     llm = llm_creator.create_llm_openai()
-    return process_full_evaluation(llm)
+    process_full_evaluation(llm, "openai")
 
 
-def ollama_process_all():
+def ollama_process_all() -> None:
     """
     Processes all PDF files in the dataset using an Ollama model.
     """
     llm = llm_creator.create_llm_ollama()
-    return process_full_evaluation(llm)
+    process_full_evaluation(llm, "ollama")
 
 
-def process_full_evaluation(llm):
+def process_full_evaluation(llm, filename) -> None:
     """
     Processes all PDF files in the dataset using only one prompt: Combined GK + CT.
     """
     output_base_dir = "../out/full_evaluation"
-    identifier = llm.model
+    identifier = llm.model_name
 
     do(invoker.combined_generated_knowledge_completeness_types, llm,
-       "combined_generated_knowledge_completeness_types", output_base_dir, identifier)
+       filename, output_base_dir, identifier)
 
 
-def process_exploration(llm):
+def process_exploration(llm) -> None:
     """
     Processes all PDF files in the dataset using all prompt variants.
     """
     output_base_dir = "../out/exploration"
-    identifier = llm.model
+    identifier = llm.model_name
 
     do(invoker.zero_shot, llm, "zero_shot", output_base_dir, identifier)
     do(invoker.few_shot, llm, "few_shot", output_base_dir, identifier),
@@ -59,7 +59,7 @@ def process_exploration(llm):
     do(invoker.combined_all, llm, "combined_all", output_base_dir, identifier)
 
 
-def do(func, llm, filename, output_base_dir, identifier):
+def do(func, llm, filename, output_base_dir, identifier) -> None:
     pdf_paths = get_pdf_file_paths()
 
     for pdf_path in pdf_paths:

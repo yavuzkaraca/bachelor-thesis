@@ -1,10 +1,6 @@
 from src.llm import llm_creator
 from src.utils.dataset_loader import paginate_pdf
 
-test_path_esa = "../dataset/PURE/2001_esa/2001_esa.pdf"
-test_path_neutero = "../dataset/PSE/2022_neutero/2022_neutero.pdf"
-test_path_home = "../dataset/PURE/2010_home_1.3/2010_home_1.3.pdf"
-
 
 def test_chat_memory():
     """
@@ -31,6 +27,7 @@ def test_text_conversion():
     """
     This test shows that all the structures are lost when pdfs are loaded
     """
+    test_path_esa = "../dataset/PURE/2001_esa/2001_esa_modified.pdf"
     pages = paginate_pdf(test_path_esa)
 
     print("\nPAGE 6")
@@ -39,7 +36,7 @@ def test_text_conversion():
 
 def test_generated_ieee():
     """
-    To see if model generates the same guidelines
+    This test checks if LLM generates the IEEE guidelines accurately
     """
     llm = llm_creator.create_llm_openai()
 

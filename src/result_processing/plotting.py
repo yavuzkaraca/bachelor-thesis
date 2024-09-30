@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from pandas import DataFrame
 
 # File paths to CSV files
 csv_files = {
@@ -61,7 +62,7 @@ rows_rename = {
 }
 
 
-def load_and_prepare_data(file_path, document_name=None):
+def load_and_prepare_data(file_path, document_name=None) -> DataFrame:
     df = pd.read_csv(file_path)
     if document_name:
         df['Document'] = document_name

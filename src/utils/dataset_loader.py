@@ -4,7 +4,6 @@ splitting them into individual pages.
 """
 
 import os
-from typing import List
 
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_core.documents import Document
