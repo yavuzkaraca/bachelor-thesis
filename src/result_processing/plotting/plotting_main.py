@@ -14,7 +14,7 @@ csv_files = {
 }
 
 
-def main():
+def main() -> None:
     # Exploration
     df_init = load_and_prepare_data(csv_files['2021_init-v'], '2021 - init-v')
     df_neutero = load_and_prepare_data(csv_files['2022_neutero'], '2022 - neutero')

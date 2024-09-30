@@ -73,7 +73,7 @@ def load_and_prepare_data(file_path, document_name=None) -> DataFrame:
 
 
 def plot_bar(data, title, xlabel, ylabel, xtick_rotation=45, xtick_ha='right', yscale=None, colors=None,
-             axv_line=0, width=0.4, figsize=(12, 6)):
+             axv_line=0, width=0.4, figsize=(12, 6)) -> None:
     """
     The default abstract plotting method, which can be customized by providing labels and more
     """
@@ -99,7 +99,7 @@ def plot_bar(data, title, xlabel, ylabel, xtick_rotation=45, xtick_ha='right', y
     plt.show()
 
 
-def plot_grouped_bar(data, custom_order, title, xlabel, ylabel):
+def plot_grouped_bar(data, custom_order, title, xlabel, ylabel) -> None:
     """
     Groups and reorders bars before plotting
     """
@@ -120,7 +120,7 @@ def plot_grouped_bar(data, custom_order, title, xlabel, ylabel):
     plt.show()
 
 
-def plot_comparison(data1, data2, entries_to_compare, title):
+def plot_comparison(data1, data2, entries_to_compare, title) -> None:
     """
     Compares and plots two dataframes,each holding scores for either comma delimiter or a semicolon delimiter
     """

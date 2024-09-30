@@ -4,7 +4,7 @@ from result_processing.plotting.abstract_plot import plot_grouped_bar, plot_bar,
     plot_comparison
 
 
-def plot_exploration(dataframe):
+def plot_exploration(dataframe) -> None:
     custom_order = [
                        'Combined GK + CT',
                        'Combined CoT + RI',
@@ -16,7 +16,7 @@ def plot_exploration(dataframe):
                      'F1 Score')
 
 
-def plot_scores_for_documents(dataframe):
+def plot_scores_for_documents(dataframe) -> None:
     extracted_df = dataframe[['Id', 'Total Precision', 'Total Recall', 'Total F1 Score']].set_index(
         'Id')
     plot_bar(
@@ -31,7 +31,7 @@ def plot_scores_for_documents(dataframe):
     )
 
 
-def plot_dataset_wide_level_scores(dataframe):
+def plot_dataset_wide_level_scores(dataframe) -> None:
     df_filtered = dataframe.drop(columns=['Id']).filter(regex='^(?!.*(tp|fp|fn)).*$').apply(pd.to_numeric,
                                                                                             errors='coerce').fillna(0)
 
@@ -68,7 +68,7 @@ def plot_dataset_wide_level_scores(dataframe):
     )
 
 
-def plot_delimiter_difference_overview(df_comma, df_semi):
+def plot_delimiter_difference_overview(df_comma, df_semi) -> None:
     plot_comparison(
         df_comma,
         df_semi,
@@ -77,7 +77,7 @@ def plot_delimiter_difference_overview(df_comma, df_semi):
     )
 
 
-def plot_delimiter_difference_document_wise(df_comma, df_semi):
+def plot_delimiter_difference_document_wise(df_comma, df_semi) -> None:
     for entry in ['2005 - nenios', '2024 - topo sim']:
         df1_filtered = df_comma[df_comma['Id'] == entry].drop(columns=['Id']).filter(regex='^(?!.*(tp|fp|fn)).*$')
         df2_filtered = df_semi[df_semi['Id'] == entry].drop(columns=['Id']).filter(regex='^(?!.*(tp|fp|fn)).*$')
