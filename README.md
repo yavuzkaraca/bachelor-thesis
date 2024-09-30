@@ -52,6 +52,7 @@ Before running the project, ensure you have set up the required API keys in your
 1. **OpenAI API Key**: Securely set up your OpenAI API key by adding it to your environment variables.
 
    - `OPENAI_API_KEY='your-openai-api-key'`
+   - `ORGANIZATION_ID='your-organisation-id'`
 
 2. **Ollama API Headers**: Set up your Ollama credentials (username and password) in your environment variables.
 
@@ -60,7 +61,7 @@ Before running the project, ensure you have set up the required API keys in your
 
 You can add these lines to your shell configuration file (e.g., `.bashrc`, `.zshrc`) to automatically set them when you start a new session.
 
-Make sure to replace `'your-openai-api-key'`, `'your-ollama-username'`, and `'your-ollama-password'` with your actual API keys and credentials.
+Make sure to replace `'your-openai-api-key'`, `'your-organisation-id'`, `'your-ollama-username'`, and `'your-ollama-password'` with your actual API keys and credentials.
 
 
 ### Installation

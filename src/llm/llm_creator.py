@@ -12,7 +12,7 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 
 # Securely setting up the OpenAI Parameters
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
-ORGANIZATION_ID = "SDQ at KIT"
+ORGANIZATION_ID = os.environ.get("ORGANIZATION_ID")
 
 # Securely setting up Ollama Parameters
 username = os.environ.get("OLLAMA_USER")
