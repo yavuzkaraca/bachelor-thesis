@@ -2,7 +2,7 @@ import pandas as pd
 
 from result_processing.plotting.abstract_plot import load_and_prepare_data
 from result_processing.plotting.scenarios import plot_exploration, plot_scores_for_documents, \
-    plot_dataset_wide_level_scores, plot_comparison
+    plot_dataset_wide_level_scores, plot_delimiter_difference_overview, plot_delimiter_difference_document_wise
 
 # File paths to CSV files
 csv_files = {
@@ -29,17 +29,11 @@ def main():
 
     # Delimiter Difference
     df_comma = load_and_prepare_data(csv_files['comma_delimiter'])
-    df_semi = load_and_prepare_data(csv_files['full_evaluation'])
-
-    print(df_comma)
-    print(df_semi)
-
-    plot_comparison(
-        df_comma,
-        df_semi,
-        entries_to_compare=['2005_nenios', '2024_topo_sim'],
-        title='Comma vs Semicolon Delimiter'
-    )
+    df_semicolon = load_and_prepare_data(csv_files['full_evaluation'])
+    plot_delimiter_difference_overview(df_comma, df_semicolon)
+    plot_scores_for_documents(df_comma)
+    plot_dataset_wide_level_scores(df_comma)
+    plot_delimiter_difference_document_wise(df_comma, df_semicolon)
 
 
 if __name__ == "__main__":

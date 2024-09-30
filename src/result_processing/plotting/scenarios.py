@@ -1,7 +1,7 @@
 import pandas as pd
 
 from result_processing.plotting.abstract_plot import plot_grouped_bar, plot_bar, bar_colors, columns_rename, \
-    rows_rename, color_palette
+    rows_rename, color_palette, plot_comparison
 
 
 def plot_exploration(dataframe):
@@ -69,29 +69,33 @@ def plot_dataset_wide_level_scores(dataframe):
     )
 
 
-def plot_comparison(data1, data2, entries_to_compare, title):
-    df1_filtered = data1[data1['Id'].isin(entries_to_compare)]
-    df2_filtered = data2[data2['Id'].isin(entries_to_compare)]
-
-    extracted_df1 = df1_filtered[['Total Recall', 'Total Precision', 'Total F1 Score']]
-    extracted_df2 = df2_filtered[['Total Recall', 'Total Precision', 'Total F1 Score']]
-
-    avg_df1 = extracted_df1.mean()
-    avg_df2 = extracted_df2.mean()
-
-    comparison_df = pd.DataFrame({
-        'Comma Delimiter': avg_df1,
-        'Semicolon Delimiter': avg_df2
-    })
-
-    plot_bar(
-        comparison_df,
-        title,
-        'Metrics',
-        'Average F1 Scores',
-        xtick_rotation=0,
-        xtick_ha='center',
-        colors=[color_palette['dark_blue'], color_palette['orange']],
-        width=0.25,
-        figsize=(9, 6)
+def plot_delimiter_difference_overview(df_comma, df_semi):
+    plot_comparison(
+        df_comma,
+        df_semi,
+        entries_to_compare=['2005 - nenios', '2024 - topo sim'],
+        title='Comma vs Semicolon Delimiter'
     )
+
+
+def plot_delimiter_difference_document_wise(df_comma, df_semi):
+    for entry in ['2005 - nenios', '2024 - topo sim']:
+        df1_filtered = df_comma[df_comma['Id'] == entry].drop(columns=['Id']).filter(regex='^(?!.*(tp|fp|fn)).*$')
+        df2_filtered = df_semi[df_semi['Id'] == entry].drop(columns=['Id']).filter(regex='^(?!.*(tp|fp|fn)).*$')
+
+        df1_average = df1_filtered.apply(pd.to_numeric, errors='coerce').fillna(0).mean()
+        df2_average = df2_filtered.apply(pd.to_numeric, errors='coerce').fillna(0).mean()
+
+        comparison_df = pd.DataFrame({
+            'Comma Delimiter': df1_average,
+            'Semicolon Delimiter': df2_average
+        })
+
+        plot_bar(
+            comparison_df,
+            f'Delimiter Comparison: {entry} Levels of Incompleteness',
+            'Level Specific Metric',
+            'Score (Log Scale)',
+            yscale='log',
+            colors=[color_palette['orange'], color_palette['dark_blue']]
+        )
