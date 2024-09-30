@@ -1,7 +1,7 @@
 import pandas as pd
 
-from result_processing.plotting.abstract_plot import plot_grouped_bar, plot_bar, bar_colors, columns_rename, \
-    rows_rename, color_palette, plot_comparison
+from result_processing.plotting.abstract_plot import plot_grouped_bar, plot_bar, bar_colors, color_palette, \
+    plot_comparison
 
 
 def plot_exploration(dataframe):
