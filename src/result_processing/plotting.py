@@ -31,20 +31,20 @@ columns_rename = {
     'L1 tp': 'Level 1 tp',
     'L1 fp': 'Level 1 fp',
     'L1 fn': 'Level 1 fn',
-    'L1 Precision': 'Level 1 Precision',  # Precision first
-    'L1 Recall': 'Level 1 Recall',        # Recall second
+    'L1 Precision': 'Level 1 Precision',
+    'L1 Recall': 'Level 1 Recall',
     'L1 F1 Score': 'Level 1 F1 Score',
     'L2 tp': 'Level 2 tp',
     'L2 fp': 'Level 2 fp',
     'L2 fn': 'Level 2 fn',
-    'L2 Precision': 'Level 2 Precision',  # Precision first
-    'L2 Recall': 'Level 2 Recall',        # Recall second
+    'L2 Precision': 'Level 2 Precision',
+    'L2 Recall': 'Level 2 Recall',
     'L2 F1 Score': 'Level 2 F1 Score',
     'L3 tp': 'Level 3 tp',
     'L3 fp': 'Level 3 fp',
     'L3 fn': 'Level 3 fn',
-    'L3 Precision': 'Level 3 Precision',  # Precision first
-    'L3 Recall': 'Level 3 Recall',        # Recall second
+    'L3 Precision': 'Level 3 Precision',
+    'L3 Recall': 'Level 3 Recall',
     'L3 F1 Score': 'Level 3 F1 Score'
 }
 
