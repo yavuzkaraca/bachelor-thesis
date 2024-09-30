@@ -1,14 +1,11 @@
-import sys
-
 import pandas as pd
 
 
-# Function to calculate precision, recall, and F1 score
 def calculate_metrics(tp, fp, fn):
-    precision = (tp / (tp + fp), 3) if (tp + fp) > 0 else 0.0
-    recall = (tp / (tp + fn), 3) if (tp + fn) > 0 else 0.0
-    f1_score = (2 * (precision * recall) / (precision + recall), 3) if (precision + recall) > 0 else 0.0
-    return round(precision), round(recall), round(f1_score)
+    precision = (tp / (tp + fp)) if (tp + fp) > 0 else 0.0
+    recall = (tp / (tp + fn)) if (tp + fn) > 0 else 0.0
+    f1_score = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0.0
+    return round(precision, 3), round(recall, 3), round(f1_score, 3)
 
 
 def main(file_path):
@@ -107,5 +104,5 @@ def main(file_path):
 
 
 if __name__ == '__main__':
-    file_path = sys.argv
+    file_path = '../../out/delimiter_difference/comma_delimiter_score.csv'  # Replace with your input file name
     main(file_path)

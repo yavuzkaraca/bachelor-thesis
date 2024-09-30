@@ -1,3 +1,3 @@
 Id,L1 tp,L1 fp,L1 fn,L1 Recall,L1 Precision,L1 F1 Score,L2 tp,L2 fp,L2 fn,L2 Recall,L2 Precision,L2 F1 Score,L3 tp,L3 fp,L3 fn,L3 Recall,L3 Precision,L3 F1 Score,Artificial tp,Artificial fp,Artificial fn,Artificial Recall,Artificial Precision,Artificial F1 Score,Total tp,Total fp,Total fn,Total Recall,Total Precision,Total F1 Score
-2005_nenios,2,0,8,0.2,1,0.333,12,5,6,0.667,0.706,0.686,0,2,5,0,0,0,3,0,5,0.375,1,0.545,14,7,19,0.424,0.667,0.518
-2024_topo_sim,0,0,6,0.0,0,0.0,13,19,7,0.65,0.406,0.5,0,0,0,0,0,0,13,0,6,0.684,1,0.812,13,19,13,0.5,0.406,0.448
+2005_nenios,2,0,8,0.2,1,0.333,12,5,6,0.667,0.706,0.686,0,2,5,0,0,0,3,0,5,0.375,1,0.545,14,7,19,0.424,0.667,0.519
+2024_topo_sim,0,0,6,0.0,0,0.0,13,19,7,0.65,0.406,0.5,0,0,0,0,0,0,13,0,6,0.684,1,0.813,13,19,13,0.5,0.406,0.448

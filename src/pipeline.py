@@ -10,22 +10,39 @@ from utils.csv_writer import generate_filename
 from utils.dataset_loader import paginate_pdf, get_pdf_file_paths
 
 
-def do(func, llm, filename, output_base_dir, identifier):
-    pdf_paths = get_pdf_file_paths()
-
-    for pdf_path in pdf_paths:
-        pages = paginate_pdf(pdf_path)
-
-        result = func(llm, pages)
-        csv_writer.save_results_to_csv(result, generate_filename(pdf_path, identifier),
-                                       os.path.join(output_base_dir, filename))
+def openai_process_all():
+    """
+    Processes all PDF files in the dataset using an OpenAI model.
+    """
+    llm = llm_creator.create_llm_openai()
+    return process_full_evaluation(llm)
 
 
-def process_all_pdfs_explore(llm, identifier):
+def ollama_process_all():
+    """
+    Processes all PDF files in the dataset using an Ollama model.
+    """
+    llm = llm_creator.create_llm_ollama()
+    return process_full_evaluation(llm)
+
+
+def process_full_evaluation(llm):
+    """
+    Processes all PDF files in the dataset using only one prompt: Combined GK + CT.
+    """
+    output_base_dir = "../out/full_evaluation"
+    identifier = llm.model
+
+    do(invoker.combined_generated_knowledge_completeness_types, llm,
+       "combined_generated_knowledge_completeness_types", output_base_dir, identifier)
+
+
+def process_exploration(llm):
     """
     Processes all PDF files in the dataset using all prompt variants.
     """
     output_base_dir = "../out/exploration"
+    identifier = llm.model
 
     do(invoker.zero_shot, llm, "zero_shot", output_base_dir, identifier)
     do(invoker.few_shot, llm, "few_shot", output_base_dir, identifier),
@@ -42,28 +59,12 @@ def process_all_pdfs_explore(llm, identifier):
     do(invoker.combined_all, llm, "combined_all", output_base_dir, identifier)
 
 
-def process_all_pdfs_advanced(llm, identifier):
-    """
-    Processes all PDF files in the dataset using only one prompt: Combined GK + CT.
-    """
+def do(func, llm, filename, output_base_dir, identifier):
     pdf_paths = get_pdf_file_paths()
-    output_base_dir = "../out/"
 
-    do(invoker.combined_generated_knowledge_completeness_types, llm,
-       "combined_generated_knowledge_completeness_types", output_base_dir, identifier)
+    for pdf_path in pdf_paths:
+        pages = paginate_pdf(pdf_path)
 
-
-def openai_process_all(model="gpt-4o-2024-05-13"):
-    """
-    Processes all PDF files in the dataset using an OpenAI model.
-    """
-    llm = llm_creator.create_llm_openai(model)
-    return process_all_pdfs_advanced(llm, "openai")
-
-
-def ollama_process_all():
-    """
-    Processes all PDF files in the dataset using an Ollama model.
-    """
-    llm = llm_creator.create_llm_ollama()
-    return process_all_pdfs_advanced(llm, "ollama")
+        result = func(llm, pages)
+        csv_writer.save_results_to_csv(result, generate_filename(pdf_path, identifier),
+                                       os.path.join(output_base_dir, filename))
