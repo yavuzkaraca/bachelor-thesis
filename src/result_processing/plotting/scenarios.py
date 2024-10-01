@@ -96,5 +96,5 @@ def plot_delimiter_difference_document_wise(df_comma, df_semi) -> None:
             'Level Specific Metric',
             'Score (Log Scale)',
             yscale='log',
-            colors=[color_palette['orange'], color_palette['dark_blue']]
+            colors=[color_palette['dark_blue'], color_palette['orange']]
         )
